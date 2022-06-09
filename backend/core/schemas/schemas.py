@@ -1,10 +1,7 @@
-from sqlalchemy import Column, Enum, ForeignKey, Integer, Numeric, Text, Float
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Enum, Float, ForeignKey, Integer, Numeric, Text
 from sqlalchemy.orm import relationship
 
-import enum
-
-from ..models.base import Base
+from core.models.base import Base
 
 
 class Destination(Base):

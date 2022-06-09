@@ -4,11 +4,10 @@ import logging
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
-from backend.shared_resources import resources
-
-from ..config import config
-from ..schemas import schemas
-from .base import Base
+from config import config
+from core.models.base import Base
+from core.schemas.schemas import *
+from shared_resources import resources
 
 logger = logging.getLogger()
 
@@ -75,15 +74,24 @@ def setup():
         try:
             for i in setup_data["DESTINATION_SETUP_FILE"]:
                 if i.get("uid", None) is not None and i.get("type", None) == "city":
-                    destination = schemas.Destination(
-                        term=i.get("term", None),
-                        state=i.get("state", None),
-                        destination_type=i.get("type", None),
-                        destination_id=i.get("uid", None),
-                        latitude=i.get("latitude", None),
-                        longitude=i.get("longitude", None),
-                    )
-                    session.add(destination)
+                    if (
+                        session.execute(
+                            select(Destination).where(
+                                (Destination.term == i.get("term", None))
+                                | (Destination.destination_id == i.get("uid", None))
+                            )
+                        ).first()
+                        is None
+                    ):
+                        destination = Destination(
+                            term=i.get("term", None),
+                            state=i.get("state", None),
+                            destination_type=i.get("type", None),
+                            destination_id=i.get("uid", None),
+                            latitude=i.get("latitude", None),
+                            longitude=i.get("longitude", None),
+                        )
+                        session.add(destination)
 
             session.commit()
             return session
@@ -100,3 +108,21 @@ def setup():
     logger.error(msg)
 
     return None
+
+
+def generate_destinations():
+    destinations = resources["SESSION"].execute(select(Destination)).all()
+    out = []
+    out.append("[")
+    for i in destinations:
+        # out.append(
+        #     "{ label: "
+        #     + f'"{i[0].term}"'
+        #     + ", year: "
+        #     + f'"{i[0].destination_id}"'
+        #     + " }"
+        # )
+        out.append(f'"{i[0].term}"')
+    out.append("]")
+    with open("temp.txt", "w+", encoding="utf8") as fp:
+        fp.write(",\n".join(out))

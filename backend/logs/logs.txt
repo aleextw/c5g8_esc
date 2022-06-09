@@ -1,0 +1,4 @@
+2022-06-09 17:10:51,887 (ERROR): Failed to insert data during setup. Traceback: type object 'Destination' has no attribute 'uid'
+2022-06-09 17:10:51,897 (ERROR): Database setup failed
+2022-06-09 17:15:53,148 (ERROR): Failed to insert data during setup. Traceback: unsupported operand type(s) for |: 'str' and 'InstrumentedAttribute'
+2022-06-09 17:15:53,156 (ERROR): Database setup failed
