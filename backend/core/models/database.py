@@ -4,10 +4,10 @@ import logging
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
-from config import config
-from core.models.base import Base
-from core.schemas.schemas import *
-from shared_resources import resources
+from backend.config import config
+from backend.core.models.base import Base
+from backend.core.schemas.schemas import *
+from backend.shared_resources import resources
 
 logger = logging.getLogger()
 
@@ -111,18 +111,23 @@ def setup():
 
 
 def generate_destinations():
+    """
+    Returns a list of {term: destination_uid} pairs.
+    """
     destinations = resources["SESSION"].execute(select(Destination)).all()
-    out = []
-    out.append("[")
-    for i in destinations:
-        # out.append(
-        #     "{ label: "
-        #     + f'"{i[0].term}"'
-        #     + ", year: "
-        #     + f'"{i[0].destination_id}"'
-        #     + " }"
-        # )
-        out.append(f'"{i[0].term}"')
-    out.append("]")
-    with open("temp.txt", "w+", encoding="utf8") as fp:
-        fp.write(",\n".join(out))
+    return [{i[0].term: i[0].destination_id} for i in destinations]
+
+
+def generate_hotels(destination_id):
+    destination = (
+        resources["SESSION"]
+        .execute(
+            select(Destination).where(Destination.destination_id == destination_id)
+        )
+        .first()
+    )
+
+    if destination is None:
+        return -1
+    else:
+        return destination[0].hotels

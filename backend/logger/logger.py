@@ -1,7 +1,7 @@
 from logging.handlers import TimedRotatingFileHandler
 import logging
 
-from config import config
+from backend.config import config
 
 
 def start_logger():

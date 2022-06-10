@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Enum, Float, ForeignKey, Integer, Numeric, Text
 from sqlalchemy.orm import relationship
 
-from core.models.base import Base
+from backend.core.models.base import Base
 
 
 class Destination(Base):
