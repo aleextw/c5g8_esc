@@ -131,3 +131,7 @@ def generate_hotels(destination_id):
         return -1
     else:
         return destination[0].hotels
+
+
+def generate_hotel(hotel_id):
+    pass
