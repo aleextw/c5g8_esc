@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException, Depends
 from .logger import logger as lg
 from .shared_resources import resources
 
-from .routers import destinations
+from .routers import destinations, hotels, hotel
 
 
 logger = lg.start_logger()
@@ -26,3 +26,4 @@ resources["SETUP_TIME"] = datetime.now()
 app = FastAPI()
 
 app.include_router(destinations.router)
+app.include_router(hotels.router)
