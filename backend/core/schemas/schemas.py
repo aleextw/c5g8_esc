@@ -3,43 +3,47 @@ from sqlalchemy.orm import relationship
 
 from backend.core.models.base import Base
 
-
 class Destination(Base):
     __tablename__ = "destination"
-
+    
     id = Column(Integer, primary_key=True)
+    uid = Column(Text)
     term = Column(Text)
-    state = Column(Text)
-    destination_type = Column(Text)
-    # Are all UIDs fixed-length / can we change to String(4)?
-    destination_id = Column(Text)
-    latitude = Column(Float)
-    longitude = Column(Float)
-    hotels = relationship("Hotel", backref="destination")
+    # latitude = Column(float)
+    # longitude = Column(float)
+    # state = Column(Text)
+    # type = Column(Text)
+        
     booking_id = Column(Integer, ForeignKey("booking.id"))
+    
 
     def __repr__(self):
-        return (
-            f"Destination(id={self.id}, name={self.name}, booking_id={self.booking_id})"
-        )
+        return f"Destination(id={self.id}, name={self.name}, booking_id={self.booking_id})"
 
 
 class Hotel(Base):
     __tablename__ = "hotel"
 
     id = Column(Integer, primary_key=True)
+    uid = Column(Text)
+    # was thinking we would not need a relational db? just an attribute to link it back to dest
+    destination_id = Column(Text)
+    
     name = Column(Text)
-    hotel_id = Column(Text)
-    latitude = Column(Numeric(8, 6))
-    longitude = Column(Numeric(8, 6))
-    avg_price = Column(Integer)
-    description = Column(Text)
     address = Column(Text)
     rating = Column(Float)
-    category = Column(Text)
-    images = Column(Text)
-    destination_id = Column(Text, ForeignKey("destination.id"))
-
+    # check score data type
+    score = Column(JSON)
+    price = Column(Float)
+    # check image_details data type
+    image_details = Column(JSON)
+    description = Column(Text)
+    # check amenities data type
+    amenities = Column(JSON)
+    # those below only used for hotel details
+    latitude = Column(Float)
+    longitude = Column(Float)
+    
     rooms = relationship("Room", backref="hotel")
 
     def __repr__(self):
@@ -50,22 +54,26 @@ class Room(Base):
     __tablename__ = "room"
 
     id = Column(Integer, primary_key=True)
-    name = Column(Text)
-    price = Column(Integer)
+    key = Column(Text)
+    roomNormalizedDescription = Column(Text)
+    market_rates = Column(JSON)
+    # check images data type
+    images = Column(JSON)
     description = Column(Text)
-    # TODO: Check if we should store image URLs as serialized string
-    # note: ^ they are stored with 3 strings - suffix (eg. jpg), count (eg. 10), prefix (https://....)
-    # image index that stores the total from e.g. 0 to 30 ^ used in the count to retrieve img
-    ## this is for hotels tho, not sure how to pinpoint for each room
-    images = Column(Text)
-    hotel_id = Column(Integer, ForeignKey("hotel.id"))
+    # check amenities data type
+    amenities = Column(JSON)
+    free_cancellation = Column(Boolean)
+    # check data type
+    roomAdditionalInfo = Column(JSON)
+    
+    hotel_id = Column(Integer, ForeignKey("destination.id"))
 
     def __repr__(self):
         return f"Room(id={self.id}, name={self.name}, price={self.price}, description={self.description}, images={self.images})"
 
 
 class Booking(Base):
-    __tablename__ = "booking"
+    __tablename__= "booking"
 
     id = Column(Integer, primary_key=True)
     booking_display_info = Column(Text)
@@ -106,7 +114,7 @@ class GuestInfo(Base):
 
     id = Column(Integer, primary_key=True)
     # TODO: Shift enum to config file
-    salutation = Column(Enum(*["Mr", "Ms", "Mrs", "Miss", "Dr"]))
+    salutation = Column(Enum(["Mr", "Ms", "Mrs", "Miss", "Dr"]))
     first_name = Column(Text)
     last_name = Column(Text)
     # TODO: Determine data type for this
