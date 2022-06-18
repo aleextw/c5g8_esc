@@ -4,8 +4,52 @@ import { useState } from "react";
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { format } from "date-fns";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import logo from "./logo.png";
 
-const Header = () => {
+function Header() {
+  const countries = [
+    {
+        id: 0,
+        name: "Singapore",
+    },
+    {
+        id: 1,
+        name: "Thailand",
+    },
+    {
+        id: 2,
+        name: "Japan",
+    },
+    {
+        id: 3,
+        name: "Korea",
+    },
+    {
+        id: 4,
+        name: "Australia",
+    },
+];
+
+const handleOnSearch = (string, results) => {
+  console.log(string, results);
+};
+
+const handleOnHover = (result) => {
+  console.log(result);
+};
+
+const handleOnSelect = (item) => {
+  console.log(item);
+};
+
+const handleOnFocus = () => {
+  console.log("Focused");
+};
+
+const handleOnClear = () => {
+  console.log("Cleared");
+};
   const [openDate, setOpenDate] = useState(false);
   const [state, setState] = useState([
     {
@@ -32,6 +76,22 @@ const handleOption = (name, operation) =>{
   return (
     <div className="headerSearch">
         <div className='headerSearchItem'>
+          <div style={{width: 200, margin: 20}}>
+            <img
+            src = {logo}
+            alt='logo'
+            style={{width:"100%", marginBottom: 20}}
+          />
+          <ReactSearchAutocomplete
+            items={countries}
+            onSearch={handleOnSearch}
+            onHover={handleOnHover}
+            onSelect={handleOnSelect}
+            onFocus={handleOnFocus}
+            onClear={handleOnClear}
+            styling={{ zIndex: 4 }}
+            autoFocus
+          />
         <input 
          type='text' 
          placeholder="Enter location" 
@@ -39,7 +99,13 @@ const handleOption = (name, operation) =>{
           <button className="searchButton">Search</button> 
         </div>
         <div className = "headerSearchItem">
-          <span onClick={() => setOpenDate(!openDate) }className="headerSearchText">From : To</span>
+          <span 
+          onClick={() => setOpenDate(!openDate) }
+          className="headerSearchText"
+        >{`${format(state[0].startDate, "MM/dd/yyyy")} to ${format(
+          state[0].endDate,
+          "MM/dd/yyyy"
+        )}`}</span>
           {openDate && <DateRange
           editableDateInputs={true}
           onChange={item => setState([item.selection])}
@@ -87,6 +153,7 @@ const handleOption = (name, operation) =>{
           </div>
           )}
         </div>
+    </div>
     </div>
   )
 }

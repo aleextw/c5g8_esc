@@ -1,5 +1,5 @@
 .headerSearch {
-  height: 30px;
+  height: 100px;
   background-color: white;
   border: 3px solid #febb02;
   display: flex;
@@ -51,7 +51,7 @@
 .optionCounter{
   display: flex;
   gap: 10px;
-  font-size: 12px;
+  font-size: 30px;
   color: black;
 }
 

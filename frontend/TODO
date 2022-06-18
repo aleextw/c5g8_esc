@@ -1,11 +1,14 @@
 Home page:
 - finish up search bar so that it goes to another page when a country is chosen(P0)
-- do autofill for the search bar (P1)
+
 - currency selector (P1): query, copy from caligo
-- do sidebar (P1?)
-    -- might combine with the search bar (see booking.com)
 - open up dialog or change to another route for log in/ register onClick (P2)
 - add other features after the req are done (P3...)
+
+- fix how ui looks
+
+https://www.npmjs.com/package/react-search-autocomplete
+- for autocomplete
 
 
 Booking page:
