@@ -1,75 +1,61 @@
-import React from 'react'
+import React, { useState } from "react";
 import "./searchbar.css";
-import { ReactSearchAutocomplete } from "react-search-autocomplete";
-import logo from "./logo.png";
+import SearchIcon from "@material-ui/icons/Search";
+import CloseIcon from "@material-ui/icons/Close";
 
-function SearchBar() {
-    const countries = [
-        {
-            id: 0,
-            name: "Singapore",
-        },
-        {
-            id: 1,
-            name: "Thailand",
-        },
-        {
-            id: 2,
-            name: "Japan",
-        },
-        {
-            id: 3,
-            name: "Korea",
-        },
-        {
-            id: 4,
-            name: "Australia",
-        },
-    ];
+function SearchBar({ placeholder, data }) {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
 
-    const handleOnSearch = (string, results) => {
-        console.log(string, results);
-      };
-    
-      const handleOnHover = (result) => {
-        console.log(result);
-      };
-    
-      const handleOnSelect = (item) => {
-        console.log(item);
-      };
-    
-      const handleOnFocus = () => {
-        console.log("Focused");
-      };
-    
-      const handleOnClear = () => {
-        console.log("Cleared");
-      };
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
+  };
 
   return (
-    <div className='SearchBar'>
-        <header className='SearchBar-header'>
-            <div style={{width: 200, margin: 20}}>
-                <img
-                src = {logo}
-                alt='logo'
-                style={{width: "100%", marginBottom: 20}}
-            />
-            <ReactSearchAutocomplete
-                items={countries}
-                onSearch={handleOnSearch}
-                onHover={handleOnHover}
-                onSelect={handleOnSelect}
-                onFocus={handleOnFocus}
-                onClear={handleOnClear}
-                styling={{ zIndex: 4 }}
-                autoFocus
-            />
-    </div>
-    </header>
+    <div className="search">
+      <div className="searchInputs">
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={wordEntered}
+          onChange={handleFilter}
+        />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <SearchIcon />
+          ) : (
+            <CloseIcon id="clearBtn" onClick={clearInput} />
+          )}
+        </div>
+      </div>
+      {filteredData.length != 0 && (
+        <div className="dataResult">
+          {filteredData.slice(0, 15).map((value, key) => {
+            return (
+              <a className="dataItem" href={value.link} target="_blank">
+                <p>{value.title} </p>
+              </a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
-        
-export default SearchBar
+
+export default SearchBar;
