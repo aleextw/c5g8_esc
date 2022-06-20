@@ -1,13 +1,16 @@
 import Navbar from "../../components/navbar/Navbar"
-import Header from "../../components/header/Header";
+import SearchBar from "../../components/searchBar/SearchBar";
+import Header from "../../components/searchBar/SearchBar";
 import "../style.css";
-import BookData from "./Data.json";
 
 const Home = () => {
   return (
     <div>
-      <Navbar/> 
-      <Header placeholder="Enter Country..." data={BookData}/>
+      <Navbar/>
+      <default className="title">
+        Bookings
+      </default>
+      
     </div>
   );
 }
