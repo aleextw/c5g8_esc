@@ -6,6 +6,8 @@ Home page:
 
 - fix how ui looks (only the css file need work)
 
+- fix clear button (rn it only appears if there is a word that matches the data, and disappears if there is no matching data)
+
 
 Booking page:
 - go to another page when click "book"
