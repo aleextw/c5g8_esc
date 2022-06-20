@@ -1,0 +1,26 @@
+.header {
+  background-color: #ffffff;
+  color: green;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.headerTime{
+  bottom: 0px;
+  right: 10px;
+  justify-content: left;
+}
+
+.headerTimeText{
+  color: white;
+  bottom: 10px;
+  font-size: small;
+}
+
+.date{
+  top: 150px;
+  font-size:medium;
+  z-index: 2;
+  left: 10px;
+}

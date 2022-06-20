@@ -1,10 +1,9 @@
 import Navbar from "../../components/navbar/Navbar"
 import Header from "../../components/header/Header";
 import "../style.css";
-// import BookData from "./Data.json";
-import BookData from "./destinations.json";
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-
+import SearchBar from "../../components/searchBar/SearchBar";
+import DatePicker from "../../components/datePicker/DatePicker";
+import OptionsPicker from "../../components/optionsPicker/OptionsPicker";
 
 function Home() {
   // return (
@@ -14,44 +13,18 @@ function Home() {
   //   </div>
   // );
 
-  const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
-    console.log(string, results)
-  }
-
-  const handleOnHover = (result) => {
-    // the item hovered
-    console.log(result)
-  }
-
-  const handleOnSelect = (item) => {
-    // the item selected
-    console.log(item)
-  }
-
-  const handleOnFocus = () => {
-    console.log('Focused')
-  }
-
 
   return (
     <div>
       <Navbar/>
-      <header className="title">
-        <div style={{ width: 400 }}>
-          <ReactSearchAutocomplete
-            items={BookData}
-            fuseOptions={{ keys: ["term"] }}
-            resultStringKeyName="term"
-            onSearch={handleOnSearch}
-            onHover={handleOnHover}
-            onSelect={handleOnSelect}
-            onFocus={handleOnFocus}
-            autoFocus
-          />
+      <div className="searchBar-container">
+        <div className="searchBar-box">
+          <h1>Find your dream destination.</h1>
+          <SearchBar className="searchBar"/>
+          <DatePicker className="searchBar"/>
+          <OptionsPicker className="searchBar"/>
         </div>
-      </header>
+      </div>
     </div>
   )
 }
