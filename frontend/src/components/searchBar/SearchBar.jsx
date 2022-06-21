@@ -1,61 +1,54 @@
-import React, { useState } from "react";
 import "./searchbar.css";
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
+import Navbar from "../../components/navbar/Navbar"
+// import BookData from "./Data.json";
+import BookData from "../../pages/home/destinations.json";
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
-function SearchBar({ placeholder, data }) {
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
+function SearchBar() {
+  // return (
+  //   <div>
+  //     <Navbar/> 
+  //     <Header placeholder="Enter Country..." data={BookData}/>
+  //   </div>
+  // );
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
+  const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    console.log(string, results)
+  }
 
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
+  const handleOnHover = (result) => {
+    // the item hovered
+    console.log(result)
+  }
 
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
+  const handleOnSelect = (item) => {
+    // the item selected
+    console.log(item)
+  }
+
+  const handleOnFocus = () => {
+    console.log('Focused')
+  }
+
 
   return (
-    <div className="search">
-      <div className="searchInputs">
-        <input
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
-        </div>
-      </div>
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return (
-              <a className="dataItem" href={value.link} target="_blank">
-                <p>{value.title} </p>
-              </a>
-            );
-          })}
-        </div>
-      )}
+    <div className="searchBar">
+      <ReactSearchAutocomplete
+        items={BookData}
+        fuseOptions={{ keys: ["term"] }}
+        resultStringKeyName="term"
+        onSearch={handleOnSearch}
+        onHover={handleOnHover}
+        onSelect={handleOnSelect}
+        onFocus={handleOnFocus}
+        autoFocus
+      ></ReactSearchAutocomplete>
     </div>
-  );
+  )
 }
 
 export default SearchBar;

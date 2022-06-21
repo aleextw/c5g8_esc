@@ -1,0 +1,53 @@
+
+.headerPeopleItem {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  bottom: 200px;
+  right: 10px;
+}
+
+.headerSearchText{
+  color: white;
+  font-size: small;
+}
+
+.options{
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+}
+
+.optionItem{
+  width:200px;
+  display: flex;
+  justify-content: space-between; 
+  margin: 10px;
+}
+
+.optionCounter{
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  color: black;
+}
+
+.optionCounterButton{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled{
+  cursor: not-allowed;
+}
+
+.dataItem {
+  bottom: 10px;
+}
