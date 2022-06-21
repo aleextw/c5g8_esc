@@ -4,6 +4,7 @@ import "../style.css";
 import SearchBar from "../../components/searchBar/SearchBar";
 import DatePicker from "../../components/datePicker/DatePicker";
 import OptionsPicker from "../../components/optionsPicker/OptionsPicker";
+import { Link } from "react-router-dom"
 
 function Home() {
   // return (
@@ -24,6 +25,7 @@ function Home() {
           <DatePicker className="searchBar"/>
           <OptionsPicker className="searchBar"/>
         </div>
+        <Link to="/hotels" color="white"> To Hotels</Link>
       </div>
     </div>
   )
