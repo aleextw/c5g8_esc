@@ -20,7 +20,6 @@ export default function Navbar() {
         <div className="navItems">
           <button className="navButton" onClick={registerRoute}>Register</button>
           <button className="navButton" onClick={loginRoute}>Login</button>
-
           <Routes>
             <Route path="/register" element={<Register/>}/>
             <Route path="/Login" element={<Login/>}/>
