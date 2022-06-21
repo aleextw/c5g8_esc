@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/Navbar"
 // import BookData from "./Data.json";
 import BookData from "../../pages/home/destinations.json";
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import { Routes, Route, useNavigate } from "react-router-dom"
 
 function SearchBar() {
   // return (
@@ -13,6 +14,8 @@ function SearchBar() {
   //     <Header placeholder="Enter Country..." data={BookData}/>
   //   </div>
   // );
+
+  const navigate = useNavigate()
 
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
@@ -34,6 +37,10 @@ function SearchBar() {
     console.log('Focused')
   }
 
+  const searchRoute = () => {
+    navigate("/hotels")
+  }
+
 
   return (
     <div className="searchBar">
@@ -47,6 +54,13 @@ function SearchBar() {
         onFocus={handleOnFocus}
         autoFocus
       ></ReactSearchAutocomplete>
+      <div className="searchButton">
+        <div className="buttonBox">
+          <button className="searchButton"
+            onClick={searchRoute}>Search
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
