@@ -1,6 +1,8 @@
 import json
 import logging
+from typing import Set
 
+import requests
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
@@ -115,23 +117,84 @@ def generate_destinations():
     Returns a list of {term: destination_uid} pairs.
     """
     destinations = resources["SESSION"].execute(select(Destination)).all()
-    return [{i[0].term: i[0].destination_id} for i in destinations]
+    return [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
 
 
-def generate_hotels(destination_id):
-    destination = (
-        resources["SESSION"]
-        .execute(
-            select(Destination).where(Destination.destination_id == destination_id)
+def generate_hotels(destination_id, checkin, checkout, guests, currency):
+    hotels = requests.get(get_dest_endpoint(destination_id))
+    hotels_pricing = requests.get(
+        get_dest_price_endpoint(
+            destination_id,
+            checkin,
+            checkout,
+            guests,
+            currency,
         )
-        .first()
     )
 
-    if destination is None:
-        return -1
-    else:
-        return destination[0].hotels
+    if (
+        hotels_pricing.status_code == requests.codes.ok
+        and hotels.status_code == requests.codes.ok
+    ):
+        return_data = {"completed": hotels_pricing.json()["completed"], "hotels": {}}
+        # Set up pricing data
+        for hotel_pricing_data in hotels_pricing.json()["hotels"]:
+            return_data["hotels"][hotel_pricing_data["id"]] = {
+                "id": hotel_pricing_data["id"],
+                "searchRank": hotel_pricing_data["searchRank"],
+                "price": hotel_pricing_data["lowest_converted_price"],
+                "points": hotel_pricing_data["points"],
+            }
+
+        # Add static data to hotels w pricing data
+        for hotel_static_data in hotels.json():
+            if return_data["hotels"].get(hotel_static_data["id"], None) is not None:
+                return_data["hotels"][hotel_static_data["id"]].update(
+                    {
+                        "latitude": hotel_static_data["latitude"],
+                        "longitude": hotel_static_data["longitude"],
+                        "distance": hotel_static_data["distance"],
+                        "name": hotel_static_data["name"],
+                        "address": hotel_static_data["address"],
+                        "rating": hotel_static_data["rating"],
+                        "review": hotel_static_data["trustyou"]["score"][
+                            "kaligo_overall"
+                        ],
+                        "photo": hotel_static_data["image_details"]["prefix"]
+                        + str(hotel_static_data["default_image_index"])
+                        + hotel_static_data["image_details"]["suffix"],
+                    }
+                )
+
+        # Remove entries with no static data
+        for hotel_data in set(return_data["hotels"].keys()):
+            if return_data["hotels"][hotel_data].get("name", None) is None:
+                del return_data["hotels"][hotel_data]
+
+        return_data["hotels"] = list(return_data["hotels"].values())
+        return return_data
+    return -1
 
 
 def generate_hotel(hotel_id):
     pass
+
+
+# dest static
+get_dest_endpoint = (
+    lambda x: f"https://hotelapi.loyalty.dev/api/hotels?destination_id={x}"
+)
+
+# dest pricing
+def get_dest_price_endpoint(destination_id, checkin, checkout, guests, currency):
+    return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+
+
+# room static
+get_hotel_endpoint = lambda x: f"https://hotelapi.loyalty.dev/api/hotels/{x}"
+
+# room pricing
+def get_hotel_details_endpoint(
+    destination_id, hotel_id, checkin, checkout, guests, currency
+):
+    return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
