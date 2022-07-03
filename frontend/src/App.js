@@ -3,21 +3,12 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-<<<<<<< Updated upstream
-import Home from "./pages/home/Home";
-import Hotels from "./pages/hotel/Hotels";
-import Booking from "./pages/booking/Booking";
-import Hotel from "./pages/hotel/Hotel";
-import Register from "./pages/proxy/Register";
-import Login from "./pages/proxy/Login";
-=======
 import Home from "./pages/Home";
 import Hotels from "./pages/Hotels";
 import Booking from "./pages/Booking";
 import Hotel from "./pages/Hotel";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
->>>>>>> Stashed changes
 
 
 function App() {
