@@ -5,6 +5,7 @@ import Footer from "../components/HotelsFooter";
 import SideBar from "../components/HotelsSideBar";
 import NavBar from "../components/NavBar";
 import CardList from "../components/CardList";
+import SideSearchBar from "../components/SideSearchBar";
 
 
 export default function Hotels() {
@@ -18,7 +19,7 @@ export default function Hotels() {
                 <CardList params={ params }/>
                 <Spacer />
                 <Show above="lg">
-                    <SideBar/>
+                    <SideSearchBar/>
                 </Show>
                 <Show below="lg">
                     <Footer/>
