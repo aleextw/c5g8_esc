@@ -175,10 +175,70 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
         return return_data
     return -1
 
+#  TODO: CHECK
+def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency):
+    hotel = requests.get(get_hotel_endpoint(hotel_id))
+    rooms_pricing = requests.get(
+        get_hotel_details_endpoint(
+            destination_id,
+            hotel_id,
+            checkin,
+            checkout,
+            guests,
+            currency,
+        )
+    )
 
-def generate_hotel(hotel_id):
-    pass
+    if (
+        rooms_pricing.status_code == requests.codes.ok
+        and hotel.status_code == requests.codes.ok
+    ):
+        return_data = {"completed": rooms_pricing.json()["completed"], "hotel_details": {}, "rooms": {}}
+        # Set up pricing data
+        for room_pricing_data in rooms_pricing.json()["rooms"]:
+            return_data["rooms"][room_pricing_data["rooms"]] = {
+                "name": room_pricing_data["roomNormalizedDescription"],
+                # "searchRank": room_pricing_data["searchRank"],
+                "price": room_pricing_data["lowest_converted_price"],
+                "photo": room_pricing_data["images"],
+                "description": room_pricing_data["description"],
+                "long_description": room_pricing_data["long_description"],
+                "amenities": room_pricing_data["amenities"],
+                "free_cancellation": room_pricing_data["free_cancellation"],
+                "additional_info": room_pricing_data["roomAdditionalInfo"],
+            }
 
+        # Add static data to hotel
+        return_data["hotel_details"].update(
+            {
+                "id": hotel["id"],
+                "latitude": hotel["latitude"],
+                "longitude": hotel["longitude"],
+                # "distance": hotel_static_data["distance"],
+                "name": hotel["name"],
+                "address": hotel["address"],
+                "rating": hotel["rating"],
+                "review": hotel["trustyou"]["score"][
+                    "kaligo_overall"
+                ],
+                "photo": hotel["image_details"]["prefix"]
+                + str(hotel["default_image_index"])
+                + hotel["image_details"]["suffix"],
+                "description": hotel["description"],
+                "amenities": hotel["amenities"],                        
+            }
+        )
+    
+
+        # Remove entries with no static data
+        for hotel_data in set(return_data["rooms"].keys()):
+            if return_data["rooms"][hotel_data].get("name", None) is None:
+                del return_data["rooms"][hotel_data]
+
+        return_data["rooms"] = list(return_data["rooms"].values())
+        return return_data
+    return -1
+    
 
 # dest static
 get_dest_endpoint = (
