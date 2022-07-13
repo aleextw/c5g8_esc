@@ -1,5 +1,5 @@
 import React from "react";
-import PhotoGallery from "../photoGallery/PhotoGallery";
+import PhotoGallery from "./photoGallery/PhotoGallery";
 import StarRatingComponent from "react-star-rating-component";
 
 function HotelInfo(props) {
