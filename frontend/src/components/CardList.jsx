@@ -12,6 +12,16 @@ function formatDistance(distance) {
 }
 
 function Card(props) {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+
+    const searchHotel = (uid) => {
+        // TODO: Add error checking for invalid UIDs
+        // TODO: Store data to local storage        
+        // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
+        navigate(`/hotel?uid=${uid}&checkInDate=${params.checkInDate}&checkOutDate=${params.checkOutDate}&guests=${params.guests}&currency=SGD`);
+    }
+
     return (<Flex>
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
         <Flex align="center" w="75%" direction={{ base: 'column', lg: 'row' }}>
@@ -28,7 +38,7 @@ function Card(props) {
                 <Heading size="sm">C5G8</Heading>
                 <Text>SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
-                <Button>Book Deal</Button>
+                <Button onClick={searchHotel(props.uid)}>Book Deal</Button>
             </Stack>
         </Flex>             
     </Flex>);
@@ -88,6 +98,7 @@ export default class CardList extends Component {
                                 rating={hotel["rating"]}
                                 review={hotel["review"]}
                                 image={hotel["photo"]}
+                                uid={hotel["uid"]}
                             />     
                         </li>   
                     )

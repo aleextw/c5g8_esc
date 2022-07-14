@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import RoomInfoPopup from "./RoomInfoPopup";
 import "./HotelRooms.scss";
-import "../hotelInfo/photoGallery/PhotoGallery";
-import PhotoGallery from "../hotelInfo/photoGallery/PhotoGallery";
+import PhotoGallery from "../photoGallery/PhotoGallery";
 
-function HotelRooms() {
+
+function HotelRooms(props) {
+    /*
   const mockHotelsData = {
     name:
       "Taste the Good Life Package - Premier Courtyard Room (incl $200 SGD dining credit)",
@@ -75,25 +76,27 @@ function HotelRooms() {
       }
     ]
   };
+  */
   return (
+
     <div className="wrapper">
       <Card
-        images={mockHotelsData.images}
-        title={mockHotelsData.name}
-        description={mockHotelsData.description}
-        price={mockHotelsData.price}
+        images={props.images}
+        title={props.name}
+        description={props.description}
+        price={props.price}
       />
       <Card
-        images={mockHotelsData.images}
-        title={mockHotelsData.name}
-        description={mockHotelsData.description}
-        price={mockHotelsData.price}
+        images={props.images}
+        title={props.name}
+        description={props.description}
+        price={props.price}
       />
       <Card
-        images={mockHotelsData.images}
-        title={mockHotelsData.name}
-        description={mockHotelsData.description}
-        price={mockHotelsData.price}
+        images={props.images}
+        title={props.name}
+        description={props.description}
+        price={props.price}
       />
     </div>
   );
