@@ -11,3 +11,12 @@ export async function getHotels(params, callback) {
     const hotels = await response.json();
     callback(hotels);
 }
+
+// check
+export async function getHotel(params, callback) {
+    const response = await fetch(
+        `http://localhost:8000/results/${params.get("uid")}?checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=${params.get("currency")}`
+    );
+    const hotel = await response.json();
+    callback(hotel);
+}
