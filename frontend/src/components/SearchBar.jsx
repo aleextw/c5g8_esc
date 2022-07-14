@@ -26,7 +26,7 @@ export default function SearchBar() {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
+        navigate(`/hotels?dest_uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);
