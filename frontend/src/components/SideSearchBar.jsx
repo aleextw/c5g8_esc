@@ -36,7 +36,7 @@ import {
     
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-      <Box bg={useColorModeValue('gray.100', 'gray.900')}>
+      <Box>
         <SidebarContent
           onClose={() => onClose}
           display={{ base: 'none', md: 'block' }}

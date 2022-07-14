@@ -1,4 +1,13 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading } from "@chakra-ui/react";
+import { 
+    Box, 
+    Center, 
+    Flex, 
+    Text, 
+    Select, 
+    Stack, 
+    Button, 
+    Heading
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { RangeDatepicker } from "chakra-dayzed-datepicker";
 import Autocomplete from "./Autocomplete";
