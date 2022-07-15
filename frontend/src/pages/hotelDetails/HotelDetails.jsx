@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Component } from "react";
-import { getHotel } from "../api/services/destinations";
+import { getHotel } from "../../api/services/destinations";
+import HotelInfo from "../hotelDetails/hotelInfo/HotelInfo";
+import HotelRooms from "../hotelDetails/hotelRooms/HotelRooms";
 import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer } from "@chakra-ui/react"
 
 export default class HotelDetails extends Component {
@@ -49,7 +51,7 @@ export default class HotelDetails extends Component {
                     />
               { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
                       return (  //display each room's info
-                        <li key={hotel["uid"]} >
+                        <li>
                           <HotelRooms
                             name={room["name"]}
                             description={room["description"]}

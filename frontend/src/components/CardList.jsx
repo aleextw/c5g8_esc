@@ -14,7 +14,7 @@ function formatDistance(distance) {
 function Card(props) {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-
+    const navigate = useNavigate();
     const searchHotel = (uid) => {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
