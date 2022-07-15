@@ -27,7 +27,7 @@ export default class HotelDetails extends Component {
       this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 10000);
   }
 
-  componentDidUnmount() {
+  componentWillUnmount() {
       clearInterval(this.updateTimer);
   }
 

@@ -14,12 +14,13 @@ function formatDistance(distance) {
 function Card(props) {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
+    
     const navigate = useNavigate();
-    const searchHotel = (uid) => {
+    const searchHotel = () => {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotel?uid=${uid}&checkInDate=${params.checkInDate}&checkOutDate=${params.checkOutDate}&guests=${params.guests}&currency=SGD`);
+        navigate(`/hotels/:id?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
     return (<Flex>
@@ -38,7 +39,7 @@ function Card(props) {
                 <Heading size="sm">C5G8</Heading>
                 <Text>SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
-                <Button onClick={searchHotel(props.uid)}>Book Deal</Button>
+                <Button onClick={searchHotel}>Book Deal</Button>
             </Stack>
         </Flex>             
     </Flex>);
@@ -70,12 +71,13 @@ export default class CardList extends Component {
         this.updateTimer = setInterval(() => getHotels(this.params, this.setHotels), 10000);
     }
 
-    componentDidUnmount() {
+    componentWillUnmount() {
         clearInterval(this.updateTimer);
     }
 
     render() {
         console.log(this.state.hotels.completed);
+        console.log(this.state.hotels.hotels.length)
         if (this.state.hotels.completed === true) {
             clearInterval(this.updateTimer);
         }
