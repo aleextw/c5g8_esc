@@ -1,6 +1,12 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import { Box, Input } from "@chakra-ui/react";
+import { 
+  Box, 
+  Input,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@chakra-ui/react";
 
 class Autocomplete extends Component {
   static propTypes = {
@@ -24,6 +30,8 @@ class Autocomplete extends Component {
       // What the user has entered
       userInput: ""
     };
+
+    this.myRef = React.createRef();
   }
 
   onChange = e => {
@@ -106,41 +114,50 @@ class Autocomplete extends Component {
     if (showSuggestions && userInput.length > 1) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <ul className="suggestions">
-            {filteredSuggestions.map((suggestion, index) => {
-              let className;
+          <PopoverContent maxW="300">
+            <ul className="suggestions">
+              {filteredSuggestions.map((suggestion, index) => {
+                let className;
 
-              // Flag the active suggestion with a class
-              if (index === activeSuggestion) {
-                className = "suggestion-active";
-              }
+                // Flag the active suggestion with a class
+                if (index === activeSuggestion) {
+                  className = "suggestion-active";
+                }
 
-              return (
-                <li className={className} key={suggestion["uid"]} id={suggestion["uid"]} onClick={onClick}>
-                  {suggestion["term"]}
-                </li>
-              );
-            })}
-          </ul>
+                return (
+                  <li className={className} key={suggestion["uid"]} id={suggestion["uid"]} onClick={onClick}>
+                    {suggestion["term"]}
+                  </li>
+                );
+              })}
+            </ul>
+          </PopoverContent>
         );
       } else {
         suggestionsListComponent = (
-          <div className="no-suggestions">
-            <em>No matches found.</em>
-          </div>
+          <PopoverContent>
+            <div className="no-suggestions">
+              <em>No matches found.</em>
+            </div>
+          </PopoverContent>
         );
       }
     }
-
+    
     return (
       <Box>
-        <Input
-          type="text"
-          onChange={onChange}
-          onKeyDown={onKeyDown}
-          value={userInput}
-        />
-        {suggestionsListComponent}
+        <Popover initialFocusRef={this.myRef}>
+          <PopoverTrigger>
+            <Input
+              type="text"
+              onChange={onChange}
+              onKeyDown={onKeyDown}
+              value={userInput}
+              ref = {this.myRef}
+            />
+          </PopoverTrigger>
+          {suggestionsListComponent}
+        </Popover>
       </Box>
     );
   }

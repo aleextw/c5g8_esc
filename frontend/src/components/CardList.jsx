@@ -63,6 +63,7 @@ export default class CardList extends Component {
     }
 
     setHotels(hotels) {
+        // TODO: Add completed checking
         this.setState({hotels: hotels});
     }
 

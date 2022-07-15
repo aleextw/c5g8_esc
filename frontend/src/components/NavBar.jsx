@@ -1,6 +1,7 @@
 import {
     Box,
     Flex,
+    Center,
     Text,
     IconButton,
     Button,
@@ -22,6 +23,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   import { useNavigate } from "react-router-dom";
+  import SearchBar from "../components/SearchBar";
   
   export default function NavBar() {
     const navigate = useNavigate();
@@ -52,14 +54,15 @@ import {
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
             display={{ base: 'flex', md: 'none' }}>
+            
             <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
+                  onClick={onToggle}
+                  icon={
+                    isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+                  }
+                  variant={'ghost'}
+                  aria-label={'Toggle Navigation'}
+                />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Link
@@ -119,7 +122,7 @@ import {
       <Stack direction={'row'} spacing={4}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
+            <Popover boundary="scrollParent">
               <PopoverTrigger>
                 <Link
                   p={2}
@@ -136,18 +139,10 @@ import {
               </PopoverTrigger>
   
               {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
-                  <Stack>
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
+                <PopoverContent bgColor="rgba(0, 0, 0, 0.5)" border="none" w="100%" h="100%">
+                  <Center>
+                    <SearchBar></SearchBar>
+                  </Center>
                 </PopoverContent>
               )}
             </Popover>
