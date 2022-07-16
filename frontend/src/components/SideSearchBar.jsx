@@ -79,17 +79,13 @@ import {
     useEffect(() => {
         getDestinations(setDestinations);
     }, []);
-    
+    // TODO: Fix background colour / decide on what colour to use
     return (
-        <Center h="80vh">
-            <Box p="5" maxW="450px" borderWidth="1px" borderRadius="lg" overflow="hidden"  bgColor="white">
+        <Center h="100%">
+            <Box h="100%" p="5" overflow="hidden"  bgColor="rgb(127, 127, 127)">
                 <Stack>
-                    <Heading size="md">Find your dream destination.</Heading>
-                    <Flex align="center" gap="5"  p={{ base: 0, lg: 2 }} w="100%" direction={{ base: 'column', lg: 'row' }}></Flex>
-                </Stack>
-                <Stack>
-                    <Text ml={2}>Destination or Hotel</Text>
-                    <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination} />
+                    <Text ml={2} color="white">Destination or Hotel</Text>
+                    <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination}/>
                 </Stack>
 
                 <Stack>

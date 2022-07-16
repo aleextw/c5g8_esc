@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Component } from "react";
 import { getHotels } from "../api/services/destinations";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer } from "@chakra-ui/react"
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner } from "@chakra-ui/react"
 
 function formatDistance(distance) {
     if (distance < 1000) {
@@ -78,12 +78,12 @@ export default class CardList extends Component {
 
     render() {
         console.log(this.state.hotels.completed);
-        console.log(this.state.hotels.hotels.length)
+        console.log(this.state.hotels.length);
         if (this.state.hotels.completed === true) {
             clearInterval(this.updateTimer);
         }
         
-        if (this.state.hotels.hotels.length > 0) {
+        if (this.state.hotels.length > 0) {
             return (
                 <ul className="hotels">
                 { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
@@ -107,6 +107,18 @@ export default class CardList extends Component {
                     )
                 })}
                 </ul>);
+        } else if (this.state.hotels.completed === false) {
+            return (<Box>
+                <Center>
+                    <Spinner
+                        thickness='4px'
+                        speed='0.65s'
+                        emptyColor='gray.200'
+                        color='blue.500'
+                        size='xl'
+                    />
+                </Center>
+            </Box>);
         } else {
             return (<Box>
                 <Center>

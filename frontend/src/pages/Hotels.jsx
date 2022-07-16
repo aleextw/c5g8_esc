@@ -14,22 +14,22 @@ export default function Hotels() {
     return (
       <ChakraProvider>
         <NavBar></NavBar>
-        <SearchBar/>
-        <Center>
-            <Box>
-                <Flex gap="5" w="100%" direction={{ base: 'column', lg: 'row-reverse' }}>       
+        <SearchBar params={ params }/>
+        <Center w="100%" h="100vh">
+            <Flex w="75%" direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
+                <Center w="75%" h="100%">
                     <CardList params={ params }/>
-                    
-                    <Show above="lg">
-                        <SideSearchBar/>
-                    </Show>
-                    <Show below="lg">
-                        <Footer/>
-                    </Show>
-                </Flex>
-            </Box>
-            
+                </Center>
+                <Show above="lg">
+                    <SideSearchBar/>
+                </Show>
+                <Show below="lg">
+                    <Footer/>
+                </Show>
+            </Flex>
+
         </Center>
+            
       </ChakraProvider>
     )
 }

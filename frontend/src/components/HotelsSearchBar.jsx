@@ -17,7 +17,7 @@ function formatDate(date) {
     return date.getFullYear() + "-" + addLeadingZeros(date.getMonth() + 1) + "-" + addLeadingZeros(date.getDate())
 }
 
-export default function SearchBar() {
+export default function SearchBar(props) {
     const navigate = useNavigate();
     
     // TODO: Load data from local storage and load reasonable defaults if not present
@@ -42,7 +42,7 @@ export default function SearchBar() {
     }, []);
 
     return (
-        <Box overflow="hidden" bgColor="white">
+        <Box overflow="hidden" bgColor="white" align="center">
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
@@ -57,51 +57,34 @@ export default function SearchBar() {
                         <Flex align="center" gap="5"  p={{ base: 0, lg: 2 }} w="100%" direction={{ base: 'column', lg: 'row' }}>
                             <Stack>
                                 <Text ml={2}>Destination or Hotel</Text>
-                                <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination} />
+                                <Text ml={2}> {props.params.get("destination")} </Text>
                             </Stack>
 
                             <Stack>
-                                <Text ml={2}>Dates of Stay</Text>
-                                <RangeDatepicker
-                                    selectedDates={selectedDates}
-                                    onDateChange={setSelectedDates}
-                                />
+                                <Text ml={2}>Check In</Text>
+                                <Text>{props.params.get("checkInDate")}</Text>
                             </Stack>
 
-                            <Flex gap="5">
-                                <Stack>
-                                    <Text>Rooms</Text>
-                                    <Select value={numRooms} onChange={setNumRooms}>
-                                        <option value='1'>1</option>
-                                        <option value='2'>2</option>
-                                        <option value='3'>3</option>
-                                        <option value='4'>4</option>
-                                    </Select>
-                                </Stack>
-                                
-                                <Stack>
-                                    <Text>Adults</Text>
-                                    <Select value={numAdults} onChange={setNumAdults}>
-                                        <option value='1'>1</option>
-                                        <option value='2'>2</option>
-                                        <option value='3'>3</option>
-                                        <option value='4'>4</option>
-                                    </Select>
-                                </Stack>
-                                
-                                <Stack>
-                                    <Text>Children</Text>
-                                    <Select value={numChildren} onChange={setNumChildren}>
-                                        <option value='0'>0</option>
-                                        <option value='1'>1</option>
-                                        <option value='2'>2</option>
-                                        <option value='3'>3</option>
-                                        <option value='4'>4</option>
-                                    </Select>
-                                </Stack>
-                            </Flex>
+                            <Stack>
+                                <Text ml={2}>Check Out</Text>
+                                <Text>{props.params.get("checkOutDate")}</Text>
+                            </Stack>
+                            
+                            <Stack>
+                                <Text>Rooms</Text>
+                                <Text>{props.params.get("numRooms")}</Text>
+                            </Stack>
+                            
+                            <Stack>
+                                <Text>Adults</Text>
+                                <Text>{props.params.get("numAdults")}</Text>
+                            </Stack>
+                            
+                            <Stack>
+                                <Text>Children</Text>
+                                <Text>{props.params.get("numChildren")}</Text>
+                            </Stack>
                         </Flex>
-                        <Button onClick={ searchRoute } colorScheme="red">Submit</Button>
                     </Stack>
             </Flex>
         </Box>
