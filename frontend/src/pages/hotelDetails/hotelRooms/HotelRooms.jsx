@@ -1,85 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import RoomInfoPopup from "./RoomInfoPopup";
-import "./HotelRooms.scss";
-import PhotoGallery from "../photoGallery/PhotoGallery";
-
+import "../hotelInfo/photoGallery/PhotoGallery";
+import PhotoGallery from "../hotelInfo/photoGallery/PhotoGallery";
+import {
+  Stack,
+  Grid,
+  Text,
+  Heading,
+  Button,
+  Flex,
+  Center
+} from "@chakra-ui/react";
 
 function HotelRooms(props) {
-    /*
-  const mockHotelsData = {
-    name:
-      "Taste the Good Life Package - Premier Courtyard Room (incl $200 SGD dining credit)",
-    description: (
-      <div>
-        <p>
-          <strong>1 King Bed</strong>
-        </p>
-        <p>452-sq-foot room with courtyard views </p>
-        <br />
-        <p>
-          <b>Entertainment</b> - 55-inch LCD TV with satellite channels
-        </p>
-        <br />
-        <p>
-          <b>Food & Drink</b> - Coffee/tea maker, minibar, room service (limited
-          hours), and free bottled water
-        </p>
-        <br />
-        <p>
-          <b>Sleep</b> - Premium bedding, a pillow menu, blackout
-          drapes/curtains, turndown service, and bed sheets{" "}
-        </p>
-        <br />
-        <p>
-          <b>Bathroom</b> - Private bathroom, deep soaking bathtub and separate
-          shower
-        </p>
-        <br />
-        <p>
-          <b>Practical</b> - Laptop-compatible safe, laptop workspace, and
-          phone; rollaway/extra beds and free cribs/infant beds available on
-          request
-        </p>
-        <br />
-        <p>
-          <b>Comfort</b> - Air conditioning and daily housekeeping
-        </p>
-        <br />
-        <p>Non-Smoking</p>
-      </div>
-    ),
-    price: 638.03,
-    images: [
-      {
-        original:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/2d887f28_z.jpg",
-        thumbnail:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/2d887f28_b.jpg",
-        originalWidth: 450,
-        originalHeight: 300
-      },
-      {
-        original:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/d01e59fd_z.jpg",
-        thumbnail:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/d01e59fd_b.jpg",
-        originalWidth: 450,
-        originalHeight: 300
-      },
-      {
-        original:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/8eb83651_z.jpg",
-        thumbnail:
-          "https://i.travelapi.com/hotels/1000000/900000/893000/892940/8eb83651_b.jpg",
-        originalWidth: 450,
-        originalHeight: 300
-      }
-    ]
-  };
-  */
   return (
-
-    <div className="wrapper">
+    <Grid margin="5rem" gap={2} templateColumns="1fr" template-rows="1fr">
       <Card
         images={props.images}
         title={props.name}
@@ -98,37 +33,53 @@ function HotelRooms(props) {
         description={props.description}
         price={props.price}
       />
-    </div>
+    </Grid>
   );
 }
 
 function Card(props) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="card">
-      <div>
-        <PhotoGallery images={props.images} className="card__img" />
-      </div>
-      <div className="card__body">
-        <h2 className="card__title" onClick={togglePopup}>
-          {props.title}
-        </h2>
-        <p className="card__description">{props.description}</p>
-        <h3 className="card__price">{props.price}</h3>
-        <button className="card__btn">Book Now</button>
-      </div>
-      {isOpen && (
-        <RoomInfoPopup
-          content={<>{props.description}</>}
-          handleClose={togglePopup}
-        />
-      )}
-    </div>
+    <Flex boxShadow="lg" p="6" rounded="md" bg="white">
+      <Stack spacing={3} direction="column">
+        <Flex margin="1rem" flexGrow="1">
+          <Heading size="2xl" lineHeight="1.4rem" mb="0.5rem" fontSize="20px">
+            {props.title}
+          </Heading>
+        </Flex>
+        <Flex
+          mt="auto"
+          mb="1"
+          w="40rem"
+          h="30rem"
+          ml="auto"
+          mr="auto"
+          objectFit="cover"
+          justifyContent="center"
+        >
+          <PhotoGallery images={props.images} />
+        </Flex>
+        <Center ml="auto" mr="auto">
+          <RoomInfoPopup content={<>{props.description}</>} />
+        </Center>
+      </Stack>
+      <Stack spacing={3} direction="column">
+        <Text lineHeight="1.2rem" fontSize="15px">
+          {props.description}
+        </Text>
+        <Heading
+          size="2xl"
+          fontSize="25px"
+          lineHeight="1.4rem"
+          marginTop="0.6rem"
+        >
+          ${props.price}
+        </Heading>
+        <Text fontSize="20px" />
+        <Button colorScheme="teal" variant="solid">
+          Book Now
+        </Button>
+      </Stack>
+    </Flex>
   );
 }
 

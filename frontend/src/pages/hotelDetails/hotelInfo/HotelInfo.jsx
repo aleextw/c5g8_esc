@@ -1,27 +1,42 @@
 import React from "react";
-import PhotoGallery from "../photoGallery/PhotoGallery";
+import PhotoGallery from "./photoGallery/PhotoGallery";
 import StarRatingComponent from "react-star-rating-component";
+import { Box, Heading } from "@chakra-ui/react";
 
 function HotelInfo(props) {
   return (
-    <div className="hotelInfo">
-      <h1 className="hotelName">{props.name}</h1>
-      <div className="stars">
+    <Box mt="2" mb="2">
+      <Heading as="h1" size="4xl" ml="2">
+        {props.name}
+      </Heading>
+      <Box mt="2" mb="2" ml="2">
         <StarRatingComponent
           name=""
           starCount={props.stars}
           editing={false}
           renderStarIcon={() => <span>⭐</span>}
         />
-      </div>
-      <h5 className="address">{props.address}</h5>
-      <div className="ratings">💕{props.rating}/100</div>
-      <PhotoGallery images={props.images} />
-      <h5>Hotel Overview</h5>
-      <div className="hotelDescription"> {props.hotelDescription} </div>
-      <h5>Hotel Amenities</h5>
-      <div className="hotelAmenities"> ... </div>
-    </div>
+      </Box>
+      <Heading size="1xl" fontSize="25px" mt="2" mb="2" ml="2">
+        {props.address}
+      </Heading>
+      <Heading size="1xl" fontSize="18px" mt="2" mb="2" ml="2">
+        💕 {props.rating}/100
+      </Heading>
+      <Box mt="2" mb="5">
+        <PhotoGallery images={props.images} />
+      </Box>
+      <Heading size="2xl" mt="2" mb="3" ml="2">
+        Hotel Overview
+      </Heading>
+      <Box mt="2" mb="5" ml="2">
+        {" "}
+        {props.hotelDescription}{" "}
+      </Box>
+      <Heading size="2xl" mt="2" mb="2" ml="2">
+        Hotel Amenities
+      </Heading>
+    </Box>
   );
 }
 
