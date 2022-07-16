@@ -35,7 +35,7 @@ export default function SearchBar() {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotels?dest_uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
+        navigate(`/hotels?destination=${destinations.find(d => d.uid === selectedDestination).term}&dest_uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=SGD`);
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);
@@ -49,6 +49,10 @@ export default function SearchBar() {
     useEffect(() => {
         getDestinations(setDestinations);
     }, []);
+
+    const handleRooms = (event) => setNumRooms(event.target.value);
+    const handleAdults = (event) => setNumAdults(event.target.value);
+    const handleChildren = (event) => setNumChildren(event.target.value);
 
     return (
         <Center h="100vh">
@@ -72,7 +76,7 @@ export default function SearchBar() {
                         <Flex gap="5">
                             <Stack>
                                 <Text>Rooms</Text>
-                                <Select value={numRooms} onChange={setNumRooms}>
+                                <Select value={numRooms} onChange={handleRooms}>
                                     <option value='1'>1</option>
                                     <option value='2'>2</option>
                                     <option value='3'>3</option>
@@ -82,7 +86,7 @@ export default function SearchBar() {
                             
                             <Stack>
                                 <Text>Adults</Text>
-                                <Select value={numAdults} onChange={setNumAdults}>
+                                <Select value={numAdults} onChange={handleAdults}>
                                     <option value='1'>1</option>
                                     <option value='2'>2</option>
                                     <option value='3'>3</option>
@@ -92,7 +96,7 @@ export default function SearchBar() {
                             
                             <Stack>
                                 <Text>Children</Text>
-                                <Select value={numChildren} onChange={setNumChildren}>
+                                <Select value={numChildren} onChange={handleChildren}>
                                     <option value='0'>0</option>
                                     <option value='1'>1</option>
                                     <option value='2'>2</option>
