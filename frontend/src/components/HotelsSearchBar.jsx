@@ -105,13 +105,13 @@ export default function HotelsSearchBar(props) {
         onClose={onClose}
         isOpen={isOpen}
         isCentered
-        size="xl"
+        size="3xl"
       >
-        <AlertDialogOverlay />
+        <AlertDialogOverlay/>
 
-        <AlertDialogContent>
+        <AlertDialogContent bg="none">
             <Center>
-                <SearchBar />
+                <SearchBar/>
             </Center>
         </AlertDialogContent>
       </AlertDialog>
