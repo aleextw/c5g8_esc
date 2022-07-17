@@ -1,7 +1,7 @@
 import "./navbar.css"
 import { Routes, Route, useNavigate } from "react-router-dom"
-import Register from "../../pages/proxy/Register"
-import Login from "../../pages/proxy/Login"
+import Register from "../../pages/Register"
+import Login from "../../pages/Login"
 
 export default function Navbar() {
   const navigate = useNavigate()
