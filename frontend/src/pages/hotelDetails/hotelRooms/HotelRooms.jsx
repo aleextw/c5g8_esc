@@ -1,7 +1,6 @@
 import React from "react";
 import RoomInfoPopup from "./RoomInfoPopup";
-import "../hotelInfo/photoGallery/PhotoGallery";
-import PhotoGallery from "../hotelInfo/photoGallery/PhotoGallery";
+import PhotoGallery from "../photoGallery/PhotoGallery";
 import {
   Stack,
   Grid,

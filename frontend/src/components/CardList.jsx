@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Component } from "react";
 import { getHotels } from "../api/services/destinations";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner } from "@chakra-ui/react"
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner, UnorderedList, ListItem, Show, StackDivider } from "@chakra-ui/react"
 
 function formatDistance(distance) {
     if (distance < 1000) {
@@ -25,23 +25,26 @@ function Card(props) {
 
     return (<Flex>
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
-        <Flex align="center" w="75%" direction={{ base: 'column', lg: 'row' }}>
-            <Stack p="2" direction="column">
+        <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
+            <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
                 <Heading size="md">{props.name}</Heading>
-                <Text>{props.address}</Text>
-                <Text>{formatDistance(props.distance)} from city centre</Text>
+                <Show above="md">
+                    <Text>{props.address}</Text>
+                    <Text>{formatDistance(props.distance)} from city centre</Text>
+                </Show>
                 {/* TODO: Add rating */}
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Spacer />
-            <Stack p="2" maxW="150" direction="column">
+            <Stack p={{base: "0", md: "2"}} w={{base: "100%", md: "40%"}} direction="column">
                 <Heading size="sm">C5G8</Heading>
-                <Text>SGD {props.price}</Text>
+                <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
-                <Button onClick={searchHotel}>Book Deal</Button>
+                <Show above="md">
+                    <Button onClick={searchHotel}>Book Deal</Button>
+                </Show>
             </Stack>
-        </Flex>             
+        </Stack>             
     </Flex>);
 }
 
@@ -78,38 +81,36 @@ export default class CardList extends Component {
 
     render() {
         console.log(this.state.hotels.completed);
-        console.log(this.state.hotels.length);
+        console.log(this.state.hotels.hotels.length);
         if (this.state.hotels.completed === true) {
             clearInterval(this.updateTimer);
         }
         
-        if (this.state.hotels.length > 0) {
+        if (this.state.hotels.hotels.length > 0) {
             return (
-                <ul className="hotels">
+                <Stack w="100%" h="100%" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                 { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
                     return (
-                        <li key={hotel["uid"]} >
-                            <Card 
-                                searchRank={hotel["searchRank"]}
-                                price={hotel["price"]}
-                                points={hotel["points"]}
-                                latitude={hotel["latitude"]}
-                                longitude={hotel["longitude"]}
-                                distance={hotel["distance"]}
-                                name={hotel["name"]}
-                                address={hotel["address"]}
-                                rating={hotel["rating"]}
-                                review={hotel["review"]}
-                                image={hotel["photo"]}
-                                uid={hotel["uid"]}
-                            />     
-                        </li>   
+                        <Card 
+                            searchRank={hotel["searchRank"]}
+                            price={hotel["price"]}
+                            points={hotel["points"]}
+                            latitude={hotel["latitude"]}
+                            longitude={hotel["longitude"]}
+                            distance={hotel["distance"]}
+                            name={hotel["name"]}
+                            address={hotel["address"]}
+                            rating={hotel["rating"]}
+                            review={hotel["review"]}
+                            image={hotel["photo"]}
+                            uid={hotel["uid"]}
+                        />      
                     )
                 })}
-                </ul>);
+                </Stack>);
         } else if (this.state.hotels.completed === false) {
-            return (<Box>
-                <Center>
+            return (<Box w="100%" h="100vh">
+                <Center w="100%" h="100%">
                     <Spinner
                         thickness='4px'
                         speed='0.65s'
@@ -120,8 +121,8 @@ export default class CardList extends Component {
                 </Center>
             </Box>);
         } else {
-            return (<Box>
-                <Center>
+            return (<Box w="100%" h="100%">
+                <Center w="100%" h="100%">
                     <Heading size="lg">
                         No hotels found!
                     </Heading>

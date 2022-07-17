@@ -15,9 +15,6 @@ code {
 input {
   border: 1px solid #999;
   padding: 0.5rem;
-  width: 300px !important;
-  min-width: 300px !important;
-  max-width: 300px !important;
 }
 
 .no-suggestions {
