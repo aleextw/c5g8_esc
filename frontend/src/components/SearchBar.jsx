@@ -77,7 +77,7 @@ export default function SearchBar() {
                         />
                     </Stack>
 
-                    <Stack direction="horizontal" gap="5" w={{base: "100%", lg: "33%"}} alignItems="center">
+                    <Stack direction="horizontal" gap="1" w={{base: "100%", lg: "33%"}} alignItems="center">
                         <Stack>
                             <Text>Rooms</Text>
                             <Select value={numRooms} onChange={handleRooms}>

@@ -148,14 +148,12 @@ class Autocomplete extends Component {
     
     return (
       <Box>
-        <Popover initialFocusRef={this.myRef} isOpen={isOpen} returnFocusOnClose={false}>
+        <Popover initialFocusRef={this.myRef} returnFocusOnClose={false}>
           <PopoverTrigger>
             <Input
               type="text"
               onChange={onChange}
               onKeyDown={onKeyDown}
-              onBlur={(e) => this.setState({ isOpen: false })}
-              onFocus={(e) => this.setState({ isOpen: true })}
               value={userInput}
               ref = {this.myRef}
             />
