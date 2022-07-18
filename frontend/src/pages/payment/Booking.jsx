@@ -126,7 +126,7 @@ export default function ContactFormWithSocialButtons() {
                         </InputGroup>
                       </FormControl>
 
-                      <FormControl isRequired>
+                      <FormControl>
                         <FormLabel>Message</FormLabel>
 
                         <Textarea
@@ -137,7 +137,17 @@ export default function ContactFormWithSocialButtons() {
                         />
                       </FormControl>
 
-                      <button>Pay</button>
+                      <Button
+                        colorScheme="blue"
+                        bg="blue.400"
+                        color="black"
+                        _hover={{
+                          bg: 'blue.500',
+                        }}
+                        isFullWidth
+                        onClick={goToPay}>
+                        Pay
+                      </Button>
 
                       <Button
                         colorScheme="blue"

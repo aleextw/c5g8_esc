@@ -1,6 +1,7 @@
 import {
     Box,
     Button,
+    ChakraProvider,
     Flex,
     FormControl,
     FormLabel,
@@ -64,6 +65,7 @@ import {
             p={{ base: 5, lg: 16 }}>
             <Box>
               <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+                <ChakraProvider>
                 <Heading
                   fontSize={{
                     base: '4xl',
@@ -167,6 +169,7 @@ import {
                     </VStack>
                   </Box>
                 </Stack>
+                </ChakraProvider>
               </VStack>
             </Box>
           </Box>
