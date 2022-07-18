@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent} from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogCloseButton} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,10 @@ function addLeadingZeros(n) {
 
 function formatDate(date) {
     return date.getFullYear() + "-" + addLeadingZeros(date.getMonth() + 1) + "-" + addLeadingZeros(date.getDate())
+}
+
+function reloadPage() {
+    window.location.reload();
 }
 
 export default function HotelsSearchBar(props) {
@@ -46,6 +50,7 @@ export default function HotelsSearchBar(props) {
 
     return (
         <Box 
+        
             overflow="hidden" 
             bgColor="white" 
             align="center"
@@ -100,21 +105,25 @@ export default function HotelsSearchBar(props) {
                 </Stack>
             </Center>
             <AlertDialog
-        motionPreset='slideInBottom'
-        leastDestructiveRef={cancelRef}
-        onClose={onClose}
-        isOpen={isOpen}
-        isCentered
-        size="3xl"
-      >
-        <AlertDialogOverlay/>
+                motionPreset='slideInBottom'
+                leastDestructiveRef={cancelRef}
+                onClose={onClose}
+                isOpen={isOpen}
+                isCentered
+                size="3xl">
+                <AlertDialogOverlay/>
 
-        <AlertDialogContent bg="none">
-            <Center>
-                <SearchBar/>
-            </Center>
-        </AlertDialogContent>
-      </AlertDialog>
+                <AlertDialogContent bg="none">
+                    <Center>
+                        <Stack>
+                            <SearchBar/>
+                            {/* quick fix to reload hotels */}
+                            <Button onClick={reloadPage} colorScheme="blue">Refresh</Button>
+                        </Stack>
+                        
+                    </Center>
+                </AlertDialogContent>
+            </AlertDialog>
         </Box>
     );
 }

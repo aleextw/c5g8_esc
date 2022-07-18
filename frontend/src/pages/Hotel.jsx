@@ -18,9 +18,6 @@ export default function Hotel() {
             <Flex gap="5" w="100%" direction={{ base: 'column', lg: 'row-reverse' }}>       
                 <HotelDetails params = {params} />
                 <Spacer />
-                <Show above="lg">
-                    <SideBar/>
-                </Show>
                 <Show below="lg">
                     <Footer/>
                 </Show>
