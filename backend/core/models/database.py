@@ -140,7 +140,7 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
         # Set up pricing data
         for hotel_pricing_data in hotels_pricing.json()["hotels"]:
             return_data["hotels"][hotel_pricing_data["id"]] = {
-                "id": hotel_pricing_data["id"],
+                "uid": hotel_pricing_data["id"],
                 "searchRank": hotel_pricing_data["searchRank"],
                 "price": hotel_pricing_data["lowest_converted_price"],
                 "points": hotel_pricing_data["points"],
@@ -175,6 +175,7 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
         return return_data
     return -1
 
+
 #  TODO: CHECK
 def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency):
     hotel = requests.get(get_hotel_endpoint(hotel_id))
@@ -193,7 +194,11 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
         rooms_pricing.status_code == requests.codes.ok
         and hotel.status_code == requests.codes.ok
     ):
-        return_data = {"completed": rooms_pricing.json()["completed"], "hotel_details": {}, "rooms": {}}
+        return_data = {
+            "completed": rooms_pricing.json()["completed"],
+            "hotel_details": {},
+            "rooms": {},
+        }
         # Set up pricing data
         for room_pricing_data in rooms_pricing.json()["rooms"]:
             return_data["rooms"][room_pricing_data["rooms"]] = {
@@ -218,17 +223,14 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
                 "name": hotel["name"],
                 "address": hotel["address"],
                 "rating": hotel["rating"],
-                "review": hotel["trustyou"]["score"][
-                    "kaligo_overall"
-                ],
+                "review": hotel["trustyou"]["score"]["kaligo_overall"],
                 "photo": hotel["image_details"]["prefix"]
                 + str(hotel["default_image_index"])
                 + hotel["image_details"]["suffix"],
                 "description": hotel["description"],
-                "amenities": hotel["amenities"],                        
+                "amenities": hotel["amenities"],
             }
         )
-    
 
         # Remove entries with no static data
         for hotel_data in set(return_data["rooms"].keys()):
@@ -238,7 +240,7 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
         return_data["rooms"] = list(return_data["rooms"].values())
         return return_data
     return -1
-    
+
 
 # dest static
 get_dest_endpoint = (
