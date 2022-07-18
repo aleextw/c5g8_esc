@@ -19,24 +19,33 @@ function HotelRooms(props) {
         title={props.name}
         description={props.description}
         price={props.price}
-      />
-      <Card
-        images={props.images}
-        title={props.name}
-        description={props.description}
-        price={props.price}
-      />
-      <Card
-        images={props.images}
-        title={props.name}
-        description={props.description}
-        price={props.price}
+        hotelName={props.price}
+        checkInDate={props.checkInDate}
+        checkOutDate={props.checkOutDate}
+        numAdults={props.numAdults}
+        numChildren={props.numChildren}
+        numRooms={props.numRooms}
       />
     </Grid>
   );
 }
 
 function Card(props) {
+  const navigate = useNavigate();
+
+  const toPaymentsPage = () => {
+    localStorage.setItem("roomName", JSON.stringify(props.name));
+    localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
+    localStorage.setItem("roomPrice", JSON.stringify(props.price));
+    localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
+    localStorage.setItem("checkOutDate", JSON.stringify(props.checkOutDate));
+    localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
+    localStorage.setItem("numAdults", JSON.stringify(props.numAdults));
+    localStorage.setItem("numChildren", JSON.stringify(props.numChildren));
+    localStorage.setItem("numRooms", JSON.stringify(props.numRooms));
+    navigate(`/booking`);
+  }
+
   return (
     <Flex boxShadow="lg" p="6" rounded="md" bg="white">
       <Stack spacing={3} direction="column">
@@ -74,7 +83,7 @@ function Card(props) {
           ${props.price}
         </Heading>
         <Text fontSize="20px" />
-        <Button colorScheme="teal" variant="solid">
+        <Button colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
           Book Now
         </Button>
       </Stack>

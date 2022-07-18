@@ -64,7 +64,15 @@ export default class HotelDetails extends Component {
                             name={room["name"]}
                             description={room["description"]}
                             price={room["price"]}
-                            images={room["images"]} />
+                            images={room["images"]}
+                            
+                            hotelName= {this.state.hotel.hotel_details.name}
+                            checkInDate = {this.params.get("checkInDate")}
+                            checkOutDate = {this.params.get("checkOutDate")}
+                            numAdults = {this.params.get("numAdults")}
+                            numChildren= {this.params.get("numChildren")}
+                            numRooms = {this.params.get("numRooms")}
+                            />
                         </li>
                       )})}
             </Box>                  
