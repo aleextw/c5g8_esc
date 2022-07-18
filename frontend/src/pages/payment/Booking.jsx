@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  ChakraProvider,
   Flex,
   FormControl,
   FormLabel,
@@ -19,7 +20,7 @@ import {
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useNavigate} from "react-router-dom";
-import Navbar from "../../components/navbar/Navbar"
+import NavBar from "../../components/NavBar"
 
 export default function ContactFormWithSocialButtons() {
   const { hasCopied, onCopy } = useClipboard('example@example.com');
@@ -60,7 +61,8 @@ export default function ContactFormWithSocialButtons() {
             p={{ base: 5, lg: 16 }}>
             <Box>
               <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-                <Navbar/>
+                <ChakraProvider>
+                <NavBar/>
                 <Heading
                   fontSize={{
                     base: '4xl',
@@ -151,6 +153,7 @@ export default function ContactFormWithSocialButtons() {
                     </VStack>
                   </Box>
                 </Stack>
+                </ChakraProvider>
               </VStack>
             </Box>
           </Box>
