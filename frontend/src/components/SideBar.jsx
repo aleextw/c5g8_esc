@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, Input } from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, Button, Heading, Input, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +43,17 @@ export default function SideBar({ onClose, ...rest }) {
 
           <Stack>
               <Heading size="sm">Price Range</Heading>
-              <Input placeholder="Placeholder input"></Input>
+              <RangeSlider defaultValue={[30, 80]}>
+              <RangeSliderTrack>
+                <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb boxSize={6} index={0}>
+                  <Box />
+                </RangeSliderThumb>
+                <RangeSliderThumb boxSize={6} index={1}>
+                  <Box />
+                </RangeSliderThumb>
+              </RangeSlider>
           </Stack>
 
           <Stack>

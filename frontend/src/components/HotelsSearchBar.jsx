@@ -52,7 +52,7 @@ export default function HotelsSearchBar(props) {
             borderBottom={1}
             borderStyle={'solid'}
             borderColor={useColorModeValue('gray.200', 'gray.900')}
-            W="100%">
+            w="100%">
             <Center
                 as="button"
                 bg={useColorModeValue('white', 'gray.800')}

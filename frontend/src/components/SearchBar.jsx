@@ -6,7 +6,8 @@ import {
     Select, 
     Stack, 
     Button, 
-    Heading
+    Heading,
+    Spacer
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { RangeDatepicker } from "chakra-dayzed-datepicker";
@@ -62,12 +63,12 @@ export default function SearchBar() {
             <Stack>
                 <Heading size="md">Find your dream destination.</Heading>
                 <Flex align="center" gap="5"  p={{ base: 0, lg: 2 }} w="100%" direction={{ base: 'column', lg: 'row' }}>
-                    <Stack>
+                    <Stack w={{base: "100%", lg: "33%"}}>
                         <Text ml={2}>Destination or Hotel</Text>
-                        <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination} />
+                        <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination}/>
                     </Stack>
 
-                    <Stack>
+                    <Stack w={{base: "100%", lg: "33%"}}>
                         <Text ml={2}>Dates of Stay</Text>
                         <RangeDatepicker
                             selectedDates={selectedDates}
@@ -76,7 +77,7 @@ export default function SearchBar() {
                         />
                     </Stack>
 
-                    <Flex gap="5">
+                    <Stack direction="horizontal" gap="5" w={{base: "100%", lg: "33%"}} alignItems="center">
                         <Stack>
                             <Text>Rooms</Text>
                             <Select value={numRooms} onChange={handleRooms}>
@@ -86,6 +87,7 @@ export default function SearchBar() {
                                 <option value='4'>4</option>
                             </Select>
                         </Stack>
+                        <Spacer />
                         
                         <Stack>
                             <Text>Adults</Text>
@@ -96,6 +98,7 @@ export default function SearchBar() {
                                 <option value='4'>4</option>
                             </Select>
                         </Stack>
+                        <Spacer />
                         
                         <Stack>
                             <Text>Children</Text>
@@ -107,7 +110,7 @@ export default function SearchBar() {
                                 <option value='4'>4</option>
                             </Select>
                         </Stack>
-                    </Flex>
+                    </Stack>
                 </Flex>
                 <Button onClick={ searchRoute } colorScheme="red">Submit</Button>
             </Stack>
