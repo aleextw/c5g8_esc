@@ -1,10 +1,9 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogCloseButton} from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { SearchIcon } from "@chakra-ui/icons";
-import SearchBar from "./SearchBar";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 
 function addLeadingZeros(n) {
     if (n <= 9) {
@@ -17,6 +16,7 @@ function formatDate(date) {
     return date.getFullYear() + "-" + addLeadingZeros(date.getMonth() + 1) + "-" + addLeadingZeros(date.getDate())
 }
 
+
 export default function HotelsSearchBar(props) {
     const navigate = useNavigate();
     
@@ -24,7 +24,8 @@ export default function HotelsSearchBar(props) {
 
     const searchRoute = () => {
         // TODO: Add error checking for invalid UIDs
-        navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`, {replace: true});
+        // TODO: Add error checking if previous route is invalid
+        navigate(-1);
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);
@@ -39,13 +40,9 @@ export default function HotelsSearchBar(props) {
         getDestinations(setDestinations);
     }, []);
 
-    const {isOpen, onOpen, onClose} = useDisclosure();
-    const cancelRef = React.useRef();
 
     return (
-        <Box 
-        
-            overflow="hidden" 
+        <Box overflow="hidden" 
             bgColor="white" 
             align="center"
             borderBottom={1}
@@ -60,10 +57,10 @@ export default function HotelsSearchBar(props) {
                 py={{ base: 2 }}
                 px={{ base: 4 }}
                 align={'center'}
-                onClick={onOpen}>
+                onClick={searchRoute}>
                 <Stack direction="horizontal" align="center" gap="5" p={{ base: 0, lg: 2 }} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
                     <VStack>
-                        <SearchIcon></SearchIcon>
+                        <ArrowBackIcon></ArrowBackIcon>
                         <Text>Edit</Text>
                     </VStack>
 
@@ -98,19 +95,6 @@ export default function HotelsSearchBar(props) {
                     </VStack>
                 </Stack>
             </Center>
-            <AlertDialog
-                motionPreset='slideInBottom'
-                leastDestructiveRef={cancelRef}
-                onClose={onClose}
-                isOpen={isOpen}
-                isCentered
-                size="3xl">
-                <AlertDialogOverlay/>
-
-                <AlertDialogContent bg="none">
-                    <SearchBar onClick={onClose}/>
-                </AlertDialogContent>
-            </AlertDialog>
         </Box>
     );
 }

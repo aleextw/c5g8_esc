@@ -5,6 +5,7 @@ import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
 import HotelDetails from "./hotelDetails/HotelDetails";
 import SideBar from "../components/SideBar";
+import HotelSearchBar from "../components/HotelSearchBar";
 
 
 export default function Hotel() {
@@ -14,14 +15,9 @@ export default function Hotel() {
     return (
       <ChakraProvider>
         <NavBar></NavBar>
-        <Center>
-            <Flex gap="5" w="100%" direction={{ base: 'column', lg: 'row-reverse' }}>       
+        <HotelSearchBar params={params}></HotelSearchBar>
+        <Center background="#F5F4F1" w="100%" h="100%" overflow="hidden">   
                 <HotelDetails params = {params} />
-                <Spacer />
-                <Show below="lg">
-                    <Footer/>
-                </Show>
-            </Flex>
         </Center>
       </ChakraProvider>
     )

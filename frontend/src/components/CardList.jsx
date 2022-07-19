@@ -23,7 +23,7 @@ function Card(props) {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
+        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
         // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
@@ -99,42 +99,40 @@ export default class CardList extends Component {
         
         if (this.state.hotels.hotels.length > 0) {
             return (
-                <Box w="100%" h="80vh">
-                    <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
-                    { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
-                        return (
-                            <Card 
-                                searchRank={hotel["searchRank"]}
-                                price={hotel["price"]}
-                                points={hotel["points"]}
-                                latitude={hotel["latitude"]}
-                                longitude={hotel["longitude"]}
-                                distance={hotel["distance"]}
-                                name={hotel["name"]}
-                                address={hotel["address"]}
-                                rating={hotel["rating"]}
-                                review={hotel["review"]}
-                                image={hotel["photo"]}
-                                uid={hotel["uid"]}
-                            />      
-                        )
-                    })}
-                    </Stack>
-                </Box>);
+                <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
+                    return (
+                        <Card 
+                            searchRank={hotel["searchRank"]}
+                            price={hotel["price"]}
+                            points={hotel["points"]}
+                            latitude={hotel["latitude"]}
+                            longitude={hotel["longitude"]}
+                            distance={hotel["distance"]}
+                            name={hotel["name"]}
+                            address={hotel["address"]}
+                            rating={hotel["rating"]}
+                            review={hotel["review"]}
+                            image={hotel["photo"]}
+                            uid={hotel["uid"]}
+                        />      
+                    )
+                })}
+                </Stack>);
         } else if (this.state.hotels.completed === false) {
-            return (<Box w="100%" h="80vh">
+            return (<Box w="100%" h="100%">
                 <Center w="100%" h="100%">
-                <Spinner
-                    thickness='4px'
-                    speed='0.65s'
-                    emptyColor='gray.200'
-                    color='blue.500'
-                    size='xl'
-                />
-            </Center>
-        </Box>);
+                    <Spinner
+                        thickness='4px'
+                        speed='0.65s'
+                        emptyColor='gray.200'
+                        color='blue.500'
+                        size='xl'
+                    />
+                </Center>
+            </Box>);
     } else {
-        return (<Box w="100%" h="80vh">
+        return (<Box w="100%" h="100%">
             <Center w="100%" h="100%">
 
                     <Heading size="lg">

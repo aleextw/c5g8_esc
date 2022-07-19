@@ -4,7 +4,7 @@ import { getHotel } from "../../api/services/destinations";
 import HotelInfo from "../hotelDetails/hotelInfo/HotelInfo";
 import HotelRooms from "../hotelDetails/hotelRooms/HotelRooms";
 import HotelMap from "../hotelDetails/hotelMap/HotelMap"
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer,AspectRatio } from "@chakra-ui/react"
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer,AspectRatio, Spinner } from "@chakra-ui/react"
 
 export default class HotelDetails extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class HotelDetails extends Component {
 
   componentDidMount() {
       // TODO: Figure out why its triggering twice
-      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 10000);
+      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 5000);
   }
 
   componentWillUnmount() {
@@ -44,29 +44,40 @@ export default class HotelDetails extends Component {
     if (this.state.hotel.rooms.length > 0) {
       return ( //display static hotel info
         <Box>
-        <HotelInfo
-          hotel_details = {this.state.hotel.hotel_details}
-        />
-        <Spacer />
-        <AspectRatio ratio={16 / 9}>
-          <HotelMap
-            lat={this.state.hotel.hotel_details.latitude}
-            long={this.state.hotel.hotel_details.longitude}
-            name={this.state.hotel.hotel_details.name}
+          <HotelInfo
+            hotel_details = {this.state.hotel.hotel_details}
           />
-        </AspectRatio>
+          <Spacer />
           { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
-                  return (  //display each room's info
-                    <li>
-                      <HotelRooms
-                        name={room["name"]}
-                        description={room["description"]}
-                        price={room["price"]}
-                        images={room["images"]} />
-                    </li>
-                  )})}
+            return (  //display each room's info
+              <li>
+                <HotelRooms
+                  name={room["name"]}
+                  description={room["description"]}
+                  price={room["price"]}
+                  images={room["images"]} />
+              </li>
+            )})}
+
+          <Spacer />
+          <HotelMap
+              pos = {[this.state.hotel.hotel_details.latitude, this.state.hotel.hotel_details.longitude]}
+              name={this.state.hotel.hotel_details.name}
+          />
         </Box>                  
       );
+    } else if (this.state.hotel.completed === false) {
+      return (<Box w="100%" h="80vh">
+          <Center w="100%" h="100%">
+          <Spinner
+              thickness='4px'
+              speed='0.65s'
+              emptyColor='gray.200'
+              color='blue.500'
+              size='xl'
+          />
+        </Center>
+      </Box>);
     } else {
       return (<Box>
         <Center>

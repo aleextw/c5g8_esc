@@ -213,6 +213,7 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
         # Set up pricing data
         for room_pricing_data in rooms_pricing.json()["rooms"]:
             return_data["rooms"][room_pricing_data["key"]] = {
+                "uid": room_pricing_data["key"],
                 "name": room_pricing_data["roomNormalizedDescription"],
                 # "searchRank": room_pricing_data["searchRank"],
                 "price": room_pricing_data["lowest_converted_price"],
