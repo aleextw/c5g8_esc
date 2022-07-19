@@ -24,9 +24,9 @@ export default function Hotels() {
                 <Show above="lg" h="100%">
                     <SideBar/>
                 </Show>
-                {/* <Show below="lg">
+                <Show below="lg">
                     <Footer/>
-                </Show> */}
+                </Show>
             </Stack>
         </Center>
             
