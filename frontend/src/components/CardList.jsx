@@ -55,7 +55,7 @@ function Card(props) {
 export default class CardList extends Component {
     constructor(props) {
         super(props);
-        this.params = props.params;
+        console.log()
 
         this.state = {
             selectedHotel: "",
@@ -64,6 +64,7 @@ export default class CardList extends Component {
             reviewRange: [],
             priceRange: [],
             typeFilter: [],
+            params: props.params
         };
 
         this.setHotels = this.setHotels.bind(this);
@@ -76,11 +77,17 @@ export default class CardList extends Component {
 
     componentDidMount() {
         // TODO: Figure out why its triggering twice
-        this.updateTimer = setInterval(() => getHotels(this.params, this.setHotels), 10000);
+        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 5000);
     }
 
     componentWillUnmount() {
         clearInterval(this.updateTimer);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
+            this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
+        }
     }
 
     render() {
@@ -93,7 +100,7 @@ export default class CardList extends Component {
         if (this.state.hotels.hotels.length > 0) {
             return (
                 <Box w="100%" h="80vh">
-                    <Stack w='100%' h='100%' overflowY='scroll' backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                    <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                     { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
                         return (
                             <Card 

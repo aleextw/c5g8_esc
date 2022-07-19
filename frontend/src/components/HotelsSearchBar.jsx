@@ -30,7 +30,9 @@ export default function HotelsSearchBar(props) {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
+        setTimeout(() => window.location.reload(), 100);
+        navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`, {replace: true});
+        console.log("test");
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);
@@ -114,14 +116,7 @@ export default function HotelsSearchBar(props) {
                 <AlertDialogOverlay/>
 
                 <AlertDialogContent bg="none">
-                    <Center>
-                        <Stack>
-                            <SearchBar/>
-                            {/* quick fix to reload hotels */}
-                            <Button onClick={reloadPage} colorScheme="blue">Refresh</Button>
-                        </Stack>
-                        
-                    </Center>
+                    <SearchBar onClick={onClose}/>
                 </AlertDialogContent>
             </AlertDialog>
         </Box>

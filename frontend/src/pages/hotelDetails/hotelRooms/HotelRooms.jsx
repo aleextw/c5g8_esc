@@ -10,6 +10,7 @@ import {
   Flex,
   Center
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function HotelRooms(props) {
   return (

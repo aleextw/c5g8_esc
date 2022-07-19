@@ -7,7 +7,8 @@ function HotelInfo(props) {
   console.log(props);
   const images = [];
   for (let i = 0; i < props.hotel_details.images.count; i++) {
-    images.push({original: props.hotel_details.images.prefix + i + props.hotel_details.images.suffix});
+    const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
+    images.push({original: img_url, thumbnail: img_url});
   }
   console.log(images);
   return (

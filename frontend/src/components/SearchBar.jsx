@@ -27,15 +27,16 @@ function formatDate(date) {
     return date.getFullYear() + "-" + addLeadingZeros(date.getMonth() + 1) + "-" + addLeadingZeros(date.getDate())
 }
 
-export default function SearchBar() {
+export default function SearchBar(props) {
     const navigate = useNavigate();
     
     // TODO: Load data from local storage and load reasonable defaults if not present
 
     const searchRoute = () => {
         // TODO: Add error checking for invalid UIDs
-        // TODO: Store data to local storage        
-        // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
+        if (props.onClick) {
+            props.onClick();
+        }
         navigate(`/hotels?destination=${destinations.find(d => d.uid === selectedDestination).term}&dest_uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=SGD`);
     }
     const today = new Date();
