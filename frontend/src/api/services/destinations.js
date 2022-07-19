@@ -15,7 +15,7 @@ export async function getHotels(params, callback) {
 // check
 export async function getHotel(params, callback) {
     const response = await fetch(
-        `http://localhost:8000/results/${params.get("dest_uid")}?${params.get("hotel_uid")}?checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${Number(params.get("numAdults")) + Number(params.get("numChildren"))}&currency=${params.get("currency")}`
+        `http://localhost:8000/hotels/details/${params.get("hotel_uid")}?dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${Number(params.get("numAdults")) + Number(params.get("numChildren"))}&currency=${params.get("currency")}`
     );
     const hotel = await response.json();
     callback(hotel);

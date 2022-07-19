@@ -177,8 +177,19 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
 
 
 #  TODO: CHECK
-def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency):
+def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency):
     hotel = requests.get(get_hotel_endpoint(hotel_id))
+    print(get_hotel_endpoint(hotel_id))
+    print(
+        get_hotel_details_endpoint(
+            destination_id,
+            hotel_id,
+            checkin,
+            checkout,
+            guests,
+            currency,
+        )
+    )
     rooms_pricing = requests.get(
         get_hotel_details_endpoint(
             destination_id,
@@ -201,7 +212,7 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
         }
         # Set up pricing data
         for room_pricing_data in rooms_pricing.json()["rooms"]:
-            return_data["rooms"][room_pricing_data["rooms"]] = {
+            return_data["rooms"][room_pricing_data["key"]] = {
                 "name": room_pricing_data["roomNormalizedDescription"],
                 # "searchRank": room_pricing_data["searchRank"],
                 "price": room_pricing_data["lowest_converted_price"],
@@ -214,9 +225,10 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
             }
 
         # Add static data to hotel
+        hotel = hotel.json()
         return_data["hotel_details"].update(
             {
-                "id": hotel["id"],
+                "uid": hotel["id"],
                 "latitude": hotel["latitude"],
                 "longitude": hotel["longitude"],
                 # "distance": hotel_static_data["distance"],
@@ -224,9 +236,7 @@ def generate_hotel(destination_id, hotel_id, checkin, checkout, guests, currency
                 "address": hotel["address"],
                 "rating": hotel["rating"],
                 "review": hotel["trustyou"]["score"]["kaligo_overall"],
-                "photo": hotel["image_details"]["prefix"]
-                + str(hotel["default_image_index"])
-                + hotel["image_details"]["suffix"],
+                "images": hotel["image_details"],
                 "description": hotel["description"],
                 "amenities": hotel["amenities"],
             }

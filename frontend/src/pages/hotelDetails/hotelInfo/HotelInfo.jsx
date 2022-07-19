@@ -1,39 +1,40 @@
 import React from "react";
-import PhotoGallery from "../photoGallery/PhotoGallery";
-import StarRatingComponent from "react-star-rating-component";
+import ImageGallery from "react-image-gallery";
 import { Box, Heading } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
 
 function HotelInfo(props) {
+  console.log(props);
+  const images = [];
+  for (let i = 0; i < props.hotel_details.images.count; i++) {
+    images.push({original: props.hotel_details.images.prefix + i + props.hotel_details.images.suffix});
+  }
+  console.log(images);
   return (
-    <Box mt="2" mb="2">
-      <Heading as="h1" size="4xl" ml="2">
-        {props.name}
+    <Box>
+      <Heading>
+        {props.hotel_details.name}
       </Heading>
-      <Box mt="2" mb="2" ml="2">
-        <StarRatingComponent
-          name=""
-          starCount={props.stars}
-          editing={false}
-          renderStarIcon={() => <span>⭐</span>}
-        />
+      <Box>
+        { <StarIcon color="gold" /> * props.hotel_details.rating}
+        { <StarIcon color="grey" /> * (5 - props.hotel_details.rating)}
       </Box>
-      <Heading size="1xl" fontSize="25px" mt="2" mb="2" ml="2">
-        {props.address}
+      <Heading>
+        {props.hotel_details.address}
       </Heading>
-      <Heading size="1xl" fontSize="18px" mt="2" mb="2" ml="2">
-        💕 {props.rating}/100
+      <Heading>
+        💕 {props.hotel_details.rating}/100
       </Heading>
-      <Box mt="2" mb="5">
-        <PhotoGallery images={props.images} />
+      <Box>
+        {/* <ImageGallery items={images} />; */}
       </Box>
-      <Heading size="2xl" mt="2" mb="3" ml="2">
+      <Heading>
         Hotel Overview
       </Heading>
-      <Box mt="2" mb="5" ml="2">
-        {" "}
-        {props.hotelDescription}{" "}
+      <Box>
+        {props.hotel_details.hotelDescription}
       </Box>
-      <Heading size="2xl" mt="2" mb="2" ml="2">
+      <Heading>
         Hotel Amenities
       </Heading>
     </Box>

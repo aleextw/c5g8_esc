@@ -1,10 +1,5 @@
-2022-07-18 00:00:46,654 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 00:00:46,904 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 00:00:46,962 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 00:00:47,752 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 01:58:41,563 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 01:58:51,626 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 01:58:53,605 (ERROR): Exception in ASGI application
+2022-07-19 13:57:22,226 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-19 13:57:22,260 (ERROR): Exception in ASGI application
 Traceback (most recent call last):
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
     conn = connection.create_connection(
@@ -27,7 +22,7 @@ Traceback (most recent call last):
     self.sock = conn = self._new_conn()
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000021050676740>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001F65FFEA3B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
 
 During handling of the above exception, another exception occurred:
 
@@ -38,7 +33,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050676740>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F65FFEA3B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
 
 During handling of the above exception, another exception occurred:
 
@@ -85,10 +80,10 @@ Traceback (most recent call last):
     return await future
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
     result = context.run(func, *args)
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotels.py", line 26, in serve_destination
-    hotels := database.generate_hotels(
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 124, in generate_hotels
-    hotels = requests.get(get_dest_endpoint(destination_id))
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 32, in serve_hotels
+    hotel := database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 181, in generate_hotel
+    hotel = requests.get(get_hotel_endpoint(hotel_id))
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
     return request('get', url, params=params, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
@@ -99,8 +94,9 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050676740>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-2022-07-18 01:58:53,788 (ERROR): Exception in ASGI application
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F65FFEA3B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-19 13:57:46,898 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-19 13:57:46,900 (ERROR): Exception in ASGI application
 Traceback (most recent call last):
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
     conn = connection.create_connection(
@@ -123,7 +119,7 @@ Traceback (most recent call last):
     self.sock = conn = self._new_conn()
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000021050675DB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001F6603E1180>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
 
 During handling of the above exception, another exception occurred:
 
@@ -134,7 +130,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050675DB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E1180>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
 
 During handling of the above exception, another exception occurred:
 
@@ -181,10 +177,10 @@ Traceback (most recent call last):
     return await future
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
     result = context.run(func, *args)
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotels.py", line 26, in serve_destination
-    hotels := database.generate_hotels(
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 124, in generate_hotels
-    hotels = requests.get(get_dest_endpoint(destination_id))
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 32, in serve_hotels
+    hotel := database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 181, in generate_hotel
+    hotel = requests.get(get_hotel_endpoint(hotel_id))
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
     return request('get', url, params=params, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
@@ -195,9 +191,9 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050675DB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-2022-07-18 01:58:53,918 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 01:58:53,920 (ERROR): Exception in ASGI application
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E1180>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-19 13:57:51,184 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-19 13:57:51,189 (ERROR): Exception in ASGI application
 Traceback (most recent call last):
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
     conn = connection.create_connection(
@@ -220,7 +216,7 @@ Traceback (most recent call last):
     self.sock = conn = self._new_conn()
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
     raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000021050674B50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001F6603E1660>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
 
 During handling of the above exception, another exception occurred:
 
@@ -231,7 +227,7 @@ Traceback (most recent call last):
     retries = retries.increment(
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050674B50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E1660>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
 
 During handling of the above exception, another exception occurred:
 
@@ -278,10 +274,10 @@ Traceback (most recent call last):
     return await future
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
     result = context.run(func, *args)
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotels.py", line 26, in serve_destination
-    hotels := database.generate_hotels(
-  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 124, in generate_hotels
-    hotels = requests.get(get_dest_endpoint(destination_id))
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 32, in serve_hotels
+    hotel := database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 181, in generate_hotel
+    hotel = requests.get(get_hotel_endpoint(hotel_id))
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
     return request('get', url, params=params, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
@@ -292,771 +288,101 @@ Traceback (most recent call last):
     r = adapter.send(request, **kwargs)
   File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels?destination_id=YCcf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021050674B50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-2022-07-18 01:59:46,953 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 01:59:47,215 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 01:59:47,320 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 01:59:47,775 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 02:00:46,946 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:00:47,216 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 02:00:47,289 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:00:48,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 02:01:46,967 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:01:47,268 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 02:01:47,347 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:01:48,267 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 02:02:46,943 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:02:47,232 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 02:02:47,319 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:02:48,211 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 02:03:46,946 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:03:47,189 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 02:03:47,265 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 02:03:48,192 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:33:44,167 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:33:44,446 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:33:44,509 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:33:45,368 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:33:47,194 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:33:47,444 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:33:47,504 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:33:48,356 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-18&checkout=2022-07-19&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:47:18,598 (INFO): Started server process [28216]
-2022-07-18 08:47:18,598 (INFO): Waiting for application startup.
-2022-07-18 08:47:18,599 (INFO): Application startup complete.
-2022-07-18 08:47:18,600 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-2022-07-18 08:47:18,669 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:18,954 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:47:19,021 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:19,414 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:47:26,615 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:26,859 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:47:26,926 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:27,781 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:47:37,180 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:37,590 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:47:37,635 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:38,482 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:47:46,631 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:46,878 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:47:46,943 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:47,836 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:47:56,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:57,185 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:47:57,260 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:47:58,124 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:06,151 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:06,385 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:06,452 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:07,217 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:16,942 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:17,249 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:17,308 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:18,059 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:26,628 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:26,860 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:26,914 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:27,842 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:36,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:37,181 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:37,242 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:38,183 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:46,616 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:46,874 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:46,932 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:47,750 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:48:56,933 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:57,189 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:48:57,245 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:48:58,050 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:06,620 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:06,855 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:06,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:07,682 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:16,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:17,172 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:17,227 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:17,981 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:26,627 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:26,880 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:26,936 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:27,787 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:36,935 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:37,158 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:37,226 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:37,967 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:46,617 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:46,846 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:46,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:47,681 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:49:56,943 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:57,169 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:49:57,222 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:49:57,967 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:06,739 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:06,987 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:07,126 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:07,958 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:16,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:17,181 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:17,240 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:18,071 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:26,618 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:26,848 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:26,907 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:27,683 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:36,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:37,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:37,250 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:38,071 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:46,623 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:46,866 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:46,952 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:47,757 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:50:56,454 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:56,679 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:50:56,747 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:50:57,546 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:08,922 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:09,158 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:09,233 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:10,054 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:18,631 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:18,863 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:18,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:19,762 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:28,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:29,169 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:29,228 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:29,990 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:38,629 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:38,859 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:38,912 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:39,676 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:48,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:49,165 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:49,265 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:50,145 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:51:58,623 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:58,870 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:51:58,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:51:59,782 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:08,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:09,171 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:09,221 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:09,973 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:18,620 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:18,865 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:18,928 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:19,831 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:28,612 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:28,829 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:28,901 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:29,676 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:38,627 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:38,884 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:39,020 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:39,982 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:48,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:49,241 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:49,327 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:50,097 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:52:58,629 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:58,866 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:52:58,939 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:52:59,749 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:53:08,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:09,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:53:09,219 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:10,047 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:53:18,625 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:18,854 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:53:18,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:19,830 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:53:28,919 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:29,146 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:53:29,194 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:29,983 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 08:53:38,624 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:38,872 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 08:53:38,936 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 08:53:39,742 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:00,385 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:00,663 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:00,735 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:01,111 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:10,059 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:10,278 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:10,365 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:11,167 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:20,376 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:20,618 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:20,680 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:21,511 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:30,061 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:30,270 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:30,333 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:31,134 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:40,379 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:40,609 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:40,668 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:41,462 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:01:50,081 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:50,328 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:01:50,397 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:01:51,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:00,375 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:00,580 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:00,642 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:01,509 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:10,064 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:10,281 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:10,353 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:11,215 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:20,379 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:20,617 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:20,695 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:21,562 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:30,079 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:30,317 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:30,385 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:31,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:40,383 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:40,616 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:40,679 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:41,517 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:02:50,073 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:50,274 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:02:50,331 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:02:51,152 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:00,376 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:00,613 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:00,682 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:01,447 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:10,621 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:10,931 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:11,000 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:11,974 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:20,921 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:21,174 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:21,243 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:22,107 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:30,623 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:30,904 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:30,963 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:31,731 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:40,935 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:41,175 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:41,253 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:42,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:03:50,612 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:50,872 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:03:50,949 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:03:51,722 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:00,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:01,158 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:01,222 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:02,046 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:10,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:11,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:11,245 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:12,044 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:20,623 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:20,853 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:20,918 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:21,736 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:30,929 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:31,166 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:31,223 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:32,024 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:40,625 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:40,873 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:40,939 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:41,763 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:04:50,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:51,166 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:04:51,227 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:04:52,039 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:05:00,651 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:00,920 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:05:00,980 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:01,809 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:05:44,933 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:45,177 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:05:45,246 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:46,119 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:05:54,607 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:54,844 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:05:54,910 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:05:55,752 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:04,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:05,330 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:05,379 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:06,224 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:14,616 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:14,854 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:14,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:15,742 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:24,923 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:25,166 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:25,237 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:26,112 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:34,624 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:34,871 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:34,954 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:35,774 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:44,947 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:45,180 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:45,254 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:46,044 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:06:54,610 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:54,867 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:06:54,925 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:06:55,776 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:04,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:05,174 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:05,257 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:06,114 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:14,626 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:14,861 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:14,923 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:15,818 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:24,863 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:25,115 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:25,191 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:26,128 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:34,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:34,770 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:34,860 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:35,823 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:44,553 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:44,784 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:44,850 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:45,667 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:07:54,872 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:55,128 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:07:55,196 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:07:56,023 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:08:17,846 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:18,116 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:08:18,193 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:19,180 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:08:27,534 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:27,767 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:08:27,836 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:28,639 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:08:37,858 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:38,072 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:08:38,134 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:38,962 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:08:47,618 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:47,863 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:08:47,977 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:48,784 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:08:57,933 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:58,163 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:08:58,236 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:08:59,043 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:07,609 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:07,854 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:07,928 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:08,722 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:17,933 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:18,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:18,232 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:18,980 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:27,612 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:27,845 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:27,912 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:28,669 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:37,923 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:38,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:38,227 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:39,050 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:47,613 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:47,842 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:47,915 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:48,710 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:09:57,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:58,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:09:58,219 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:09:59,045 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:07,616 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:07,850 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:07,916 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:08,679 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:17,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:18,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:18,249 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:19,056 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:27,616 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:28,062 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:28,224 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:29,165 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:37,932 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:38,175 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:38,244 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:39,064 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:47,614 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:47,851 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:48,172 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:48,924 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:10:57,919 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:58,150 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:10:58,216 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:10:58,979 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:07,610 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:07,917 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:07,979 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:08,742 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:17,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:18,156 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:18,225 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:19,012 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:27,609 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:27,868 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:27,940 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:28,763 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:37,935 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:38,168 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:38,229 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:39,050 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:47,619 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:47,846 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:47,921 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:48,731 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:11:57,927 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:58,167 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:11:58,232 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:11:59,068 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:12:07,620 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:07,849 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:12:07,916 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:08,725 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:12:17,924 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:18,172 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:12:18,234 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:19,036 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:12:27,617 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:27,858 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:12:27,927 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:28,782 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:12:37,927 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:38,171 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:12:38,239 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:12:39,036 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:13:35,189 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:35,442 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:13:35,509 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:36,465 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:13:44,877 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:45,112 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:13:45,180 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:46,023 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:13:55,193 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:55,443 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:13:55,529 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:13:56,354 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:04,887 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:05,124 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:05,189 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:06,038 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:15,929 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:16,157 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:16,214 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:17,117 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:25,610 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:25,884 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:25,964 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:26,919 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:35,201 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:35,448 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:35,516 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:36,386 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:45,209 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:45,453 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:45,532 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:46,447 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:14:54,896 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:55,137 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:14:55,188 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:14:56,037 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:05,201 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:05,434 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:05,506 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:06,335 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:14,889 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:15,136 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:15,210 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:16,363 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:25,206 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:25,514 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:25,595 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:26,513 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:34,893 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:35,166 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:35,222 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:36,022 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:45,184 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:45,433 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:45,483 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:46,353 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:15:55,611 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:56,081 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:15:56,169 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:15:57,052 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:05,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:06,171 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:06,246 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:07,369 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:15,612 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:15,911 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:15,971 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:16,752 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:25,922 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:26,174 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:26,270 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:27,049 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:35,663 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:35,976 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:36,040 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:36,828 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:45,920 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:46,211 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:46,284 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:47,114 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:16:55,611 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:55,869 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:16:55,925 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:16:56,775 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:17:06,084 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:17:06,396 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:17:06,488 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:17:07,340 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:22:07,532 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:22:07,818 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:22:08,021 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:22:09,001 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:22:20,987 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:22:21,219 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:22:21,367 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:22:22,227 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:23:32,902 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:33,169 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:23:33,231 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:34,098 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:23:42,603 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:42,832 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:23:42,890 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:43,698 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:23:52,917 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:53,177 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:23:53,243 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:23:54,173 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:02,606 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:02,827 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:02,910 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:03,698 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:12,918 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:13,161 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:13,224 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:14,024 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:22,600 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:22,822 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:22,880 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:23,660 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:32,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:33,167 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:33,225 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:33,998 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:42,607 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:42,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:42,875 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:43,660 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:24:52,918 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:53,138 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:24:53,203 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:24:54,067 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:25:02,594 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:02,827 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:25:02,891 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:03,700 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:25:12,919 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:13,134 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:25:13,344 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:14,275 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:25:21,697 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:21,924 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:25:21,979 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:22,823 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:25:41,364 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:41,585 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:25:41,647 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:42,509 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:25:51,054 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:51,313 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:25:51,453 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:25:52,285 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:01,914 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:02,157 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:02,223 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:03,005 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:11,604 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:11,822 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:11,884 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:12,731 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:21,919 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:22,165 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:22,230 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:23,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:31,602 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:31,887 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:31,948 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:32,770 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:41,900 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:42,121 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:42,182 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:43,013 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:26:51,605 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:51,818 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:26:51,890 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:26:52,785 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:01,915 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:02,179 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:02,246 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:03,041 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:11,914 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:12,180 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:12,257 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:13,168 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:21,922 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:22,227 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:22,287 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:23,114 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:31,917 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:32,207 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:32,259 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:33,105 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:41,919 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:42,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:42,223 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:43,028 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:27:51,607 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:51,833 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:27:51,903 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:27:52,711 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:28:10,929 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:11,167 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:28:11,245 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:12,189 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:28:20,621 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:20,836 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:28:20,901 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:21,711 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:28:30,921 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:31,284 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:28:31,375 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:32,165 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:28:41,604 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:41,832 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:28:41,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:42,800 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:28:51,912 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:52,124 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:28:52,188 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:28:53,002 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:29:05,917 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:06,118 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=null HTTP/1.1" 200 None
-2022-07-18 10:29:06,121 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:06,404 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=null&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
-2022-07-18 10:29:44,189 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:44,429 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:29:44,492 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:45,409 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:29:53,881 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:54,123 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:29:54,176 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:29:55,018 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:30:04,185 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:30:04,424 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:30:04,484 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:30:05,315 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:30:44,985 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:30:45,233 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:30:45,292 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:30:46,129 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:04,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:05,169 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:05,237 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:06,121 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:14,595 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:14,837 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:15,123 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:16,021 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:24,911 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:25,171 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:25,241 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:26,007 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:34,601 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:34,820 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:34,893 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:35,710 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:44,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:45,185 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:45,241 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:46,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:31:54,604 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:54,830 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:31:54,884 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:31:55,800 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:32:11,571 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:32:11,827 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:32:11,881 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:32:12,776 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:01,487 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:01,716 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:01,777 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:02,616 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:11,908 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:12,128 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:12,184 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:13,115 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:21,162 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:21,488 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:21,542 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:22,325 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:31,471 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:31,704 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:31,767 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:32,533 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:41,596 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:41,880 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:42,105 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:42,894 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:33:51,920 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:52,134 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:33:52,184 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:33:53,019 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:34:01,600 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:01,880 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:34:01,937 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:02,770 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:34:11,907 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:12,133 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:34:12,202 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:12,239 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 429 None
-2022-07-18 10:34:41,143 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:41,383 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:34:41,441 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:34:42,382 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
-2022-07-18 10:34:56,110 (INFO): Shutting down
-2022-07-18 10:34:56,224 (INFO): Waiting for application shutdown.
-2022-07-18 10:34:56,225 (INFO): Application shutdown complete.
-2022-07-18 10:34:56,225 (INFO): Finished server process [28216]
-2022-07-18 10:35:22,889 (INFO): Started server process [12916]
-2022-07-18 10:35:22,890 (INFO): Waiting for application startup.
-2022-07-18 10:35:22,891 (INFO): Application startup complete.
-2022-07-18 10:35:40,672 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:35:40,921 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
-2022-07-18 10:35:40,982 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
-2022-07-18 10:35:41,808 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-19&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E1660>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2022-07-19 13:57:59,899 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-19 13:57:59,901 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001F6603E38B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E38B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 32, in serve_hotels
+    hotel := database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 181, in generate_hotel
+    hotel = requests.get(get_hotel_endpoint(hotel_id))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='hotelapi.loyalty.dev', port=443): Max retries exceeded with url: /api/hotels/Jot8 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001F6603E38B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))

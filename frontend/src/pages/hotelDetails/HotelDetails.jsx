@@ -33,52 +33,48 @@ export default class HotelDetails extends Component {
   }
 
   render() {
-      console.log(this.state.hotel.completed);
-      if (this.state.hotel.completed === true) {
-          clearInterval(this.updateTimer);
-      }
+    console.log(this.state.hotel.completed);
+    console.log(this.state.hotel.hotel_details);
+    console.log(this.state.hotel.rooms);
 
-      if (this.state.hotel.rooms.length > 0) {
-          return ( //display static hotel info
-            <Box>
-            <HotelInfo
-              name={this.state.hotel.hotel_details.name}
-              address={this.state.hotel.hotel_details.address}
-              stars={this.state.hotel.hotel_details.stars}
-              rating={this.state.hotel.hotel_details.rating}
-              images={this.state.hotel.hotel_details.images}
-              hotelDescription={this.state.hotel.hotel_details.description}
-            />
-            <Spacer />
-            <AspectRatio ratio={16 / 9}>
-              <HotelMap
-                lat={this.state.hotel.hotel_details.lat}
-                long={this.state.hotel.hotel_details.long}
-                name={this.state.hotel.hotel_details.name}
-              />
-            </AspectRatio>
-              { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
-                      return (  //display each room's info
-                        <li>
-                          <HotelRooms
-                            name={room["name"]}
-                            description={room["description"]}
-                            price={room["price"]}
-                            images={room["images"]} />
-                        </li>
-                      )})}
-            </Box>                  
-          );
+    if (this.state.hotel.completed === true) {
+        clearInterval(this.updateTimer);
     }
 
-    else {
+    if (this.state.hotel.rooms.length > 0) {
+      return ( //display static hotel info
+        <Box>
+        <HotelInfo
+          hotel_details = {this.state.hotel.hotel_details}
+        />
+        <Spacer />
+        <AspectRatio ratio={16 / 9}>
+          <HotelMap
+            lat={this.state.hotel.hotel_details.latitude}
+            long={this.state.hotel.hotel_details.longitude}
+            name={this.state.hotel.hotel_details.name}
+          />
+        </AspectRatio>
+          { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
+                  return (  //display each room's info
+                    <li>
+                      <HotelRooms
+                        name={room["name"]}
+                        description={room["description"]}
+                        price={room["price"]}
+                        images={room["images"]} />
+                    </li>
+                  )})}
+        </Box>                  
+      );
+    } else {
       return (<Box>
         <Center>
             <Heading size="lg">
                 No hotel found!
             </Heading>
         </Center>
-    </Box>);
+      </Box>);
     }
   }
 }
