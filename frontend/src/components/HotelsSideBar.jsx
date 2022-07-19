@@ -20,18 +20,21 @@ import {
   FiMenu,
 } from 'react-icons/fi';
 
-const LinkItems = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
-  { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
-];
+// const LinkItems = [
+//   { name: 'Home', icon: FiHome },
+//   { name: 'Trending', icon: FiTrendingUp },
+//   { name: 'Explore', icon: FiCompass },
+//   { name: 'Favourites', icon: FiStar },
+//   { name: 'Settings', icon: FiSettings },
+// ];
 
 export default function SideBar({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box
+    maxHeight= "100%"
+    overflow= "auto"
+    bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
@@ -71,33 +74,33 @@ const SidebarContent = ({ onClose, ...rest }) => {
   );
 };
 
-const NavItem = ({ icon, children, ...rest }) => {
-  return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
-      <Flex
-        align="center"
-        p="4"
-        mx="4"
-        borderRadius="lg"
-        role="group"
-        cursor="pointer"
-        _hover={{
-          bg: 'cyan.400',
-          color: 'white',
-        }}
-        {...rest}>
-        {icon && (
-          <Icon
-            mr="4"
-            fontSize="16"
-            _groupHover={{
-              color: 'white',
-            }}
-            as={icon}
-          />
-        )}
-        {children}
-      </Flex>
-    </Link>
-  );
-};
+// const NavItem = ({ icon, children, ...rest }) => {
+//   return (
+//     <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+//       <Flex
+//         align="center"
+//         p="4"
+//         mx="4"
+//         borderRadius="lg"
+//         role="group"
+//         cursor="pointer"
+//         _hover={{
+//           bg: 'cyan.400',
+//           color: 'white',
+//         }}
+//         {...rest}>
+//         {icon && (
+//           <Icon
+//             mr="4"
+//             fontSize="16"
+//             _groupHover={{
+//               color: 'white',
+//             }}
+//             as={icon}
+//           />
+//         )}
+//         {children}
+//       </Flex>
+//     </Link>
+//   );
+// };

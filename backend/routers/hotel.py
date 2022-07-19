@@ -8,9 +8,9 @@ router = APIRouter()
 logger = logging.getLogger()
 
 
-@router.get("/hotels/details/{hotel_id}")
+@router.get("/results/hotel/{hotel_uid}")
 def serve_hotels(
-    hotel_id: str,
+    hotel_uid: str,
     dest_uid: str,
     checkInDate: str,
     checkOutDate: str,
@@ -21,7 +21,7 @@ def serve_hotels(
     Given a destination_id and other optional query parameters, return the
     list of hotels corresponding to that destination, along with their pricing information
     """
-    print(hotel_id)  # Need this
+    print(hotel_uid)  # Need this
     print(dest_uid)
     print(checkInDate)  # Need this
     print(checkOutDate)  # Need this
@@ -30,7 +30,7 @@ def serve_hotels(
 
     if (
         hotel := database.generate_hotel(
-            hotel_id, dest_uid, checkInDate, checkOutDate, guests, currency
+            hotel_uid, dest_uid, checkInDate, checkOutDate, guests, currency
         )
     ) == -1:
         # TODO: Check if HTTP 400 is the appropriate exception to raise

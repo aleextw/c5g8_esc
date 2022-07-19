@@ -29,7 +29,7 @@ export default function SideBar({ onClose, ...rest }) {
   }, []);
   // TODO: Fix background colour / decide on what colour to use
   return (
-      <Center h="100vh" backgroundColor="white" p="5">
+      <Center h="100%" backgroundColor="white" p="5">
         <Stack h="100%" w="100%">
           <Stack>
               <Heading size="sm" color="black">Hotel Name</Heading>
