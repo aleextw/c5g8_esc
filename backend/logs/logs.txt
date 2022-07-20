@@ -5699,3 +5699,1775 @@ KeyError: 'id'
 2022-07-20 16:06:26,810 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
 2022-07-20 16:06:26,816 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
 2022-07-20 16:06:27,491 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:16:13,633 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:16:13,817 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:16:13,863 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:16:14,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:17:43,663 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:17:43,854 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:17:43,858 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:17:44,848 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:04,551 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:04,655 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:04,659 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:05,429 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:09,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:09,660 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:09,665 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:10,336 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:14,548 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:14,666 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:14,672 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:15,392 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:19,552 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:19,664 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:19,669 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:20,499 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:24,559 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:24,697 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:24,705 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:25,419 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:29,553 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:29,687 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:29,692 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:30,420 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:34,558 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:34,648 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:34,653 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:35,382 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:39,717 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:39,826 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:39,836 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:40,532 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:44,124 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:44,219 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:44,224 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:44,915 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:52,736 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:52,841 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:52,846 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:53,542 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:18:57,728 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:57,863 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:18:57,869 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:18:58,543 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:02,734 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:02,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:02,830 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:03,504 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:08,556 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:08,652 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:08,657 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:09,312 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:13,555 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:13,645 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:13,649 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:14,338 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:18,549 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:18,668 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:18,676 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:19,398 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:23,613 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:23,804 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:23,813 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:24,523 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:36,975 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:37,073 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:37,078 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:37,786 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:41,971 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:42,085 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:42,091 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:42,787 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:47,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:47,657 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:47,662 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:48,505 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:52,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:52,654 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:52,659 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:53,321 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:19:57,559 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:57,680 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:19:57,686 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:19:58,385 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:20:02,560 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:20:02,665 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:20:02,670 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:20:03,332 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:49:44,564 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:45,593 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:49:45,598 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:47,913 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:49:49,549 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:49,673 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:49:49,677 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:50,538 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:49:54,561 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:54,678 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:49:54,684 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:55,341 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:49:59,565 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:49:59,862 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:49:59,868 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:04,537 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:04,561 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:04,734 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:04,737 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:05,868 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:09,555 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:10,181 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:10,186 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:10,980 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:14,568 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:14,830 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:14,836 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:16,557 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:19,568 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:19,923 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:19,928 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:21,824 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:24,550 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:24,813 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:24,820 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:27,414 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:29,552 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:29,699 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:29,703 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:31,227 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:34,571 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:34,722 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:34,726 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:38,131 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:39,549 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:39,767 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:39,772 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:44,718 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:44,731 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:45,003 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:45,025 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:47,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:49,575 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:50,212 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:50,217 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:53,222 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:54,551 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:54,734 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:50:54,740 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:50:56,857 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:50:59,550 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:00,312 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:00,317 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:04,965 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:04,979 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:05,153 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:05,157 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:07,763 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:09,548 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:10,034 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:10,039 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:11,890 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:14,548 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:14,871 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:14,876 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:17,224 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:19,573 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:19,833 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:19,843 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:22,823 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:25,539 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:25,628 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:25,632 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:28,621 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:30,529 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:30,643 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:30,647 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:33,120 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:35,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:37,624 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:37,628 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:40,241 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:40,535 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:40,655 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:40,658 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:43,047 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:45,527 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:45,647 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:45,650 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:53,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:53,647 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:53,840 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:51:53,844 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:51:57,669 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:51:57,681 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:00,627 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:00,631 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:02,129 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:02,143 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:02,246 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:02,250 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:04,045 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:05,536 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:05,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:05,830 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:08,655 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:10,540 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:10,653 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:10,657 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:12,336 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:15,537 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:16,076 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:16,080 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:16,813 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:20,534 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:20,650 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:20,656 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:21,383 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:25,538 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:26,816 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:26,822 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:27,559 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:30,538 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:30,616 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:30,622 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:31,365 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:35,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:35,675 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:35,682 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:38,535 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:40,575 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:40,704 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:40,713 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:41,464 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:45,539 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:45,660 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:45,665 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:47,537 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:50,537 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:50,661 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:50,666 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:52,336 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:52:55,529 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:55,622 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:52:55,626 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:52:57,540 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:00,550 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:00,643 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:00,647 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:01,353 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:05,544 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:05,707 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:05,714 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:06,544 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:10,539 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:10,718 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:10,724 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:12,738 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:15,538 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:16,237 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:16,242 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:18,756 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:20,526 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:21,035 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:21,041 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:23,949 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:25,530 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:25,660 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:25,664 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:28,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:30,522 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:30,671 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:30,677 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:31,666 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:35,541 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:35,845 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:35,851 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:38,067 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:40,535 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:40,639 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:40,643 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:41,437 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:45,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:45,727 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:45,733 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:47,739 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:50,550 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:53,333 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:53,337 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:54,824 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:53:55,535 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:56,448 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:53:56,454 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:53:57,259 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:54:00,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:54:00,647 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:54:00,652 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:54:01,488 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:54:04,574 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:54:04,703 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:54:04,711 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:54:05,593 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:06,548 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:08,521 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:08,526 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:13,237 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:13,252 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:14,144 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:14,148 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:16,031 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:16,537 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:17,927 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:17,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:19,237 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:21,535 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:21,671 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:21,677 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:23,517 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:26,536 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:28,220 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:28,225 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:30,161 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 16:55:31,104 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:31,229 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 16:55:31,233 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 16:55:36,639 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:08:28,837 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:08:28,960 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:08:28,964 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:08:30,160 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:26:53,688 (INFO): Shutting down
+2022-07-20 17:26:53,797 (INFO): Waiting for application shutdown.
+2022-07-20 17:26:53,798 (INFO): Application shutdown complete.
+2022-07-20 17:26:53,800 (INFO): Finished server process [5032]
+2022-07-20 17:26:58,717 (INFO): Started server process [29140]
+2022-07-20 17:26:58,718 (INFO): Waiting for application startup.
+2022-07-20 17:26:58,719 (INFO): Application startup complete.
+2022-07-20 17:30:13,444 (INFO): Started server process [5872]
+2022-07-20 17:30:13,445 (INFO): Waiting for application startup.
+2022-07-20 17:30:13,446 (INFO): Application startup complete.
+2022-07-20 17:31:34,393 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:31:34,510 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:31:34,517 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:31:35,759 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:31:39,379 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:31:39,709 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:31:39,716 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:31:40,910 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:32:33,084 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:32:33,205 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:32:33,210 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:32:34,244 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:32:38,082 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:32:38,349 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:32:38,357 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:32:39,096 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:34:32,055 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:34:32,255 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:34:32,264 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:34:32,937 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:34:36,747 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:34:36,870 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:34:36,875 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:34:37,645 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:36:52,508 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:36:52,629 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:36:52,635 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:36:54,349 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:36:57,196 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:36:57,308 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:36:57,313 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:36:58,158 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:37:02,199 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:37:02,294 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:37:02,302 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:37:03,258 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:38:26,196 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:38:26,439 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 17:38:26,445 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 17:38:27,242 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 17:49:20,596 (INFO): Started server process [32676]
+2022-07-20 17:49:20,597 (INFO): Waiting for application startup.
+2022-07-20 17:49:20,598 (INFO): Application startup complete.
+2022-07-20 17:55:19,683 (INFO): Started server process [21688]
+2022-07-20 17:55:19,684 (INFO): Waiting for application startup.
+2022-07-20 17:55:19,685 (INFO): Application startup complete.
+2022-07-20 17:58:24,847 (INFO): Started server process [31208]
+2022-07-20 17:58:24,849 (INFO): Waiting for application startup.
+2022-07-20 17:58:24,852 (INFO): Application startup complete.
+2022-07-20 17:59:19,365 (INFO): Shutting down
+2022-07-20 17:59:19,473 (INFO): Waiting for application shutdown.
+2022-07-20 17:59:19,474 (INFO): Application shutdown complete.
+2022-07-20 17:59:19,475 (INFO): Finished server process [31208]
+2022-07-20 17:59:21,324 (INFO): Started server process [22952]
+2022-07-20 17:59:21,324 (INFO): Waiting for application startup.
+2022-07-20 17:59:21,325 (INFO): Application startup complete.
+2022-07-20 18:07:28,539 (INFO): Started server process [25580]
+2022-07-20 18:07:28,540 (INFO): Waiting for application startup.
+2022-07-20 18:07:28,541 (INFO): Application startup complete.
+2022-07-20 18:07:53,493 (INFO): Started server process [8924]
+2022-07-20 18:07:53,493 (INFO): Waiting for application startup.
+2022-07-20 18:07:53,494 (INFO): Application startup complete.
+2022-07-20 18:15:14,405 (INFO): Started server process [24724]
+2022-07-20 18:15:14,405 (INFO): Waiting for application startup.
+2022-07-20 18:15:14,406 (INFO): Application startup complete.
+2022-07-20 18:17:57,137 (INFO): Started server process [15072]
+2022-07-20 18:17:57,138 (INFO): Waiting for application startup.
+2022-07-20 18:17:57,139 (INFO): Application startup complete.
+2022-07-20 18:19:24,968 (INFO): Started server process [23124]
+2022-07-20 18:19:24,969 (INFO): Waiting for application startup.
+2022-07-20 18:19:24,969 (INFO): Application startup complete.
+2022-07-20 18:23:41,421 (INFO): Started server process [27420]
+2022-07-20 18:23:41,422 (INFO): Waiting for application startup.
+2022-07-20 18:23:41,423 (INFO): Application startup complete.
+2022-07-20 18:23:46,257 (INFO): Started server process [2028]
+2022-07-20 18:23:46,258 (INFO): Waiting for application startup.
+2022-07-20 18:23:46,258 (INFO): Application startup complete.
+2022-07-20 18:32:02,652 (INFO): Started server process [27716]
+2022-07-20 18:32:02,653 (INFO): Waiting for application startup.
+2022-07-20 18:32:02,654 (INFO): Application startup complete.
+2022-07-20 18:32:13,316 (INFO): Started server process [10300]
+2022-07-20 18:32:13,317 (INFO): Waiting for application startup.
+2022-07-20 18:32:13,318 (INFO): Application startup complete.
+2022-07-20 18:32:41,419 (INFO): Started server process [9172]
+2022-07-20 18:32:41,420 (INFO): Waiting for application startup.
+2022-07-20 18:32:41,421 (INFO): Application startup complete.
+2022-07-20 18:34:14,463 (INFO): Started server process [30964]
+2022-07-20 18:34:14,464 (INFO): Waiting for application startup.
+2022-07-20 18:34:14,465 (INFO): Application startup complete.
+2022-07-20 18:34:46,316 (INFO): Started server process [5924]
+2022-07-20 18:34:46,317 (INFO): Waiting for application startup.
+2022-07-20 18:34:46,317 (INFO): Application startup complete.
+2022-07-20 18:35:10,550 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:10,696 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:10,704 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:11,110 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:15,237 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:15,342 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:15,349 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:16,038 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:20,542 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:20,671 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:20,676 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:21,297 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:25,542 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:25,624 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:25,630 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:26,410 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:30,861 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:30,947 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:30,953 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:31,614 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:35,542 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:35,639 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:35,644 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:36,301 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:40,851 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:40,950 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:40,956 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:41,605 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:45,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:45,641 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:45,646 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:46,326 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:50,848 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:50,935 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:50,942 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:51,593 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:35:55,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:55,640 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:35:55,645 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:35:56,333 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:00,543 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:00,652 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:00,659 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:01,378 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:05,535 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:05,642 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:05,648 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:06,440 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:10,549 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:10,636 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:10,642 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:11,277 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:15,549 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:15,630 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:15,636 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:16,318 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:20,539 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:20,870 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:20,878 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:21,576 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:25,545 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:25,637 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:25,643 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:26,336 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:36:30,563 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:30,653 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 18:36:30,659 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 18:36:31,317 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 18:48:39,303 (INFO): Started server process [19600]
+2022-07-20 18:48:39,304 (INFO): Waiting for application startup.
+2022-07-20 18:48:39,304 (INFO): Application startup complete.
+2022-07-20 18:50:05,638 (INFO): Started server process [15228]
+2022-07-20 18:50:05,638 (INFO): Waiting for application startup.
+2022-07-20 18:50:05,639 (INFO): Application startup complete.
+2022-07-20 18:50:12,528 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 283, in create_booking
+    .execute(select(Booking).where(Booking.id == id).execute())
+  File "<string>", line 2, in execute
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\deprecations.py", line 401, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\base.py", line 963, in execute
+    raise exc.UnboundExecutionError(msg)
+sqlalchemy.exc.UnboundExecutionError: This Select is not directly bound to a Connection or Engine. Use the .execute() method of a Connection or Engine to execute this construct.
+2022-07-20 18:51:07,538 (INFO): Started server process [21408]
+2022-07-20 18:51:07,538 (INFO): Waiting for application startup.
+2022-07-20 18:51:07,539 (INFO): Application startup complete.
+2022-07-20 18:51:07,557 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 284, in create_booking
+    .execute(select(Booking).where(Booking.id == id).execute())
+  File "<string>", line 2, in execute
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\deprecations.py", line 401, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\base.py", line 963, in execute
+    raise exc.UnboundExecutionError(msg)
+sqlalchemy.exc.UnboundExecutionError: This Select is not directly bound to a Connection or Engine. Use the .execute() method of a Connection or Engine to execute this construct.
+2022-07-20 18:53:12,453 (INFO): Started server process [29348]
+2022-07-20 18:53:12,454 (INFO): Waiting for application startup.
+2022-07-20 18:53:12,455 (INFO): Application startup complete.
+2022-07-20 18:53:13,980 (INFO): Shutting down
+2022-07-20 18:53:14,088 (INFO): Waiting for application shutdown.
+2022-07-20 18:53:14,089 (INFO): Application shutdown complete.
+2022-07-20 18:53:14,089 (INFO): Finished server process [29348]
+2022-07-20 18:53:17,510 (INFO): Started server process [23452]
+2022-07-20 18:53:17,510 (INFO): Waiting for application startup.
+2022-07-20 18:53:17,511 (INFO): Application startup complete.
+2022-07-20 18:53:49,180 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 283, in create_booking
+    .execute(select(Booking).where(Booking.id == id).execute())
+  File "<string>", line 2, in execute
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\deprecations.py", line 401, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\base.py", line 963, in execute
+    raise exc.UnboundExecutionError(msg)
+sqlalchemy.exc.UnboundExecutionError: This Select is not directly bound to a Connection or Engine. Use the .execute() method of a Connection or Engine to execute this construct.
+2022-07-20 18:56:52,490 (INFO): Started server process [20648]
+2022-07-20 18:56:52,491 (INFO): Waiting for application startup.
+2022-07-20 18:56:52,492 (INFO): Application startup complete.
+2022-07-20 18:56:53,870 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 292, in create_booking
+    booking_price=booking.price,
+AttributeError: 'Booking' object has no attribute 'price'
+2022-07-20 18:57:06,710 (INFO): Started server process [28804]
+2022-07-20 18:57:06,710 (INFO): Waiting for application startup.
+2022-07-20 18:57:06,711 (INFO): Application startup complete.
+2022-07-20 18:57:07,895 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 289, in create_booking
+    booking_entry = Booking(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1157, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 459, in __set__
+    self.impl.set(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1563, in set
+    raise TypeError(
+TypeError: Incompatible collection type: str is not list-like
+2022-07-20 18:59:10,486 (INFO): Started server process [23464]
+2022-07-20 18:59:10,487 (INFO): Waiting for application startup.
+2022-07-20 18:59:10,488 (INFO): Application startup complete.
+2022-07-20 18:59:12,810 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 296, in create_booking
+    booking_entry = Booking(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1157, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 459, in __set__
+    self.impl.set(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1563, in set
+    raise TypeError(
+TypeError: Incompatible collection type: Row is not list-like
+2022-07-20 19:01:26,253 (INFO): Started server process [11828]
+2022-07-20 19:01:26,254 (INFO): Waiting for application startup.
+2022-07-20 19:01:26,254 (INFO): Application startup complete.
+2022-07-20 19:01:27,352 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 296, in create_booking
+    booking_entry = Booking(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1157, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 459, in __set__
+    self.impl.set(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1602, in set
+    collections.bulk_replace(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 843, in bulk_replace
+    appender(member, _sa_initiator=initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 1169, in append
+    item = __set(self, item, _sa_initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 1134, in __set
+    item = executor.fire_append_event(item, _sa_initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 753, in fire_append_event
+    return self.attr.fire_append_event(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1429, in fire_append_event
+    value = fn(state, value, initiator or self._append_token)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1765, in emit_backref_from_collection_append_event
+    child_state, child_dict = instance_state(child), instance_dict(child)
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+2022-07-20 19:01:37,720 (INFO): Started server process [29212]
+2022-07-20 19:01:37,721 (INFO): Waiting for application startup.
+2022-07-20 19:01:37,722 (INFO): Application startup complete.
+2022-07-20 19:01:37,755 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 296, in create_booking
+    booking_entry = Booking(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1157, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 459, in __set__
+    self.impl.set(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1602, in set
+    collections.bulk_replace(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 843, in bulk_replace
+    appender(member, _sa_initiator=initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 1169, in append
+    item = __set(self, item, _sa_initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 1134, in __set
+    item = executor.fire_append_event(item, _sa_initiator)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\collections.py", line 753, in fire_append_event
+    return self.attr.fire_append_event(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1429, in fire_append_event
+    value = fn(state, value, initiator or self._append_token)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1765, in emit_backref_from_collection_append_event
+    child_state, child_dict = instance_state(child), instance_dict(child)
+AttributeError: Could not locate column in row for column '_sa_instance_state'
+2022-07-20 19:03:33,009 (INFO): Started server process [25480]
+2022-07-20 19:03:33,009 (INFO): Waiting for application startup.
+2022-07-20 19:03:33,010 (INFO): Application startup complete.
+2022-07-20 19:03:36,484 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: booking.destination_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 282, in create_booking
+    resources["SESSION"].execute(select(Booking).where(Booking.id == id)).first()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 326, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: booking.destination_id
+[SQL: SELECT booking.id, booking.booking_display_info, booking.booking_price, booking."supplier_booking_ID", booking.supplier_booking_ref, booking.guest_booking_ref, booking.guest_account_info, booking.guest_payment_info, booking.destination_id 
+FROM booking 
+WHERE booking.id = ?]
+[parameters: ('br9yka2etk5xpzc3pxqu38bo6gyk9f4b1ryvo6nue0te6afr300jgwu2wmg03kon',)]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-07-20 19:05:12,344 (INFO): Started server process [9412]
+2022-07-20 19:05:12,345 (INFO): Waiting for application startup.
+2022-07-20 19:05:12,346 (INFO): Application startup complete.
+2022-07-20 19:05:41,856 (INFO): Started server process [31564]
+2022-07-20 19:05:41,856 (INFO): Waiting for application startup.
+2022-07-20 19:05:41,857 (INFO): Application startup complete.
+2022-07-20 19:05:41,892 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 64, in create_booking
+    if (booking_uid := database.create_booking(booking)) != -1:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 309, in create_booking
+    resources["SESSION"].commit()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3502, in _flush
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 326, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO booking (id, booking_display_info, booking_price, "supplier_booking_ID", supplier_booking_ref, guest_booking_ref, guest_account_info, guest_payment_info, destination_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('mx1prxic3zf5x7y17z1ch5agvco89fpedubilvsqpjg5gvut89i091f2f4rcka7t', '', 186.08, 0, 0, 0, '', '', 'YCcf')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-07-20 19:06:08,124 (INFO): Started server process [23892]
+2022-07-20 19:06:08,125 (INFO): Waiting for application startup.
+2022-07-20 19:06:08,126 (INFO): Application startup complete.
+2022-07-20 19:06:55,252 (INFO): Started server process [28896]
+2022-07-20 19:06:55,253 (INFO): Waiting for application startup.
+2022-07-20 19:06:55,254 (INFO): Application startup complete.
+2022-07-20 19:07:28,852 (INFO): Started server process [3588]
+2022-07-20 19:07:28,853 (INFO): Waiting for application startup.
+2022-07-20 19:07:28,853 (INFO): Application startup complete.
+2022-07-20 19:11:16,451 (INFO): Started server process [29488]
+2022-07-20 19:11:16,452 (INFO): Waiting for application startup.
+2022-07-20 19:11:16,453 (INFO): Application startup complete.
+2022-07-20 19:14:29,302 (INFO): Shutting down
+2022-07-20 19:14:29,415 (INFO): Waiting for application shutdown.
+2022-07-20 19:14:29,416 (INFO): Application shutdown complete.
+2022-07-20 19:14:29,417 (INFO): Finished server process [29488]
+2022-07-20 19:15:30,708 (INFO): Started server process [24472]
+2022-07-20 19:15:30,709 (INFO): Waiting for application startup.
+2022-07-20 19:15:30,709 (INFO): Application startup complete.
+2022-07-20 19:18:57,965 (INFO): Shutting down
+2022-07-20 19:18:58,074 (INFO): Waiting for application shutdown.
+2022-07-20 19:18:58,075 (INFO): Application shutdown complete.
+2022-07-20 19:18:58,075 (INFO): Finished server process [24472]
+2022-07-20 19:19:32,512 (INFO): Started server process [22364]
+2022-07-20 19:19:32,513 (INFO): Waiting for application startup.
+2022-07-20 19:19:32,513 (INFO): Application startup complete.
+2022-07-20 19:21:51,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:21:52,225 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:21:52,318 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:21:52,703 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:21:56,929 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:21:57,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:21:57,247 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:21:58,050 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:01,942 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:02,205 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:02,273 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:03,027 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:06,941 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:07,161 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:07,249 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:08,043 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:11,932 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:12,225 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:12,302 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:13,147 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:16,940 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:17,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:17,233 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:18,017 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:21,939 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:22,168 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:22,226 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:23,047 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:26,928 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:27,158 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:27,227 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:28,020 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:31,936 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:32,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:32,228 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:32,994 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:36,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:37,152 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:37,217 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:38,027 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:41,942 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:42,154 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:42,213 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:43,031 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:46,937 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:47,160 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:47,230 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:48,028 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:51,930 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:52,162 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:52,225 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:53,065 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:22:56,933 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:57,194 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:22:57,253 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:22:58,117 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:01,937 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:02,203 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:02,267 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:03,099 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:06,931 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:08,129 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:08,582 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:09,412 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:11,929 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:12,189 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:12,256 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:13,097 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:16,938 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:17,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:17,227 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:17,991 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:21,941 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:22,195 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:22,270 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:23,047 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:26,934 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:27,153 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:27,229 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:27,972 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:31,937 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:32,156 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-20 19:23:32,226 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:33,008 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:41,572 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:41,662 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 19:23:41,667 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:42,206 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:23:46,568 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:46,705 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-20 19:23:46,710 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-20 19:23:48,197 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-21&checkout=2022-07-22&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-20 19:26:22,902 (INFO): Started server process [2880]
+2022-07-20 19:26:22,903 (INFO): Waiting for application startup.
+2022-07-20 19:26:22,904 (INFO): Application startup complete.
+2022-07-20 19:26:22,932 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:26:22,950 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:26:22,963 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:26:22,991 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:26:23,282 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:26:23,329 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid).all()
+AttributeError: 'int' object has no attribute 'all'
+2022-07-20 19:27:03,921 (INFO): Started server process [16936]
+2022-07-20 19:27:03,922 (INFO): Waiting for application startup.
+2022-07-20 19:27:03,922 (INFO): Application startup complete.
+2022-07-20 19:27:08,031 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 312, in get_booking
+    return booking[0]
+IndexError: list index out of range
+2022-07-20 19:27:08,260 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 72, in get_booking
+    return database.get_booking(booking_uid)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 312, in get_booking
+    return booking[0]
+IndexError: list index out of range
+2022-07-20 19:28:07,320 (INFO): Started server process [27972]
+2022-07-20 19:28:07,321 (INFO): Waiting for application startup.
+2022-07-20 19:28:07,322 (INFO): Application startup complete.
+2022-07-20 19:28:53,277 (INFO): Started server process [24820]
+2022-07-20 19:28:53,278 (INFO): Waiting for application startup.
+2022-07-20 19:28:53,278 (INFO): Application startup complete.
+2022-07-20 19:29:09,086 (INFO): Shutting down
+2022-07-20 19:29:09,194 (INFO): Waiting for application shutdown.
+2022-07-20 19:29:09,194 (INFO): Application shutdown complete.
+2022-07-20 19:29:09,195 (INFO): Finished server process [24820]
+2022-07-20 19:29:14,745 (INFO): Started server process [26888]
+2022-07-20 19:29:14,746 (INFO): Waiting for application startup.
+2022-07-20 19:29:14,746 (INFO): Application startup complete.
+2022-07-20 19:30:14,660 (INFO): Started server process [19876]
+2022-07-20 19:30:14,661 (INFO): Waiting for application startup.
+2022-07-20 19:30:14,662 (INFO): Application startup complete.
+2022-07-20 19:30:19,529 (INFO): Started server process [19904]
+2022-07-20 19:30:19,530 (INFO): Waiting for application startup.
+2022-07-20 19:30:19,531 (INFO): Application startup complete.
+2022-07-20 19:30:49,489 (INFO): Started server process [29864]
+2022-07-20 19:30:49,490 (INFO): Waiting for application startup.
+2022-07-20 19:30:49,491 (INFO): Application startup complete.
+2022-07-20 19:31:18,093 (INFO): Shutting down
+2022-07-20 19:31:18,202 (INFO): Waiting for application shutdown.
+2022-07-20 19:31:18,203 (INFO): Application shutdown complete.
+2022-07-20 19:31:18,203 (INFO): Finished server process [29864]
+2022-07-20 19:31:43,601 (INFO): Started server process [20012]
+2022-07-20 19:31:43,602 (INFO): Waiting for application startup.
+2022-07-20 19:31:43,603 (INFO): Application startup complete.
+2022-07-20 19:32:09,741 (INFO): Shutting down
+2022-07-20 19:32:09,850 (INFO): Waiting for application shutdown.
+2022-07-20 19:32:09,851 (INFO): Application shutdown complete.
+2022-07-20 19:32:09,851 (INFO): Finished server process [20012]
+2022-07-20 19:33:02,251 (INFO): Started server process [29028]
+2022-07-20 19:33:02,252 (INFO): Waiting for application startup.
+2022-07-20 19:33:02,252 (INFO): Application startup complete.
+2022-07-20 19:33:18,673 (INFO): Shutting down
+2022-07-20 19:33:18,781 (INFO): Waiting for application shutdown.
+2022-07-20 19:33:18,782 (INFO): Application shutdown complete.
+2022-07-20 19:33:18,782 (INFO): Finished server process [29028]
+2022-07-20 19:33:34,485 (INFO): Started server process [19328]
+2022-07-20 19:33:34,486 (INFO): Waiting for application startup.
+2022-07-20 19:33:34,486 (INFO): Application startup complete.
+2022-07-20 19:34:51,407 (INFO): Started server process [580]
+2022-07-20 19:34:51,408 (INFO): Waiting for application startup.
+2022-07-20 19:34:51,409 (INFO): Application startup complete.

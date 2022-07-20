@@ -18,22 +18,54 @@ import {
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 import React from 'react';
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
+import { postBooking } from '../../api/services/destinations';
 
-export default function ContactFormWithSocialButtons() {
+export default function Booking() {
 
   const { hasCopied, onCopy } = useClipboard('example@example.com');
 
-  const navigate = useNavigate()
+  const [ name, setName ] = useState("");
+  const [ email, setEmail ] = useState("");
+  const [ phone, setPhone ] = useState("");
+  const [ additionalData, setAdditionalData ] = useState("");
+
+  const navigate = useNavigate();
 
   const goToSummary = () => {
-    navigate("/summary")
+    const body = {
+      name: name.replace(/['"]+/g, ''), 
+      email: email.replace(/['"]+/g, ''), 
+      phone: phone.replace(/['"]+/g, ''), 
+      additionalData: additionalData, 
+      roomName: localStorage.getItem("roomName").replace(/['"]+/g, ''),
+      hotelName: localStorage.getItem("hotelName"),
+      roomPrice: localStorage.getItem("roomPrice"),
+      checkInDate: localStorage.getItem("checkInDate").replace(/['"]+/g, ''),
+      checkOutDate: localStorage.getItem("checkOutDate").replace(/['"]+/g, ''),
+      numAdults: localStorage.getItem("numAdults").replace(/['"]+/g, ''),
+      numChildren: localStorage.getItem("numChildren").replace(/['"]+/g, ''),
+      numRooms: localStorage.getItem("numRooms").replace(/['"]+/g, ''),
+      dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
+      hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, '')
+    };
+
+    console.log(body);
+    let response;
+    postBooking(JSON.stringify(body)).then((data) => {
+      response = data;
+      console.log(response);
+      if (response.status === 200) {
+        navigate(`/summary?booking_uid=${response.booking_uid}`);
+      }
+    });
   }
 
   const cancelBook = () => {
-    navigate("/hotels")
+    navigate(-1);
   }
 
   return (
@@ -58,7 +90,7 @@ export default function ContactFormWithSocialButtons() {
                       base: '4xl',
                       md: '5xl',
                     }}>
-                    Booking Summary
+                    Booking
                   </Heading>
 
                   <Stack
@@ -80,6 +112,8 @@ export default function ContactFormWithSocialButtons() {
                               type="text" 
                               name="name" 
                               placeholder="Your Name" 
+                              value={name}
+                              onChange={(event) => setName(event.target.value)}
                             />
                           </InputGroup>
                         </FormControl>
@@ -93,6 +127,8 @@ export default function ContactFormWithSocialButtons() {
                               type="email"
                               name="email"
                               placeholder="Your Email"
+                              value={email}
+                              onChange={(event) => setEmail(event.target.value)}
                             />
                           </InputGroup>
                         </FormControl>
@@ -106,6 +142,8 @@ export default function ContactFormWithSocialButtons() {
                               type="number"
                               name="number"
                               placeholder="Your Number"
+                              value={phone}
+                              onChange={(event) => setPhone(event.target.value)}
                             />
                           </InputGroup>
                         </FormControl>
@@ -118,6 +156,8 @@ export default function ContactFormWithSocialButtons() {
                             placeholder="Write what you want the hotel to know here..."
                             rows={6}
                             resize="none"
+                            value={additionalData}
+                            onChange={(event) => setAdditionalData(event.target.value)}
                           />
                         </FormControl>
 
@@ -128,7 +168,6 @@ export default function ContactFormWithSocialButtons() {
                           _hover={{
                             bg: 'blue.500',
                           }}
-                          isFullWidth
                           onClick={goToSummary}>
                           Summary
                         </Button>
@@ -140,7 +179,6 @@ export default function ContactFormWithSocialButtons() {
                           _hover={{
                             bg: 'blue.500',
                           }}
-                          isFullWidth
                           onClick={cancelBook}>
                           Cancel
                         </Button>
