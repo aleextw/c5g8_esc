@@ -13,23 +13,28 @@ export default function Hotels() {
     console.log(params.get("destination"));
     return (
       <ChakraProvider>
-        <NavBar></NavBar>
-        <HotelsSearchBar params={ params }/>
-        {/* 84vh is the bodge for now, let's hope our component heights don't change */}
-        <Center background="#F5F4F1" w="100%" h="84vh" overflow="hidden">
-            <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
-                <Center w={{base:"100%", lg:"75%"}} h="100%">
-                    <CardList params={ params }/>
-                </Center>
-                <Show above="lg" h="100%">
-                    <SideBar/>
-                </Show>
-                {/* <Show below="lg">
-                    <Footer/>
-                </Show> */}
-            </Stack>
-        </Center>
-            
+        <Box h="100vh" w="100wh">
+            <Box h="10%" w="100%">
+                <NavBar></NavBar>
+            </Box>
+            <Box h="10%" w="100%">
+                <HotelsSearchBar params={ params }/>
+            </Box>
+            {/* 84vh is the bodge for now, let's hope our component heights don't change */}
+            <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">
+                <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
+                    <Center w={{base:"100%", lg:"75%"}} h="100%">
+                        <CardList params={ params }/>
+                    </Center>
+                    <Show above="lg" h="100%">
+                        <SideBar/>
+                    </Show>
+                    {/* <Show below="lg">
+                        <Footer/>
+                    </Show> */}
+                </Stack>
+            </Center>
+        </Box>   
       </ChakraProvider>
     )
 }

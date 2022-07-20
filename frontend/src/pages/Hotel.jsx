@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Center, ChakraProvider, Flex, Show, Spacer } from "@chakra-ui/react";
+import { Center, ChakraProvider, Flex, Show, Spacer, Box } from "@chakra-ui/react";
 import "../index.css";
 import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
@@ -14,11 +14,17 @@ export default function Hotel() {
     
     return (
       <ChakraProvider>
-        <NavBar></NavBar>
-        <HotelSearchBar params={params}></HotelSearchBar>
-        <Center background="#F5F4F1" w="100%" h="100%" overflow="hidden">   
-                <HotelDetails params = {params} />
-        </Center>
+        <Box h="100vh" w="100wh">
+            <Box h="10%" w="100%">
+                <NavBar></NavBar>
+            </Box>
+            <Box h="10%" w="100%">
+                <HotelSearchBar params={params}/>
+            </Box>
+            <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">   
+                <HotelDetails params={params} />
+            </Center>
+        </Box>   
       </ChakraProvider>
     )
 }

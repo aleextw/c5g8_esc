@@ -39,12 +39,12 @@ import {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box>
+      <Box h="100%">
         <Flex
           
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          h="100%"
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}

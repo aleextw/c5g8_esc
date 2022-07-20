@@ -6,18 +6,16 @@ import ReactDOMServer from 'react-dom/server';
 
 function HotelInfo(props) {
   // TODO: Figure out why image quality sucks
-  console.log(props);
   const images = [];
   for (let i = 0; i < props.hotel_details.images.count; i++) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
     images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
   }
-  console.log(images);
 
   var stars = Array(props.hotel_details.rating).fill(<StarIcon color="gold" />).concat(Array(5 - props.hotel_details.rating).fill(<StarIcon color="grey" />));
   return (
     <Center w="100%" h="100%">
-      <VStack w="70%" h="100%">
+      <VStack w="100%" h="100%">
         <Spacer />
         <Center borderWidth="1px" w="100%" background="white">
           <HStack w="100%">
@@ -61,9 +59,8 @@ function HotelInfo(props) {
           </HStack>
         </Center>
         <Spacer />
-        <Center borderWidth="1px" w="100%" background="white" p="6">
-          {<div dangerouslySetInnerHTML={{__html: props.hotel_details.description}}></div>}
-        </Center>
+        {/* <Box borderWidth="1px" w="100%" background="white" p="6" h="100vh" dangerouslySetInnerHTML={{__html: props.hotel_details.description}}>
+        </Box> */}
       </VStack>
     </Center>
     

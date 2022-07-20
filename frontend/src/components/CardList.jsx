@@ -40,7 +40,7 @@ function Card(props) {
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p={{base: "0", md: "2"}} w={{base: "100%", md: "40%"}} direction="column">
+            <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
                 {/* <Heading size="sm">C5G8</Heading> */}
                 <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
