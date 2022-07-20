@@ -5,7 +5,9 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Hotels from "./pages/Hotels";
-import Booking from "./pages/Booking";
+import Booking from "./pages/payment/Booking";
+import Pay from "./pages/payment/Pay";
+import Summary from "./pages/payment/Summary";
 import Hotel from "./pages/Hotel";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -30,6 +32,8 @@ function App() {
         <Route path="/hotels" element={<Hotels/>}/>
         <Route path="/hotel" element={<Hotel/>}/>
         <Route path="/booking" element={<Booking/>}/>
+        <Route path="/pay" element={<Pay/>}/>
+        <Route path="/summary" element={<Summary/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/Login" element={<Login/>}/>
       </Routes>

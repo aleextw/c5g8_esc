@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogCloseButton} from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
