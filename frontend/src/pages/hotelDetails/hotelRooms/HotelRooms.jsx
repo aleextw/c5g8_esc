@@ -10,6 +10,7 @@ import {
   Flex,
   Center
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function HotelRooms(props) {
   return (
@@ -64,7 +65,7 @@ function Card(props) {
           objectFit="cover"
           justifyContent="center"
         >
-          <PhotoGallery images={props.images} />
+          {/* <PhotoGallery images={props.images} /> */}
         </Flex>
         <Center ml="auto" mr="auto">
           <RoomInfoPopup content={<>{props.description}</>} />

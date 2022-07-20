@@ -39,11 +39,12 @@ import {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box>
+      <Box h="100%">
         <Flex
+          
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          h="100%"
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
@@ -250,42 +251,42 @@ import {
   };
   
   const NAV_ITEMS = [
-    {
-      label: 'Inspiration',
-      children: [
-        {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Find Work',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Learn Design',
-      href: '#',
-    },
-    {
-      label: 'Hire Designers',
-      href: '#',
-    },
+    // {
+    //   label: 'Inspiration',
+    //   children: [
+    //     {
+    //       label: 'Explore Design Work',
+    //       subLabel: 'Trending Design to inspire you',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'New & Noteworthy',
+    //       subLabel: 'Up-and-coming Designers',
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: 'Find Work',
+    //   children: [
+    //     {
+    //       label: 'Job Board',
+    //       subLabel: 'Find your dream design job',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: 'Learn Design',
+    //   href: '#',
+    // },
+    // {
+    //   label: 'Hire Designers',
+    //   href: '#',
+    // },
   ];

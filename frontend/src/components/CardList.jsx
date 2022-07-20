@@ -23,11 +23,11 @@ function Card(props) {
         // TODO: Add error checking for invalid UIDs
         // TODO: Store data to local storage        
         // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
+        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
         // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
-    return (<Flex>
+    return (<Flex >
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
             <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
@@ -40,8 +40,8 @@ function Card(props) {
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p={{base: "0", md: "2"}} w={{base: "100%", md: "40%"}} direction="column">
-                <Heading size="sm">C5G8</Heading>
+            <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
+                {/* <Heading size="sm">C5G8</Heading> */}
                 <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
                 <Show above="md">
@@ -55,7 +55,7 @@ function Card(props) {
 export default class CardList extends Component {
     constructor(props) {
         super(props);
-        this.params = props.params;
+        console.log()
 
         this.state = {
             selectedHotel: "",
@@ -64,6 +64,7 @@ export default class CardList extends Component {
             reviewRange: [],
             priceRange: [],
             typeFilter: [],
+            params: props.params
         };
 
         this.setHotels = this.setHotels.bind(this);
@@ -76,11 +77,17 @@ export default class CardList extends Component {
 
     componentDidMount() {
         // TODO: Figure out why its triggering twice
-        this.updateTimer = setInterval(() => getHotels(this.params, this.setHotels), 10000);
+        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 5000);
     }
 
     componentWillUnmount() {
         clearInterval(this.updateTimer);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
+            this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
+        }
     }
 
     render() {
@@ -92,7 +99,7 @@ export default class CardList extends Component {
         
         if (this.state.hotels.hotels.length > 0) {
             return (
-                <Stack w="100%" h="100%" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                 { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
                     return (
                         <Card 
@@ -113,7 +120,7 @@ export default class CardList extends Component {
                 })}
                 </Stack>);
         } else if (this.state.hotels.completed === false) {
-            return (<Box w="100%" h="100vh">
+            return (<Box w="100%" h="100%">
                 <Center w="100%" h="100%">
                     <Spinner
                         thickness='4px'
@@ -124,9 +131,10 @@ export default class CardList extends Component {
                     />
                 </Center>
             </Box>);
-        } else {
-            return (<Box w="100%" h="100%">
-                <Center w="100%" h="100%">
+    } else {
+        return (<Box w="100%" h="100%">
+            <Center w="100%" h="100%">
+
                     <Heading size="lg">
                         No hotels found!
                     </Heading>
