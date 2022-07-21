@@ -26,6 +26,11 @@ function Card(props) {
       navigate(`/booking`);
     }
 
+    const images = [];
+    for (let i = 0; i < props.images.length; i++) {
+      images.push({original: props.images[i].high_resolution_url, thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
+    }
+
   return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
       <Container>
@@ -76,58 +81,6 @@ function FreeCancellation(props) {
       <Text fontSize={"sm"} color={"gray.500"} >No Free Cancellation Available</Text>
   )}
 }
-
-// function Card(props) {
-//   const location = useLocation();
-//   const params = new URLSearchParams(location.search);
-//   const navigate = useNavigate();
-
-//   const toPaymentsPage = () => {
-//     localStorage.setItem("roomName", JSON.stringify(props.name));
-//     localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
-//     localStorage.setItem("roomPrice", JSON.stringify(props.price));
-//     localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
-//     localStorage.setItem("checkOutDate", JSON.stringify(props.checkOutDate));
-//     localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
-//     localStorage.setItem("numAdults", JSON.stringify(props.numAdults));
-//     localStorage.setItem("numChildren", JSON.stringify(props.numChildren));
-//     localStorage.setItem("numRooms", JSON.stringify(props.numRooms));
-//     navigate(`/booking?room=${props.uid}&hotel_uid=${params.get("hotel_uid")}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
-//   }
-
-//   const images = [];
-//   for (let i = 0; i < props.images.count; i++) {
-//     images.push({original: props.images[i].url, thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
-//   }
-
-//   return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
-//       <Box maxW="50%">
-//         <Container>
-//           <ImageGallery items={props.images} useBrowserFullscreen={false}></ImageGallery>
-//         </Container>
-//       </Box>
-//       <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-//           <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
-//               <Heading size="md">{props.name}</Heading>
-//               <Show above="md">
-//                   <Text>{props.description}</Text>
-//               </Show>
-//               {/* TODO: Add rating */}
-//               {/* TODO: Add map modal */}
-//               {/* TODO: Add review */}
-//           </Stack>
-//           <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
-//               {/* <Heading size="sm">C5G8</Heading> */}
-//               <Text size="sm">SGD {props.price}</Text>
-//               <Show above="md">
-//               <Button colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
-//                 Book Now
-//               </Button>
-//               </Show>
-//           </Stack>
-//       </Stack>             
-//   </Flex>);
-// }
 
 
 export default class HotelDetails extends Component {
