@@ -16,7 +16,7 @@ class Destination(Base):
     latitude = Column(Float)
     longitude = Column(Float)
     hotels = relationship("Hotel", backref="destination")
-    booking_id = Column(Integer, ForeignKey("booking.id"))
+    booking_id = relationship("Booking", backref="destination")
 
     def __repr__(self):
         return (
@@ -73,13 +73,13 @@ class Booking(Base):
     # TODO: Check booking ID type with Ascenda
     supplier_booking_ID = Column(Integer)
     supplier_booking_ref = Column(Integer)
-    guest_booking_ref = Column(Integer)
+    guest_booking_ref = Column(Text)
     # TODO: Change this to a relationship with GuestInfo
     guest_account_info = Column(Text)
     # TODO: Change this to a relationship with PaymentInfo
     guest_payment_info = Column(Text)
     # TODO: Add relationship to hotel, room, and destination?
-    destination = relationship("Destination", backref="booking")
+    destination_id = Column(Text, ForeignKey("destination.id"))
 
     def __repr__(self):
         return f"Booking(id={self.id}, booking_disp_info={self.booking_display_info}, booking_price={self.booking_price}, )"

@@ -1,4 +1,4 @@
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, Box, Center } from "@chakra-ui/react";
 import SearchBar from "../components/SearchBar";
 import "../index.css";
 import NavBar from "../components/NavBar";
@@ -12,7 +12,10 @@ export default function Home() {
         bgPosition="center"
         bgRepeat="no-repeat"
       >
-        <SearchBar />
+        
+        <Center h="100vh">
+          <SearchBar />
+        </Center>
       </Box>
     </ChakraProvider>
   )
