@@ -130,7 +130,8 @@ export default class HotelDetails extends Component {
 
     this.state = {
         selectedRoom: "",
-        hotel: {"completed": false, "hotel_details": {}, "rooms":[]}, //hotel_details contain static hotel data, rooms contain list of objects for each room
+        hotel: {"completed": false, "hotel_details": {}, "rooms":[]}, 
+        //hotel_details contain static hotel data, rooms contain list of objects for each room
     };
 
     this.setHotel = this.setHotel.bind(this);

@@ -11,8 +11,8 @@ function HotelInfo(props) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
     images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
   }
-
-  var stars = Array(props.hotel_details.rating).fill(<StarIcon color="gold" />).concat(Array(5 - props.hotel_details.rating).fill(<StarIcon color="grey" />));
+  // ERROR in loading stars
+  // var stars = Array(props.hotel_details.rating).fill(<StarIcon color="gold" />).concat(Array(5 - props.hotel_details.rating).fill(<StarIcon color="grey" />));
   return (
     <Center w="100%" h="100%">
       <VStack w="100%" h="100%">
@@ -31,7 +31,7 @@ function HotelInfo(props) {
                     {props.hotel_details.name}
                   </Heading>
                   <Box w="50%" align="right">
-                    {stars}
+                    {/* {stars} */}
                   </Box>
                 </HStack>
                 <Text w="100%" align="left">

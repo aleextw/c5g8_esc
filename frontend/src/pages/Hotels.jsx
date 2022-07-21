@@ -5,7 +5,7 @@ import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
 import CardList from "../components/CardList";
 import HotelsSearchBar from "../components/HotelsSearchBar";
-import SideBar from "../components/SideBar";
+import SideBar from "../components/HotelsSideBar";
 
 export default function Hotels() {
     const location = useLocation();
@@ -29,9 +29,9 @@ export default function Hotels() {
                     <Show above="lg" h="100%">
                         <SideBar/>
                     </Show>
-                    {/* <Show below="lg">
+                    <Show below="lg">
                         <Footer/>
-                    </Show> */}
+                    </Show>
                 </Stack>
             </Center>
         </Box>   
