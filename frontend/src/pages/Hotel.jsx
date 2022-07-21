@@ -4,7 +4,6 @@ import "../index.css";
 import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
 import HotelDetails from "./hotelDetails/HotelDetails";
-import SideBar from "../components/SideBar";
 import HotelSearchBar from "../components/HotelSearchBar";
 
 

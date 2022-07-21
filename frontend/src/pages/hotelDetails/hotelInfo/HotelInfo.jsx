@@ -12,8 +12,6 @@ function HotelInfo(props) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
     images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
   }
-  console.log(props.hotel_details.rating);
-
   return (
     <Center w="100%" h="100%">
       <VStack w="100%" h="100%">

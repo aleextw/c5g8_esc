@@ -8,7 +8,7 @@ import {
     useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent
   } from '@chakra-ui/react';
   import React from 'react';
-import SideBar from './SideBar';
+import SideBar from './HotelsSideBar';
   
   
   export default function Footer() {
@@ -31,8 +31,9 @@ import SideBar from './SideBar';
           py={4}
           direction={{ base: 'column', md: 'row' }}
           spacing={4}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}
+          justify={{ base: 'center'}}
+          align={{ base: 'center'}}
+          cursor='pointer'
           onClick={onOpen}>
           <Stack direction={'row'} spacing={6} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
             {/* <Link href={'#'}>Home</Link>
@@ -52,7 +53,7 @@ import SideBar from './SideBar';
                 <AlertDialogOverlay/>
 
                 <AlertDialogContent bg="none">
-                    <SideBar onClick={onClose}/>
+                    <SideBar/>
                 </AlertDialogContent>
             </AlertDialog>
         </Box>
