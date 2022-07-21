@@ -24,7 +24,7 @@ function RoomInfoPopup(props) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>{props.name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box>

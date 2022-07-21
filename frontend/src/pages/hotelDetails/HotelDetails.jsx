@@ -13,9 +13,10 @@ function Card(props) {
     const params = new URLSearchParams(location.search);
     const navigate = useNavigate();
     const toPaymentsPage = () => {
-      localStorage.setItem("roomName", JSON.stringify(props.room.name));
-      localStorage.setItem("hotelName", JSON.stringify(props.room.hotelName));
-      localStorage.setItem("roomPrice", JSON.stringify(props.room.price));
+      localStorage.setItem("roomName", JSON.stringify(props.description));
+      localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
+      localStorage.setItem("roomPrice", JSON.stringify(props.price));
+      localStorage.setItem("points", JSON.stringify(props.points));
       localStorage.setItem("checkInDate", JSON.stringify(params.get("checkInDate")));
       localStorage.setItem("checkOutDate", JSON.stringify(params.get("checkOutDate")));
       localStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
@@ -28,13 +29,13 @@ function Card(props) {
 
     const images = [];
     for (let i = 0; i < props.images.length; i++) {
-      images.push({original: props.images[i].high_resolution_url, thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
+      images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
     }
 
   return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
       <Container>
-        <ImageGallery items={images} useBrowserFullscreen={false}></ImageGallery>
+        <ImageGallery items={images} useBrowserFullscreen={false} showPlayButton={false}></ImageGallery>
       </Container>
     </Box>
     <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
@@ -45,7 +46,7 @@ function Card(props) {
             </Show>
             <FreeCancellation data={props.free_cancellation}/>
             <Center ml="auto" mr="auto">
-              <RoomInfoPopup content={props.long_description} />
+              <RoomInfoPopup name= {props.description} content={props.long_description} />
             </Center>
             {/* TODO: Add rating */}
             {/* TODO: Add map modal */}
@@ -111,9 +112,9 @@ export default class HotelDetails extends Component {
   }
 
   render() {
-    console.log(this.state.hotel.completed);
-    console.log(this.state.hotel.hotel_details);
-    console.log(this.state.hotel.rooms);
+    console.log("completed? :", this.state.hotel.completed);
+    console.log("hotel_details: ",this.state.hotel.hotel_details);
+    console.log("rooms: ", this.state.hotel.rooms);
 
     if (this.state.hotel.completed === true) {
         clearInterval(this.updateTimer);
