@@ -2,6 +2,7 @@ import React from "react";
 import {
   Button,
   Text,
+  Box,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -26,7 +27,9 @@ function RoomInfoPopup(props) {
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text> {props.content} </Text>
+            <Box>
+              <Text dangerouslySetInnerHTML={{__html: props.content}}/>
+            </Box>
           </ModalBody>
 
           <ModalFooter>
