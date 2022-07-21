@@ -4,7 +4,7 @@ import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer,
 import { StarIcon } from "@chakra-ui/icons";
 import ReactDOMServer from 'react-dom/server';
 import ReactStars from "react-rating-stars-component";
-import {MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver } from "react-icons/md";
+import {MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver, MdOutlineDriveEta } from "react-icons/md";
 import{TbSnowflake,TbParking} from "react-icons/tb";
 import {BiFridge,} from "react-icons/bi";
 import {BsSafe} from "react-icons/bs";
@@ -24,20 +24,25 @@ const icons = {
   "safe": <BsSafe/>,
   "sauna": <MdHotTub/>,
   "tVInRoom": <MdOutlineMonitor/>,
+  "valetParking": <MdOutlineDriveEta/>,
   "voiceMail": <MdOutlineRecordVoiceOver/>
 }
 
 function IconComponent(props) {
   const amenity= props.amenity[0];
-  return (
-          <IconButton
-            variant="link"
-            colorScheme='teal'
-            aria-label= {amenity}
-            fontSize='20px'
-            icon= {icons[amenity]}
-            />
-  )
+
+  if (amenity != "valetParking" || amenity) {
+    return (
+            <IconButton
+              variant="link"
+              colorScheme='teal'
+              aria-label= {amenity}
+              fontSize='24px'
+              icon= {icons[amenity]}
+              title={amenity}
+              />
+    )
+  }
 }
 
 

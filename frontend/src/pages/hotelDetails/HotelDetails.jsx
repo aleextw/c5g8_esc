@@ -46,7 +46,7 @@ function Card(props) {
             </Show>
             <FreeCancellation data={props.free_cancellation}/>
             <Center ml="auto" mr="auto">
-              <RoomInfoPopup name= {props.description} content={props.long_description} />
+              <RoomInfoPopup name= {props.description} content={props.long_description} amenities={props.amenities} />
             </Center>
             {/* TODO: Add rating */}
             {/* TODO: Add map modal */}
@@ -147,7 +147,8 @@ export default class HotelDetails extends Component {
                 price={room["price"]}
                 images={room["photo"]}
                 points={room["points"]}
-                uid={room["uid"]} />
+                uid={room["uid"]}
+                amenities={room["amenities"]} />
                 
             )})}
           <Spacer />
