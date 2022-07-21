@@ -10,6 +10,7 @@ from backend.config import config
 from backend.core.models.base import Base
 from backend.core.schemas.schemas import *
 from backend.shared_resources import resources
+import random
 
 logger = logging.getLogger()
 
@@ -272,3 +273,44 @@ def get_hotel_details_endpoint(
     destination_id, hotel_id, checkin, checkout, guests, currency
 ):
     return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+
+
+def create_booking(booking):
+    id = "".join(
+        [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
+    )
+    while (
+        resources["SESSION"].execute(select(Booking).where(Booking.id == id)).first()
+        is not None
+    ):
+        id = "".join(
+            [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
+        )
+
+    booking_entry = Booking(
+        booking_display_info="",
+        booking_price=booking.roomPrice,
+        supplier_booking_ID=0,
+        supplier_booking_ref=0,
+        guest_booking_ref=id,
+        guest_account_info="",
+        guest_payment_info="",
+        destination_id=booking.dest_uid,
+    )
+
+    resources["SESSION"].add(booking_entry)
+    resources["SESSION"].commit()
+
+    return id
+
+
+def get_booking(booking_uid):
+    if (
+        booking := resources["SESSION"]
+        .execute(select(Booking).where(Booking.guest_booking_ref == booking_uid))
+        .all()
+    ):
+        print(booking)
+        return booking
+    else:
+        return -1

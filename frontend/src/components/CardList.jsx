@@ -27,10 +27,10 @@ function Card(props) {
         // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
-    return (<Flex >
+    return (<Flex  onClick={searchHotel} cursor={"pointer"}>
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-            <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
+            <Stack p="2" direction="column" w={{base: "100%", md: "60%", sm:"60%"}}>
                 <Heading size="md">{props.name}</Heading>
                 <Show above="md">
                     <Text>{props.address}</Text>
@@ -40,7 +40,7 @@ function Card(props) {
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
+            <Stack p="2" w={{base: "100%", md: "40%", sm: "60%"}} direction="column">
                 {/* <Heading size="sm">C5G8</Heading> */}
                 <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
@@ -99,40 +99,42 @@ export default class CardList extends Component {
         
         if (this.state.hotels.hotels.length > 0) {
             return (
-                <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
-                { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
-                    return (
-                        <Card 
-                            searchRank={hotel["searchRank"]}
-                            price={hotel["price"]}
-                            points={hotel["points"]}
-                            latitude={hotel["latitude"]}
-                            longitude={hotel["longitude"]}
-                            distance={hotel["distance"]}
-                            name={hotel["name"]}
-                            address={hotel["address"]}
-                            rating={hotel["rating"]}
-                            review={hotel["review"]}
-                            image={hotel["photo"]}
-                            uid={hotel["uid"]}
-                        />      
-                    )
-                })}
-                </Stack>);
+                <Box w="100%" h={{base: "80vh", md: "70vh", sm: "70vh"}}>
+                    <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                    { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
+                        return (
+                            <Card 
+                                searchRank={hotel["searchRank"]}
+                                price={hotel["price"]}
+                                points={hotel["points"]}
+                                latitude={hotel["latitude"]}
+                                longitude={hotel["longitude"]}
+                                distance={hotel["distance"]}
+                                name={hotel["name"]}
+                                address={hotel["address"]}
+                                rating={hotel["rating"]}
+                                review={hotel["review"]}
+                                image={hotel["photo"]}
+                                uid={hotel["uid"]}
+                            />      
+                        )
+                    })}
+                    </Stack>
+                </Box>);
         } else if (this.state.hotels.completed === false) {
-            return (<Box w="100%" h="100%">
+            return (<Box w="100%" h="80vh">
                 <Center w="100%" h="100%">
-                    <Spinner
-                        thickness='4px'
-                        speed='0.65s'
-                        emptyColor='gray.200'
-                        color='blue.500'
-                        size='xl'
-                    />
-                </Center>
-            </Box>);
+                <Spinner
+                    thickness='4px'
+                    speed='0.65s'
+                    emptyColor='gray.200'
+                    color='blue.500'
+                    size='xl'
+                />
+            </Center>
+        </Box>);
     } else {
-        return (<Box w="100%" h="100%">
+        return (<Box w="100%" h="80vh">
             <Center w="100%" h="100%">
 
                     <Heading size="lg">

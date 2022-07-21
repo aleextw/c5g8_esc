@@ -6,21 +6,24 @@ import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import FormList from "./FormList"
+import FormList from "./FormList";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
-export default function Review() {
+export default function Summary(props) {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
 
   const [forms, setForm] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:8000/forms')
+    fetch(`http://localhost:8000/summary/${params.get("booking_uid")}`)
       .then(res => {
         return res.json();
       }) 
       .then(data => {
           console.log(data);
-          setForm(data)
+          setForm(data);
       })
   }, []);
   

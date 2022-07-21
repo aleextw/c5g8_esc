@@ -9,34 +9,24 @@ import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Show, S
 import ImageGallery from "react-image-gallery";
 
 function Card(props) {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  
-  const navigate = useNavigate();
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const navigate = useNavigate();
+    const toPaymentsPage = () => {
+      localStorage.setItem("roomName", JSON.stringify(props.room.name));
+      localStorage.setItem("hotelName", JSON.stringify(props.room.hotelName));
+      localStorage.setItem("roomPrice", JSON.stringify(props.room.price));
+      localStorage.setItem("checkInDate", JSON.stringify(params.get("checkInDate")));
+      localStorage.setItem("checkOutDate", JSON.stringify(params.get("checkOutDate")));
+      localStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
+      localStorage.setItem("numChildren", JSON.stringify(params.get("numChildren")));
+      localStorage.setItem("numRooms", JSON.stringify(params.get("numRooms")));
+      localStorage.setItem("dest_uid", JSON.stringify(params.get("dest_uid")));
+      localStorage.setItem("hotel_uid", JSON.stringify(params.get("hotel_uid"))); 
+      navigate(`/booking`);
+    }
 
-  const toPaymentsPage = () => {
-    // localStorage.setItem("roomName", JSON.stringify(props.name));
-    // localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
-    // localStorage.setItem("roomPrice", JSON.stringify(props.price));
-    // localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
-    // localStorage.setItem("checkOutDate", JSON.stringify(props.checkOutDate));
-    // localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
-    // localStorage.setItem("numAdults", JSON.stringify(props.numAdults));
-    // localStorage.setItem("numChildren", JSON.stringify(props.numChildren));
-    // localStorage.setItem("numRooms", JSON.stringify(props.numRooms));
-    navigate(`/booking?room=${props.uid}&hotel_uid=${params.hotel_uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
-  }
-
-  const images = [];
-  for (let i = 0; i < props.images.length; i++) {
-    const image = props.images[i];
-    console.log(image);
-    console.log(image.high_resolution_url + "  " + image.url);
-    const imageDetails = {key: i, original: image.high_resolution_url, thumbnail: image.url};
-    images.push(imageDetails);
-  };
-
-    return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
+  return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
       <Container>
         <ImageGallery items={images} useBrowserFullscreen={false}></ImageGallery>
@@ -87,6 +77,58 @@ function FreeCancellation(props) {
   )}
 }
 
+// function Card(props) {
+//   const location = useLocation();
+//   const params = new URLSearchParams(location.search);
+//   const navigate = useNavigate();
+
+//   const toPaymentsPage = () => {
+//     localStorage.setItem("roomName", JSON.stringify(props.name));
+//     localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
+//     localStorage.setItem("roomPrice", JSON.stringify(props.price));
+//     localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
+//     localStorage.setItem("checkOutDate", JSON.stringify(props.checkOutDate));
+//     localStorage.setItem("checkInDate", JSON.stringify(props.checkInDate));
+//     localStorage.setItem("numAdults", JSON.stringify(props.numAdults));
+//     localStorage.setItem("numChildren", JSON.stringify(props.numChildren));
+//     localStorage.setItem("numRooms", JSON.stringify(props.numRooms));
+//     navigate(`/booking?room=${props.uid}&hotel_uid=${params.get("hotel_uid")}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
+//   }
+
+//   const images = [];
+//   for (let i = 0; i < props.images.count; i++) {
+//     images.push({original: props.images[i].url, thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
+//   }
+
+//   return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
+//       <Box maxW="50%">
+//         <Container>
+//           <ImageGallery items={props.images} useBrowserFullscreen={false}></ImageGallery>
+//         </Container>
+//       </Box>
+//       <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
+//           <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
+//               <Heading size="md">{props.name}</Heading>
+//               <Show above="md">
+//                   <Text>{props.description}</Text>
+//               </Show>
+//               {/* TODO: Add rating */}
+//               {/* TODO: Add map modal */}
+//               {/* TODO: Add review */}
+//           </Stack>
+//           <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
+//               {/* <Heading size="sm">C5G8</Heading> */}
+//               <Text size="sm">SGD {props.price}</Text>
+//               <Show above="md">
+//               <Button colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
+//                 Book Now
+//               </Button>
+//               </Show>
+//           </Stack>
+//       </Stack>             
+//   </Flex>);
+// }
+
 
 export default class HotelDetails extends Component {
   constructor(props) {
@@ -95,7 +137,8 @@ export default class HotelDetails extends Component {
 
     this.state = {
         selectedRoom: "",
-        hotel: {"completed": false, "hotel_details": {}, "rooms":[]}, //hotel_details contain static hotel data, rooms contain list of objects for each room
+        hotel: {"completed": false, "hotel_details": {}, "rooms":[]}, 
+        //hotel_details contain static hotel data, rooms contain list of objects for each room
     };
 
     this.setHotel = this.setHotel.bind(this);

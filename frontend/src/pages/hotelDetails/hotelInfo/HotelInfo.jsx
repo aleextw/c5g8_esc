@@ -3,6 +3,7 @@ import ImageGallery from "react-image-gallery";
 import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import ReactDOMServer from 'react-dom/server';
+import ReactStars from "react-rating-stars-component";
 
 function HotelInfo(props) {
   // TODO: Figure out why image quality sucks
@@ -11,8 +12,6 @@ function HotelInfo(props) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
     images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
   }
-
-  var stars = Array(props.hotel_details.rating).fill(<StarIcon color="gold" />).concat(Array(5 - props.hotel_details.rating).fill(<StarIcon color="grey" />));
   return (
     <Center w="100%" h="100%">
       <VStack w="100%" h="100%">
@@ -31,7 +30,17 @@ function HotelInfo(props) {
                     {props.hotel_details.name}
                   </Heading>
                   <Box w="50%" align="right">
-                    {stars}
+                  <ReactStars
+                    count={5}
+                    value={props.hotel_details.rating}
+                    edit={false}
+                    size={24}
+                    isHalf={true}
+                    emptyIcon={<i className="far fa-star"></i>}
+                    halfIcon={<i className="fa fa-star-half-alt"></i>}
+                    fullIcon={<i className="fa fa-star"></i>}
+                    activeColor="#ffd700"
+                  />
                   </Box>
                 </HStack>
                 <Text w="100%" align="left">

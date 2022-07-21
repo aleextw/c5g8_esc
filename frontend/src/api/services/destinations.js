@@ -20,3 +20,17 @@ export async function getHotel(params, callback) {
     const hotel = await response.json();
     callback(hotel);
 }
+
+export function postBooking(body) {
+    return fetch("http://localhost:8000/booking", 
+    {method: "POST",
+     mode: "cors", 
+     body: body, 
+     headers: {"Content-type": "application/json;charset=UTF-8"}
+    }).then(response => response.json().then(data => {
+        return {
+            "status": response.status,
+            "booking_uid": data.booking_uid
+        };
+    }));
+}

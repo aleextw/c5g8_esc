@@ -15,6 +15,8 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    useColorMode,
+    Switch
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -37,7 +39,7 @@ import {
     }
 
     const { isOpen, onToggle } = useDisclosure();
-  
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
       <Box h="100%">
         <Flex
@@ -89,7 +91,8 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href={'#'}>
+              href={'#'}
+              onClick={loginRoute}>
               Sign In
             </Button>
             <Button
@@ -101,7 +104,8 @@ import {
               href={'#'}
               _hover={{
                 bg: 'pink.300',
-              }}>
+              }}
+              onClick={registerRoute}>
               Sign Up
             </Button>
           </Stack>
