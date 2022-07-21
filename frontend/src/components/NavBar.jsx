@@ -15,6 +15,8 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    useColorMode,
+    Switch
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -37,7 +39,7 @@ import {
     }
 
     const { isOpen, onToggle } = useDisclosure();
-  
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
       <Box h="100%">
         <Flex
