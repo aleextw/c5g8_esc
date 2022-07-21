@@ -27,7 +27,7 @@ function Card(props) {
         // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
-    return (<Flex  onClick={searchHotel} cursor={"pointer"}>
+    return (<Flex  name="HotelCard" onClick={searchHotel} cursor={"pointer"}>
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
             <Stack p="2" direction="column" w={{base: "100%", md: "60%", sm:"60%"}}>
