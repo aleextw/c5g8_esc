@@ -10,17 +10,17 @@ router = APIRouter()
 logger = logging.getLogger()
 
 
-@router.get("/results/{dest_uid}")
+@router.get("/results/{dest_uid}", tags=["hotels"])
 def serve_destination(
-    dest_uid: str,
-    checkInDate: str,
-    checkOutDate: str,
-    numRooms: int,
-    guests: int,
-    currency: str,
+    dest_uid: str | None = None,
+    checkInDate: str | None = None,
+    checkOutDate: str | None = None,
+    numRooms: int | None = None,
+    guests: int | None = None,
+    currency: str | None = None,
 ):
     """
-    Given a destination_id and other optional query parameters, return the
+    Given a destination_id and other query parameters, return the
     list of hotels corresponding to that destination, along with their pricing information
     """
     return database.generate_hotels(

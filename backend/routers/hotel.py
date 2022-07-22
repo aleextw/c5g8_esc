@@ -28,19 +28,19 @@ class Booking(BaseModel):
     dest_uid: str
 
 
-@router.get("/results/hotel/{hotel_uid}")
-def serve_hotels(
-    hotel_uid: str,
-    dest_uid: str,
-    checkInDate: str,
-    checkOutDate: str,
-    numRooms: int,
-    guests: int,
-    currency: str,
+@router.get("/results/hotel/{hotel_uid}", tags=["hotel"])
+def serve_hotel(
+    hotel_uid: str | None = None,
+    dest_uid: str | None = None,
+    checkInDate: str | None = None,
+    checkOutDate: str | None = None,
+    numRooms: int | None = None,
+    guests: int | None = None,
+    currency: str | None = None,
 ):
     """
-    Given a destination_id and other optional query parameters, return the
-    list of hotels corresponding to that destination, along with their pricing information
+    Given a hotel_uid and other query parameters, return the
+    list of rooms corresponding to that hotel, along with their pricing information
     """
 
     if (
