@@ -28,8 +28,7 @@ class Autocomplete extends Component {
       // Whether or not the suggestion list is shown
       showSuggestions: false,
       // What the user has entered
-      userInput: "",
-      isOpen: false
+      userInput: ""
     };
 
     this.myRef = React.createRef();
@@ -106,8 +105,7 @@ class Autocomplete extends Component {
         activeSuggestion,
         filteredSuggestions,
         showSuggestions,
-        userInput,
-        isOpen
+        userInput
       }
     } = this;
 
@@ -148,13 +146,14 @@ class Autocomplete extends Component {
     
     return (
       <Box>
-        <Popover initialFocusRef={this.myRef} returnFocusOnClose={false}>
+        <Popover initialFocusRef={this.myRef} isOpen={this.props.open} returnFocusOnClose={false}>
           <PopoverTrigger>
             <Input
               name="dest_input"
               type="text"
               onChange={onChange}
               onKeyDown={onKeyDown}
+              onFocus={(e) => this.props.onFocus(true)}
               value={userInput}
               ref = {this.myRef}
             />

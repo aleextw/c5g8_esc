@@ -31,13 +31,12 @@ async function test1() {
   await datePicker.click();
   await sleep(1000);
 
+  // TODO: Fix inability to click on dates in datepicker
   //   // Step 5 - select dates of stay
   //   let date1 = driver.findElement(
-  //     By.xpath('//label[contains(.,"Sat Jul 30 2022")]')
+  //     By.xpath('//*[contains(.,"Sat Jul 30 2022")]')
   //   );
-  //   let date2 = driver.findElement(
-  //     By.xpath('//label[contains(.,"Mon Aug 1 2022")]')
-  //   );
+  //   let date2 = driver.findElement(By.xpath('//*[contains(.,"Mon Aug 1 2022")]'));
   //   await date1.click();
   //   await sleep(1000);
   //   await date2.click();
