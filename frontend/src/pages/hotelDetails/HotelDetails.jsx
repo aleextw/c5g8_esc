@@ -22,6 +22,7 @@ function Card(props) {
       localStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
       localStorage.setItem("numChildren", JSON.stringify(params.get("numChildren")));
       localStorage.setItem("numRooms", JSON.stringify(params.get("numRooms")));
+      localStorage.setItem("room_uid", JSON.stringify(props.uid));
       localStorage.setItem("dest_uid", JSON.stringify(params.get("dest_uid")));
       localStorage.setItem("hotel_uid", JSON.stringify(params.get("hotel_uid"))); 
       navigate(`/booking`);

@@ -318,6 +318,28 @@ def get_hotel_details_endpoint(
 
 
 def create_booking(booking):
+    if any(
+        [
+            i is None
+            for i in [
+                booking.name,
+                booking.phone,
+                booking.email,
+                booking.roomName,
+                booking.hotelName,
+                booking.roomPrice,
+                booking.checkInDate,
+                booking.checkOutDate,
+                booking.numAdults,
+                booking.numChildren,
+                booking.numRooms,
+                booking.room_uid,
+                booking.hotel_uid,
+                booking.dest_uid,
+            ]
+        ]
+    ):
+        return "-1"
     id = "".join(
         [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
     )
