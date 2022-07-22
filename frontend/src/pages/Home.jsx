@@ -6,8 +6,8 @@ import NavBar from "../components/NavBar";
 export default function Home() {
   return (
     <ChakraProvider>
-      <NavBar />
-      <Box 
+      <NavBar/>
+      <Box name="bgImage"
         bgImage="https://images.hdqwalls.com/download/1/yosemite-national-park-usa-4k-4r.jpg"
         bgPosition="center"
         bgRepeat="no-repeat"

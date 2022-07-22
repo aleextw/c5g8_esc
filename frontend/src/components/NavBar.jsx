@@ -96,7 +96,6 @@ import {
               Sign In
             </Button>
             <Button
-              display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
