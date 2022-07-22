@@ -121,13 +121,14 @@ def generate_destinations():
     return [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
 
 
-def generate_hotels(destination_id, checkin, checkout, guests, currency):
+def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, currency):
     hotels = resources["REQUESTS_SESSION"].get(get_dest_endpoint(destination_id))
     hotels_pricing = resources["REQUESTS_SESSION"].get(
         get_dest_price_endpoint(
             destination_id,
             checkin,
             checkout,
+            num_rooms,
             guests,
             currency,
         ),
@@ -143,15 +144,6 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
             "TE": "trailers",
             "Upgrade-Insecure-Requests": "1",
         },
-    )
-    print(
-        get_dest_price_endpoint(
-            destination_id,
-            checkin,
-            checkout,
-            guests,
-            currency,
-        )
     )
 
     if (
@@ -199,29 +191,21 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
 
         return_data["hotels"] = list(return_data["hotels"].values())
         return return_data
-    return -1
+    return {"completed": True, "hotels": {}}
 
 
 #  TODO: CHECK
-def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency):
+def generate_hotel(
+    hotel_id, destination_id, checkin, checkout, num_rooms, guests, currency
+):
     hotel = resources["REQUESTS_SESSION"].get(get_hotel_endpoint(hotel_id))
-    print(get_hotel_endpoint(hotel_id))
-    print(
-        get_hotel_details_endpoint(
-            destination_id,
-            hotel_id,
-            checkin,
-            checkout,
-            guests,
-            currency,
-        )
-    )
     rooms_pricing = resources["REQUESTS_SESSION"].get(
         get_hotel_details_endpoint(
             destination_id,
             hotel_id,
             checkin,
             checkout,
+            num_rooms,
             guests,
             currency,
         )
@@ -276,7 +260,11 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
 
         return_data["rooms"] = list(return_data["rooms"].values())
         return return_data
-    return -1
+    return {
+        "completed": True,
+        "hotel_details": {},
+        "rooms": {},
+    }
 
 
 # dest static
@@ -285,8 +273,10 @@ get_dest_endpoint = (
 )
 
 # dest pricing
-def get_dest_price_endpoint(destination_id, checkin, checkout, guests, currency):
-    return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+def get_dest_price_endpoint(
+    destination_id, checkin, checkout, num_rooms, guests, currency
+):
+    return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 # room static
@@ -294,9 +284,9 @@ get_hotel_endpoint = lambda x: f"https://hotelapi.loyalty.dev/api/hotels/{x}"
 
 # room pricing
 def get_hotel_details_endpoint(
-    destination_id, hotel_id, checkin, checkout, guests, currency
+    destination_id, hotel_id, checkin, checkout, num_rooms, guests, currency
 ):
-    return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+    return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 def create_booking(booking):
@@ -334,7 +324,6 @@ def get_booking(booking_uid):
         .execute(select(Booking).where(Booking.guest_booking_ref == booking_uid))
         .all()
     ):
-        print(booking)
         return booking
     else:
         return -1
