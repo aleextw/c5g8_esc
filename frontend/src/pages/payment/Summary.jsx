@@ -11,6 +11,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 
 export default function Summary(props) {
+  console.log("roomName: ", localStorage.getItem("roomName"));
+  console.log("hotelName: ", localStorage.getItem("hotelName"));
+  console.log("checkInDate: ", localStorage.getItem("checkInDate"));
+  
   const location = useLocation();
   const params = new URLSearchParams(location.search);
 

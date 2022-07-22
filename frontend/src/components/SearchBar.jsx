@@ -113,7 +113,7 @@ export default function SearchBar(props) {
                         </Stack>
                     </Stack>
                 </Flex>
-                <Button onClick={ searchRoute } colorScheme="red">Submit</Button>
+                <Button name="dest_search_submit" onClick={ searchRoute } colorScheme="red">Submit</Button>
             </Stack>
         </Box>
     );

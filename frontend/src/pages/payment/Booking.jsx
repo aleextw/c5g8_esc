@@ -26,6 +26,10 @@ import { postBooking } from '../../api/services/destinations';
 
 export default function Booking() {
 
+  console.log("roomName: ", localStorage.getItem("roomName"));
+  console.log("hotelName: ", localStorage.getItem("hotelName"));
+  console.log("checkInDate: ", localStorage.getItem("checkInDate"));
+
   const { hasCopied, onCopy } = useClipboard('example@example.com');
 
   const [ name, setName ] = useState("");

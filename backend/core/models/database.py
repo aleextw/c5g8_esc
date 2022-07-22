@@ -225,10 +225,11 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
                 "price": room_pricing_data["lowest_converted_price"],
                 "photo": room_pricing_data["images"],
                 "description": room_pricing_data["description"],
-                "long_description": room_pricing_data["long_description"],
+                "long_description": room_pricing_data["long_description"] if ("long_description" in room_pricing_data) else "",
                 "amenities": room_pricing_data["amenities"],
                 "free_cancellation": room_pricing_data["free_cancellation"],
                 "additional_info": room_pricing_data["roomAdditionalInfo"],
+                "points": room_pricing_data["points"]
             }
 
         # Add static data to hotel

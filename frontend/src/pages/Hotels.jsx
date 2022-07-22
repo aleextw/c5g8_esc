@@ -18,7 +18,7 @@ export default function Hotels() {
                 <NavBar></NavBar>
             </Box>
             <Box h="10%" w="100%">
-                <HotelsSearchBar params={ params }/>
+                <HotelsSearchBar name="HotelSearchBar" params={ params }/>
             </Box>
             {/* 84vh is the bodge for now, let's hope our component heights don't change */}
             <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">

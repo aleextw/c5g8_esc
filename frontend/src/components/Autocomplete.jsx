@@ -116,7 +116,7 @@ class Autocomplete extends Component {
     if (showSuggestions && userInput.length > 1) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <PopoverContent maxW="300">
+          <PopoverContent name="dest_suggestions" maxW="300">
             <ul className="suggestions">
               {filteredSuggestions.map((suggestion, index) => {
                 let className;
@@ -137,7 +137,7 @@ class Autocomplete extends Component {
         );
       } else {
         suggestionsListComponent = (
-          <PopoverContent>
+          <PopoverContent name="dest_suggestions">
             <div className="no-suggestions">
               <em>No matches found.</em>
             </div>
@@ -151,6 +151,7 @@ class Autocomplete extends Component {
         <Popover initialFocusRef={this.myRef} returnFocusOnClose={false}>
           <PopoverTrigger>
             <Input
+              name="dest_input"
               type="text"
               onChange={onChange}
               onKeyDown={onKeyDown}

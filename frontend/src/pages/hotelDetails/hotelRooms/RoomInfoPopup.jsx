@@ -1,7 +1,10 @@
 import React from "react";
+import {Spacer, UnorderedList, ListItem, Divider} from "@chakra-ui/react";
+
 import {
   Button,
   Text,
+  Box,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -9,11 +12,13 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton
+  ModalCloseButton,
+  Heading
 } from "@chakra-ui/react";
 
 function RoomInfoPopup(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Button onClick={onOpen} colorScheme="teal" variant="ghost" width="50%">
@@ -23,10 +28,24 @@ function RoomInfoPopup(props) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>{props.name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text> {props.content} </Text>
+            <Box>
+              <Text dangerouslySetInnerHTML={{__html: props.content}}/>
+            </Box>
+            <Text>   </Text>
+            <Divider/>
+            <Heading size={"md"}>Amenities:</Heading>
+            <Text>   </Text>
+            <UnorderedList>
+            {
+              props.amenities.slice(0, props.amenities.length).map((amenity) => {
+                    return (
+                      <ListItem>{amenity}</ListItem>
+                    )
+                })}
+            </UnorderedList>
           </ModalBody>
 
           <ModalFooter>

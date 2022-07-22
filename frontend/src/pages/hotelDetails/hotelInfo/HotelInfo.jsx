@@ -1,9 +1,50 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
-import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex } from "@chakra-ui/react";
+import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import ReactDOMServer from 'react-dom/server';
 import ReactStars from "react-rating-stars-component";
+import {MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver, MdOutlineDriveEta } from "react-icons/md";
+import{TbSnowflake,TbParking} from "react-icons/tb";
+import {BiFridge,} from "react-icons/bi";
+import {BsSafe} from "react-icons/bs";
+
+
+const icons = {
+  "airConditioning": <TbSnowflake/>,
+  "businessCenter": <MdOutlineBusinessCenter/>,
+  "clothingIron": <MdOutlineIron/>,
+  "dataPorts": <MdSettingsEthernet/>,
+  "dryCleaning": <MdOutlineDryCleaning/>,
+  "hairDryer": <MdOutlineDry/>,
+  "miniBarInRoom": <BiFridge/>,
+  "outdoorPool": <MdPool/>,
+  "parkingGarage": <TbParking/>,
+  "roomService": <MdRoomService/>,
+  "safe": <BsSafe/>,
+  "sauna": <MdHotTub/>,
+  "tVInRoom": <MdOutlineMonitor/>,
+  "valetParking": <MdOutlineDriveEta/>,
+  "voiceMail": <MdOutlineRecordVoiceOver/>
+}
+
+function IconComponent(props) {
+  const amenity= props.amenity[0];
+
+  if (amenity != "valetParking" || amenity) {
+    return (
+            <IconButton
+              variant="link"
+              colorScheme='teal'
+              aria-label= {amenity}
+              fontSize='24px'
+              icon= {icons[amenity]}
+              title={amenity}
+              />
+    )
+  }
+}
+
 
 function HotelInfo(props) {
   // TODO: Figure out why image quality sucks
@@ -12,6 +53,10 @@ function HotelInfo(props) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
     images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
   }
+
+  const amenities = Object.keys(props.hotel_details.amenities).map((key) => [key, props.hotel_details.amenities[key]]);
+  // console.log("amenities: ", amenities);
+
   return (
     <Center w="100%" h="100%">
       <VStack w="100%" h="100%">
@@ -47,9 +92,18 @@ function HotelInfo(props) {
                   {props.hotel_details.address}
                 </Text>
                 <Spacer />
-                <Link color="teal.500" href="#map" w="100%" align="left">
+                <Box align='left'>
+                  {
+                    amenities.slice(0, amenities.length).map((amenity) => {
+                      return (
+                        <IconComponent amenity={amenity} align="left"/>
+                      )
+                  })}
+                </Box>
+                <Spacer/>
+                {/*<Link color="teal.500" href="#map" w="100%" align="left">
                   Show on map
-                </Link>
+                </Link> */}
                 <Spacer />
               </VStack>
               <Box w="100%">
@@ -59,8 +113,8 @@ function HotelInfo(props) {
                     <Text w="100%" align="left">Earn at least</Text>
                   </VStack>
                   <VStack w="50%">
-                    <Heading w="100%" align="right" size="md">SGD 100</Heading>
-                    <Heading w="100%" align="right" size="sm">100 points</Heading>
+                    <Heading w="100%" align="right" size="md">SGD {props.price}</Heading>
+                    <Heading w="100%" align="right" size="sm">{props.points} points</Heading>
                   </VStack>
                 </HStack>
               </Box>

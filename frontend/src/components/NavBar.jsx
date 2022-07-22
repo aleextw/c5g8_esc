@@ -91,11 +91,11 @@ import {
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href={'#'}>
+              href={'#'}
+              onClick={loginRoute}>
               Sign In
             </Button>
             <Button
-              display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
@@ -103,7 +103,8 @@ import {
               href={'#'}
               _hover={{
                 bg: 'pink.300',
-              }}>
+              }}
+              onClick={registerRoute}>
               Sign Up
             </Button>
           </Stack>
