@@ -142,6 +142,7 @@ export default class HotelDetails extends Component {
             return (  //display each room's info
               <Card
                 name={room["name"]}
+                hotelName={this.state.hotel.hotel_details.name}
                 description={room["description"]}
                 long_description={ (room["long_description"] != "") ? room["long_description"] : room["description"]}
                 price={room["price"]}
