@@ -68,7 +68,7 @@ function Card(props) {
 
 
 function FreeCancellation(props) {
-  if (props.free_cancellation == "true") {
+  if (props.free_cancellation === "true") {
     return (
     <Center>
       <Text fontSize={"xl"} color={"green.500"} >Free Cancellation Available</Text>
@@ -104,7 +104,7 @@ export default class HotelDetails extends Component {
 
   componentDidMount() {
       // TODO: Figure out why its triggering twice
-      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 5000);
+      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 2000);
   }
 
   componentWillUnmount() {
@@ -144,7 +144,7 @@ export default class HotelDetails extends Component {
                 name={room["name"]}
                 hotelName={this.state.hotel.hotel_details.name}
                 description={room["description"]}
-                long_description={ (room["long_description"] != "") ? room["long_description"] : room["description"]}
+                long_description={ (room["long_description"] !== "") ? room["long_description"] : room["description"]}
                 price={room["price"]}
                 images={room["photo"]}
                 points={room["points"]}

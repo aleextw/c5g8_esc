@@ -11217,3 +11217,12 @@ KeyError: 'id'
 2022-07-22 21:22:45,949 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
 2022-07-22 21:22:46,429 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-23&checkout=2022-07-24&lang=en_US&currency=FOO&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
 2022-07-22 21:22:51,437 (DEBUG): Using proactor: IocpProactor
+2022-07-22 21:42:29,831 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-22 21:42:30,021 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-22 21:42:30,393 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-23&checkout=2022-07-24&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-22 21:42:38,839 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-22 21:42:39,497 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-23&checkout=2022-07-24&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-22 21:42:39,576 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-22 21:42:40,234 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-23&checkout=2022-07-24&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-22 21:42:54,877 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-22 21:42:55,508 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-23&checkout=2022-07-24&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
