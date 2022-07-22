@@ -122,6 +122,7 @@ def generate_destinations():
 
 
 def generate_hotels(destination_id, checkin, checkout, guests, currency):
+    print(get_dest_endpoint(destination_id))
     hotels = requests.get(get_dest_endpoint(destination_id))
     hotels_pricing = requests.get(
         get_dest_price_endpoint(
@@ -138,38 +139,42 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
         and hotels.status_code == requests.codes.ok
     ):
         return_data = {"completed": hotels_pricing.json()["completed"], "hotels": {}}
-        # Set up pricing data
-        for hotel_pricing_data in hotels_pricing.json()["hotels"]:
-            return_data["hotels"][hotel_pricing_data["id"]] = {
-                "uid": hotel_pricing_data["id"],
-                "searchRank": hotel_pricing_data["searchRank"],
-                "price": hotel_pricing_data["lowest_converted_price"],
-                "points": hotel_pricing_data["points"],
-            }
+        try:
+            `# Set up pricing data
+            for hotel_pricing_data in hotels_pricing.json()["hotels"]:
+                return_data["hotels"][hotel_pricing_data["id"]] = {
+                    "uid": hotel_pricing_data["id"],
+                    "searchRank": hotel_pricing_data["searchRank"],
+                    "price": hotel_pricing_data["lowest_converted_price"],
+                    "points": hotel_pricing_data["points"],
+                }
 
-        # Add static data to hotels w pricing data
-        for hotel_static_data in hotels.json():
-            if return_data["hotels"].get(hotel_static_data["id"], None) is not None:
-                return_data["hotels"][hotel_static_data["id"]].update(
-                    {
-                        "latitude": hotel_static_data["latitude"],
-                        "longitude": hotel_static_data["longitude"],
-                        "distance": hotel_static_data["distance"],
-                        "name": hotel_static_data["name"],
-                        "address": hotel_static_data["address"],
-                        "rating": hotel_static_data["rating"],
-                        "review": hotel_static_data["trustyou"]["score"][
-                            "kaligo_overall"
-                        ],
-                        "photo": hotel_static_data["image_details"]["prefix"]
-                        + str(hotel_static_data["default_image_index"])
-                        + hotel_static_data["image_details"]["suffix"],
-                    }
-                )
+            # Add static data to hotels w pricing data
+            for hotel_static_data in hotels.json():
+                if return_data["hotels"].get(hotel_static_data["id"], None) is not None:
+                    return_data["hotels"][hotel_static_data["id"]].update(
+                        {
+                            "latitude": hotel_static_data["latitude"],
+                            "longitude": hotel_static_data["longitude"],
+                            "distance": hotel_static_data["distance"],
+                            "name": hotel_static_data["name"],
+                            "address": hotel_static_data["address"],
+                            "rating": hotel_static_data["rating"],
+                            "review": hotel_static_data["trustyou"]["score"][
+                                "kaligo_overall"
+                            ],
+                            "photo": hotel_static_data["image_details"]["prefix"]
+                            + str(hotel_static_data["default_image_index"])
+                            + hotel_static_data["image_details"]["suffix"],
+                        }
+                    )
+        except Exception as e:
+            # Data missing
+            pass
 
-        # Remove entries with no static data
+        # Remove entries with missing data
         for hotel_data in set(return_data["hotels"].keys()):
-            if return_data["hotels"][hotel_data].get("name", None) is None:
+            if len(list(return_data["hotels"][hotel_data].keys())) != 12:
                 del return_data["hotels"][hotel_data]
 
         return_data["hotels"] = list(return_data["hotels"].values())
