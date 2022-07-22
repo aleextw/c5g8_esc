@@ -72,6 +72,7 @@ export default function SearchBar(props) {
                     <Stack w={{base: "100%", lg: "33%"}}>
                         <Text ml={2}>Dates of Stay</Text>
                         <RangeDatepicker
+                            name="date_picker"
                             selectedDates={selectedDates}
                             onDateChange={setSelectedDates}
                             minDate={new Date()}
@@ -81,7 +82,7 @@ export default function SearchBar(props) {
                     <Stack direction="horizontal" gap="1" w={{base: "100%", lg: "33%"}} alignItems="center">
                         <Stack>
                             <Text>Rooms</Text>
-                            <Select value={numRooms} onChange={handleRooms}>
+                            <Select value={numRooms} onChange={handleRooms} name="rooms">
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
@@ -92,7 +93,7 @@ export default function SearchBar(props) {
                         
                         <Stack>
                             <Text>Adults</Text>
-                            <Select value={numAdults} onChange={handleAdults}>
+                            <Select value={numAdults} onChange={handleAdults} name="num_adults">
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
@@ -103,7 +104,7 @@ export default function SearchBar(props) {
                         
                         <Stack>
                             <Text>Children</Text>
-                            <Select value={numChildren} onChange={handleChildren}>
+                            <Select value={numChildren} onChange={handleChildren} name="num_children">
                                 <option value='0'>0</option>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>

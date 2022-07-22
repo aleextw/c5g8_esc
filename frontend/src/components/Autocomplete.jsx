@@ -77,7 +77,7 @@ class Autocomplete extends Component {
         showSuggestions: false,
         userInput: filteredSuggestions[activeSuggestion]["term"]
       });
-      this.props.onSelect(filteredSuggestions[activeSuggestion]["term"]);
+      this.props.onSelect(filteredSuggestions[activeSuggestion]["uid"]);
     }
     // User pressed the up arrow
     else if (e.keyCode === 38) {
