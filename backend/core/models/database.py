@@ -122,8 +122,29 @@ def generate_destinations():
 
 
 def generate_hotels(destination_id, checkin, checkout, guests, currency):
-    hotels = requests.get(get_dest_endpoint(destination_id))
-    hotels_pricing = requests.get(
+    hotels = resources["REQUESTS_SESSION"].get(get_dest_endpoint(destination_id))
+    hotels_pricing = resources["REQUESTS_SESSION"].get(
+        get_dest_price_endpoint(
+            destination_id,
+            checkin,
+            checkout,
+            guests,
+            currency,
+        ),
+        headers={
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+            "Connection": "keep-alive",
+            "DNT": "1",
+            "Host": "hotelapi.loyalty.dev",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "cross-site",
+            "TE": "trailers",
+            "Upgrade-Insecure-Requests": "1",
+        },
+    )
+    print(
         get_dest_price_endpoint(
             destination_id,
             checkin,
@@ -183,7 +204,7 @@ def generate_hotels(destination_id, checkin, checkout, guests, currency):
 
 #  TODO: CHECK
 def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency):
-    hotel = requests.get(get_hotel_endpoint(hotel_id))
+    hotel = resources["REQUESTS_SESSION"].get(get_hotel_endpoint(hotel_id))
     print(get_hotel_endpoint(hotel_id))
     print(
         get_hotel_details_endpoint(
@@ -195,7 +216,7 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
             currency,
         )
     )
-    rooms_pricing = requests.get(
+    rooms_pricing = resources["REQUESTS_SESSION"].get(
         get_hotel_details_endpoint(
             destination_id,
             hotel_id,
