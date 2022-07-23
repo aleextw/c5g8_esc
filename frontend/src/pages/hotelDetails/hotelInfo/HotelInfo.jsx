@@ -57,6 +57,8 @@ function HotelInfo(props) {
   const amenities = Object.keys(props.hotel_details.amenities).map((key) => [key, props.hotel_details.amenities[key]]);
   // console.log("amenities: ", amenities);
 
+  console.log("HotelInfo Images: ", images);
+
   return (
     <Center w="100%" h="100%">
       <VStack w="100%" h="100%">

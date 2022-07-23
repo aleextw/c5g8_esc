@@ -2,7 +2,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Component } from "react";
 import { getHotel } from "../../api/services/destinations";
 import HotelInfo from "../hotelDetails/hotelInfo/HotelInfo";
-import HotelRooms from "../hotelDetails/hotelRooms/HotelRooms";
 import HotelMap from "../hotelDetails/hotelMap/HotelMap";
 import RoomInfoPopup from "../hotelDetails/hotelRooms/RoomInfoPopup";
 import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Show, Spinner, StackDivider, Container } from "@chakra-ui/react";
@@ -32,6 +31,8 @@ function Card(props) {
     for (let i = 0; i < props.images.length; i++) {
       images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
     }
+
+    console.log("Images: ", images);
 
   return (<Flex name="RoomCard" borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
