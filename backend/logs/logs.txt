@@ -2763,3 +2763,26 @@ KeyError: 'description'
 2022-07-23 14:40:22,975 (INFO): Application shutdown complete.
 2022-07-23 14:40:22,975 (INFO): Finished server process [16456]
 >>>>>>> dfa4d57f6d505da3db34f599c2ab72dbff0f7f2c
+2022-07-23 15:14:07,743 (INFO): Started server process [11596]
+2022-07-23 15:14:07,744 (INFO): Waiting for application startup.
+2022-07-23 15:14:07,744 (INFO): Application startup complete.
+2022-07-23 15:14:33,333 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 15:14:34,059 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:14:36,382 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:14:42,543 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:14:44,881 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:14:49,709 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:14:52,198 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:14:57,551 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:14:59,891 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:15:01,946 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:15:03,834 (DEBUG): Starting new HTTPS connection (2): hotelapi.loyalty.dev:443
+2022-07-23 15:15:04,345 (DEBUG): Starting new HTTPS connection (3): hotelapi.loyalty.dev:443
+2022-07-23 15:15:04,453 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:15:04,905 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:15:07,542 (DEBUG): Starting new HTTPS connection (4): hotelapi.loyalty.dev:443
+2022-07-23 15:15:08,394 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:15:10,705 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:15:11,337 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:15:11,878 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:15:12,222 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None

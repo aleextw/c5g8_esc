@@ -81,17 +81,12 @@ export default class CardList extends Component {
         // a fake async api call like which sends
         // 20 more records in 1.5 secs
         const cardLength = this.state.items.length;
-        console.log("fetching more data");
-        setTimeout(() => {
-          this.setState({
-            items: this.state.items.concat(this.state.hotels.hotels.slice(cardLength, cardLength+10))
+        this.setState({
+            items: this.state.hotels.hotels.slice(0, cardLength+10)
           });
-        }, 1500);
-        console.log("more data fetched, items: ", this.state.items);
       };
 
     componentDidMount() {
-        // TODO: Figure out why its triggering twice
         this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
     }
 
