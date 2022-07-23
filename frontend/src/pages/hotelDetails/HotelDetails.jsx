@@ -33,7 +33,7 @@ function Card(props) {
       images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
     }
 
-  return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
+  return (<Flex name="RoomCard" borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
       <Container>
         <ImageGallery items={images} useBrowserFullscreen={false} showPlayButton={false}></ImageGallery>
@@ -55,7 +55,7 @@ function Card(props) {
             <Text size="sm">SGD {props.price}</Text>
             <Text size="sm" color="teal.500">Earn {props.points} points!</Text>
             <Show above="md">
-            <Button colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
+            <Button name="button_bookRoom" colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
               Book Now
             </Button>
             </Show>
@@ -120,7 +120,7 @@ export default class HotelDetails extends Component {
 
     if (this.state.hotel.rooms.length > 0) {
       return ( //display static hotel info
-        <Stack w="70%" h="100%" overflowY='scroll' className="hotels-list">
+        <Stack name="HotelDetails" w="70%" h="100%" overflowY='scroll' className="hotels-list">
           <HotelInfo
             hotel_details = {this.state.hotel.hotel_details}
             price = {this.state.hotel.rooms[0].price}

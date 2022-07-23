@@ -129,14 +129,14 @@ async function empty_destination() {
   await roomCount.sendKeys(Key.ARROW_DOWN);
   await roomCount.sendKeys(Key.ENTER);
 
-  // Step 7 - select room count input
+  // Step 7 - select adult count input
   let adultCount = driver.findElement(By.name("num_adults"));
   await adultCount.click();
   await sleep(1000);
   await adultCount.sendKeys(Key.ARROW_UP);
   await adultCount.sendKeys(Key.ENTER);
 
-  // Step 8 - select room count input
+  // Step 8 - select children count input
   let childrenCount = driver.findElement(By.name("num_children"));
   await childrenCount.click();
   await sleep(1000);

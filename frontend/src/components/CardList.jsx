@@ -50,7 +50,7 @@ function Card(props) {
                 <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
                 <Show above="md">
-                    <Button onClick={searchHotel}>Book Deal</Button>
+                    <Button name="button_bookHotel" onClick={searchHotel}>Book Deal</Button>
                 </Show>
             </Stack>
         </Stack>             
@@ -89,6 +89,7 @@ export default class CardList extends Component {
       };
 
     componentDidMount() {
+        // TODO: Figure out why its triggering twice
         this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
     }
 
@@ -122,23 +123,23 @@ export default class CardList extends Component {
                         >
 
                             { this.state.items.map((hotel) => {
-                                return (
-                                    <Card 
-                                        searchRank={hotel["searchRank"]}
-                                        price={hotel["price"]}
-                                        points={hotel["points"]}
-                                        latitude={hotel["latitude"]}
-                                        longitude={hotel["longitude"]}
-                                        distance={hotel["distance"]}
-                                        name={hotel["name"]}
-                                        address={hotel["address"]}
-                                        rating={hotel["rating"]}
-                                        review={hotel["review"]}
-                                        image={hotel["photo"]}
-                                        uid={hotel["uid"]}
-                                    />      
-                                )
-                            })}
+                        return (
+                            <Card 
+                                searchRank={hotel["searchRank"]}
+                                price={hotel["price"]}
+                                points={hotel["points"]}
+                                latitude={hotel["latitude"]}
+                                longitude={hotel["longitude"]}
+                                distance={hotel["distance"]}
+                                name={hotel["name"]}
+                                address={hotel["address"]}
+                                rating={hotel["rating"]}
+                                review={hotel["review"]}
+                                image={hotel["photo"]}
+                                uid={hotel["uid"]}
+                            />      
+                        )
+                    })}
 
                         </InfiniteScroll>
                     </Stack>

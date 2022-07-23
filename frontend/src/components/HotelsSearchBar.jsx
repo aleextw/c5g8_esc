@@ -43,7 +43,7 @@ export default function HotelsSearchBar(props) {
     const cancelRef = React.useRef();
 
     return (
-        <Box 
+        <Box name="HotelsSearchBar"
             h="100%"
             overflow="hidden" 
             bgColor="white" 

@@ -52,7 +52,7 @@ export default function HotelsSearchBar(props) {
             borderStyle={'solid'}
             borderColor={useColorModeValue('gray.200', 'gray.900')}
             w="100%">
-            <Center
+            <Center 
                 as="button"
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
@@ -61,7 +61,7 @@ export default function HotelsSearchBar(props) {
                 px={{ base: 4 }}
                 align={'center'}
                 onClick={searchRoute}>
-                <Stack direction="horizontal" align="center" gap="5" p={{ base: 0, lg: 2 }} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
+                <Stack name="goback_HotelSearchBar" direction="horizontal" align="center" gap="5" p={{ base: 0, lg: 2 }} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
                     <VStack>
                         <ArrowBackIcon></ArrowBackIcon>
                         <Text>Edit</Text>
