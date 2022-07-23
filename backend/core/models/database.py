@@ -162,9 +162,9 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                 return_data["hotels"][hotel_pricing_data["id"]] = {
                     "uid": hotel_pricing_data["id"],
                     "searchRank": hotel_pricing_data["searchRank"],
-                    "price": hotel_pricing_data["lowest_converted_price"]
+                    "price": hotel_pricing_data["converted_price"]
                     if hotels_pricing.json()["completed"]
-                    else hotel_pricing_data["converted_price"],
+                    else hotel_pricing_data["lowest_converted_price"],
                     "points": hotel_pricing_data["points"],
                 }
 

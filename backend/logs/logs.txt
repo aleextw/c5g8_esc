@@ -151,3 +151,13 @@ requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected(
 2022-07-23 11:57:14,277 (INFO): Started server process [33676]
 2022-07-23 11:57:14,278 (INFO): Waiting for application startup.
 2022-07-23 11:57:14,279 (INFO): Application startup complete.
+2022-07-23 11:57:43,240 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 11:57:43,374 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:43,955 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:57:45,341 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:46,020 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:57:47,334 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:47,946 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:58:20,342 (INFO): Started server process [35616]
+2022-07-23 11:58:20,343 (INFO): Waiting for application startup.
+2022-07-23 11:58:20,344 (INFO): Application startup complete.
