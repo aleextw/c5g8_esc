@@ -2,6 +2,10 @@ const { By, Key, Builder, until } = require("selenium-webdriver");
 require("chromedriver");
 
 async function test1() {
+  /* 
+  
+  */
+
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   //To wait for browser to build and launch properly
   let driver = await new Builder().forBrowser("chrome").build();
