@@ -3038,3 +3038,4 @@ NameError: name 'false' is not defined
 2022-07-23 15:07:09,053 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
 2022-07-23 15:07:11,681 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
 2022-07-23 15:07:15,645 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:07:18,947 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
