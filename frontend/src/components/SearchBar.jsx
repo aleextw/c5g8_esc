@@ -38,7 +38,9 @@ export default function SearchBar(props) {
         let finalSelectedDestination = "";
         // If searchbar has data, choose the first suggestion if none selected
         if (selectedDestination === "") {
+            console.log("baz");
             if (filteredSuggestions.length > 0 && showSuggestions) {
+                console.log("bar");
                 // Set directly to a temp var rather than update state since state update is async, might not reflect properly
                 finalSelectedDestination = filteredSuggestions[activeSuggestion]["uid"];
             } else {
@@ -47,6 +49,8 @@ export default function SearchBar(props) {
                 setInvalidDestination(true);
                 return;
             }
+        } else {
+            finalSelectedDestination = selectedDestination;
         }
 
         // If checkInDate and checkOutDate are the same, raise another error

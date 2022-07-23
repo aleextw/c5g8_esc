@@ -93,22 +93,10 @@ def test_get_rooms_valid_hotel():
     assert set(data["hotel_details"]["images"].keys()) == set(
         ["suffix", "count", "prefix"]
     )
-    assert (
-        isinstance(data["hotel_details"]["images"]["count"], int)
-        and data["hotel_details"]["images"]["count"] > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["images"]["suffix"], str)
-        and len(data["hotel_details"]["images"]["suffix"]) > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["images"]["prefix"], str)
-        and len(data["hotel_details"]["images"]["prefix"]) > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["description"], str)
-        and len(data["hotel_details"]["description"]) > 0
-    )
+    assert isinstance(data["hotel_details"]["images"]["count"], int)
+    assert isinstance(data["hotel_details"]["images"]["suffix"], str)
+    assert isinstance(data["hotel_details"]["images"]["prefix"], str)
+    assert isinstance(data["hotel_details"]["description"], str)
     assert (
         # TODO: Check what a non-empty amenities dict should contain (wrt datatypes)
         isinstance(data["hotel_details"]["amenities"], dict)

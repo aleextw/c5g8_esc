@@ -222,6 +222,18 @@ def generate_hotel(
         return {"completed": True, "rooms": [], "hotel_details": {}}
 
     hotel = resources["REQUESTS_SESSION"].get(get_hotel_endpoint(hotel_id))
+    print(get_hotel_endpoint(hotel_id))
+    print(
+        get_hotel_details_endpoint(
+            destination_id,
+            hotel_id,
+            checkin,
+            checkout,
+            num_rooms,
+            guests,
+            currency,
+        )
+    )
     rooms_pricing = resources["REQUESTS_SESSION"].get(
         get_hotel_details_endpoint(
             destination_id,
@@ -253,14 +265,18 @@ def generate_hotel(
         for room_pricing_data in rooms_pricing.json()["rooms"]:
             return_data["rooms"][room_pricing_data["key"]] = {
                 "uid": room_pricing_data["key"],
-                "name": room_pricing_data["roomNormalizedDescription"],
-                "price": room_pricing_data["lowest_converted_price"],
-                "photo": room_pricing_data["images"],
-                "description": room_pricing_data["description"],
+                "name": room_pricing_data.get("roomNormalizedDescription", ""),
+                "price": room_pricing_data["converted_price"]
+                if rooms_pricing.json()["completed"]
+                else room_pricing_data["lowest_converted_price"],
+                "photo": room_pricing_data.get(
+                    "images", {"suffix": "", "count": 0, "prefix": ""}
+                ),
+                "description": room_pricing_data.get("description", "None"),
                 "long_description": room_pricing_data.get("long_description", None),
-                "amenities": room_pricing_data["amenities"],
-                "free_cancellation": room_pricing_data["free_cancellation"],
-                "additional_info": room_pricing_data["roomAdditionalInfo"],
+                "amenities": room_pricing_data.get("amenities", []),
+                "free_cancellation": room_pricing_data.get("free_cancellation", False),
+                "additional_info": room_pricing_data.get("roomAdditionalInfo", {}),
             }
 
         # Add static data to hotel
