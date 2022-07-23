@@ -35,14 +35,17 @@ export default function SearchBar(props) {
     // TODO: Load data from local storage and load reasonable defaults if not present
 
     const searchRoute = () => {
+        let finalSelectedDestination = "";
         // If searchbar has data, choose the first suggestion if none selected
         if (selectedDestination === "") {
             if (filteredSuggestions.length > 0 && showSuggestions) {
-                setSelectedDestination(filteredSuggestions[activeSuggestion]["uid"]);
+                // Set directly to a temp var rather than update state since state update is async, might not reflect properly
+                finalSelectedDestination = filteredSuggestions[activeSuggestion]["uid"];
             } else {
-            // No valid suggestion to pick as default, raise error
-            setInvalidDestination(true);
-            return;
+                console.log("baz");
+                // No valid suggestion to pick as default, raise error
+                setInvalidDestination(true);
+                return;
             }
         }
 
@@ -55,7 +58,8 @@ export default function SearchBar(props) {
         if (props.onClick) {
             props.onClick();
         }
-        navigate(`/hotels?destination=${destinations.find(d => d.uid === selectedDestination).term}&dest_uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=SGD`);
+
+        navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=SGD`);
     }
 
     const today = new Date();

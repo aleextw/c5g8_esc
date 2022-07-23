@@ -243,7 +243,10 @@ def generate_hotel(
             "rooms": {},
         }
 
-        if len(rooms_pricing.json()["rooms"]) == 0:
+        if (
+            rooms_pricing.json()["completed"]
+            and len(rooms_pricing.json()["rooms"]) == 0
+        ):
             return {"completed": True, "rooms": [], "hotel_details": {}}
 
         # Set up pricing data
