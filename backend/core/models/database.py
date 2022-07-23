@@ -138,21 +138,19 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
             num_rooms,
             guests,
             currency,
-        ),
-        headers={
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Connection": "keep-alive",
-            "DNT": "1",
-            "Host": "hotelapi.loyalty.dev",
-            "Sec-Fetch-Dest": "document",
-            "Sec-Fetch-Mode": "navigate",
-            "Sec-Fetch-Site": "cross-site",
-            "TE": "trailers",
-            "Upgrade-Insecure-Requests": "1",
-        },
+        )
     )
 
+    print(
+        get_dest_price_endpoint(
+            destination_id,
+            checkin,
+            checkout,
+            num_rooms,
+            guests,
+            currency,
+        )
+    )
     if (
         hotels_pricing.status_code == requests.codes.ok
         and hotels.status_code == requests.codes.ok
@@ -164,7 +162,9 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                 return_data["hotels"][hotel_pricing_data["id"]] = {
                     "uid": hotel_pricing_data["id"],
                     "searchRank": hotel_pricing_data["searchRank"],
-                    "price": hotel_pricing_data["lowest_converted_price"],
+                    "price": hotel_pricing_data["lowest_converted_price"]
+                    if hotels_pricing.json()["completed"]
+                    else hotel_pricing_data["converted_price"],
                     "points": hotel_pricing_data["points"],
                 }
 
