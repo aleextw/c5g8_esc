@@ -121,87 +121,118 @@ def generate_destinations():
     return [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
 
 
-def generate_hotels(destination_id, checkin, checkout, guests, currency):
-    hotels = requests.get(get_dest_endpoint(destination_id))
-    hotels_pricing = requests.get(
+def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, currency):
+    if any(
+        [
+            i is None
+            for i in [destination_id, checkin, checkout, num_rooms, guests, currency]
+        ]
+    ):
+        return {"completed": True, "hotels": []}
+    hotels = resources["REQUESTS_SESSION"].get(get_dest_endpoint(destination_id))
+    hotels_pricing = resources["REQUESTS_SESSION"].get(
         get_dest_price_endpoint(
             destination_id,
             checkin,
             checkout,
+            num_rooms,
             guests,
             currency,
         )
     )
 
+    print(
+        get_dest_price_endpoint(
+            destination_id,
+            checkin,
+            checkout,
+            num_rooms,
+            guests,
+            currency,
+        )
+    )
     if (
         hotels_pricing.status_code == requests.codes.ok
         and hotels.status_code == requests.codes.ok
     ):
         return_data = {"completed": hotels_pricing.json()["completed"], "hotels": {}}
-        # Set up pricing data
-        for hotel_pricing_data in hotels_pricing.json()["hotels"]:
-            return_data["hotels"][hotel_pricing_data["id"]] = {
-                "uid": hotel_pricing_data["id"],
-                "searchRank": hotel_pricing_data["searchRank"],
-                "price": hotel_pricing_data["lowest_converted_price"],
-                "points": hotel_pricing_data["points"],
-            }
+        try:
+            # Set up pricing data
+            for hotel_pricing_data in hotels_pricing.json()["hotels"]:
+                return_data["hotels"][hotel_pricing_data["id"]] = {
+                    "uid": hotel_pricing_data["id"],
+                    "searchRank": hotel_pricing_data["searchRank"],
+                    "price": hotel_pricing_data["converted_price"]
+                    if hotels_pricing.json()["completed"]
+                    else hotel_pricing_data["lowest_converted_price"],
+                    "points": hotel_pricing_data["points"],
+                }
 
-        # Add static data to hotels w pricing data
-        for hotel_static_data in hotels.json():
-            if return_data["hotels"].get(hotel_static_data["id"], None) is not None:
-                return_data["hotels"][hotel_static_data["id"]].update(
-                    {
-                        "latitude": hotel_static_data["latitude"],
-                        "longitude": hotel_static_data["longitude"],
-                        "distance": hotel_static_data["distance"],
-                        "name": hotel_static_data["name"],
-                        "address": hotel_static_data["address"],
-                        "rating": hotel_static_data["rating"],
-                        "review": hotel_static_data["trustyou"]["score"][
-                            "kaligo_overall"
-                        ],
-                        "photo": hotel_static_data["image_details"]["prefix"]
-                        + str(hotel_static_data["default_image_index"])
-                        + hotel_static_data["image_details"]["suffix"],
-                    }
-                )
+            # Add static data to hotels w pricing data
+            for hotel_static_data in hotels.json():
+                if return_data["hotels"].get(hotel_static_data["id"], None) is not None:
+                    return_data["hotels"][hotel_static_data["id"]].update(
+                        {
+                            "latitude": hotel_static_data["latitude"],
+                            "longitude": hotel_static_data["longitude"],
+                            "distance": hotel_static_data["distance"],
+                            "name": hotel_static_data["name"],
+                            "address": hotel_static_data["address"],
+                            "rating": hotel_static_data["rating"],
+                            "review": hotel_static_data["trustyou"]["score"][
+                                "kaligo_overall"
+                            ],
+                            "photo": hotel_static_data["image_details"]["prefix"]
+                            + str(hotel_static_data["default_image_index"])
+                            + hotel_static_data["image_details"]["suffix"],
+                        }
+                    )
+        except Exception as e:
+            # Data missing
+            pass
 
-        # Remove entries with no static data
+        # Remove entries with missing data
         for hotel_data in set(return_data["hotels"].keys()):
-            if return_data["hotels"][hotel_data].get("name", None) is None:
+            if len(list(return_data["hotels"][hotel_data].keys())) != 12:
                 del return_data["hotels"][hotel_data]
 
         return_data["hotels"] = list(return_data["hotels"].values())
         return return_data
-    return -1
+    return {"completed": True, "hotels": []}
 
 
 #  TODO: CHECK
-def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency):
-    hotel = requests.get(get_hotel_endpoint(hotel_id))
-    print(get_hotel_endpoint(hotel_id))
-    print(
-        get_hotel_details_endpoint(
-            destination_id,
-            hotel_id,
-            checkin,
-            checkout,
-            guests,
-            currency,
-        )
-    )
-    rooms_pricing = requests.get(
-        get_hotel_details_endpoint(
-            destination_id,
-            hotel_id,
-            checkin,
-            checkout,
-            guests,
-            currency,
-        )
-    )
+def generate_hotel(
+    hotel_id, destination_id, checkin, checkout, num_rooms, guests, currency
+):
+    if any(
+        [
+            i is None
+            for i in [
+                hotel_id,
+                destination_id,
+                checkin,
+                checkout,
+                num_rooms,
+                guests,
+                currency,
+            ]
+        ]
+    ):
+        return {"completed": True, "rooms": [], "hotel_details": {}}
 
+    hotel = resources["REQUESTS_SESSION"].get(get_hotel_endpoint(hotel_id))
+    rooms_pricing = resources["REQUESTS_SESSION"].get(
+        get_hotel_details_endpoint(
+            destination_id,
+            hotel_id,
+            checkin,
+            checkout,
+            num_rooms,
+            guests,
+            currency,
+        )
+    )
     if (
         rooms_pricing.status_code == requests.codes.ok
         and hotel.status_code == requests.codes.ok
@@ -211,30 +242,35 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
             "hotel_details": {},
             "rooms": {},
         }
+
+        if len(rooms_pricing.json()["rooms"]) == 0:
+            return {"completed": True, "rooms": [], "hotel_details": {}}
+
         # Set up pricing data
         for room_pricing_data in rooms_pricing.json()["rooms"]:
             return_data["rooms"][room_pricing_data["key"]] = {
                 "uid": room_pricing_data["key"],
                 "name": room_pricing_data["roomNormalizedDescription"],
-                # "searchRank": room_pricing_data["searchRank"],
                 "price": room_pricing_data["lowest_converted_price"],
                 "photo": room_pricing_data["images"],
                 "description": room_pricing_data["description"],
-                "long_description": room_pricing_data["long_description"] if ("long_description" in room_pricing_data) else "",
+                "long_description": room_pricing_data.get("long_description", None),
                 "amenities": room_pricing_data["amenities"],
                 "free_cancellation": room_pricing_data["free_cancellation"],
                 "additional_info": room_pricing_data["roomAdditionalInfo"],
-                "points": room_pricing_data["points"]
             }
 
         # Add static data to hotel
         hotel = hotel.json()
+
+        if hotel == {}:
+            return {"completed": True, "rooms": [], "hotel_details": {}}
+
         return_data["hotel_details"].update(
             {
                 "uid": hotel["id"],
                 "latitude": hotel["latitude"],
                 "longitude": hotel["longitude"],
-                # "distance": hotel_static_data["distance"],
                 "name": hotel["name"],
                 "address": hotel["address"],
                 "rating": hotel["rating"],
@@ -252,7 +288,11 @@ def generate_hotel(hotel_id, destination_id, checkin, checkout, guests, currency
 
         return_data["rooms"] = list(return_data["rooms"].values())
         return return_data
-    return -1
+    return {
+        "completed": True,
+        "hotel_details": {},
+        "rooms": [],
+    }
 
 
 # dest static
@@ -261,8 +301,10 @@ get_dest_endpoint = (
 )
 
 # dest pricing
-def get_dest_price_endpoint(destination_id, checkin, checkout, guests, currency):
-    return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+def get_dest_price_endpoint(
+    destination_id, checkin, checkout, num_rooms, guests, currency
+):
+    return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 # room static
@@ -270,12 +312,34 @@ get_hotel_endpoint = lambda x: f"https://hotelapi.loyalty.dev/api/hotels/{x}"
 
 # room pricing
 def get_hotel_details_endpoint(
-    destination_id, hotel_id, checkin, checkout, guests, currency
+    destination_id, hotel_id, checkin, checkout, num_rooms, guests, currency
 ):
-    return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={guests}&partner_id=1"
+    return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 def create_booking(booking):
+    if any(
+        [
+            i is None
+            for i in [
+                booking.name,
+                booking.phone,
+                booking.email,
+                booking.roomName,
+                booking.hotelName,
+                booking.roomPrice,
+                booking.checkInDate,
+                booking.checkOutDate,
+                booking.numAdults,
+                booking.numChildren,
+                booking.numRooms,
+                booking.room_uid,
+                booking.hotel_uid,
+                booking.dest_uid,
+            ]
+        ]
+    ):
+        return "-1"
     id = "".join(
         [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
     )
@@ -310,7 +374,6 @@ def get_booking(booking_uid):
         .execute(select(Booking).where(Booking.guest_booking_ref == booking_uid))
         .all()
     ):
-        print(booking)
         return booking
     else:
         return -1

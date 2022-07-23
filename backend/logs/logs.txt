@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022-07-22 00:21:08,547 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
 2022-07-22 00:21:08,745 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
 2022-07-22 00:21:08,764 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
@@ -1082,3 +1083,194 @@
 2022-07-22 19:17:59,484 (INFO): Waiting for application shutdown.
 2022-07-22 19:17:59,503 (INFO): Application shutdown complete.
 2022-07-22 19:17:59,503 (INFO): Finished server process [1570]
+=======
+2022-07-23 00:34:33,624 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 00:34:34,771 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 00:34:35,268 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 00:34:35,720 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 00:34:36,273 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 00:34:37,701 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 00:34:38,217 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 01:13:39,182 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-23 01:13:39,316 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 01:13:39,641 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 01:13:41,149 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 01:13:41,673 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 01:15:18,690 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 01:15:19,005 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=3%7C3&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 01:15:20,686 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 01:15:21,144 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=3%7C3&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 01:16:06,845 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=lVwl HTTP/1.1" 200 None
+2022-07-23 01:16:07,292 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=lVwl&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=3%7C3&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:49:59,203 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotels.py", line 26, in serve_destination
+    return database.generate_hotels(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 132, in generate_hotels
+    hotels = resources["REQUESTS_SESSION"].get(get_dest_endpoint(destination_id))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2022-07-23 11:50:01,185 (DEBUG): Starting new HTTPS connection (2): hotelapi.loyalty.dev:443
+2022-07-23 11:50:01,368 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:02,156 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:03,285 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:03,871 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:05,279 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:05,837 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:07,284 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:07,814 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:09,282 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:09,845 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:11,295 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:12,525 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:13,518 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:14,063 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:15,290 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:15,929 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:50:17,280 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:50:17,914 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:53:21,089 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:53:21,680 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:54:00,274 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:54:00,887 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:54:55,684 (INFO): Started server process [29124]
+2022-07-23 11:54:55,685 (INFO): Waiting for application startup.
+2022-07-23 11:54:55,686 (INFO): Application startup complete.
+2022-07-23 11:54:55,701 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 11:54:55,856 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:54:56,436 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:55:10,966 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:55:11,554 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:57:14,277 (INFO): Started server process [33676]
+2022-07-23 11:57:14,278 (INFO): Waiting for application startup.
+2022-07-23 11:57:14,279 (INFO): Application startup complete.
+2022-07-23 11:57:43,240 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 11:57:43,374 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:43,955 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:57:45,341 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:46,020 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:57:47,334 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:57:47,946 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:58:20,342 (INFO): Started server process [35616]
+2022-07-23 11:58:20,343 (INFO): Waiting for application startup.
+2022-07-23 11:58:20,344 (INFO): Application startup complete.
+2022-07-23 11:58:40,575 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 11:58:40,712 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:58:41,279 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:58:42,986 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:58:43,567 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 11:58:44,679 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=pS0H HTTP/1.1" 200 None
+2022-07-23 11:58:45,409 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=pS0H&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 12:14:04,255 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-23 12:14:04,528 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 12:14:04,942 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 12:49:42,057 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-23 12:49:42,448 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 12:49:43,559 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 12:49:44,370 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 12:49:46,166 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 12:49:46,804 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 12:49:49,154 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 13:01:35,945 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-23 13:01:36,419 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 13:01:37,857 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 13:03:06,874 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 13:03:08,903 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 13:06:31,628 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 13:06:33,699 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 13:06:34,305 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-23 13:06:36,237 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+>>>>>>> d82839a2806be66ef5feef3dbde92ef3b337902d

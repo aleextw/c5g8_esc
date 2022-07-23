@@ -53,6 +53,7 @@ export default function Booking() {
       numAdults: localStorage.getItem("numAdults").replace(/['"]+/g, ''),
       numChildren: localStorage.getItem("numChildren").replace(/['"]+/g, ''),
       numRooms: localStorage.getItem("numRooms").replace(/['"]+/g, ''),
+      room_uid: localStorage.getItem("room_uid").replace(/['"]+/g, ''),
       dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
       hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, '')
     };

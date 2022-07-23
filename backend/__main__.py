@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import requests
 import uvicorn
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -26,6 +27,7 @@ resources["SETUP_TIME"] = datetime.now()
 
 origins = ["http://localhost:3000", "localhost:3000", "http://localhost"]
 
+resources["REQUESTS_SESSION"] = requests.Session()
 
 app = FastAPI()
 

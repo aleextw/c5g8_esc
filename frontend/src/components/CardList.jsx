@@ -55,7 +55,6 @@ function Card(props) {
 export default class CardList extends Component {
     constructor(props) {
         super(props);
-        console.log()
 
         this.state = {
             selectedHotel: "",
@@ -77,7 +76,7 @@ export default class CardList extends Component {
 
     componentDidMount() {
         // TODO: Figure out why its triggering twice
-        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 5000);
+        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
     }
 
     componentWillUnmount() {
