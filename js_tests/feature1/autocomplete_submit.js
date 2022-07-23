@@ -44,6 +44,7 @@ async function test1() {
   // Step 6 - select room count input
   let roomCount = driver.findElement(By.name("rooms"));
   await roomCount.click();
+  o;
   await sleep(1000);
   await roomCount.sendKeys(Key.ARROW_DOWN);
   await roomCount.sendKeys(Key.ENTER);
