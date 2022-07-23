@@ -22,6 +22,7 @@ function Card(props) {
       localStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
       localStorage.setItem("numChildren", JSON.stringify(params.get("numChildren")));
       localStorage.setItem("numRooms", JSON.stringify(params.get("numRooms")));
+      localStorage.setItem("room_uid", JSON.stringify(props.uid));
       localStorage.setItem("dest_uid", JSON.stringify(params.get("dest_uid")));
       localStorage.setItem("hotel_uid", JSON.stringify(params.get("hotel_uid"))); 
       navigate(`/booking`);
@@ -68,7 +69,7 @@ function Card(props) {
 
 
 function FreeCancellation(props) {
-  if (props.free_cancellation == "true") {
+  if (props.free_cancellation === "true") {
     return (
     <Center>
       <Text fontSize={"xl"} color={"green.500"} >Free Cancellation Available</Text>
@@ -104,7 +105,7 @@ export default class HotelDetails extends Component {
 
   componentDidMount() {
       // TODO: Figure out why its triggering twice
-      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 5000);
+      this.updateTimer = setInterval(() => getHotel(this.params, this.setHotel), 2000);
   }
 
   componentWillUnmount() {
@@ -142,8 +143,9 @@ export default class HotelDetails extends Component {
             return (  //display each room's info
               <Card
                 name={room["name"]}
+                hotelName={this.state.hotel.hotel_details.name}
                 description={room["description"]}
-                long_description={ (room["long_description"] != "") ? room["long_description"] : room["description"]}
+                long_description={ (room["long_description"] !== "") ? room["long_description"] : room["description"]}
                 price={room["price"]}
                 images={room["photo"]}
                 points={room["points"]}

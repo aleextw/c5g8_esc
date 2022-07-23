@@ -27,7 +27,7 @@ function Card(props) {
         // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
-    return (<Flex  onClick={searchHotel} cursor={"pointer"}>
+    return (<Flex  name="HotelCard" onClick={searchHotel} cursor={"pointer"}>
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
             <Stack p="2" direction="column" w={{base: "100%", md: "60%", sm:"60%"}}>
@@ -55,7 +55,6 @@ function Card(props) {
 export default class CardList extends Component {
     constructor(props) {
         super(props);
-        console.log()
 
         this.state = {
             selectedHotel: "",
@@ -77,7 +76,7 @@ export default class CardList extends Component {
 
     componentDidMount() {
         // TODO: Figure out why its triggering twice
-        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 5000);
+        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
     }
 
     componentWillUnmount() {
@@ -99,7 +98,7 @@ export default class CardList extends Component {
         
         if (this.state.hotels.hotels.length > 0) {
             return (
-                <Box w="100%" h={{base: "80vh", md: "70vh", sm: "70vh"}}>
+                <Box w="100%" h={{base: "80vh", lg:"80vh", md: "70vh", sm: "70vh"}}>
                     <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                     { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
                         return (

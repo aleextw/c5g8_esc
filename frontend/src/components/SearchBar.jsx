@@ -50,6 +50,7 @@ export default function SearchBar(props) {
     const [numAdults, setNumAdults] = useState(2);
     const [numChildren, setNumChildren] = useState(0);
     // const [currency, setCurrency] = useState("SGD");
+    const [autocompleteOpenState, setAutocompleteOpenState] = useState(false);
     
     useEffect(() => {
         getDestinations(setDestinations);
@@ -66,13 +67,15 @@ export default function SearchBar(props) {
                 <Flex align="center" gap="5"  p={{ base: 0, lg: 2 }} w="100%" direction={{ base: 'column', lg: 'row' }}>
                     <Stack w={{base: "100%", lg: "33%"}}>
                         <Text ml={2}>Destination or Hotel</Text>
-                        <Autocomplete suggestions={destinations} placeholder="Destination or Hotel" onSelect={setSelectedDestination}/>
+                        <Autocomplete suggestions={destinations} open={autocompleteOpenState} onFocus={setAutocompleteOpenState} placeholder="Destination or Hotel" onSelect={setSelectedDestination}/>
                     </Stack>
 
-                    <Stack w={{base: "100%", lg: "33%"}}>
+                    <Stack w={{base: "100%", lg: "33%"}} onClick={e => setAutocompleteOpenState(false)}>
                         <Text ml={2}>Dates of Stay</Text>
                         <RangeDatepicker
+                            name="date_picker"
                             selectedDates={selectedDates}
+                            
                             onDateChange={setSelectedDates}
                             minDate={new Date()}
                         />
@@ -81,7 +84,7 @@ export default function SearchBar(props) {
                     <Stack direction="horizontal" gap="1" w={{base: "100%", lg: "33%"}} alignItems="center">
                         <Stack>
                             <Text>Rooms</Text>
-                            <Select value={numRooms} onChange={handleRooms}>
+                            <Select value={numRooms} onClick={e => {setAutocompleteOpenState(false); console.log(autocompleteOpenState);}} onChange={handleRooms} name="rooms">
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
@@ -92,7 +95,7 @@ export default function SearchBar(props) {
                         
                         <Stack>
                             <Text>Adults</Text>
-                            <Select value={numAdults} onChange={handleAdults}>
+                            <Select value={numAdults} onClick={e => setAutocompleteOpenState(false)} onChange={handleAdults} name="num_adults">
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
@@ -103,7 +106,7 @@ export default function SearchBar(props) {
                         
                         <Stack>
                             <Text>Children</Text>
-                            <Select value={numChildren} onChange={handleChildren}>
+                            <Select value={numChildren} onClick={e => setAutocompleteOpenState(false)} onChange={handleChildren} name="num_children">
                                 <option value='0'>0</option>
                                 <option value='1'>1</option>
                                 <option value='2'>2</option>
@@ -113,7 +116,7 @@ export default function SearchBar(props) {
                         </Stack>
                     </Stack>
                 </Flex>
-                <Button onClick={ searchRoute } colorScheme="red">Submit</Button>
+                <Button name="dest_search_submit" onClick={ searchRoute } colorScheme="red">Submit</Button>
             </Stack>
         </Box>
     );

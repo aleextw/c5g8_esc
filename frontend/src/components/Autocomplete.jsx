@@ -28,8 +28,7 @@ class Autocomplete extends Component {
       // Whether or not the suggestion list is shown
       showSuggestions: false,
       // What the user has entered
-      userInput: "",
-      isOpen: false
+      userInput: ""
     };
 
     this.myRef = React.createRef();
@@ -77,7 +76,7 @@ class Autocomplete extends Component {
         showSuggestions: false,
         userInput: filteredSuggestions[activeSuggestion]["term"]
       });
-      this.props.onSelect(filteredSuggestions[activeSuggestion]["term"]);
+      this.props.onSelect(filteredSuggestions[activeSuggestion]["uid"]);
     }
     // User pressed the up arrow
     else if (e.keyCode === 38) {
@@ -106,8 +105,7 @@ class Autocomplete extends Component {
         activeSuggestion,
         filteredSuggestions,
         showSuggestions,
-        userInput,
-        isOpen
+        userInput
       }
     } = this;
 
@@ -116,7 +114,7 @@ class Autocomplete extends Component {
     if (showSuggestions && userInput.length > 1) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <PopoverContent maxW="300">
+          <PopoverContent name="dest_suggestions" maxW="300">
             <ul className="suggestions">
               {filteredSuggestions.map((suggestion, index) => {
                 let className;
@@ -137,7 +135,7 @@ class Autocomplete extends Component {
         );
       } else {
         suggestionsListComponent = (
-          <PopoverContent>
+          <PopoverContent name="dest_suggestions">
             <div className="no-suggestions">
               <em>No matches found.</em>
             </div>
@@ -148,12 +146,14 @@ class Autocomplete extends Component {
     
     return (
       <Box>
-        <Popover initialFocusRef={this.myRef} returnFocusOnClose={false}>
+        <Popover initialFocusRef={this.myRef} isOpen={this.props.open} returnFocusOnClose={false}>
           <PopoverTrigger>
             <Input
+              name="dest_input"
               type="text"
               onChange={onChange}
               onKeyDown={onKeyDown}
+              onFocus={(e) => this.props.onFocus(true)}
               value={userInput}
               ref = {this.myRef}
             />
