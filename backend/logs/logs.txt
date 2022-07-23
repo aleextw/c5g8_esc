@@ -1551,3 +1551,1490 @@ KeyError: 'description'
 2022-07-23 14:40:22,974 (INFO): Waiting for application shutdown.
 2022-07-23 14:40:22,975 (INFO): Application shutdown complete.
 2022-07-23 14:40:22,975 (INFO): Finished server process [16456]
+2022-07-23 14:53:20,780 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:53:21,200 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:53:21,208 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:53:41,180 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:01,987 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:01,992 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 14:54:02,224 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:02,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:54:07,645 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:07,711 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:08,356 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:54:13,371 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:13,508 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:14,066 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:54:19,086 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:19,146 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf HTTP/1.1" 200 None
+2022-07-23 14:54:19,619 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:54:24,635 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:24,690 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:24,943 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-21&checkout=2022-07-20&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:54:29,959 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:30,249 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:30,490 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:54:35,508 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:35,574 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:35,823 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:54:40,837 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:54:40,977 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-07-23 14:54:41,316 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=FOO&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 500 None
+2022-07-23 14:54:46,322 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:11,276 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:11,926 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:55:12,488 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:55:17,646 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:18,279 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:55:22,816 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:55:31,418 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:31,472 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-07-23 14:55:31,837 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:55:36,848 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:36,893 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-07-23 14:55:37,190 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-07-25&checkout=2022-07-26&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:55:42,208 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:42,787 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:55:43,355 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-22&checkout=2022-07-21&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:55:48,376 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:49,021 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:55:49,578 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:55:54,586 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:55:55,279 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:55:55,754 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:56:00,773 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:56:01,488 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-07-23 14:56:01,960 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=FOO&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-07-23 14:56:06,966 (DEBUG): Using proactor: IocpProactor
+2022-07-23 14:57:08,007 (INFO): Started server process [8292]
+2022-07-23 14:57:08,008 (INFO): Waiting for application startup.
+2022-07-23 14:57:08,009 (INFO): Application startup complete.
+2022-07-23 14:57:08,057 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 14:57:08,241 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:08,756 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:08,759 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:08,836 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:09,366 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:09,368 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:10,331 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:10,854 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:10,856 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:12,018 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:12,581 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:12,584 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:14,321 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:14,848 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:14,851 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:16,016 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:16,546 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:16,548 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:18,346 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 14:57:18,811 (INFO): Shutting down
+2022-07-23 14:57:18,879 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 14:57:18,882 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 298, in generate_hotel
+    "description": hotel["description"],
+KeyError: 'description'
+2022-07-23 14:57:18,904 (INFO): Waiting for application shutdown.
+2022-07-23 14:57:18,905 (INFO): Application shutdown complete.
+2022-07-23 14:57:18,906 (INFO): Finished server process [8292]
+2022-07-23 15:01:35,210 (INFO): Started server process [31688]
+2022-07-23 15:01:35,211 (INFO): Waiting for application startup.
+2022-07-23 15:01:35,212 (INFO): Application startup complete.
+2022-07-23 15:01:35,278 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 15:01:35,388 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:35,996 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:35,999 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:36,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:36,781 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:36,784 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:37,172 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:37,701 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:37,704 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:37,767 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:38,359 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:38,361 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:38,737 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:39,302 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:39,305 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:39,383 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:39,932 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:39,934 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:40,824 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:41,404 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:41,406 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:42,514 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:43,138 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:43,141 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:44,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:45,350 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:45,353 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:46,517 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:47,141 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:47,143 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:48,843 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:49,429 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:49,432 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:50,532 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:51,091 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:51,094 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:52,823 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:53,353 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:53,356 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:54,522 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:55,288 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:55,290 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:56,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:57,373 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:57,376 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:01:58,514 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:01:59,055 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:01:59,057 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:02:00,957 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:01,755 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:01,758 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:02:02,534 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:03,088 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:03,091 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:02:04,910 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:05,487 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:05,489 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": false,
+NameError: name 'false' is not defined
+2022-07-23 15:02:06,525 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:07,057 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:07,061 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\hotel.py", line 50, in serve_hotel
+    return database.generate_hotel(
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 278, in generate_hotel
+    "hero_image": False,
+NameError: name 'false' is not defined
+2022-07-23 15:02:09,261 (INFO): Started server process [34564]
+2022-07-23 15:02:09,262 (INFO): Waiting for application startup.
+2022-07-23 15:02:09,263 (INFO): Application startup complete.
+2022-07-23 15:02:09,272 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 15:02:09,431 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:09,991 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:10,538 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:11,055 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:12,523 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:13,253 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:14,373 (INFO): Started server process [34588]
+2022-07-23 15:02:14,374 (INFO): Waiting for application startup.
+2022-07-23 15:02:14,375 (INFO): Application startup complete.
+2022-07-23 15:02:14,778 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 15:02:14,916 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:15,523 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:16,537 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:17,059 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:18,027 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:18,642 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:02:20,116 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:02:20,767 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:03:03,395 (INFO): Started server process [19480]
+2022-07-23 15:03:03,396 (INFO): Waiting for application startup.
+2022-07-23 15:03:03,397 (INFO): Application startup complete.
+2022-07-23 15:03:09,301 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-23 15:03:09,422 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:03:09,966 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:03:11,355 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:03:11,962 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:03:13,362 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:03:13,921 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:03:15,365 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D HTTP/1.1" 200 None
+2022-07-23 15:03:15,955 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/5x5D/price?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:06:53,547 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:06:54,340 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:06:55,960 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:06:58,457 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:07:02,528 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:07:05,073 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:07:09,053 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None
+2022-07-23 15:07:11,681 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=WP3Z&checkin=2022-07-24&checkout=2022-07-25&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-23 15:07:15,645 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=WP3Z HTTP/1.1" 200 None

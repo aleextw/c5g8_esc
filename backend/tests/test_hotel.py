@@ -105,6 +105,7 @@ def test_get_rooms_valid_hotel():
     for room in data["rooms"]:
         assert set(room.keys()) == set(room_attr)
         assert isinstance(room["uid"], str) and len(room["uid"]) > 0
+        assert isinstance(room["name"], str) and len(room["name"]) >= 0
         assert isinstance(room["price"], (float, int)) and room["price"] >= 0
         assert isinstance(room["photo"], list)
         for item in room["photo"]:
@@ -116,7 +117,7 @@ def test_get_rooms_valid_hotel():
                 and len(item["high_resolution_url"]) > 0
             )
             assert isinstance(item["hero_image"], bool)
-        assert isinstance(room["description"], str) and len(room["description"]) > 0
+        assert isinstance(room["description"], str)
         assert isinstance(room["long_description"], (str, NoneType))
         assert isinstance(room["amenities"], list)
         for item in room["amenities"]:

@@ -270,9 +270,16 @@ def generate_hotel(
                 if rooms_pricing.json()["completed"]
                 else room_pricing_data["lowest_converted_price"],
                 "photo": room_pricing_data.get(
-                    "images", {"suffix": "", "count": 0, "prefix": ""}
+                    "images",
+                    [
+                        {
+                            "url": "https://via.placeholder.com/300",
+                            "high_resolution_url": "https://via.placeholder.com/300",
+                            "hero_image": False,
+                        }
+                    ],
                 ),
-                "description": room_pricing_data.get("description", "None"),
+                "description": room_pricing_data.get("description", ""),
                 "long_description": room_pricing_data.get("long_description", None),
                 "amenities": room_pricing_data.get("amenities", []),
                 "free_cancellation": room_pricing_data.get("free_cancellation", False),
@@ -288,14 +295,18 @@ def generate_hotel(
         return_data["hotel_details"].update(
             {
                 "uid": hotel["id"],
-                "latitude": hotel["latitude"],
-                "longitude": hotel["longitude"],
+                "latitude": hotel.get("latitude", 38.685516),
+                "longitude": hotel.get("longitude", -101.073324),
                 "name": hotel["name"],
                 "address": hotel["address"],
                 "rating": hotel["rating"],
                 "review": hotel["trustyou"]["score"]["kaligo_overall"],
-                "images": hotel["image_details"],
-                "description": hotel["description"],
+                "images": hotel.get(
+                    "image_details", {"suffix": "", "count": 0, "prefix": ""}
+                ),
+                "description": hotel.get(
+                    "description", "This hotel has not provided a description."
+                ),
                 "amenities": hotel["amenities"],
             }
         )
