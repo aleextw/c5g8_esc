@@ -31,7 +31,7 @@ const icons = {
 function IconComponent(props) {
   const amenity= props.amenity[0];
 
-  if (amenity != "valetParking" || amenity) {
+  if (amenity !== "valetParking" || amenity) {
     return (
             <IconButton
               variant="link"

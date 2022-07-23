@@ -172,16 +172,16 @@ export default function SearchBar(props) {
 
                     <Stack w={{base: "100%", lg: "33%"}} onClick={e => {setAutocompleteOpenState(false); setInvalidDates(false);}}>
                         <Text ml={2}>Dates of Stay</Text>
-                        <FormControl isInvalid={invalidDates}>
+                        {/* <FormControl isInvalid={invalidDates}> */}
                             <RangeDatepicker
                                 name="date_picker"
                                 selectedDates={selectedDates}
-                                usePortal={true}
+                                // usePortal={true}
                                 onDateChange={setSelectedDates}
                                 minDate={new Date()}
                             />
-                            {invalidDates && <FormErrorMessage>Please select 2 dates.</FormErrorMessage>}
-                        </FormControl>
+                            {/* {invalidDates && <FormErrorMessage>Please select 2 dates.</FormErrorMessage>} */}
+                        {/* </FormControl> */}
                     </Stack>
 
                     <Flex direction="horizontal" gap="3" w={{base: "100%", lg: "33%"}}>

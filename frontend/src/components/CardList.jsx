@@ -3,6 +3,7 @@ import { Component } from "react";
 import { getHotels } from "../api/services/destinations";
 import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner, UnorderedList, ListItem, Show, StackDivider } from "@chakra-ui/react"
 import InfiniteScroll from "react-infinite-scroll-component";
+import ReactStars from "react-rating-stars-component";
 
 function formatDistance(distance) {
     if (distance < 1000) {
@@ -18,30 +19,33 @@ function Card(props) {
     
     const navigate = useNavigate();
     const searchHotel = () => {
-        console.log(props.name);
-        console.log(props);
-        console.log(props.uid);
-        // TODO: Add error checking for invalid UIDs
-        // TODO: Store data to local storage        
-        // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
         navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
-        // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
     }
 
-    return (<Flex  name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={5} mb={5} shadow={"base"}>
-        <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
+    return (<Flex name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={1} mb={1} shadow={"base"} background="white">
+        <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-            <Stack p="2" direction="column" w={{base: "100%", md: "60%", sm:"60%"}}>
+            <Stack p="2" direction="column" w="100%">
                 <Heading size="md">{props.name}</Heading>
                 <Show above="md">
                     <Text>{props.address}</Text>
                     <Text>{formatDistance(props.distance)} from city centre</Text>
                 </Show>
-                {/* TODO: Add rating */}
+                <ReactStars
+                    count={5}
+                    value={props.rating}
+                    edit={false}
+                    size={24}
+                    isHalf={true}
+                    emptyIcon={<i className="far fa-star"></i>}
+                    halfIcon={<i className="fa fa-star-half-alt"></i>}
+                    fullIcon={<i className="fa fa-star"></i>}
+                    activeColor="#ffd700"
+                  />
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p="2" w={{base: "100%", md: "40%", sm: "60%"}} direction="column">
+            <Stack p="2" w="100%" direction="column">
                 {/* <Heading size="sm">C5G8</Heading> */}
                 <Text size="sm">SGD {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
@@ -78,8 +82,6 @@ export default class CardList extends Component {
     }
 
     fetchMoreData = () => {
-        // a fake async api call like which sends
-        // 20 more records in 1.5 secs
         const cardLength = this.state.items.length;
         this.setState({
             items: this.state.hotels.hotels.slice(0, cardLength+10)
@@ -110,7 +112,7 @@ export default class CardList extends Component {
         if (this.state.hotels.hotels.length > 0) {
             return (
                 <Box w="100%" h={{base: "80vh", lg:"80vh", md: "70vh", sm: "70vh"}}>
-                    <Stack id="card-stack" w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                    <Stack id="card-stack" w='100%' h='100%' overflowY='scroll' className="hotels-list" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                         <InfiniteScroll
                         dataLength={this.state.items.length}
                         next={this.fetchMoreData}

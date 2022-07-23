@@ -49,9 +49,6 @@ function Card(props) {
             <Center ml="auto" mr="auto">
               <RoomInfoPopup name= {props.description} content={props.long_description} amenities={props.amenities} />
             </Center>
-            {/* TODO: Add rating */}
-            {/* TODO: Add map modal */}
-            {/* TODO: Add review */}
         </Stack>
         <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
             {/* <Heading size="sm">C5G8</Heading> */}
