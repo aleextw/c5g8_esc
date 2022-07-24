@@ -269,6 +269,7 @@ def generate_hotel(
                 "price": room_pricing_data["converted_price"]
                 if rooms_pricing.json()["completed"]
                 else room_pricing_data["lowest_converted_price"],
+                "points": room_pricing_data["points"],
                 "photo": room_pricing_data.get(
                     "images",
                     [
