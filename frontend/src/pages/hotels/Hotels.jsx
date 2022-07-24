@@ -49,7 +49,7 @@ function Hotels() {
           }
         ])
       });
-    }, 1500);
+    }, 100000);
   }
 
   return (

@@ -20,8 +20,15 @@ import {
   } from '@chakra-ui/react';
   import React from 'react';
   import { useNavigate} from "react-router-dom";
+  import { useState, useEffect } from 'react';
   
   export default function ContactFormWithSocialButtons() {
+
+    const [ cardName, setCardName ] = useState("");
+    const [ cardNumber, setCardNumber ] = useState("");
+    const [ expiry, setExpiry ] = useState("");
+    const [ CVV, setCVV ] = useState("");
+
     const { hasCopied, onCopy } = useClipboard('example@example.com');
   
     const navigate = useNavigate()
@@ -37,6 +44,22 @@ import {
     const cancelBook = () => {
       navigate("/hotels")
     }
+
+    useEffect(() => {
+      localStorage.setItem('cardName', JSON.stringify(cardName))
+    }, [cardName])
+
+    useEffect(() => {
+      localStorage.setItem('cardNumber', JSON.stringify(cardNumber))
+    }, [cardNumber])
+
+    useEffect(() => {
+      localStorage.setItem('expiry', JSON.stringify(expiry))
+    }, [expiry])
+
+    useEffect(() => {
+      localStorage.setItem('CVV', JSON.stringify(CVV))
+    }, [CVV])
   
     return (
       <Flex
@@ -77,7 +100,12 @@ import {
   
                       <InputGroup>
                         <InputLeftElement />
-                        <Input type="text" name="name" placeholder="Your Name" />
+                        <Input 
+                          type="text" 
+                          name="cardName" 
+                          placeholder="Your Name"
+                          value={cardName}
+                          onChange={(event) => setCardName(event.target.value)} />
                       </InputGroup>
                     </FormControl>
   
@@ -88,8 +116,10 @@ import {
                         <InputLeftElement />
                         <Input
                           type="number"
-                          name="number"
+                          name="cardNumber"
                           placeholder="Card Number"
+                          value={cardNumber}
+                          onChange={(event) => setCardNumber(event.target.value)}
                         />
                       </InputGroup>
                     </FormControl>
@@ -101,8 +131,10 @@ import {
                         <InputLeftElement />
                         <Input
                           type="number"
-                          name="number"
+                          name="expiry"
                           placeholder="Expiry Date"
+                          value={expiry}
+                          onChange={(event) => setExpiry(event.target.value)}
                         />
                       </InputGroup>
                     </FormControl>
@@ -114,8 +146,10 @@ import {
                         <InputLeftElement />
                         <Input
                           type="number"
-                          name="number"
+                          name="CVV"
                           placeholder="CVV"
+                          value={CVV}
+                          onChange={(event) => setCVV(event.target.value)}
                         />
                       </InputGroup>
                     </FormControl>

@@ -18,7 +18,7 @@ import {
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
@@ -39,12 +39,12 @@ export default function Booking() {
 
   const navigate = useNavigate();
 
-  const goToSummary = () => {
+  const goToPay = () => {
     const body = {
       name: name.replace(/['"]+/g, ''), 
       email: email.replace(/['"]+/g, ''), 
       phone: phone.replace(/['"]+/g, ''), 
-      additionalData: additionalData, 
+      additionalData: additionalData.replace(/['"] + /g, ''),
       roomName: localStorage.getItem("roomName").replace(/['"]+/g, ''),
       hotelName: localStorage.getItem("hotelName"),
       roomPrice: localStorage.getItem("roomPrice"),
@@ -58,16 +58,34 @@ export default function Booking() {
       hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, '')
     };
 
-    console.log(body);
-    let response;
-    postBooking(JSON.stringify(body)).then((data) => {
-      response = data;
-      console.log(response);
-      if (response.status === 200) {
-        navigate(`/summary?booking_uid=${response.booking_uid}`);
-      }
-    });
+    // console.log(body);
+    // let response;
+    // postBooking(JSON.stringify(body)).then((data) => {
+    //   response = data;
+    //   console.log(response);
+    //   if (response.status === 200) {
+    //     navigate(`/summary?booking_uid=${response.booking_uid}`);
+    //   }
+    // });
+
+    navigate("/pay")
   }
+
+  useEffect(() => {
+    localStorage.setItem('name', JSON.stringify(name))
+  }, [name])
+
+  useEffect(() => {
+    localStorage.setItem('email', JSON.stringify(email))
+  }, [email])
+
+  useEffect(() => {
+    localStorage.setItem('phone', JSON.stringify(phone))
+  }, [phone])
+
+  useEffect(() => {
+    localStorage.setItem('additionalData', JSON.stringify(additionalData))
+  }, [additionalData])
 
   const cancelBook = () => {
     navigate(-1);
@@ -173,8 +191,9 @@ export default function Booking() {
                           _hover={{
                             bg: 'blue.500',
                           }}
-                          onClick={goToSummary}>
-                          Summary
+                          type="submit"
+                          onClick={goToPay}>
+                          Pay
                         </Button>
 
                         <Button
