@@ -2,11 +2,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Component } from "react";
 import { getHotel } from "../../api/services/destinations";
 import HotelInfo from "../hotelDetails/hotelInfo/HotelInfo";
-import HotelRooms from "../hotelDetails/hotelRooms/HotelRooms";
 import HotelMap from "../hotelDetails/hotelMap/HotelMap";
-import RoomInfoPopup from "../hotelDetails/hotelRooms/RoomInfoPopup";
+import RoomInfoPopup from "../hotelDetails/RoomInfoPopup";
 import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Show, Spinner, StackDivider, Container } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 function Card(props) {
     const location = useLocation();
