@@ -1,12 +1,12 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
-import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton} from "@chakra-ui/react";
+import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton, Tooltip} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import ReactDOMServer from 'react-dom/server';
 import ReactStars from "react-rating-stars-component";
-import {MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver, MdOutlineDriveEta } from "react-icons/md";
+import {MdSmokeFree,MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver, MdOutlineDriveEta, MdFitnessCenter} from "react-icons/md";
 import{TbSnowflake,TbParking} from "react-icons/tb";
-import {BiFridge,} from "react-icons/bi";
+import {BiFridge,BiHandicap} from "react-icons/bi";
 import {BsSafe} from "react-icons/bs";
 
 
@@ -25,14 +25,17 @@ const icons = {
   "sauna": <MdHotTub/>,
   "tVInRoom": <MdOutlineMonitor/>,
   "valetParking": <MdOutlineDriveEta/>,
-  "voiceMail": <MdOutlineRecordVoiceOver/>
+  "voiceMail": <MdOutlineRecordVoiceOver/>,
+  "fitnessFacility": <MdFitnessCenter/>,
+  "handicapAccessible": <BiHandicap/>,
+  "nonSmokingRooms": <MdSmokeFree/>
+
 }
 
 function IconComponent(props) {
   const amenity= props.amenity[0];
-
-  if (amenity !== "valetParking" || amenity) {
-    return (
+  return (
+          <Tooltip label={amenity}>
             <IconButton
               variant="link"
               colorScheme='teal'
@@ -41,8 +44,8 @@ function IconComponent(props) {
               icon= {icons[amenity]}
               title={amenity}
               />
-    )
-  }
+          </Tooltip>
+  )
 }
 
 
@@ -56,8 +59,6 @@ function HotelInfo(props) {
 
   const amenities = Object.keys(props.hotel_details.amenities).map((key) => [key, props.hotel_details.amenities[key]]);
   // console.log("amenities: ", amenities);
-
-  console.log("HotelInfo Images: ", images);
 
   return (
     <Center w="100%" h="100%">
@@ -94,14 +95,17 @@ function HotelInfo(props) {
                   {props.hotel_details.address}
                 </Text>
                 <Spacer />
-                <Box align='left'>
+                <Flex align='left' direction={"row"} flexWrap={"wrap"} justifyContent={"flex-start"} alignContent={"flex-start"}>
                   {
                     amenities.slice(0, amenities.length).map((amenity) => {
-                      return (
+                      console.log("amenity: ", amenity);
+                      if (amenity[0] in icons) {
+                        return (
                         <IconComponent amenity={amenity} align="left"/>
                       )
+                  }
                   })}
-                </Box>
+                </Flex>
                 <Spacer/>
                 {/*<Link color="teal.500" href="#map" w="100%" align="left">
                   Show on map

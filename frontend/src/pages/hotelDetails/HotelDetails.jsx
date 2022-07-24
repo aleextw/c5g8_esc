@@ -33,12 +33,10 @@ function Card(props) {
       images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
     }
 
-    console.log("Images: ", images);
-
   return (<Flex name="RoomCard" borderWidth="1px" backgroundColor="white" borderRadius="lg">
     <Box maxW="50%">
       <Container>
-        <ImageGallery items={images} useBrowserFullscreen={false} showPlayButton={false}></ImageGallery>
+        <ImageGallery items={images} showPlayButton={false}></ImageGallery>
       </Container>
     </Box>
     <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
