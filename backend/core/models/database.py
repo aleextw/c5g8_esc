@@ -1,6 +1,7 @@
 import json
 import logging
-from typing import Set
+from pprint import pprint
+
 
 import requests
 from sqlalchemy import create_engine, select
@@ -163,7 +164,7 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                     "uid": hotel_pricing_data["id"],
                     "searchRank": hotel_pricing_data["searchRank"],
                     "price": hotel_pricing_data["converted_price"]
-                    if hotels_pricing.json()["completed"]
+                    if hotel_pricing_data["converted_price"] > 0
                     else hotel_pricing_data["lowest_converted_price"],
                     "points": hotel_pricing_data["points"],
                 }
@@ -267,7 +268,7 @@ def generate_hotel(
                 "uid": room_pricing_data["key"],
                 "name": room_pricing_data.get("roomNormalizedDescription", ""),
                 "price": room_pricing_data["converted_price"]
-                if rooms_pricing.json()["completed"]
+                if room_pricing_data["converted_price"] > 0
                 else room_pricing_data["lowest_converted_price"],
                 "points": room_pricing_data["points"],
                 "photo": room_pricing_data.get(
@@ -353,9 +354,15 @@ def create_booking(booking):
         [
             i is None
             for i in [
-                booking.name,
-                booking.phone,
+                booking.salutation,
+                booking.firstName,
+                booking.lastName,
                 booking.email,
+                booking.phone,
+                booking.additionalData,
+                booking.cardName,
+                booking.cardNumber,
+                booking.billingAddress,
                 booking.roomName,
                 booking.hotelName,
                 booking.roomPrice,
@@ -382,15 +389,51 @@ def create_booking(booking):
             [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
         )
 
+    display_info = DisplayInfo(
+        room_name=booking.roomName,
+        hotel_name=booking.hotelName,
+        check_in_date=booking.checkInDate,
+        check_out_date=booking.checkOutDate,
+        num_adults=booking.numAdults,
+        num_children=booking.numChildren,
+        num_rooms=booking.numRooms,
+    )
+
+    payment_info = PaymentInfo(
+        card_name=booking.cardName,
+        card_number=booking.cardNumber,
+        billing_address=booking.billingAddress,
+    )
+
+    guest_info = GuestInfo(
+        salutation=booking.salutation,
+        first_name=booking.firstName,
+        last_name=booking.lastName,
+        email=booking.email,
+        contact_number=booking.phone,
+        additional_data=booking.additionalData,
+    )
+
+    destination = (
+        resources["SESSION"]
+        .execute(
+            select(Destination).where(Destination.destination_id == booking.dest_uid)
+        )
+        .first()
+    )
+
+    if destination is None:
+        return -1
+
     booking_entry = Booking(
-        booking_display_info="",
-        booking_price=booking.roomPrice,
-        supplier_booking_ID=0,
-        supplier_booking_ref=0,
+        booking_display_info=display_info,
+        price=booking.roomPrice,
         guest_booking_ref=id,
-        guest_account_info="",
-        guest_payment_info="",
-        destination_id=booking.dest_uid,
+        guest_account_info=guest_info,
+        guest_payment_info=payment_info,
+        room_uid=booking.room_uid,
+        hotel_uid=booking.hotel_uid,
+        destination=destination[0],
     )
 
     resources["SESSION"].add(booking_entry)
@@ -403,8 +446,15 @@ def get_booking(booking_uid):
     if (
         booking := resources["SESSION"]
         .execute(select(Booking).where(Booking.guest_booking_ref == booking_uid))
-        .all()
+        .first()
     ):
-        return booking
+
+        return {
+            "booking_info": booking[0].as_dict(),
+            "display_info": booking[0].booking_display_info.as_dict(),
+            "account_info": booking[0].guest_account_info.as_dict(),
+            "payment_info": booking[0].guest_payment_info.as_dict(),
+            "destination_info": booking[0].destination.as_dict(),
+        }
     else:
         return -1

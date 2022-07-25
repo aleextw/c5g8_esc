@@ -20,7 +20,6 @@ export default function Hotels() {
             <Box h="10%" w="100%">
                 <HotelsSearchBar name="HotelSearchBar" params={ params }/>
             </Box>
-            {/* 84vh is the bodge for now, let's hope our component heights don't change */}
             <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">
                 <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
                     <Center w={{base:"100%", lg:"75%"}} h="100%">

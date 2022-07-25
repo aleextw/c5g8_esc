@@ -16,10 +16,15 @@ class Booking(BaseModel):
     Data passed by the frontend corresponding to a hotel room booking
     """
 
-    name: str | None = None
-    phone: str | None = None
+    salutation: str | None = None
+    firstName: str | None = None
+    lastName: str | None = None
     email: str | None = None
+    phone: str | None = None
     additionalData: str | None = None
+    cardName: str | None = None
+    cardNumber: str | None = None
+    billingAddress: str | None = None
     roomName: str | None = None
     hotelName: str | None = None
     roomPrice: float | None = None
