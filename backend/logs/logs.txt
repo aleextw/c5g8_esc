@@ -89,3 +89,15 @@
 2022-07-25 09:46:57,735 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
 2022-07-25 09:46:58,013 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/r199 HTTP/1.1" 200 None
 2022-07-25 09:46:59,226 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/r199/price?destination_id=Zauv&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 15:38:40,854 (INFO): Started server process [18700]
+2022-07-25 15:38:40,855 (INFO): Waiting for application startup.
+2022-07-25 15:38:40,855 (INFO): Application startup complete.
+2022-07-25 15:38:40,857 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 15:39:19,381 (INFO): Shutting down
+2022-07-25 15:39:19,491 (INFO): Waiting for application shutdown.
+2022-07-25 15:39:19,492 (INFO): Application shutdown complete.
+2022-07-25 15:39:19,492 (INFO): Finished server process [18700]
+2022-07-25 15:44:05,905 (INFO): Started server process [13260]
+2022-07-25 15:44:05,906 (INFO): Waiting for application startup.
+2022-07-25 15:44:05,907 (INFO): Application startup complete.
+2022-07-25 15:44:05,908 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

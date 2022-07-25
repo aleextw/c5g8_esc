@@ -48,6 +48,7 @@ export default function Booking() {
 
   const goToPay = () => {
     // TODO: Field validation
+    
     const body = {
       salutation: salutation.replace(/['"]+/g, ''),
       firstName: firstName.replace(/['"]+/g, ''), 
