@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Component } from "react";
+import React, { Component } from "react";
 import { getHotels } from "../api/services/destinations";
 import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner, UnorderedList, ListItem, Show, StackDivider } from "@chakra-ui/react"
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -62,13 +62,11 @@ export default class CardList extends Component {
         super(props);
 
         this.state = {
-            selectedHotel: "",
+            selectedHotel: props.selectedHotel,
+            priceRange: props.priceRange,
+            starsRange: props.starsRange,
+            sort: props.sort,
             hotels: {"completed": false, "hotels": []},
-            starRating: "",
-            reviewRange: [],
-            priceRange: [],
-            typeFilter: [],
-            items: [],
             params: props.params
         };
 
@@ -101,6 +99,43 @@ export default class CardList extends Component {
         if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
             this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
         }
+        if (prevProps.selectedHotel != this.props.selectedHotel) {
+            console.log("Hotel Filter changed");
+        }
+        if (prevProps.priceRange != this.props.priceRange) {
+            console.log("Price Filter changed");
+        }
+        if (prevProps.starsRange != this.props.starsRange) {
+            console.log("Stars Filter changed");
+        }
+        if (prevProps.sort != this.props.sort) {
+            console.log("Sorting changed");
+            if (this.props.sort == 0) {
+                console.log("Best deal selected");
+
+            }
+            if (this.props.sort == 1) {
+                console.log("Price low to high selected");
+                
+            }
+            if (this.props.sort == 2) {
+                console.log("Price high to low selected");
+                
+            }
+            if (this.props.sort == 3) {
+                console.log("Stars low to high selected");
+                
+            }
+            if (this.props.sort == 4) {
+                console.log("Stars high to low selected");
+                
+            }
+            if (this.props.sort == 5) {
+                console.log("Distance selected");
+                
+            }
+        }
+
     }
 
     render() {

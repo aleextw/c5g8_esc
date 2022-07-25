@@ -98,7 +98,7 @@ function HotelInfo(props) {
                 <Flex align='left' direction={"row"} flexWrap={"wrap"} justifyContent={"flex-start"} alignContent={"flex-start"}>
                   {
                     amenities.slice(0, amenities.length).map((amenity) => {
-                      console.log("amenity: ", amenity);
+                      // console.log("amenity: ", amenity);
                       if (amenity[0] in icons) {
                         return (
                         <IconComponent amenity={amenity} align="left"/>

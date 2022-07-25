@@ -1,5 +1,5 @@
 import React from "react";
-import {Spacer, UnorderedList, ListItem, Divider} from "@chakra-ui/react";
+import {Spacer, UnorderedList, ListItem, Divider, GridItem, Grid} from "@chakra-ui/react";
 
 import {
   Button,
@@ -31,21 +31,30 @@ function RoomInfoPopup(props) {
           <ModalHeader>{props.name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box>
-              <Text dangerouslySetInnerHTML={{__html: props.content}}/>
-            </Box>
-            <Text>   </Text>
-            <Divider/>
-            <Heading size={"md"}>Amenities:</Heading>
-            <Text>   </Text>
-            <UnorderedList>
-            {
-              props.amenities.slice(0, props.amenities.length).map((amenity) => {
-                    return (
-                      <ListItem>{amenity}</ListItem>
-                    )
-                })}
-            </UnorderedList>
+            <Grid templateRows={"auto"} gap={5}>
+              <GridItem w={"100%"} h={"100%"}>
+                <Text dangerouslySetInnerHTML={{__html: props.content}}/>
+              </GridItem>
+
+              <GridItem w={"100%"} h={"100%"}>
+                <Divider/>
+              </GridItem>
+
+              <GridItem w={"100%"} h={"100%"}>
+                <Heading size={"md"}>Amenities:</Heading>
+              </GridItem>
+              
+              <GridItem w={"100%"} h={"100%"}>
+                <UnorderedList>
+                {
+                  props.amenities.slice(0, props.amenities.length).map((amenity) => {
+                        return (
+                          <ListItem>{amenity}</ListItem>
+                        )
+                    })}
+                </UnorderedList>
+              </GridItem>
+            </Grid>
           </ModalBody>
 
           <ModalFooter>
