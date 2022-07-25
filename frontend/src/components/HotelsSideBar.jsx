@@ -17,28 +17,27 @@ export default function SideBar(props) {
   //     navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
   // }
 
-  const initialState = {
-    selectedHotel: '',
-    priceRange: [0, 100],
-    starsRange: [0,100],
-    sort: 0
-
+  // TODO : reset to initial state
+  const resetState = () => {
+    setHotel("");
+    setPriceRange([0,100]);
+    setStarsRange([0,100]);
+    setSort(0);
+    
   };
-  const [init, setInit] = useState(initialState);
+
   const [selectedHotel, setHotel] = useState(""); // autocomplete?
+  // const [minPrice] = props.minPrice;
+  // const [maxPrice] = props.maxPrice;
+  // const [priceRange, setPriceRange] = useState([minPrice,maxPrice]);
   const [priceRange, setPriceRange] = useState([0,100]); // replace with min and max price of search
   const [starsRange, setStarsRange] = useState([0,100]);
   const [sort, setSort] = useState(0);
   // const [typeFilter, setTypeFilters] = useState([]);
 
-  // TODO : reset to initial state
-  const resetState = () => {
-    setInit(initialState);
-  };
-  // link to CardList
   function handlePrice(val) {
     setPriceRange(val);
-    console.log("Price change: " + val);
+    console.log("Price change: " + val[0] + " " + val[1]*10);
     props.setPriceRange(val);
   }
   function handleStars(val) {
@@ -49,6 +48,10 @@ export default function SideBar(props) {
     setSort(event.target.value);
     props.setSort(event.target.value);
   }
+  
+    
+  
+  // TODO: fix slider reset sort 
   // TODO: Fix background colour / decide on what colour to use
   return (
       <Center h="100%" backgroundColor="white" p="5">
@@ -67,7 +70,9 @@ export default function SideBar(props) {
               <Heading size="sm">Price Range</Heading>
               <Text height="5"></Text>
               <RangeSlider 
-              defaultValue={[0, 100]} min={0} max={100} step={1}
+              // min={minPrice} max={maxPrice} 
+              defaultValue={[0,100]}
+              step={1}
               onChangeEnd={(val)=> handlePrice(val)}
               >
                 <RangeSliderMark
@@ -80,7 +85,7 @@ export default function SideBar(props) {
                   ml='-5'
                   w='8'
                 >
-                  {priceRange[0]}
+                  {priceRange[0]*10}
                 </RangeSliderMark>
                 <RangeSliderMark
                   value={priceRange[1]}
@@ -92,15 +97,17 @@ export default function SideBar(props) {
                   ml='-5'
                   w='8'
                 >
-                  {priceRange[1]}
+                  {priceRange[1]*10}
                 </RangeSliderMark>
                 <RangeSliderTrack>
                   <RangeSliderFilledTrack />
                 </RangeSliderTrack>
-                <RangeSliderThumb boxSize={6} index={0}>
+                <RangeSliderThumb
+                boxSize={6} index={0}>
                   <Box />
                 </RangeSliderThumb>
-                <RangeSliderThumb boxSize={6} index={1}>
+                <RangeSliderThumb
+                boxSize={6} index={1}>
                   <Box />
                 </RangeSliderThumb>
               </RangeSlider>
@@ -115,6 +122,7 @@ export default function SideBar(props) {
               >
                 <RangeSliderMark
                   value={starsRange[0]}
+                  fontSize="small"
                   textAlign='center'
                   bg='blue.500'
                   color='white'
@@ -126,6 +134,7 @@ export default function SideBar(props) {
                 </RangeSliderMark>
                 <RangeSliderMark
                   value={starsRange[1]}
+                  fontSize="small"
                   textAlign='center'
                   bg='blue.500'
                   color='white'
@@ -155,7 +164,7 @@ export default function SideBar(props) {
           <Stack>
             <Heading size="sm">Sort by</Heading>
             <Select value={sort} onChange={handleSort}>
-              <option value='0'>Best Deal</option>
+              <option value='0'>-</option>
               <option value='1'>Price: Low to High</option>
               <option value='2'>Price: High to Low</option>
               <option value='3'>Stars: Low to High</option>

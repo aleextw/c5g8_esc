@@ -15,7 +15,9 @@ export default function Hotels() {
 
     const [selectedHotel, setHotel] = useState("");
     // const [reviewRange, setReviewRange] = useState([]);
-    const [priceRange, setPriceRange] = useState([0,100]); // replace with min and max price of search
+    const [minPrice, setMinPrice] = useState();
+    const [maxPrice, setMaxPrice] = useState();
+    const [priceRange, setPriceRange] = useState([0,1000]); // replace with min and max price of search
     const [starsRange, setStarsRange] = useState([0,100]);
     const [sort, setSort] = useState(0);
 
@@ -33,6 +35,8 @@ export default function Hotels() {
                     <Center w={{base:"100%", lg:"75%"}} h="100%">
                         <CardList 
                         selectedHotel={selectedHotel}
+                        setMinPrice={setMinPrice}
+                        setMaxPrice={setMaxPrice}
                         priceRange={priceRange}
                         starsRange={starsRange}
                         sort={sort}
@@ -40,6 +44,8 @@ export default function Hotels() {
                     </Center>
                     <Show above="lg" h="100%">
                         <SideBar 
+                        minPrice={minPrice}
+                        maxPrice={maxPrice}
                         setHotel={setHotel}
                         setPriceRange={setPriceRange}
                         setStarsRange={setStarsRange}
