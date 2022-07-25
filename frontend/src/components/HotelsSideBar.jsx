@@ -1,10 +1,11 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, Input, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, Button, Heading, Input, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb, RangeSliderMark } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
  
-export default function SideBar({ onClose, ...rest }) {
+export default function SideBar(props) {
+    // get functions to build form with useForm() hook
   // const navigate = useNavigate();
   
   // // TODO: Load data from local storage and load reasonable defaults if not present
@@ -18,35 +19,36 @@ export default function SideBar({ onClose, ...rest }) {
 
   const initialState = {
     selectedHotel: '',
-    starRating: 0,
-    // minPrice: 0,
-    // maxPrice: 100,
-    reviewRange: 0,
     priceRange: [0, 100],
+    starsRange: [0,100],
     sort: 0
 
   };
-  // const [minPrice, setMinPrice] = useState(0);
-  // const [maxPrice, setMaxPrice] = useState(100);
-  const [filters, setFilters] = useState(initialState);
-  const [selectedHotel, setHotel] = useState("");
-  const [starRating, setStarRating] = useState(0);
-  const [reviewRange, setReviewRange] = useState([]);
-  const [priceRange, setPriceRange] = useState([0,100]);
+  const [init, setInit] = useState(initialState);
+  const [selectedHotel, setHotel] = useState(""); // autocomplete?
+  const [priceRange, setPriceRange] = useState([0,100]); // replace with min and max price of search
+  const [starsRange, setStarsRange] = useState([0,100]);
   const [sort, setSort] = useState(0);
   // const [typeFilter, setTypeFilters] = useState([]);
 
-  // const updateState= () => {
-  //   setFilters({hotel: hotelName, reviews: reviewScore, price_range: pricesChosen, rating: ratingScore});
-  // };
-
   // TODO : reset to initial state
   const resetState = () => {
-    setFilters(initialState);
+    setInit(initialState);
   };
-  // TODO: still not working yet
-  const handlePrice = (event) => setPriceRange(event.target.value);
-  const handleSort = (event) => setSort(event.target.value);
+  // link to CardList
+  function handlePrice(val) {
+    setPriceRange(val);
+    console.log("Price change: " + val);
+    props.setPriceRange(val);
+  }
+  function handleStars(val) {
+    setStarsRange(val)
+    props.setStarsRange(val);
+  }
+  function handleSort(event) {
+    setSort(event.target.value);
+    props.setSort(event.target.value);
+  }
   // TODO: Fix background colour / decide on what colour to use
   return (
       <Center h="100%" backgroundColor="white" p="5">
@@ -63,12 +65,37 @@ export default function SideBar({ onClose, ...rest }) {
 
           <Stack>
               <Heading size="sm">Price Range</Heading>
+              <Text height="5"></Text>
               <RangeSlider 
-              defaultValue={[0, 100]}
-              // onChangeEnd={handlePrice}
+              defaultValue={[0, 100]} min={0} max={100} step={1}
+              onChangeEnd={(val)=> handlePrice(val)}
               >
-              <RangeSliderTrack>
-                <RangeSliderFilledTrack />
+                <RangeSliderMark
+                  value={priceRange[0]}
+                  fontSize="small"
+                  textAlign='center'
+                  bg='blue.500'
+                  color='white'
+                  mt='-10'
+                  ml='-5'
+                  w='8'
+                >
+                  {priceRange[0]}
+                </RangeSliderMark>
+                <RangeSliderMark
+                  value={priceRange[1]}
+                  fontSize="small"
+                  textAlign='center'
+                  bg='blue.500'
+                  color='white'
+                  mt='-10'
+                  ml='-5'
+                  w='8'
+                >
+                  {priceRange[1]}
+                </RangeSliderMark>
+                <RangeSliderTrack>
+                  <RangeSliderFilledTrack />
                 </RangeSliderTrack>
                 <RangeSliderThumb boxSize={6} index={0}>
                   <Box />
@@ -81,7 +108,43 @@ export default function SideBar({ onClose, ...rest }) {
 
           <Stack>
               <Heading size="sm">Hotel Star Rating</Heading>
-              <Input placeholder="Placeholder input"></Input>
+              <Text height="5"></Text>
+              <RangeSlider 
+              defaultValue={[0, 100]} min={0} max={100} step={10}
+              onChangeEnd={(val)=> handleStars(val)}
+              >
+                <RangeSliderMark
+                  value={starsRange[0]}
+                  textAlign='center'
+                  bg='blue.500'
+                  color='white'
+                  mt='-10'
+                  ml='-5'
+                  w='8'
+                >
+                  {starsRange[0]/20}
+                </RangeSliderMark>
+                <RangeSliderMark
+                  value={starsRange[1]}
+                  textAlign='center'
+                  bg='blue.500'
+                  color='white'
+                  mt='-10'
+                  ml='-5'
+                  w='8'
+                >
+                  {starsRange[1]/20}
+                </RangeSliderMark>
+                <RangeSliderTrack>
+                  <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb boxSize={6} index={0}>
+                  <Box />
+                </RangeSliderThumb>
+                <RangeSliderThumb boxSize={6} index={1}>
+                  <Box />
+                </RangeSliderThumb>
+              </RangeSlider>
           </Stack>
 
           <Stack>
@@ -92,9 +155,12 @@ export default function SideBar({ onClose, ...rest }) {
           <Stack>
             <Heading size="sm">Sort by</Heading>
             <Select value={sort} onChange={handleSort}>
-              <option value='0'>-</option>
+              <option value='0'>Best Deal</option>
               <option value='1'>Price: Low to High</option>
               <option value='2'>Price: High to Low</option>
+              <option value='3'>Stars: Low to High</option>
+              <option value='4'>Stars: High to Low</option>
+              <option value='5'>Distance to City Centre</option>
             </Select>
           </Stack>
 

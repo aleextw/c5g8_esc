@@ -6,11 +6,19 @@ import NavBar from "../components/NavBar";
 import CardList from "../components/CardList";
 import HotelsSearchBar from "../components/HotelsSearchBar";
 import SideBar from "../components/HotelsSideBar";
+import { useState } from 'react'
 
 export default function Hotels() {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     console.log(params.get("destination"));
+
+    const [selectedHotel, setHotel] = useState("");
+    // const [reviewRange, setReviewRange] = useState([]);
+    const [priceRange, setPriceRange] = useState([0,100]); // replace with min and max price of search
+    const [starsRange, setStarsRange] = useState([0,100]);
+    const [sort, setSort] = useState(0);
+
     return (
       <ChakraProvider>
         <Box h="100vh" w="100wh">
@@ -24,10 +32,19 @@ export default function Hotels() {
             <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">
                 <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
                     <Center w={{base:"100%", lg:"75%"}} h="100%">
-                        <CardList params={ params }/>
+                        <CardList 
+                        selectedHotel={selectedHotel}
+                        priceRange={priceRange}
+                        starsRange={starsRange}
+                        sort={sort}
+                        params={ params }/>
                     </Center>
                     <Show above="lg" h="100%">
-                        <SideBar/>
+                        <SideBar 
+                        setHotel={setHotel}
+                        setPriceRange={setPriceRange}
+                        setStarsRange={setStarsRange}
+                        setSort={setSort}/>
                     </Show>
                     <Show below="lg">
                         <Footer/>
