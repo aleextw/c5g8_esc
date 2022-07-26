@@ -21,7 +21,8 @@ import {
   Center,
   StackDivider,
   Spacer,
-  Select
+  Select,
+  FormErrorMessage
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import React from 'react';
@@ -52,7 +53,6 @@ export default function Booking() {
   const navigate = useNavigate();
 
   const goToPay = () => {
-    // TODO: Field validation
 
     const body = {
       salutation: salutation.replace(/['"]+/g, ''),
@@ -94,6 +94,10 @@ export default function Booking() {
     navigate(-1);
   }
 
+  const emailError = !(/\S+@\S+\.\S+/.test(email));
+  const expiryError = !(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(expiry));
+  
+
   return (
     <ChakraProvider>
       <Box h="100vh" w="100wh">
@@ -112,7 +116,7 @@ export default function Booking() {
                     <FormControl isRequired w="30%">
                       <FormLabel>Salutation</FormLabel>
                       <InputGroup>
-                        <Select value={salutation} onChange={(e) => setSalutation(e.target.value)}>
+                        <Select name="salutation" value={salutation} onChange={(e) => setSalutation(e.target.value)}>
                           <option value='Mr'>Mr</option>
                           <option value='Ms'>Ms</option>
                           <option value='Mrs'>Mrs</option>
@@ -125,7 +129,7 @@ export default function Booking() {
                         </Select>
                       </InputGroup>
                     </FormControl>
-                    <FormControl isRequired w="70%">
+                    <FormControl isRequired w="70%" isInvalid={firstName==''}>
                       <FormLabel>First Name</FormLabel>
 
                       <InputGroup>
@@ -137,27 +141,28 @@ export default function Booking() {
                           onChange={(event) => setFirstName(event.target.value)}
                         />
                       </InputGroup>
+                      <FormErrorMessage>Please enter your first name.</FormErrorMessage>
                     </FormControl>
                   </HStack>
 
-                  <FormControl isRequired>
+                  <FormControl isRequired isInvalid={lastName==''}>
                     <FormLabel>Last Name</FormLabel>
 
                     <InputGroup>
                       <Input 
                         type="text" 
-                        name="firstName" 
+                        name="lastName" 
                         placeholder="Last Name" 
                         value={lastName}
                         onChange={(event) => setLastName(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>Please enter your last name.</FormErrorMessage>
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
-                  <FormControl isRequired>
+                  <FormControl isRequired='true' isInvalid={emailError}>
                     <FormLabel>Email</FormLabel>
-
                     <InputGroup>
                       <Input
                         type="email"
@@ -167,20 +172,23 @@ export default function Booking() {
                         onChange={(event) => setEmail(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>E.g., john@gmail.com</FormErrorMessage>
                   </FormControl>
 
-                  <FormControl isRequired>
+                  <FormControl isRequired isInvalid={phone==''}>
                     <FormLabel>Phone Number</FormLabel>
 
                     <InputGroup>
                       <Input
-                        type="tel"
+                        type="number"
+                        // changed from tel
                         name="number"
                         placeholder="Phone Number"
                         value={phone}
                         onChange={(event) => setPhone(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>Please enter a number.</FormErrorMessage>
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
@@ -203,7 +211,7 @@ export default function Booking() {
                   Payment Details
                 </Heading>
                 <HStack w="100%">
-                <FormControl isRequired>
+                <FormControl isRequired isInvalid={cardName==''}>
                     <FormLabel>Cardholder Name</FormLabel>
 
                     <InputGroup>
@@ -214,9 +222,10 @@ export default function Booking() {
                         value={cardName}
                         onChange={(event) => setCardName(event.target.value)} />
                     </InputGroup>
+                    <FormErrorMessage>Please enter the name on your card.</FormErrorMessage>
                   </FormControl>
 
-                  <FormControl isRequired>
+                  <FormControl isRequired isInvalid={cardNumber==''|cardNumber.length!==16}>
                     <FormLabel>Card Number</FormLabel>
 
                     <InputGroup>
@@ -225,44 +234,48 @@ export default function Booking() {
                         name="cardNumber"
                         placeholder="Card Number"
                         value={cardNumber}
-                        onChange={(event) => setCardNumber(event.target.value.slice(0, 16))}
+                        onChange={(event) => setCardNumber(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>Please enter a valid card number.</FormErrorMessage>
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
-                <FormControl isRequired>
+                <FormControl isRequired isInvalid={expiryError}>
                     <FormLabel>Expiry Date</FormLabel>
 
                     <InputGroup>
                       <Input
-                        type="date"
+                        type="text"
                         name="expiry"
-                        placeholder="Expiry Date"
+                        placeholder="e.g., 03/22"
                         value={expiry}
                         onChange={(event) => setExpiry(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>Please enter a MM/YY format.</FormErrorMessage>
                   </FormControl>
 
-                  <FormControl isRequired>
+                  <FormControl isRequired isInvalid={CVV.length!==3}>
                     <FormLabel>CVV</FormLabel>
 
                     <InputGroup>
-                      <Input
+                      <Input onWheel={(event)=> event.currentTarget.blur()} // prevent scroll wheel
                         type="number"
                         name="CVV"
                         placeholder="CVV"
                         value={CVV}
-                        onChange={(event) => setCVV(event.target.value.slice(0, 3))}
+                        onChange={(event) => setCVV(event.target.value)}
                       />
                     </InputGroup>
+                    <FormErrorMessage>Please enter your 3-digit CVV.</FormErrorMessage>
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
-                  <FormControl>
+                  <FormControl isRequired isInvalid={CVV.length==''}>
                     <FormLabel>Billing Address</FormLabel>
                     <Input type="text" name="billingAddress" placeholder="Billing Address" value={billingAddress} onChange={(event) => setBillingAddress(event.target.value)} />
+                    <FormErrorMessage>Please enter your billing address.</FormErrorMessage>
                   </FormControl>
                 </HStack>
               </VStack>
@@ -271,6 +284,7 @@ export default function Booking() {
               <Flex w="100%">
                 <Spacer/>
                 <Button
+                  name="button_confirmBooking"
                   w="25%"
                   colorScheme="blue"
                   bg="blue.400"

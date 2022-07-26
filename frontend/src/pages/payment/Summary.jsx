@@ -45,7 +45,7 @@ function formatSummaryData(booking) {
       </Heading>
       <Box>
         <Heading size="md" w="100%" align="center">Your booking ID:</Heading>
-        <Link color='teal.500' onClick={(e)=>navigator.clipboard.writeText(e.target.innerText)} isExternal>{booking.booking_info.guest_booking_ref}</Link>
+        <Link name="copyBookingRef" color='teal.500' onClick={(e)=>navigator.clipboard.writeText(e.target.innerText)} isExternal>{booking.booking_info.guest_booking_ref}</Link>
         <Text align="center">(Copy this booking ID to access your booking data again in future.)</Text>
       </Box>
       <HStack w="100%" h="100%">
