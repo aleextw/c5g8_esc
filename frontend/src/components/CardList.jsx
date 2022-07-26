@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Component } from "react";
+import React, { Component } from "react";
 import { getHotels } from "../api/services/destinations";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner, UnorderedList, ListItem, Show, StackDivider } from "@chakra-ui/react"
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider } from "@chakra-ui/react"
 import InfiniteScroll from "react-infinite-scroll-component";
 import ReactStars from "react-rating-stars-component";
 
@@ -11,6 +11,21 @@ function formatDistance(distance) {
     } else {
         return Math.round(distance / 1000 * 100) / 100 + " km";
     }
+}
+function compareObjects(object1, object2, key) {
+    const obj1 = object1[key]
+    const obj2 = object2[key]
+  
+    if (obj1 < obj2) {
+      return -1
+    }
+    if (obj1 > obj2) {
+      return 1
+    }
+    return 0
+}
+function getFilteredKey(hotels, filters, key) { 
+    return hotels.filter((item) => item[key]<=filters[0] && item[key]>=filters[1]);
 }
 
 function Card(props) {
@@ -62,13 +77,13 @@ export default class CardList extends Component {
         super(props);
 
         this.state = {
-            selectedHotel: "",
+            filteredHotels: [],
+            selectedHotel: props.selectedHotel,
+            setPrices: [],
+            priceRange: props.priceRange,
+            starsRange: props.starsRange,
+            sort: props.sort,
             hotels: {"completed": false, "hotels": []},
-            starRating: "",
-            reviewRange: [],
-            priceRange: [],
-            typeFilter: [],
-            items: [],
             params: props.params
         };
 
@@ -100,7 +115,68 @@ export default class CardList extends Component {
     componentDidUpdate(prevProps) {
         if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
             this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
+            
         }
+        if (prevProps.selectedHotel !== this.props.selectedHotel) {
+            console.log("Hotel Filter changed");
+            // this.setState({hotels: hotels.get("hotels").get()})
+        }
+        if (prevProps.priceRange !== this.props.priceRange) {
+            console.log("Price Filter changed");
+            // this.setState({hotels: {"completed": false, "hotels": getFilteredKey(this.state.hotels.hotels, this.props.priceRange, 'price')}});
+        }
+        if (prevProps.starsRange !== this.props.starsRange) {
+            console.log("Stars Filter changed");
+        }
+        if (prevProps.sort !== this.props.sort) {
+            console.log("Sorting changed to value: "+ this.props.sort);
+            if (this.props.sort == 0) {
+                // console.log("Best deal selected");
+                // this.setState({hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                // .sort((a, b) => {
+                //     return compareObjects(b, a, 'points')
+                //   })}})
+            }
+            if (this.props.sort == 1) {
+                console.log("Price low to high selected");
+                this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                .sort((a, b) => {
+                    return compareObjects(a, b, 'price')
+                  })}})
+            }
+            if (this.props.sort == 2) {
+                console.log("Price high to low selected");
+                this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                .sort((a, b) => {
+                    return compareObjects(b, a, 'price')
+                  })}})
+            }
+            if (this.props.sort == 3) {
+                console.log("Stars low to high selected");
+                this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                .sort((a, b) => {
+                    return compareObjects(a, b, 'rating')
+                  })}})
+                
+            }
+            if (this.props.sort == 4) {
+                console.log("Stars high to low selected");
+                this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                .sort((a, b) => {
+                    return compareObjects(b, a, 'rating')
+                  })}})
+            }
+            if (this.props.sort == 5) {
+                console.log("Distance selected");
+                this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
+                .sort((a, b) => {
+                    return compareObjects(a, b, 'distance')
+                  })}})
+            }
+            
+            console.log(this.state.hotels.hotels)
+        }
+
     }
 
     render() {

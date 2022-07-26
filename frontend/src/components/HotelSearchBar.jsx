@@ -26,7 +26,7 @@ export default function HotelsSearchBar(props) {
         // TODO: Add error checking for invalid UIDs
         // TODO: Add error checking if previous route is invalid
         // TODO: Figure out why have to double click
-        navigate(-2);
+        navigate(-1);
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);
