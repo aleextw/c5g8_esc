@@ -225,7 +225,7 @@ export default function Booking() {
                         name="cardNumber"
                         placeholder="Card Number"
                         value={cardNumber}
-                        onChange={(event) => setCardNumber(event.target.value)}
+                        onChange={(event) => setCardNumber(event.target.value.slice(0, 16))}
                       />
                     </InputGroup>
                   </FormControl>
@@ -254,13 +254,13 @@ export default function Booking() {
                         name="CVV"
                         placeholder="CVV"
                         value={CVV}
-                        onChange={(event) => setCVV(event.target.value)}
+                        onChange={(event) => setCVV(event.target.value.slice(0, 3))}
                       />
                     </InputGroup>
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
-                  <FormControl isRequired>
+                  <FormControl>
                     <FormLabel>Billing Address</FormLabel>
                     <Input type="text" name="billingAddress" placeholder="Billing Address" value={billingAddress} onChange={(event) => setBillingAddress(event.target.value)} />
                   </FormControl>
