@@ -16,7 +16,10 @@ import {
     useBreakpointValue,
     useDisclosure,
     useColorMode,
-    Switch
+    Switch,
+    Heading,
+    GridItem,
+    Grid
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -26,8 +29,10 @@ import {
   } from '@chakra-ui/icons';
   import { useNavigate } from "react-router-dom";
   import SearchBar from "../components/SearchBar";
+import { useState } from 'react';
   
   export default function NavBar() {
+
     const navigate = useNavigate();
 
     const loginRoute = () => {
@@ -38,8 +43,74 @@ import {
       navigate("/register");
     }
 
+    const [isLoggedIn, setIsLoggedIn] = useState(JSON.parse(localStorage.getItem("isLoggedIn")));
+
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
+
+    const signOut = () => {
+      localStorage.setItem("isLoggedIn", JSON.stringify(!isLoggedIn));
+      setIsLoggedIn(false);
+    }
+    
+    function ManageUser() {
+      
+      console.log("logged in? ", isLoggedIn)
+
+      if (isLoggedIn) {
+        const firstName = localStorage.getItem("firstName") != null ? JSON.parse(localStorage.getItem("firstName")) : "Traveller";
+
+        return (
+          <Stack>
+            <Heading size={"md"}>Hello {firstName}!</Heading>
+  
+            <Button
+                  colorScheme={"teal"}
+                  fontSize={'sm'}
+                  size={"sm"}
+                  fontWeight={400}
+                  href={'#'}
+                  onClick={signOut}>
+                  Sign Out
+                </Button>
+          </Stack>
+        )
+      }
+  
+      else {
+  
+        return (
+          <Stack
+                flex={{ base: 1, md: 0 }}
+                justify={'flex-end'}
+                direction={'row'}
+                spacing={6}>
+                <Button
+                  as={'a'}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  href={'#'}
+                  onClick={loginRoute}>
+                  Sign In
+                </Button>
+                <Button
+                  fontSize={'sm'}
+                  fontWeight={600}
+                  color={'white'}
+                  bg={'pink.400'}
+                  href={'#'}
+                  _hover={{
+                    bg: 'pink.300',
+                  }}
+                  onClick={registerRoute}>
+                  Sign Up
+                </Button>
+              </Stack>
+        )
+      }
+    }
+
     return (
       <Box h="100%">
         <Flex
@@ -67,6 +138,7 @@ import {
                   aria-label={'Toggle Navigation'}
                 />
           </Flex>
+
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Link
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
@@ -75,39 +147,13 @@ import {
               href="/">
               C5G8
             </Link>
-  
+
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>
-  
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
-            direction={'row'}
-            spacing={6}>
-            <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}
-              onClick={loginRoute}>
-              Sign In
-            </Button>
-            <Button
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
-              href={'#'}
-              _hover={{
-                bg: 'pink.300',
-              }}
-              onClick={registerRoute}>
-              Sign Up
-            </Button>
-          </Stack>
+          
+          <ManageUser/>
         </Flex>
   
         <Collapse in={isOpen} animateOpacity>

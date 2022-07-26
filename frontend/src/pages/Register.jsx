@@ -18,16 +18,29 @@ import {
 } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
+import { useReducedMotion } from "framer-motion";
 
-const Login = () => {
+const Register = () => {
 
     const navigate = useNavigate();
 
     const goToLogin = () => {
+        console.log(firstName, lastName, email, phoneNumber, username);
+        localStorage.setItem("firstName", JSON.stringify(firstName));
+        localStorage.setItem("lastName", JSON.stringify(lastName));
+        localStorage.setItem("email", JSON.stringify(email));
+        localStorage.setItem("phoneNumber", JSON.stringify(phoneNumber));
+        localStorage.setItem("username", JSON.stringify(username));
         navigate("/login");
       }
 
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [username, setUserName] = useState("");
 
     const handleShowClick = () => setShowPassword(!showPassword);
 
@@ -63,8 +76,8 @@ const Login = () => {
                         <InputLeftElement
                             pointerEvents="none"
                         />
-                        <Input type="text" placeholder="First Name" />
-                        <Input type="text" placeholder="Last Name" />
+                        <Input type="text" placeholder="First Name" onChange={event => setFirstName(event.target.value)} />
+                        <Input type="text" placeholder="Last Name" onChange={event => setLastName(event.target.value)} />
                         </InputGroup>
                     </FormControl>
 
@@ -73,7 +86,7 @@ const Login = () => {
                         <InputLeftElement
                             pointerEvents="none"
                         />
-                        <Input type="email" placeholder="Email" />
+                        <Input type="email" placeholder="Email" onChange={event => setEmail(event.target.value)}/>
                         </InputGroup>
                     </FormControl>
 
@@ -82,7 +95,7 @@ const Login = () => {
                         <InputLeftElement
                             pointerEvents="none"
                         />
-                        <Input type="number" placeholder="Phone number" />
+                        <Input type="number" placeholder="Phone number" onChange={event => setPhoneNumber(event.target.value)} />
                         </InputGroup>
                     </FormControl>
 
@@ -91,7 +104,7 @@ const Login = () => {
                         <InputLeftElement
                             pointerEvents="none"
                         />
-                        <Input type="text" placeholder="Username" />
+                        <Input type="text" placeholder="Username" onChange={event => setUserName(event.target.value)}/>
                         </InputGroup>
                     </FormControl>
 
@@ -134,4 +147,4 @@ const Login = () => {
       );
 } 
 
-export default Login
+export default Register

@@ -27,6 +27,11 @@ const Login = () => {
         navigate("/register");
       }
 
+    const toHomepage = () => {
+    localStorage.setItem("isLoggedIn", true);
+    navigate("/");
+    }
+
     const [showPassword, setShowPassword] = useState(false)
 
     const handleShowClick = () => setShowPassword(!showPassword);
@@ -82,7 +87,7 @@ const Login = () => {
                         </InputRightElement>
                         </InputGroup>
                         <FormHelperText textAlign="right">
-                        <Link>forgot password?</Link>
+                        <Link>Forgot your password?</Link>
                         </FormHelperText>
                     </FormControl>
                     <Button
@@ -91,6 +96,7 @@ const Login = () => {
                         variant="solid"
                         colorScheme="teal"
                         width="full"
+                        onClick={toHomepage}
                     >
                         Login
                     </Button>

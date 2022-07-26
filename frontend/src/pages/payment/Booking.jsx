@@ -32,11 +32,16 @@ import { postBooking } from '../../api/services/destinations';
 export default function Booking() {
   const { hasCopied, onCopy } = useClipboard('example@example.com');
 
+  const localFirstName = localStorage.getItem("firstName") !== null ? JSON.parse(localStorage.getItem("firstName")) : "";
+  const localLastName = localStorage.getItem("lastName") !== null ? JSON.parse(localStorage.getItem("lastName")) : "";
+  const localEmail = localStorage.getItem("email") !== null ? JSON.parse(localStorage.getItem("email")) : "";
+  const localPhoneNumber = localStorage.getItem("phoneNumber") !== null ? JSON.parse(localStorage.getItem("phoneNumber")) : "";
+
   const [ salutation, setSalutation ] = useState("Mr");
-  const [ firstName, setFirstName ] = useState("");
-  const [ lastName, setLastName ] = useState("");
-  const [ email, setEmail ] = useState("");
-  const [ phone, setPhone ] = useState("");
+  const [ firstName, setFirstName ] = useState(localFirstName);
+  const [ lastName, setLastName ] = useState(localLastName);
+  const [ email, setEmail ] = useState(localEmail);
+  const [ phone, setPhone ] = useState(localPhoneNumber);
   const [ additionalData, setAdditionalData ] = useState("");
   const [ cardName, setCardName ] = useState("");
   const [ cardNumber, setCardNumber ] = useState("");
