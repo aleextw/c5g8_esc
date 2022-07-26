@@ -24,13 +24,13 @@ export default function Hotels() {
     return (
       <ChakraProvider>
         <Box h="100vh" w="100wh">
-            <Box h="10%" w="100%">
+            <Box h="8%" w="100%">
                 <NavBar></NavBar>
             </Box>
             <Box h="10%" w="100%">
                 <HotelsSearchBar name="HotelSearchBar" params={ params }/>
             </Box>
-            <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">
+            <Center background="#F5F4F1" w="100%" h="82%" overflow="hidden">
                 <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
                     <Center w={{base:"100%", lg:"75%"}} h="100%">
                         <CardList 

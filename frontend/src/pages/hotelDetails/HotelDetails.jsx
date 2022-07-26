@@ -42,9 +42,6 @@ function Card(props) {
     <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
         <Stack p="2" direction="column" w={{base: "100%", md: "60%"}}>
             <Heading size="md">{props.name}</Heading>
-            <Show above="md">
-                {/* <Text>{props.description}</Text> */}
-            </Show>
             <FreeCancellation data={props.free_cancellation}/>
             <Center ml="auto" mr="auto">
               <RoomInfoPopup name= {props.description} content={props.long_description} amenities={props.amenities} />
