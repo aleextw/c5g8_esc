@@ -11,38 +11,38 @@ import {BsSafe} from "react-icons/bs";
 
 
 const icons = {
-  "airConditioning": <TbSnowflake/>,
-  "businessCenter": <MdOutlineBusinessCenter/>,
-  "clothingIron": <MdOutlineIron/>,
-  "dataPorts": <MdSettingsEthernet/>,
-  "dryCleaning": <MdOutlineDryCleaning/>,
-  "hairDryer": <MdOutlineDry/>,
-  "miniBarInRoom": <BiFridge/>,
-  "outdoorPool": <MdPool/>,
-  "parkingGarage": <TbParking/>,
-  "roomService": <MdRoomService/>,
-  "safe": <BsSafe/>,
-  "sauna": <MdHotTub/>,
-  "tVInRoom": <MdOutlineMonitor/>,
-  "valetParking": <MdOutlineDriveEta/>,
-  "voiceMail": <MdOutlineRecordVoiceOver/>,
-  "fitnessFacility": <MdFitnessCenter/>,
-  "handicapAccessible": <BiHandicap/>,
-  "nonSmokingRooms": <MdSmokeFree/>
+  "airConditioning": [<TbSnowflake/>, "Air Conditioning"],
+  "businessCenter": [<MdOutlineBusinessCenter/>, "Business Center"],
+  "clothingIron": [<MdOutlineIron/>, "Clothing Iron"],
+  "dataPorts": [<MdSettingsEthernet/>, "Data Ports"],
+  "dryCleaning": [<MdOutlineDryCleaning/>, "Dry Cleaning"],
+  "hairDryer": [<MdOutlineDry/>, "Hair Dryer"],
+  "miniBarInRoom": [<BiFridge/>, "Fridge"],
+  "outdoorPool": [<MdPool/>, "Outdoor Pool"],
+  "parkingGarage": [<TbParking/>, "Parking Garage"],
+  "roomService": [<MdRoomService/>, "Room Service"],
+  "safe": [<BsSafe/>, "Safe"],
+  "sauna": [<MdHotTub/>, "Sauna"],
+  "tVInRoom": [<MdOutlineMonitor/>, "TV in Rooom"],
+  "valetParking": [<MdOutlineDriveEta/>, "Valet Parking"],
+  "voiceMail": [<MdOutlineRecordVoiceOver/>, "Voicemail"],
+  "fitnessFacility": [<MdFitnessCenter/>, "Fitness Facility"],
+  "handicapAccessible": [<BiHandicap/>, "Handicapped Accessible"],
+  "nonSmokingRooms": [<MdSmokeFree/>, "Non-smoking Rooms"]
 
 }
 
 function IconComponent(props) {
   const amenity= props.amenity[0];
   return (
-          <Tooltip label={amenity}>
+          <Tooltip label={icons[amenity][1]}>
             <IconButton
               variant="link"
               colorScheme='teal'
               aria-label= {amenity}
               fontSize='24px'
-              icon= {icons[amenity]}
-              title={amenity}
+              icon= {icons[amenity][0]}
+              // title={icons[amenity][1]}
               />
           </Tooltip>
   )

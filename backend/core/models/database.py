@@ -268,6 +268,7 @@ def generate_hotel(
             for i in range(len(rooms_pricing.json()["rooms"])):
                 room_pricing_data = rooms_pricing.json()["rooms"][i]
                 return_data["rooms"][i] = {
+                    "key": room_pricing_data["key"],
                     "uid": room_pricing_data["key"],
                     "name": room_pricing_data.get("roomNormalizedDescription", ""),
                     "price": room_pricing_data["converted_price"]
