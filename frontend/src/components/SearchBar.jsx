@@ -38,13 +38,10 @@ export default function SearchBar(props) {
         let finalSelectedDestination = "";
         // If searchbar has data, choose the first suggestion if none selected
         if (selectedDestination === "") {
-            console.log("baz");
             if (filteredSuggestions.length > 0 && showSuggestions) {
-                console.log("bar");
                 // Set directly to a temp var rather than update state since state update is async, might not reflect properly
                 finalSelectedDestination = filteredSuggestions[activeSuggestion]["uid"];
             } else {
-                console.log("baz");
                 // No valid suggestion to pick as default, raise error
                 setInvalidDestination(true);
                 return;
