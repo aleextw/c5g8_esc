@@ -35,7 +35,7 @@ function formatSummaryData(booking) {
   
   // for the masking of the credit card number
   const cardNumber = booking.payment_info.card_number
-  const maskedNumber = `${cardNumber.substring(0, 6)}xxxxx${cardNumber.substring(11, 15)}`;
+  const maskedNumber = `${cardNumber.substring(0, 6)}xxxxx${cardNumber.substring(12, 16)}`;
 
   return (
   <Center w={{base: "70%", lg: "50%"}} h="80%">
