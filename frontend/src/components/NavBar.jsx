@@ -133,6 +133,7 @@ import { useState } from 'react';
 
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             <Link
+              name="button_linkToHomePage"
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}
@@ -279,7 +280,7 @@ import { useState } from 'react';
   };
   
   const NAV_ITEMS = [
-    {label: "View a Booking", href: "/booking/search"}
+    {label: "View a Booking", name:'button_viewBooking', href: "/booking/search"}
     // {
     //   label: 'Inspiration',
     //   children: [

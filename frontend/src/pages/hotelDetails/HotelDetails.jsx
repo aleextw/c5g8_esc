@@ -33,8 +33,8 @@ function Card(props) {
       images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
     }
 
-  return (<Flex name="RoomCard" borderWidth="1px" backgroundColor="white" borderRadius="lg">
-    <Box maxW="50%">
+  return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
+    <Box name="RoomCard" maxW="50%">
       <Container>
         <ImageGallery items={images} showPlayButton={false}></ImageGallery>
       </Container>
