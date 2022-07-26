@@ -254,6 +254,7 @@ import {
   };
   
   const NAV_ITEMS = [
+    {label: "View a Booking", href: "/booking/search"}
     // {
     //   label: 'Inspiration',
     //   children: [

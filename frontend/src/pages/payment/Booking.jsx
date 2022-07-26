@@ -30,8 +30,6 @@ import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 
 export default function Booking() {
-  const { hasCopied, onCopy } = useClipboard('example@example.com');
-
   const [ salutation, setSalutation ] = useState("Mr");
   const [ firstName, setFirstName ] = useState("");
   const [ lastName, setLastName ] = useState("");
@@ -48,7 +46,7 @@ export default function Booking() {
 
   const goToPay = () => {
     // TODO: Field validation
-    
+
     const body = {
       salutation: salutation.replace(/['"]+/g, ''),
       firstName: firstName.replace(/['"]+/g, ''), 
@@ -56,7 +54,7 @@ export default function Booking() {
       email: email.replace(/['"]+/g, ''), 
       phone: phone.replace(/['"]+/g, ''), 
       additionalData: additionalData.replace(/['"] + /g, ''),
-      cardName: cardName.replace(/['"] + /g, ''), 
+      cardName: cardName.replace(/['"] + /g, '').substring(0, 6) + "xxxxxx" + cardName.replace(/['"] + /g, '').substring(12, 16), 
       cardNumber: cardNumber.replace(/['"] + /g, ''), // Only pass first 6 and last 4 digits
       billingAddress: billingAddress.replace(/['"] + /g, ''),
       // expiry: expiry.replace(/['"] + /g, ''), // Don't pass to frontend

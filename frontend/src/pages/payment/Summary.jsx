@@ -120,8 +120,13 @@ export default function Summary(props) {
   let content;
 
   if (booking !== "") {
-    
-    content = formatSummaryData(booking);
+    if (booking === -1) {
+      content = (<Heading size="lg">
+                  No booking found!
+              </Heading>);
+    } else {
+      content = formatSummaryData(booking);
+    }
   } else {
     content = (<Spinner
       thickness='4px'
