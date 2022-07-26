@@ -32,6 +32,11 @@ import { getBooking } from '../../api/services/destinations';
 import { useLocation } from "react-router-dom";
 
 function formatSummaryData(booking) {
+  
+  // for the masking of the credit card number
+  const cardNumber = booking.payment_info.card_number
+  const maskedNumber = `${cardNumber.substring(0, 6)}xxxxx${cardNumber.substring(11, 15)}`;
+
   return (
   <Center w={{base: "70%", lg: "50%"}} h="80%">
     <VStack w="100%" h="100%" divider={<StackDivider borderColor='gray.200' />}>
@@ -69,7 +74,7 @@ function formatSummaryData(booking) {
             <strong>Payee Name:</strong> {booking.payment_info.card_name}
           </Text>
           <Text w="100%" align="left">
-            <strong>Card Number:</strong> {booking.payment_info.card_number}
+            <strong>Card Number:</strong> {maskedNumber}
           </Text>
           <Text w="100%" align="left">
             <strong>Billing Address:</strong> {booking.payment_info.billing_address}
