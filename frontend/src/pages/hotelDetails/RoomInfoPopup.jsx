@@ -48,9 +48,15 @@ function RoomInfoPopup(props) {
                 <UnorderedList>
                 {
                   props.amenities.slice(0, props.amenities.length).map((amenity) => {
-                        return (
+                    if (amenity.toLowerCase().includes("room size") ||  (amenity.toLowerCase().includes("number of bedrooms"))) {
+
+                    }
+
+                    else {
+                      return (
                           <ListItem>{amenity}</ListItem>
                         )
+                    }
                     })}
                 </UnorderedList>
               </GridItem>

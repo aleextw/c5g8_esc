@@ -260,32 +260,35 @@ def generate_hotel(
             and len(rooms_pricing.json()["rooms"]) == 0
         ):
             return {"completed": True, "rooms": [], "hotel_details": {}}
-
+        
         # Set up pricing data
-        for room_pricing_data in rooms_pricing.json()["rooms"]:
-            return_data["rooms"][room_pricing_data["key"]] = {
-                "uid": room_pricing_data["key"],
-                "name": room_pricing_data.get("roomNormalizedDescription", ""),
-                "price": room_pricing_data["converted_price"]
-                if rooms_pricing.json()["completed"]
-                else room_pricing_data["lowest_converted_price"],
-                "points": room_pricing_data["points"],
-                "photo": room_pricing_data.get(
-                    "images",
-                    [
-                        {
-                            "url": "https://via.placeholder.com/300",
-                            "high_resolution_url": "https://via.placeholder.com/300",
-                            "hero_image": False,
-                        }
-                    ],
-                ),
-                "description": room_pricing_data.get("description", ""),
-                "long_description": room_pricing_data.get("long_description", None),
-                "amenities": room_pricing_data.get("amenities", []),
-                "free_cancellation": room_pricing_data.get("free_cancellation", False),
-                "additional_info": room_pricing_data.get("roomAdditionalInfo", {}),
-            }
+        else:
+            print("length of hotelrooms: ", len(rooms_pricing.json()["rooms"])) 
+            for i in range(len(rooms_pricing.json()["rooms"])):
+                room_pricing_data = rooms_pricing.json()["rooms"][i]
+                return_data["rooms"][i] = {
+                    "uid": room_pricing_data["key"],
+                    "name": room_pricing_data.get("roomNormalizedDescription", ""),
+                    "price": room_pricing_data["converted_price"] if rooms_pricing.json()["completed"] else room_pricing_data["lowest_converted_price"],
+                    "points": room_pricing_data["points"],
+                    "photo": room_pricing_data.get(
+                        "images",
+                        [
+                            {
+                                "url": "https://via.placeholder.com/300",
+                                "high_resolution_url": "https://via.placeholder.com/300",
+                                "hero_image": False,
+                            }
+                        ],
+                    ),
+                    "description": room_pricing_data.get("description", ""),
+                    "long_description": room_pricing_data.get("long_description", None),
+                    "amenities": room_pricing_data.get("amenities", []),
+                    "free_cancellation": room_pricing_data.get("free_cancellation", False),
+                    "additional_info": room_pricing_data.get("roomAdditionalInfo", {})
+                }
+
+            print("before return data rooms: ", len(return_data["rooms"]))
 
         # Add static data to hotel
         hotel = hotel.json()
@@ -313,11 +316,15 @@ def generate_hotel(
         )
 
         # Remove entries with no static data
+        
         for hotel_data in set(return_data["rooms"].keys()):
             if return_data["rooms"][hotel_data].get("name", None) is None:
                 del return_data["rooms"][hotel_data]
 
         return_data["rooms"] = list(return_data["rooms"].values())
+        
+
+        print("after return data rooms: ", len(return_data["rooms"]))
         return return_data
     return {
         "completed": True,

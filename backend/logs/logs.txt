@@ -89,3 +89,235 @@
 2022-07-25 09:46:57,735 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
 2022-07-25 09:46:58,013 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/r199 HTTP/1.1" 200 None
 2022-07-25 09:46:59,226 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/r199/price?destination_id=Zauv&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:53:36,474 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:53:37,029 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:53:38,190 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:53:39,031 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:53:40,182 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:53:41,127 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:53:49,029 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 09:53:49,516 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:53:51,273 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 09:53:52,404 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:54:07,936 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:54:08,985 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:54:34,832 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:54:35,702 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:54:58,622 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 09:54:59,535 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 09:59:54,483 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 09:59:55,465 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:00:02,482 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT HTTP/1.1" 200 None
+2022-07-25 10:00:03,029 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:00:04,685 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT HTTP/1.1" 200 None
+2022-07-25 10:00:05,300 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:01:05,034 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:01:06,127 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:01:10,076 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:01:10,908 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:05:37,056 (INFO): Shutting down
+2022-07-25 10:05:37,259 (INFO): Waiting for application shutdown.
+2022-07-25 10:05:37,264 (INFO): Application shutdown complete.
+2022-07-25 10:05:37,264 (INFO): Finished server process [43266]
+2022-07-25 10:05:39,803 (INFO): Started server process [45387]
+2022-07-25 10:05:39,803 (INFO): Waiting for application startup.
+2022-07-25 10:05:39,803 (INFO): Application startup complete.
+2022-07-25 10:05:39,804 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:05:49,429 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:05:49,629 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:05:50,514 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:05:52,111 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:05:52,962 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:06:16,474 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:06:17,424 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:06:18,461 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:06:19,343 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:06:20,468 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:06:21,310 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:06:22,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/NhJ1 HTTP/1.1" 200 None
+2022-07-25 10:06:23,364 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/NhJ1/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:06:53,581 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/NhJ1 HTTP/1.1" 200 None
+2022-07-25 10:06:54,186 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/NhJ1/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:12,946 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=EzoR HTTP/1.1" 200 None
+2022-07-25 10:07:13,426 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:14,927 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=EzoR HTTP/1.1" 200 None
+2022-07-25 10:07:15,738 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:17,025 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=EzoR HTTP/1.1" 200 None
+2022-07-25 10:07:17,824 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:19,706 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/gusl HTTP/1.1" 200 None
+2022-07-25 10:07:20,175 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/gusl/price?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:21,719 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/gusl HTTP/1.1" 200 None
+2022-07-25 10:07:22,330 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/gusl/price?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:07:54,594 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=EzoR HTTP/1.1" 200 None
+2022-07-25 10:07:55,430 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=EzoR&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:09:13,434 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=3W9U HTTP/1.1" 200 None
+2022-07-25 10:09:13,926 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:09:15,403 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=3W9U HTTP/1.1" 200 None
+2022-07-25 10:09:15,909 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:09:20,840 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8 HTTP/1.1" 200 None
+2022-07-25 10:09:21,284 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8/price?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:09:22,830 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8 HTTP/1.1" 200 None
+2022-07-25 10:09:23,489 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8/price?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:17:46,780 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-25 10:17:48,203 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8 HTTP/1.1" 200 None
+2022-07-25 10:17:48,773 (DEBUG): Starting new HTTPS connection (2): hotelapi.loyalty.dev:443
+2022-07-25 10:17:48,818 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8/price?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:17:48,903 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8 HTTP/1.1" 200 None
+2022-07-25 10:17:49,550 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/uNR8/price?destination_id=3W9U&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:18:07,442 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:18:08,289 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:18:15,272 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT HTTP/1.1" 200 None
+2022-07-25 10:18:15,796 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/nPbT/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:03,018 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:20:03,894 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:37,233 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:37,683 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:38,992 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:40,251 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:41,071 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:42,986 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:45,020 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:45,820 (DEBUG): Starting new HTTPS connection (3): hotelapi.loyalty.dev:443
+2022-07-25 10:20:47,101 (DEBUG): Starting new HTTPS connection (4): hotelapi.loyalty.dev:443
+2022-07-25 10:20:47,189 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:20:47,873 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:47,991 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:48,116 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:20:48,529 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:21:08,253 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:21:09,038 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:23:00,337 (INFO): Shutting down
+2022-07-25 10:23:00,460 (INFO): Waiting for application shutdown.
+2022-07-25 10:23:00,465 (INFO): Application shutdown complete.
+2022-07-25 10:23:00,466 (INFO): Finished server process [45387]
+2022-07-25 10:23:02,612 (INFO): Started server process [46122]
+2022-07-25 10:23:02,612 (INFO): Waiting for application startup.
+2022-07-25 10:23:02,612 (INFO): Application startup complete.
+2022-07-25 10:23:02,612 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:23:13,725 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:23:13,920 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:23:14,793 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:23:16,374 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:23:17,239 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:23:17,740 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:23:18,579 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:23:39,941 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:23:40,782 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:25:30,169 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:25:30,995 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:25:37,196 (INFO): Shutting down
+2022-07-25 10:25:37,301 (INFO): Waiting for application shutdown.
+2022-07-25 10:25:37,307 (INFO): Application shutdown complete.
+2022-07-25 10:25:37,308 (INFO): Finished server process [46122]
+2022-07-25 10:25:39,254 (INFO): Started server process [46303]
+2022-07-25 10:25:39,254 (INFO): Waiting for application startup.
+2022-07-25 10:25:39,254 (INFO): Application startup complete.
+2022-07-25 10:25:39,254 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:25:49,124 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:25:49,254 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:25:50,116 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:25:51,203 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:25:52,005 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:25:53,151 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:25:54,225 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:26:01,210 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 429 None
+2022-07-25 10:26:01,216 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-25 10:26:01,288 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 429 None
+2022-07-25 10:26:12,378 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-25 10:26:12,497 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:26:13,564 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:29:53,346 (INFO): Shutting down
+2022-07-25 10:29:53,483 (INFO): Waiting for application shutdown.
+2022-07-25 10:29:53,494 (INFO): Application shutdown complete.
+2022-07-25 10:29:53,494 (INFO): Finished server process [46303]
+2022-07-25 10:29:55,069 (INFO): Started server process [46477]
+2022-07-25 10:29:55,069 (INFO): Waiting for application startup.
+2022-07-25 10:29:55,069 (INFO): Application startup complete.
+2022-07-25 10:29:55,069 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:30:08,044 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:30:08,159 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:30:09,190 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:30:10,642 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:30:11,496 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:30:12,511 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:30:13,386 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:30:25,076 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:30:25,983 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:32:55,490 (INFO): Shutting down
+2022-07-25 10:32:55,609 (INFO): Waiting for application shutdown.
+2022-07-25 10:32:55,616 (INFO): Application shutdown complete.
+2022-07-25 10:32:55,617 (INFO): Finished server process [46477]
+2022-07-25 10:32:57,434 (INFO): Started server process [46576]
+2022-07-25 10:32:57,434 (INFO): Waiting for application startup.
+2022-07-25 10:32:57,435 (INFO): Application startup complete.
+2022-07-25 10:32:57,435 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:33:07,462 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:33:07,584 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:33:08,411 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:33:09,468 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:33:10,336 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:33:11,478 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:33:12,382 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:34:15,840 (INFO): Shutting down
+2022-07-25 10:34:15,950 (INFO): Waiting for application shutdown.
+2022-07-25 10:34:15,955 (INFO): Application shutdown complete.
+2022-07-25 10:34:15,955 (INFO): Finished server process [46576]
+2022-07-25 10:34:17,126 (INFO): Started server process [46695]
+2022-07-25 10:34:17,126 (INFO): Waiting for application startup.
+2022-07-25 10:34:17,127 (INFO): Application startup complete.
+2022-07-25 10:34:17,127 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:34:23,251 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:34:23,584 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:34:24,473 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:34:25,716 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:34:26,623 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:34:27,295 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:34:28,268 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:54:18,958 (INFO): Shutting down
+2022-07-25 10:54:19,122 (INFO): Waiting for application shutdown.
+2022-07-25 10:54:19,159 (INFO): Application shutdown complete.
+2022-07-25 10:54:19,161 (INFO): Finished server process [46695]
+2022-07-25 10:54:21,613 (INFO): Started server process [46985]
+2022-07-25 10:54:21,613 (INFO): Waiting for application startup.
+2022-07-25 10:54:21,613 (INFO): Application startup complete.
+2022-07-25 10:54:21,614 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:54:30,264 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:54:30,666 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:54:31,582 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:54:32,268 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:54:33,216 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:54:34,218 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:54:35,060 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-27&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:56:07,188 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:56:07,840 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:56:09,149 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:56:10,003 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:56:11,164 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:56:12,039 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:56:13,953 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:56:14,859 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:56:34,708 (INFO): Shutting down
+2022-07-25 10:56:34,820 (INFO): Waiting for application shutdown.
+2022-07-25 10:56:34,824 (INFO): Application shutdown complete.
+2022-07-25 10:56:34,824 (INFO): Finished server process [46985]
+2022-07-25 10:56:36,317 (INFO): Started server process [47165]
+2022-07-25 10:56:36,317 (INFO): Waiting for application startup.
+2022-07-25 10:56:36,318 (INFO): Application startup complete.
+2022-07-25 10:56:36,318 (INFO): Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-07-25 10:56:45,062 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-25 10:56:46,310 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:56:47,261 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:57:16,700 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:57:17,674 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:57:49,579 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:57:50,442 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:58:24,469 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=RsBU HTTP/1.1" 200 None
+2022-07-25 10:58:25,202 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 10:58:28,404 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 10:58:29,229 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 11:01:50,570 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd HTTP/1.1" 200 None
+2022-07-25 11:01:51,802 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/WaXd/price?destination_id=RsBU&checkin=2022-07-26&checkout=2022-07-27&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-25 17:41:31,889 (INFO): Shutting down
+2022-07-25 17:41:32,128 (INFO): Waiting for application shutdown.
+2022-07-25 17:41:32,185 (INFO): Application shutdown complete.
+2022-07-25 17:41:32,185 (INFO): Finished server process [47165]
