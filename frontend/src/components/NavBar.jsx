@@ -1,7 +1,6 @@
 import {
     Box,
     Flex,
-    Center,
     Text,
     IconButton,
     Button,
@@ -9,13 +8,15 @@ import {
     Collapse,
     Icon,
     Link,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
+    Spinner,
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
     Heading,
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    Center,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -26,6 +27,7 @@ import {
   import { useNavigate } from "react-router-dom";
   import SearchBar from "../components/SearchBar";
 import { useState } from 'react';
+import { postLogout } from '../api/services/destinations';
   
   export default function NavBar() {
 
@@ -39,35 +41,68 @@ import { useState } from 'react';
       navigate("/register");
     }
 
-    const [isLoggedIn, setIsLoggedIn] = useState(JSON.parse(localStorage.getItem("isLoggedIn")));
+    const logout = () => {
+      const body = {
+        username: localStorage.getItem("username"),
+        token: localStorage.getItem("token")
+      };
+      let response;
+      setLoggingOut(true);
+      postLogout(JSON.stringify(body)).then((data) => {
+        response = data;
+        setLoggingOut(false);
+        if (response.status === 200) {
+          if (response.valid === "") {            
+            localStorage.removeItem("token");   
+            localStorage.removeItem("firstName");
+            localStorage.removeItem("lastName");
+            localStorage.removeItem("email");
+            localStorage.removeItem("phoneNumber");
+            localStorage.removeItem("username");
+            localStorage.removeItem("prevURL");
+          } else {
+            setLogoutError(response.valid);
+          }
+        } else {
+          setLogoutError("Logout failed for unknown reasons. Please try again.");
+          setInterval(() => setLogoutError(""), 5000);
+        }
+      });
+    }
 
     const { isOpen, onToggle } = useDisclosure();
-
-    const signOut = () => {
-      localStorage.setItem("isLoggedIn", JSON.stringify(!isLoggedIn));
-      setIsLoggedIn(false);
-    }
+    const [ loggingOut, setLoggingOut ] = useState(false);
+    const [ logoutError, setLogoutError ] = useState("");
     
     function ManageUser() {
       
-      console.log("logged in? ", isLoggedIn)
+      console.log("logged in? ", localStorage.getItem("token"));
+      console.log("user", localStorage.getItem("firstName"));
 
-      if (isLoggedIn) {
-        const firstName = localStorage.getItem("firstName") != null ? JSON.parse(localStorage.getItem("firstName")) : "Traveller";
+      if (localStorage.getItem("token")) {
+        const firstName = localStorage.getItem("firstName") !== null ? localStorage.getItem("firstName") : "Traveller";
 
         return (
-          <Stack>
-            <Heading size={"md"}>Hello {firstName}!</Heading>
-  
+          <Stack direction="row" h="100%" alignItems="center">
+            {logoutError !== "" && <Alert status='error'>
+            <AlertIcon />
+            <AlertTitle>{logoutError}</AlertTitle>
+            </Alert>}
+              <Text textAlign="center" p="2">Hello {firstName}!</Text>
+            
             <Button
-                  colorScheme={"teal"}
-                  fontSize={'sm'}
-                  size={"sm"}
-                  fontWeight={400}
-                  onClick={signOut}>
-                  Log Out
-                </Button>
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg={'teal.400'}
+              _hover={{
+                bg: 'teal.300',
+              }}
+              onClick={logout}>
+              {loggingOut ? <Spinner /> : "Log Out"}
+            </Button>
           </Stack>
+          
         )
       }
   

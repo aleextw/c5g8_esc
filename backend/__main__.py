@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import config
 from .core.models import database
 from .logger import logger as lg
-from .routers import destinations, hotel, hotels
+from .routers import destinations, hotel, hotels, auth
 from .shared_resources import resources
 
 logger = lg.start_logger()
@@ -25,7 +25,13 @@ resources["SETUP_TIME"] = datetime.now()
 # # For testing purposes
 # database.generate_destinations()
 
-origins = ["http://localhost:3000", "localhost:3000", "http://localhost"]
+origins = [
+    "http://localhost:3000",
+    "localhost:3000",
+    "http://localhost",
+    "https://localhost",
+    "https://localhost:3000",
+]
 
 resources["REQUESTS_SESSION"] = requests.Session()
 
@@ -42,6 +48,7 @@ app.add_middleware(
 app.include_router(destinations.router)
 app.include_router(hotels.router)
 app.include_router(hotel.router)
+app.include_router(auth.router)
 
 # if __name__ == "__main__":
 #     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)

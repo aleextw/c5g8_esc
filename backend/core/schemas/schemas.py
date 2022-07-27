@@ -124,3 +124,52 @@ class GuestInfo(Base):
     def __repr__(self):
         # TODO: Fill this in
         return f"GuestInfo(id={self.id}, salutation={self.salutation}, first_name={self.first_name}, last_name={self.last_name}, email={self.email}, contact_number={self.contact_number}, additional_data={self.additional_data})"
+
+
+class User(Base):
+    """
+    Represents a user account in the application
+    """
+
+    __tablename__ = "user"
+
+    id = Column(Integer, primary_key=True)
+    first_name = Column(Text)
+    last_name = Column(Text)
+    email = Column(Text)
+    phone_number = Column(Text)
+    username = Column(Text)
+    password_hash = Column(Text)
+    salt = Column(Text)
+    token_val = Column(Text, ForeignKey("token.value"))
+
+    def as_dict(self):
+        # Autistic but necessary to maintain codebase standards
+        return {
+            "firstName": self.first_name,
+            "lastName": self.last_name,
+            "email": self.email,
+            "phoneNumber": self.phone_number,
+            "username": self.username,
+        }
+
+    def __repr__(self):
+        return f"User(id={self.id}, first_name={self.first_name}, last_name={self.last_name}, email={self.email}, phone_number={self.phone_number}, username={self.username})"
+
+
+class Token(Base):
+    """
+    Represents an authorization token for a user
+    """
+
+    __tablename__ = "token"
+
+    id = Column(Integer, primary_key=True)
+    value = Column(Text)
+    assigned_user = relationship("User", backref="token", uselist=False)
+
+    def as_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
+    def __repr__(self):
+        return f"Token(id={self.id}, value={self.value})"

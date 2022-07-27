@@ -6,26 +6,25 @@ import {
   Button,
   InputGroup,
   Stack,
-  InputLeftElement,
-  chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
-  FormHelperText,
   InputRightElement,
   ChakraProvider,
   Center,
   FormErrorMessage,
   FormLabel,
   VStack,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  Spinner,
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
-import { useReducedMotion } from "framer-motion";
+import { postLogin } from "../api/services/destinations";
 
 const Login = () => {
-
     const navigate = useNavigate();
 
     const login = () => {
@@ -42,9 +41,39 @@ const Login = () => {
         if (anyError) {
             return;
         }
-        localStorage.setItem("username", JSON.stringify(username));
-        localStorage.setItem("password", JSON.stringify(password));
-        navigate("/");
+
+        const body = {
+            username: username,
+            password: password
+        };
+        
+        let response;
+        setLoggingIn(true);
+        postLogin(body).then((data) => {
+            response = data;
+            setLoggingIn(false);
+            if (response.status === 200) {
+                if (response.valid === "") {
+                    console.log(response);
+                    localStorage.setItem("token", response.token);
+                    localStorage.setItem("firstName", response.user.firstName);
+                    localStorage.setItem("lastName", response.user.lastName);
+                    localStorage.setItem("email", response.user.email);
+                    localStorage.setItem("phoneNumber", response.user.phoneNumber);
+                    localStorage.setItem("username", response.user.username);
+                    let url = localStorage.getItem("prevURL");
+                    if (url !== null) {
+                        navigate(url);
+                    } else {
+                        navigate("/");
+                    }
+                } else {
+                    setLoginError(response.valid);
+                }
+            } else {
+                setLoginError("Login failed for unknown reasons. Please try again.")
+            }
+        });
       }
 
     const [showPassword, setShowPassword] = useState(false);
@@ -54,8 +83,14 @@ const Login = () => {
 
     const [usernameError, setUsernameError] = useState("");
     const [passwordError, setPasswordError] = useState("");
-
+    
+    const [loggingIn, setLoggingIn] = useState(false);
+    const [loginError, setLoginError] = useState("");
     const handleShowClick = () => setShowPassword(!showPassword);
+
+    if (localStorage.getItem("token") !== null) {
+        navigate(-1);
+    }
 
     return (
         <ChakraProvider>
@@ -65,11 +100,11 @@ const Login = () => {
                 </Box>
                 <Box name="bgImage"
                 bgImage="https://images.hdqwalls.com/download/storm-national-park-pacific-beach-seascape-4k-bn-1920x1080.jpg"
+                w="100%"
                 bgPosition="center"
                 bgRepeat="no-repeat"
                 fill="cover"
-                h="92%"
-                >
+                h="92%">
                     <Center h="100%">
                         <Box p="5" maxW="400px" w="70%" borderWidth="1px" borderRadius="lg" overflow="hidden"  bgColor="white">
                             <Stack>
@@ -102,6 +137,15 @@ const Login = () => {
                                         </FormControl>
                                     </Stack>
                                 </Flex>
+                                <Center w="100%">
+                                    {loggingIn && <Spinner />}
+                                </Center>
+                                <Center w="100%">
+                                    {loginError !== "" && <Alert status='error'>
+                                    <AlertIcon />
+                                    <AlertTitle>{loginError}</AlertTitle>
+                                    </Alert>}
+                                </Center>
                                 <Center w="100%">
                                     <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ login } colorScheme="red">Submit</Button>
                                 </Center>

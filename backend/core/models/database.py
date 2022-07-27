@@ -1,6 +1,8 @@
+from distutils.command.build_scripts import first_line_re
 import json
 import logging
 from pprint import pprint
+import secrets
 
 
 import requests
@@ -11,9 +13,9 @@ from backend.config import config
 from backend.core.models.base import Base
 from backend.core.schemas.schemas import *
 from backend.shared_resources import resources
-import random
 
 logger = logging.getLogger()
+valid_chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
 
 def load():
@@ -141,17 +143,6 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
             currency,
         )
     )
-
-    print(
-        get_dest_price_endpoint(
-            destination_id,
-            checkin,
-            checkout,
-            num_rooms,
-            guests,
-            currency,
-        )
-    )
     if (
         hotels_pricing.status_code == requests.codes.ok
         and hotels.status_code == requests.codes.ok
@@ -223,18 +214,6 @@ def generate_hotel(
         return {"completed": True, "rooms": [], "hotel_details": {}}
 
     hotel = resources["REQUESTS_SESSION"].get(get_hotel_endpoint(hotel_id))
-    print(get_hotel_endpoint(hotel_id))
-    print(
-        get_hotel_details_endpoint(
-            destination_id,
-            hotel_id,
-            checkin,
-            checkout,
-            num_rooms,
-            guests,
-            currency,
-        )
-    )
     rooms_pricing = resources["REQUESTS_SESSION"].get(
         get_hotel_details_endpoint(
             destination_id,
@@ -261,10 +240,10 @@ def generate_hotel(
             and len(rooms_pricing.json()["rooms"]) == 0
         ):
             return {"completed": True, "rooms": [], "hotel_details": {}}
-        
+
         # Set up pricing data
         else:
-            print("length of hotelrooms: ", len(rooms_pricing.json()["rooms"])) 
+            print("length of hotelrooms: ", len(rooms_pricing.json()["rooms"]))
             for i in range(len(rooms_pricing.json()["rooms"])):
                 room_pricing_data = rooms_pricing.json()["rooms"][i]
                 return_data["rooms"][i] = {
@@ -288,8 +267,10 @@ def generate_hotel(
                     "description": room_pricing_data.get("description", ""),
                     "long_description": room_pricing_data.get("long_description", None),
                     "amenities": room_pricing_data.get("amenities", []),
-                    "free_cancellation": room_pricing_data.get("free_cancellation", False),
-                    "additional_info": room_pricing_data.get("roomAdditionalInfo", {})
+                    "free_cancellation": room_pricing_data.get(
+                        "free_cancellation", False
+                    ),
+                    "additional_info": room_pricing_data.get("roomAdditionalInfo", {}),
                 }
 
             print("before return data rooms: ", len(return_data["rooms"]))
@@ -320,13 +301,12 @@ def generate_hotel(
         )
 
         # Remove entries with no static data
-        
+
         for hotel_data in set(return_data["rooms"].keys()):
             if return_data["rooms"][hotel_data].get("name", None) is None:
                 del return_data["rooms"][hotel_data]
 
         return_data["rooms"] = list(return_data["rooms"].values())
-        
 
         print("after return data rooms: ", len(return_data["rooms"]))
         return return_data
@@ -388,16 +368,12 @@ def create_booking(booking):
         ]
     ):
         return "-1"
-    id = "".join(
-        [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
-    )
+    id = secrets.token_urlsafe(64)
     while (
         resources["SESSION"].execute(select(Booking).where(Booking.id == id)).first()
         is not None
     ):
-        id = "".join(
-            [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
-        )
+        id = secrets.token_urlsafe(64)
 
     display_info = DisplayInfo(
         room_name=booking.roomName,
@@ -468,3 +444,96 @@ def get_booking(booking_uid):
         }
     else:
         return -1
+
+
+def register_user(data):
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.email == data.email))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Email already in use."}
+
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Username already in use."}
+
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.phone_number == data.phoneNumber))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Phone number already in use."}
+
+    new_user = User(
+        first_name=data.firstName,
+        last_name=data.lastName,
+        email=data.email,
+        phone_number=data.phoneNumber,
+        username=data.username,
+        password_hash=data.passwordHash,
+        salt=data.salt,
+    )
+    token = Token(value=secrets.token_urlsafe(256), assigned_user=new_user)
+
+    resources["SESSION"].add_all([new_user, token])
+    resources["SESSION"].commit()
+
+    return {"valid": "", "token": token.value, "user": new_user.as_dict()}
+
+
+def login_user(data):
+    user = (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+    )
+
+    if user is None:
+        return {"valid": "Error: User does not exist."}
+
+    if data.type == "query":
+        return {"valid": "", "salt": user[0].salt}
+    elif data.type == "login":
+        if (
+            user[0].password_hash == data.passwordHash
+            and user[0].username == data.username
+        ):
+            token = Token(value=secrets.token_urlsafe(256), assigned_user=user[0])
+            resources["SESSION"].add(token)
+            resources["SESSION"].commit()
+
+            return {"valid": "", "token": token.value, "user": user[0].as_dict()}
+
+    return {"valid": "Error: Application error. Please try again."}
+
+
+def logout_user(data):
+    user = (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+    )
+
+    if user is None:
+        return {"valid": "Error: User does not exist."}
+
+    token = (
+        resources["SESSION"]
+        .execute(select(Token).where(Token.value == data.token))
+        .first()
+    )
+
+    if token is None:
+        return {"valid": "Error: Token does not exist."}
+
+    resources["SESSION"].delete(token[0])
+    resources["SESSION"].commit()
+
+    return {"valid": ""}

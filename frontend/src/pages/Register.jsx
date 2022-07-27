@@ -6,30 +6,30 @@ import {
   Button,
   InputGroup,
   Stack,
-  InputLeftElement,
-  chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
-  FormHelperText,
   InputRightElement,
   ChakraProvider,
   Center,
   FormErrorMessage,
   FormLabel,
   VStack,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  Spinner,
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
-import { useReducedMotion } from "framer-motion";
+import { SHA512, enc, lib } from "crypto-js";
+import { postRegister } from "../api/services/destinations";
 
 const Register = () => {
 
     const navigate = useNavigate();
 
-    const goToLogin = () => {
-        console.log(firstName, lastName, email, phoneNumber, username, password);
+    const register = () => {
         let anyError = false;
         if (firstName === "") {
             setFirstNameError(true);
@@ -59,13 +59,46 @@ const Register = () => {
         if (anyError) {
             return;
         }
-        localStorage.setItem("firstName", JSON.stringify(firstName));
-        localStorage.setItem("lastName", JSON.stringify(lastName));
-        localStorage.setItem("email", JSON.stringify(email));
-        localStorage.setItem("phoneNumber", JSON.stringify(phoneNumber));
-        localStorage.setItem("username", JSON.stringify(username));
-        localStorage.setItem("password", JSON.stringify(password));
-        navigate("/login");
+        
+        let salt = lib.WordArray.random(64).toString(enc.Base64);
+        let passwordHash = SHA512(password + salt).toString(enc.Base64);
+        const body = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            phoneNumber: phoneNumber,
+            username: username,
+            passwordHash: passwordHash,
+            salt: salt
+        };
+        
+        let response;
+        setRegistering(true);
+        postRegister(JSON.stringify(body)).then((data) => {
+            response = data;
+            setRegistering(false);
+            if (response.status === 200) {
+                if (response.valid === "") {
+                    console.log(response);
+                    localStorage.setItem("token", response.token);
+                    localStorage.setItem("firstName", response.user.firstName);
+                    localStorage.setItem("lastName", response.user.lastName);
+                    localStorage.setItem("email", response.user.email);
+                    localStorage.setItem("phoneNumber", response.user.phoneNumber);
+                    localStorage.setItem("username", response.user.username);
+                    let url = localStorage.getItem("prevURL");
+                    if (url !== null) {
+                        navigate(url);
+                    } else {
+                        navigate("/");
+                    }
+                } else {
+                    setRegistrationError(response.valid);
+                }
+            } else {
+                setRegistrationError("Registration failed for unknown reasons. Please try again.")
+            }
+        });
       }
 
     const [showPassword, setShowPassword] = useState(false);
@@ -81,10 +114,16 @@ const Register = () => {
     const [lastNameError, setLastNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [phoneNumberError, setPhoneNumberError] = useState(false);
-    const [usernameError, setUsernameError] = useState("");
-    const [passwordError, setPasswordError] = useState("");
+    const [usernameError, setUsernameError] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
 
+    const [registering, setRegistering] = useState(false);
+    const [registrationError, setRegistrationError] = useState("");
     const handleShowClick = () => setShowPassword(!showPassword);
+    
+    if (localStorage.getItem("token") !== null) {
+        navigate(-1);
+    }
 
     return (
         <ChakraProvider>
@@ -119,7 +158,7 @@ const Register = () => {
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={lastNameError}>
                                             <FormLabel>Last Name</FormLabel>
-                                            <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onClick={(e) => setLastName(false)} placeholder="Last Name"/>
+                                            <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onClick={(e) => setLastNameError(false)} placeholder="Last Name"/>
                                             {lastNameError && <FormErrorMessage>Last name is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
@@ -164,7 +203,16 @@ const Register = () => {
                                     </Stack>
                                 </Flex>
                                 <Center w="100%">
-                                    <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ goToLogin } colorScheme="red">Submit</Button>
+                                    {registering && <Spinner />}
+                                </Center>
+                                <Center w="100%">
+                                    {registrationError !== "" && <Alert status='error'>
+                                    <AlertIcon />
+                                    <AlertTitle>{registrationError}</AlertTitle>
+                                    </Alert>}
+                                </Center>
+                                <Center w="100%">
+                                    <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ register } colorScheme="red">Submit</Button>
                                 </Center>
                             </Stack>
                         </Box>
