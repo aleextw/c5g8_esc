@@ -8,6 +8,8 @@ from pydantic import BaseModel
 
 from backend.core.models import database
 
+from .auth import AuthData
+
 router = APIRouter()
 
 logger = logging.getLogger()
@@ -38,6 +40,12 @@ class Booking(BaseModel):
     room_uid: str | None = None
     hotel_uid: str | None = None
     dest_uid: str | None = None
+    username: str | None = None
+
+
+class UserData(BaseModel):
+    username: str
+    token: str
 
 
 @router.get("/results/hotel/{hotel_uid}", tags=["hotel"])
@@ -75,3 +83,12 @@ def get_booking(booking_uid: str):
     If an invalid booking_uid is passed, return -1.
     """
     return database.get_booking(booking_uid)
+
+
+@router.post("/summary", tags=["booking"])
+def get_user_bookings(user_data: AuthData):
+    """
+    Given a username and token, return the corresponding bookings belonging to the user.
+    If any invalid data is passed, return -1.
+    """
+    return database.get_user_bookings(user_data)

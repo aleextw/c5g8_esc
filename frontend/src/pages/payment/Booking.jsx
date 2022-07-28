@@ -37,7 +37,8 @@ export default function Booking() {
   const [ additionalData, setAdditionalData ] = useState("");
   const [ cardName, setCardName ] = useState("");
   const [ cardNumber, setCardNumber ] = useState("");
-  const [ expiry, setExpiry ] = useState("");
+  const [ expiryMonth, setExpiryMonth ] = useState("1");
+  const [ expiryYear, setExpiryYear ] = useState("2022");
   const [ CVV, setCVV ] = useState("");
   const [ showCVV, setShowCVV ] = useState(false);
   const [billingAddress, setBillingAddress] = useState("");
@@ -48,7 +49,8 @@ export default function Booking() {
   const [ phoneError, setPhoneError ] = useState(false);
   const [ cardNameError, setCardNameError ] = useState(false);
   const [ cardNumberError, setCardNumberError ] = useState(false);
-  const [ expiryError, setExpiryError ] = useState(false);
+  const [ expiryMonthError, setExpiryMonthError ] = useState(false);
+  const [ expiryYearError, setExpiryYearError ] = useState(false);
   const [ CVVError, setCVVError ] = useState(false);
   const [ billingAddressError, setBillingAddressError ] = useState(false);
 
@@ -65,10 +67,8 @@ export default function Booking() {
       cardName: cardName.replace(/['"] + /g, ''), 
       cardNumber: cardNumber.replace(/['"] + /g, '').substring(0, 6) + "xxxxxx" + cardNumber.replace(/['"] + /g, '').substring(12, 16), // Only pass first 6 and last 4 digits
       billingAddress: billingAddress.replace(/['"] + /g, ''),
-      // expiry: expiry.replace(/['"] + /g, ''), // Don't pass to frontend
-      // CVV: CVV.replace(/['"] + /g, ''), // Don't pass to frontend
       roomName: localStorage.getItem("roomName").replace(/['"]+/g, ''),
-      hotelName: localStorage.getItem("hotelName"),
+      hotelName: localStorage.getItem("hotelName").replace(/['"]+/g, ''),
       roomPrice: localStorage.getItem("roomPrice"),
       checkInDate: localStorage.getItem("checkInDate").replace(/['"]+/g, ''),
       checkOutDate: localStorage.getItem("checkOutDate").replace(/['"]+/g, ''),
@@ -77,14 +77,14 @@ export default function Booking() {
       numRooms: localStorage.getItem("numRooms").replace(/['"]+/g, ''),
       room_uid: localStorage.getItem("room_uid").replace(/['"]+/g, ''),
       dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
-      hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, '')
+      hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
+      username: localStorage.getItem("username").replace(/['"]+/g, ''),
     };
 
-    console.log(body);
     let response;
     postBooking(JSON.stringify(body)).then((data) => {
+      console.log(data);
       response = data;
-      console.log(response);
       if (response.status === 200) {
         navigate(`/summary?booking_uid=${response.booking_uid}`);
       }
@@ -92,25 +92,23 @@ export default function Booking() {
   }
 
   function handleBook() {
-    let errorCheck = handleError();
-    console.log(errorCheck);
-    if (errorCheck) {
+    if (handleError()) {
       goToPay();
     }
   }
 
   function handleError() {
     let pass = true;
-    if (!firstName) { setFirstNameError(true); pass=false; } else {setFirstNameError(false);}
-    if (!lastName) {  setLastNameError(true); pass=false; } else {setLastNameError(false);}
-    if (!(/\S+@\S+\.\S+/.test(email))) { setEmailError(true);pass=false; } else {setEmailError(false);}
-    if (!phone || phone.length!==8) { setPhoneError(true);pass=false; } else {setPhoneError(false);}
-    if (!cardName) { setCardNameError(true);pass=false; } else {setCardNameError(false);}
-    if (!cardNumber|| cardNumber.length!==16) { setCardNumberError(true);pass=false;} else {setCardNumberError(false);}
-    if (!(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(expiry))) { setExpiryError(true); pass=false;} else {setExpiryError(false);}
-    if (!CVV || CVV.length!==3) { setCVVError(true);pass=false; } else {setCVVError(false);}
-    if (!billingAddress) { setBillingAddressError(true);pass=false;} else {setBillingAddressError(false);}
-    
+    if (!firstName) { setFirstNameError(true); pass=false; console.log(1);} else {setFirstNameError(false);}
+    if (!lastName) {  setLastNameError(true); pass=false; console.log(2);} else {setLastNameError(false);}
+    if (!(/\S+@\S+\.\S+/.test(email))) { setEmailError(true);pass=false; console.log(3);} else {setEmailError(false);}
+    if (!phone || phone.length!==8) { setPhoneError(true);pass=false; console.log(4);} else {setPhoneError(false);}
+    if (!cardName) { setCardNameError(true);pass=false; console.log(5);} else {setCardNameError(false);}
+    if (!cardNumber|| cardNumber.length!==16) { setCardNumberError(true);pass=false; console.log(6);} else {setCardNumberError(false);}
+    if (!(/^((0?[1-9])|(1[0-2]))$/.test(expiryMonth))) { setExpiryMonthError(true); pass=false; console.log(7);} else {setExpiryMonthError(false);}
+    if (!(/^(19|20)[\d]{2,2}$/.test(expiryYear))) { setExpiryYearError(true); pass=false; console.log(8);} else {setExpiryYearError(false);}
+    if (!CVV || CVV.length!==3) { setCVVError(true);pass=false; console.log(9);} else {setCVVError(false);}
+    if (!billingAddress) { setBillingAddressError(true);pass=false; console.log(10);} else {setBillingAddressError(false);}
     return pass;
   }
 
@@ -121,11 +119,11 @@ export default function Booking() {
   return (
       <ChakraProvider>
       <Box h="100vh" w="100wh">
-        <Box h="10%" w="100%">
+        <Box h="8%" w="100%">
             <NavBar></NavBar>
         </Box>
         <CSSReset />
-        <Center w="100%" h="90%">
+        <Center w="100%" h="92%">
           <VStack w={{base: "70%", lg: "50%"}} h="100%" divider={<StackDivider borderColor='gray.200' />}>
             <Center w="100%">
               <VStack w="100%" padding={3}>
@@ -153,12 +151,12 @@ export default function Booking() {
                   <FormControl isRequired w="40%" isInvalid={firstNameError}>
                     <FormLabel>First Name</FormLabel>
                       <Input
-                        touched=""
                         type="text" 
                         name="firstName" 
                         placeholder="First Name" 
                         value={firstName}
                         onChange={(event) => setFirstName(event.target.value)}
+                        onClick={e => setFirstNameError(false)}
                       />
                     {firstNameError && <FormErrorMessage>Required</FormErrorMessage>}
                   </FormControl>
@@ -171,6 +169,7 @@ export default function Booking() {
                         placeholder="Last Name" 
                         value={lastName}
                         onChange={(event) => setLastName(event.target.value)}
+                        onClick={e => setLastNameError(false)}
                       />
                     {lastNameError && <FormErrorMessage>Required</FormErrorMessage>}
                   </FormControl>
@@ -185,6 +184,7 @@ export default function Booking() {
                         placeholder="Email"
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
+                        onClick={e => setEmailError(false)}
                       />
                     {emailError && <FormErrorMessage>Example: john@gmail.com</FormErrorMessage>}
                   </FormControl>
@@ -198,6 +198,7 @@ export default function Booking() {
                         placeholder="Phone Number"
                         value={phone}
                         onChange={(event) => setPhone(event.target.value)}
+                        onClick={e => setPhoneError(false)}
                       />
                     {phoneError && <FormErrorMessage>Please enter a valid phone number.</FormErrorMessage>}
                   </FormControl>
@@ -221,32 +222,19 @@ export default function Booking() {
                   Payment Details
                 </Heading>
                 <HStack w="100%">
-                <FormControl isRequired w='65%' isInvalid={cardNameError}>
+                  <FormControl isRequired w='65%' isInvalid={cardNameError}>
                     <FormLabel>Cardholder Name</FormLabel>
                       <Input 
                         type="text" 
                         name="cardName" 
                         placeholder="Cardholder Name"
                         value={cardName}
-                        onChange={(event) => setCardName(event.target.value)} />
+                        onChange={(event) => setCardName(event.target.value)} 
+                        onClick={e => setCardNameError(false)}
+                      />
                     {cardNameError && <FormErrorMessage>Please enter the name on your card.</FormErrorMessage>}
                   </FormControl>
-                  <FormControl isRequired w='35%' isInvalid={expiryError}
-                >
-                    <FormLabel>Expiry Date</FormLabel>
-                      <Input
-                        type="text"
-                        name="expiry"
-                        placeholder="Example: 03/27"
-                        value={expiry}
-                        onChange={(event) => setExpiry(event.target.value)}
-                      />
-                    {expiryError && <FormErrorMessage>Please enter in MM/YY format.</FormErrorMessage>}
-                  </FormControl>
-                
-                </HStack>
-                <HStack w="100%">
-                <FormControl isRequired w='65%' isInvalid={cardNumberError}>
+                  <FormControl isRequired w='65%' isInvalid={cardNumberError}>
                     <FormLabel>Card Number</FormLabel>
                       <Input
                         type="number"
@@ -254,8 +242,34 @@ export default function Booking() {
                         placeholder="Card Number"
                         value={cardNumber}
                         onChange={(event) => setCardNumber(event.target.value)}
+                        onClick={e => setCardNumberError(false)}
                       />
                     {cardNumberError && <FormErrorMessage>Please enter a valid card number.</FormErrorMessage>}
+                  </FormControl>
+                </HStack>
+                <HStack w="100%">
+                  <FormControl isRequired>
+                    <FormLabel>Month</FormLabel>
+                    <Select 
+                        value={expiryMonth} 
+                        onChange={setExpiryMonth}
+                        onClick={e => setExpiryMonthError(false)}
+                    >
+                      {Array.from({length: 12}, (_, index) => index + 1).map((month) => {return <option>{month}</option>})}
+                    </Select>
+                    {expiryMonthError && <FormErrorMessage>Please select a month.</FormErrorMessage>}
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <FormLabel>Year</FormLabel>
+                    <Select
+                        value={expiryYear}
+                        onChange={setExpiryYear}
+                        onClick={e => setExpiryYearError(false)}
+                    >
+                      {Array.from({length: 10}, (_, index) => index + new Date().getFullYear()).map((year) => {return <option>{year}</option>})}
+                    </Select>
+                    {expiryYearError && <FormErrorMessage>Please select a year.</FormErrorMessage>}
                   </FormControl>
 
                   <FormControl isRequired w='35%' isInvalid={CVVError}>
@@ -267,6 +281,7 @@ export default function Booking() {
                         placeholder="CVV"
                         value={CVV}
                         onChange={(event) => setCVV(event.target.value)}
+                        onClick={e => setCVVError(false)}
                       />
                       <InputRightElement paddingEnd={2} width="10">
                         <Button fontSize={10} height="6" size="sm" onClick={()=> setShowCVV(!showCVV)}>
@@ -281,7 +296,14 @@ export default function Booking() {
                 <HStack w="100%">
                   <FormControl isRequired isInvalid={billingAddressError}>
                     <FormLabel>Billing Address</FormLabel>
-                    <Input type="text" name="billingAddress" placeholder="Billing Address" value={billingAddress} onChange={(event) => setBillingAddress(event.target.value)} />
+                    <Input 
+                        type="text" 
+                        name="billingAddress" 
+                        placeholder="Billing Address" 
+                        value={billingAddress} 
+                        onChange={(event) => setBillingAddress(event.target.value)} 
+                        onClick={e => setBillingAddressError(false)}
+                    />
                     {billingAddressError&&<FormErrorMessage>Please enter your billing address.</FormErrorMessage>}
                   </FormControl>
                 </HStack>

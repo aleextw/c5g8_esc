@@ -437,6 +437,7 @@ def create_booking(booking):
         room_uid=booking.room_uid,
         hotel_uid=booking.hotel_uid,
         destination=destination[0],
+        assigned_user=booking.username,
     )
 
     resources["SESSION"].add(booking_entry)
@@ -532,6 +533,49 @@ def login_user(data):
 
 
 def logout_user(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        resources["SESSION"].delete(response["token"][0])
+        resources["SESSION"].commit()
+
+        return {"valid": ""}
+    return {"valid": response["valid"]}
+
+
+def get_user_bookings(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        return {
+            "valid": "",
+            "bookings": [
+                i.booking_display_info.as_dict() for i in response["user"][0].bookings
+            ],
+        }
+    return {"valid": response["valid"]}
+
+
+def get_user_data(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        return {
+            "valid": "",
+            "user": response["user"][0].as_dict(),
+        }
+    return {"valid": response["valid"]}
+
+
+def delete_user_data(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        resources["SESSION"].delete(response["token"][0])
+        resources["SESSION"].delete(response["user"][0])
+        resources["SESSION"].commit()
+
+        return {"valid": ""}
+    return {"valid": response["valid"]}
+
+
+def validate_auth_data(data):
     user = (
         resources["SESSION"]
         .execute(select(User).where(User.username == data.username))
@@ -550,7 +594,9 @@ def logout_user(data):
     if token is None:
         return {"valid": "Error: Token does not exist."}
 
-    resources["SESSION"].delete(token[0])
-    resources["SESSION"].commit()
+    if token[0].assigned_user != user[0]:
+        return {
+            "valid": "Error: Specified token does not correspond to specified user."
+        }
 
-    return {"valid": ""}
+    return {"valid": "", "user": user, "token": token}

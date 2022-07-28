@@ -9,6 +9,9 @@ import {
   Text,
   Center,
   Spinner,
+  Alert,
+  AlertIcon,
+  Collapse
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
@@ -16,11 +19,8 @@ import NavBar from '../../components/NavBar';
 import { getBooking } from '../../api/services/destinations';
 import { useLocation } from "react-router-dom";
 
-function formatSummaryData(booking) {
-  
-  // for the masking of the credit card number
-  const cardNumber = booking.payment_info.card_number
-  const maskedNumber = `${cardNumber.substring(0, 6)}xxxxx${cardNumber.substring(12, 16)}`;
+function SummaryData(props) {
+  const [copied, setCopied] = useState(false);
 
   return (
   <Center w={{base: "70%", lg: "50%"}} h="80%">
@@ -30,7 +30,16 @@ function formatSummaryData(booking) {
       </Heading>
       <Box>
         <Heading size="md" w="100%" align="center">Your booking ID:</Heading>
-        <Link name="copyBookingRef" color='teal.500' onClick={(e)=>navigator.clipboard.writeText(e.target.innerText)} isExternal>{booking.booking_info.guest_booking_ref}</Link>
+        <Center w="100%" align="center">
+          <Link name="copyBookingRef" color='teal.500' w="100%" onClick={(e)=>{navigator.clipboard.writeText(e.target.innerText); setCopied(true); setInterval(() => setCopied(false), 10000)}} isExternal>{props.data.booking_info.guest_booking_ref}</Link>
+        </Center>
+        <Collapse in={copied} animateOpacity>
+          <Alert status='info' borderRadius="md">
+            <AlertIcon />
+            Booking ID copied to clipboard!
+          </Alert>
+        </Collapse>
+        
         <Text align="center">(Copy this booking ID to access your booking data again in future.)</Text>
       </Box>
       <HStack w="100%" h="100%">
@@ -39,16 +48,16 @@ function formatSummaryData(booking) {
             Guest Details
           </Heading>
           <Text w="100%" align="left">
-            <strong>Name:</strong> {booking.account_info.salutation} {booking.account_info.first_name} {booking.account_info.last_name}
+            <strong>Name:</strong> {props.data.account_info.salutation} {props.data.account_info.first_name} {props.data.account_info.last_name}
           </Text>
           <Text w="100%" align="left">
-            <strong>Email:</strong> {booking.account_info.email}
+            <strong>Email:</strong> {props.data.account_info.email}
           </Text>
           <Text w="100%" align="left">
-            <strong>Phone:</strong> {booking.account_info.contact_number}
+            <strong>Phone:</strong> {props.data.account_info.contact_number}
           </Text>
           <Text w="100%" align="top-left">
-              <strong>Additional Information:</strong> {booking.account_info.additional_data}
+              <strong>Additional Information:</strong> {props.data.account_info.additional_data}
           </Text>
         </VStack>
         <VStack w="100%" h="100%">
@@ -56,13 +65,13 @@ function formatSummaryData(booking) {
             Payment Details
           </Heading>
           <Text w="100%" align="left">
-            <strong>Payee Name:</strong> {booking.payment_info.card_name}
+            <strong>Payee Name:</strong> {props.data.payment_info.card_name}
           </Text>
           <Text w="100%" align="left">
-            <strong>Card Number:</strong> {maskedNumber}
+            <strong>Card Number:</strong> {props.data.payment_info.card_number}
           </Text>
           <Text w="100%" align="left">
-            <strong>Billing Address:</strong> {booking.payment_info.billing_address}
+            <strong>Billing Address:</strong> {props.data.payment_info.billing_address}
           </Text>
         </VStack>
       </HStack>
@@ -72,28 +81,28 @@ function formatSummaryData(booking) {
           Hotel Details
         </Heading>
         <Text w="100%" align="left">
-          <strong>Destination:</strong> {booking.destination_info.term}
+          <strong>Destination:</strong> {props.data.destination_info.term}
         </Text>
         <Text w="100%" align="left">
-          <strong>Hotel Name:</strong> {booking.display_info.hotel_name}
+          <strong>Hotel Name:</strong> {props.data.display_info.hotel_name}
         </Text>
         <Text w="100%" align="left">
-          <strong>Room Name:</strong> {booking.display_info.room_name}
+          <strong>Room Name:</strong> {props.data.display_info.room_name}
         </Text>
         <Text w="100%" align="left">
-          <strong>Check In Date:</strong> {booking.display_info.check_in_date}
+          <strong>Check In Date:</strong> {props.data.display_info.check_in_date}
         </Text>
         <Text w="100%" align="top-left">
-            <strong>Check Out Date:</strong> {booking.display_info.check_out_date}
+            <strong>Check Out Date:</strong> {props.data.display_info.check_out_date}
         </Text>
         <Text w="100%" align="top-left">
-            <strong>Number of Rooms:</strong> {booking.display_info.num_rooms}
+            <strong>Number of Rooms:</strong> {props.data.display_info.num_rooms}
         </Text>
         <Text w="100%" align="top-left">
-            <strong>Number of Adults:</strong> {booking.display_info.num_adults}
+            <strong>Number of Adults:</strong> {props.data.display_info.num_adults}
         </Text>
         <Text w="100%" align="top-left">
-            <strong>Number of Children:</strong> {booking.display_info.num_children}
+            <strong>Number of Children:</strong> {props.data.display_info.num_children}
         </Text>
       </VStack>    
     </VStack>
@@ -116,7 +125,7 @@ export default function Summary(props) {
                   No booking found!
               </Heading>);
     } else {
-      content = formatSummaryData(booking);
+      content = <SummaryData data={booking}/>;
     }
   } else {
     content = (<Spinner

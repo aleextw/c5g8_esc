@@ -46,6 +46,7 @@ class Booking(Base):
     guest_account_info = relationship("GuestInfo", backref="booking", uselist=False)
     guest_payment_info = relationship("PaymentInfo", backref="booking", uselist=False)
     hotel_destination = Column(Text, ForeignKey("destination.destination_id"))
+    assigned_user = Column(Text, ForeignKey("user.username"))
 
     def as_dict(self):
         """
@@ -152,6 +153,7 @@ class User(Base):
     password_hash = Column(Text)
     salt = Column(Text)
     token_val = Column(Text, ForeignKey("token.value"))
+    bookings = relationship("Booking", backref="user")
 
     def as_dict(self):
         """

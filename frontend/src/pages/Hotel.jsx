@@ -13,13 +13,13 @@ export default function Hotel() {
     return (
       <ChakraProvider>
         <Box h="100vh" w="100wh">
-            <Box h="10%" w="100%">
+            <Box h="8%" w="100%">
                 <NavBar></NavBar>
             </Box>
             <Box h="10%" w="100%">
                 <HotelSearchBar params={params}/>
             </Box>
-            <Center background="#F5F4F1" w="100%" h="80%" overflow="hidden">   
+            <Center background="#F5F4F1" w="100%" h="82%" overflow="hidden">   
                 <HotelDetails params={params} />
             </Center>
         </Box>   

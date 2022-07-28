@@ -11,7 +11,7 @@ router = APIRouter()
 
 logger = logging.getLogger()
 
-
+# TODO: Shift data models to separate file for cleaner code
 class RegistrationData(BaseModel):
     """
     Data passed by the frontend corresponding to a hotel room booking
@@ -32,7 +32,7 @@ class LoginData(BaseModel):
     passwordHash: str | None = None
 
 
-class LogoutData(BaseModel):
+class AuthData(BaseModel):
     username: str
     token: str
 
@@ -48,5 +48,15 @@ def login(login_data: LoginData):
 
 
 @router.post("/logout", tags=["auth"])
-def logout(logout_data: LogoutData):
+def logout(logout_data: AuthData):
     return database.logout_user(logout_data)
+
+
+@router.post("/profile", tags=["auth"])
+def get_user_data(auth_data: AuthData):
+    return database.get_user_data(auth_data)
+
+
+@router.post("/profile/delete", tags=["auth"])
+def delete_user_data(auth_data: AuthData):
+    return database.delete_user_data(auth_data)

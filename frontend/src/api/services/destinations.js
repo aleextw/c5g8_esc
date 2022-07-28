@@ -144,3 +144,66 @@ export function postLogout(body) {
       return { status: -1 };
     });
 }
+
+export function getUserBookings(body) {
+  return fetch("https://localhost:8000/summary", {
+    method: "POST",
+    mode: "cors",
+    body: body,
+    headers: { "Content-type": "application/json;charset=UTF-8" },
+  })
+    .then((response) =>
+      response.json().then((data) => {
+        return {
+          status: response.status,
+          valid: data.valid,
+          bookings: data.bookings,
+        };
+      })
+    )
+    .catch((error) => {
+      return { status: -1 };
+    });
+}
+
+export function getUserData(body, callback) {
+  fetch("https://localhost:8000/profile", {
+    method: "POST",
+    mode: "cors",
+    body: body,
+    headers: { "Content-type": "application/json;charset=UTF-8" },
+  })
+    .then((response) =>
+      response.json().then((data) => {
+        console.log(data);
+        callback({
+          status: response.status,
+          valid: data.valid,
+          user: data.user,
+        });
+      })
+    )
+    .catch((error) => {
+      callback({ status: -1 });
+    });
+}
+
+export function postDeleteAccount(body) {
+  return fetch("https://localhost:8000/profile/delete", {
+    method: "POST",
+    mode: "cors",
+    body: body,
+    headers: { "Content-type": "application/json;charset=UTF-8" },
+  })
+    .then((response) =>
+      response.json().then((data) => {
+        return {
+          status: response.status,
+          valid: data.valid,
+        };
+      })
+    )
+    .catch((error) => {
+      return { status: -1 };
+    });
+}
