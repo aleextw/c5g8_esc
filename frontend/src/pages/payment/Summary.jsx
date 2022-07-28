@@ -1,26 +1,11 @@
 import {
   Box,
-  Button,
   ChakraProvider,
-  Flex,
-  FormControl,
-  FormLabel,
   Heading,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Link,
-  Stack,
-  Textarea,
-  Tooltip,
-  useClipboard,
-  useColorModeValue,
   VStack,
   HStack,
-  Spacer,
   StackDivider,
-  Select,
   Text,
   Center,
   Spinner,
@@ -120,6 +105,7 @@ export default function Summary(props) {
   const params = new URLSearchParams(location.search);
   const [ booking, setBooking ] = useState("");
   const foo = (e) => {console.log(e); setBooking(e)}
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {getBooking(params, foo)}, []);
   
   let content;

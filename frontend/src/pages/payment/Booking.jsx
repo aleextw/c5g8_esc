@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 import CSSReset from "@chakra-ui/css-reset";
-import { Form, Field, useField, useForm } from "react-final-form";
-import { useClipboard, ChakraProvider, theme,
+import { 
+  ChakraProvider,
   Box,
   Button,
-  ButtonGroup,
   Heading,
-  Icon,
-  Link,
   FormControl,
   FormLabel,
   FormErrorMessage,
   Input,
-  Checkbox,
-  Progress,
-  Radio,
-  RadioGroup,
-  Stack, Spacer, Flex,
+  Spacer, 
+  Flex,
   Textarea,
   VStack,
   HStack,
@@ -30,8 +24,6 @@ import { useClipboard, ChakraProvider, theme,
 
 
 export default function Booking() {
-  const { hasCopied, onCopy } = useClipboard('example@example.com');
-
   const localFirstName = localStorage.getItem("firstName") !== null ? JSON.parse(localStorage.getItem("firstName")) : "";
   const localLastName = localStorage.getItem("lastName") !== null ? JSON.parse(localStorage.getItem("lastName")) : "";
   const localEmail = localStorage.getItem("email") !== null ? JSON.parse(localStorage.getItem("email")) : "";
@@ -49,9 +41,7 @@ export default function Booking() {
   const [ CVV, setCVV ] = useState("");
   const [ showCVV, setShowCVV ] = useState(false);
   const [billingAddress, setBillingAddress] = useState("");
-  // const [error, setError] = useState({
-  //   firstName: false, lastName: false, email: false, phone: false,
-  //   cardName: false, cardNumber: false, expiry: false, CVV: false, billingAddress: false });
+  
   const [ firstNameError, setFirstNameError ] = useState(false);
   const [ lastNameError, setLastNameError ] = useState(false);
   const [ emailError, setEmailError ] = useState(false);
@@ -72,8 +62,8 @@ export default function Booking() {
       email: email.replace(/['"]+/g, ''), 
       phone: phone.replace(/['"]+/g, ''), 
       additionalData: additionalData.replace(/['"] + /g, ''),
-      cardName: cardName.replace(/['"] + /g, '').substring(0, 6) + "xxxxxx" + cardName.replace(/['"] + /g, '').substring(12, 16), 
-      cardNumber: cardNumber.replace(/['"] + /g, ''), // Only pass first 6 and last 4 digits
+      cardName: cardName.replace(/['"] + /g, ''), 
+      cardNumber: cardNumber.replace(/['"] + /g, '').substring(0, 6) + "xxxxxx" + cardNumber.replace(/['"] + /g, '').substring(12, 16), // Only pass first 6 and last 4 digits
       billingAddress: billingAddress.replace(/['"] + /g, ''),
       // expiry: expiry.replace(/['"] + /g, ''), // Don't pass to frontend
       // CVV: CVV.replace(/['"] + /g, ''), // Don't pass to frontend

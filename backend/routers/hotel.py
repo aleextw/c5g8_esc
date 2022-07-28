@@ -1,7 +1,9 @@
+# pylint: disable=no-name-in-module
+# pylint: disable=no-self-argument
 import datetime
 import logging
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter
 from pydantic import BaseModel
 
 from backend.core.models import database

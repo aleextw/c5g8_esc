@@ -4,7 +4,7 @@ import { getHotel } from "../../api/services/destinations";
 import HotelInfo from "../hotelDetails/hotelInfo/HotelInfo";
 import HotelMap from "../hotelDetails/hotelMap/HotelMap";
 import RoomInfoPopup from "../hotelDetails/RoomInfoPopup";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Show, Spinner, StackDivider, Container } from "@chakra-ui/react";
+import { Flex, Heading, Stack, Text, Button, Box, Center, Spacer, Show, Spinner, StackDivider, Container } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 

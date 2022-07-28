@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
-import { Center, ChakraProvider, Flex, Show, Spacer, Box } from "@chakra-ui/react";
+import { Center, ChakraProvider, Box } from "@chakra-ui/react";
 import "../index.css";
-import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
 import HotelDetails from "./hotelDetails/HotelDetails";
 import HotelSearchBar from "../components/HotelSearchBar";

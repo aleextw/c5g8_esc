@@ -1,9 +1,10 @@
-from distutils.command.build_scripts import first_line_re
+# pylint: disable=no-member
+# pylint: disable=broad-except
+# pylint: disable=invalid-name
+# pylint: disable=redefined-builtin
 import json
 import logging
-from pprint import pprint
 import secrets
-
 
 import requests
 from sqlalchemy import create_engine, select
@@ -11,7 +12,15 @@ from sqlalchemy.orm import sessionmaker
 
 from backend.config import config
 from backend.core.models.base import Base
-from backend.core.schemas.schemas import *
+from backend.core.schemas.schemas import (
+    Booking,
+    Destination,
+    DisplayInfo,
+    GuestInfo,
+    PaymentInfo,
+    Token,
+    User,
+)
 from backend.shared_resources import resources
 
 logger = logging.getLogger()
@@ -179,7 +188,7 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                             + hotel_static_data["image_details"]["suffix"],
                         }
                     )
-        except Exception as e:
+        except Exception as _:
             # Data missing
             pass
 
@@ -193,7 +202,6 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
     return {"completed": True, "hotels": []}
 
 
-#  TODO: CHECK
 def generate_hotel(
     hotel_id, destination_id, checkin, checkout, num_rooms, guests, currency
 ):
@@ -326,6 +334,9 @@ get_dest_endpoint = (
 def get_dest_price_endpoint(
     destination_id, checkin, checkout, num_rooms, guests, currency
 ):
+    """
+    Build and return the hotel pricing URL for the specified destination
+    """
     return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
@@ -336,10 +347,16 @@ get_hotel_endpoint = lambda x: f"https://hotelapi.loyalty.dev/api/hotels/{x}"
 def get_hotel_details_endpoint(
     destination_id, hotel_id, checkin, checkout, num_rooms, guests, currency
 ):
+    """
+    Build and return the hotel details URL for the specified hotel
+    """
     return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 def create_booking(booking):
+    """
+    Create a new booking using the given booking data
+    """
     if any(
         [
             i is None

@@ -1,15 +1,16 @@
 import { 
-    Box, 
-    Center, 
+    Box,
     Flex, 
     Text, 
     Select, 
     Stack, 
     Button, 
     Heading,
-    Spacer,
-    FormControl,
-    FormErrorMessage
+    Center,
+    Spinner,
+    Alert,
+    AlertIcon,
+    AlertTitle,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { RangeDatepicker } from "chakra-dayzed-datepicker";
@@ -35,6 +36,9 @@ export default function SearchBar(props) {
     // TODO: Load data from local storage and load reasonable defaults if not present
 
     const searchRoute = () => {
+        // Load a spinner
+        setSearching(true);
+
         let finalSelectedDestination = "";
         // If searchbar has data, choose the first suggestion if none selected
         if (selectedDestination === "") {
@@ -42,8 +46,13 @@ export default function SearchBar(props) {
                 // Set directly to a temp var rather than update state since state update is async, might not reflect properly
                 finalSelectedDestination = filteredSuggestions[activeSuggestion]["uid"];
             } else {
+                setSearching(false);
+
                 // No valid suggestion to pick as default, raise error
                 setInvalidDestination(true);
+
+                // Clear error after 5 seconds
+                setInterval(() => setInvalidDestination(false), 10000);
                 return;
             }
         } else {
@@ -52,7 +61,11 @@ export default function SearchBar(props) {
 
         // If checkInDate and checkOutDate are the same, raise another error
         if (selectedDates.length < 2 || selectedDates[0] === selectedDates[1]) {
+            setSearching(false);
             setInvalidDates(true);
+
+            // Clear error after 5 seconds
+            setInterval(() => setInvalidDates(false), 10000);
             return;
         }
 
@@ -60,6 +73,7 @@ export default function SearchBar(props) {
             props.onClick();
         }
 
+        setSearching(false);
         navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=SGD`);
     }
 
@@ -81,6 +95,8 @@ export default function SearchBar(props) {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [userInput, setUserInput] = useState("");
     
+    const [searching, setSearching] = useState(false);
+
     const [invalidDestination, setInvalidDestination] = useState(false);
     const [invalidDates, setInvalidDates] = useState(false);
 
@@ -111,7 +127,6 @@ export default function SearchBar(props) {
             setFilteredSuggestions([]);
             setShowSuggestions(false);
             setUserInput(e.currentTarget.innerText);
-    
             setSelectedDestination(e.currentTarget.id);
       };
     
@@ -162,14 +177,11 @@ export default function SearchBar(props) {
                             onChange={onChange}
                             onClick={onClick}
                             onKeyDown={onKeyDown}
-                            invalidDestination={invalidDestination}
-                            setInvalidDestination={setInvalidDestination}
                             />
                     </Stack>
 
                     <Stack w={{base: "100%", lg: "33%"}} onClick={e => {setAutocompleteOpenState(false); setInvalidDates(false);}}>
                         <Text ml={2}>Dates of Stay</Text>
-                        {/* <FormControl isInvalid={invalidDates}> */}
                             <RangeDatepicker
                                 name="date_picker"
                                 selectedDates={selectedDates}
@@ -177,8 +189,6 @@ export default function SearchBar(props) {
                                 onDateChange={setSelectedDates}
                                 minDate={new Date()}
                             />
-                            {/* {invalidDates && <FormErrorMessage>Please select 2 dates.</FormErrorMessage>} */}
-                        {/* </FormControl> */}
                     </Stack>
 
                     <Flex direction="horizontal" gap="3" w={{base: "100%", lg: "33%"}}>
@@ -214,6 +224,21 @@ export default function SearchBar(props) {
                         </Stack>
                     </Flex>
                 </Flex>
+                <Center w="100%">
+                    {searching && <Spinner />}
+                </Center>
+                <Center w="100%">
+                    {invalidDestination && <Alert status='error'>
+                    <AlertIcon />
+                    <AlertTitle>Error: Please pick a valid destination.</AlertTitle>
+                    </Alert>}
+                </Center>
+                <Center w="100%">
+                    {invalidDates && <Alert status='error'>
+                    <AlertIcon />
+                    <AlertTitle>Error: Please pick valid dates.</AlertTitle>
+                    </Alert>}
+                </Center>
                 <Button name="dest_search_submit" onClick={ searchRoute } colorScheme="red">Submit</Button>
             </Stack>
         </Box>

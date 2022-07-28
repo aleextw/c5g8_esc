@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Enum, Float, ForeignKey, Integer, Numeric, Text, Date
+from sqlalchemy import Column, Date, Enum, Float, ForeignKey, Integer, Text
 from sqlalchemy.orm import relationship
 
 from backend.core.models.base import Base
@@ -21,6 +21,9 @@ class Destination(Base):
     booking = relationship("Booking", backref="destination", uselist=False)
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
@@ -40,13 +43,14 @@ class Booking(Base):
     price = Column(Float)
     booking_display_info = relationship("DisplayInfo", backref="booking", uselist=False)
     guest_booking_ref = Column(Text)
-    # TODO: Change this to a relationship with GuestInfo
     guest_account_info = relationship("GuestInfo", backref="booking", uselist=False)
-    # TODO: Change this to a relationship with PaymentInfo
     guest_payment_info = relationship("PaymentInfo", backref="booking", uselist=False)
     hotel_destination = Column(Text, ForeignKey("destination.destination_id"))
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
@@ -71,6 +75,9 @@ class DisplayInfo(Base):
     booking_ref = Column(Text, ForeignKey("booking.guest_booking_ref"))
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
@@ -87,15 +94,16 @@ class PaymentInfo(Base):
     id = Column(Integer, primary_key=True)
     card_name = Column(Text)
     card_number = Column(Text)
-    # TODO: Consider splitting address as its own table / serialize for easy reference
     billing_address = Column(Text)
     booking_ref = Column(Text, ForeignKey("booking.guest_booking_ref"))
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
-        # TODO: Fill this in
         return f"PaymentInfo(id={self.id}, card_name={self.card_name}, card_number={self.card_number}, billing_address={self.billing_address})"
 
 
@@ -107,22 +115,24 @@ class GuestInfo(Base):
     __tablename__ = "guestinfo"
 
     id = Column(Integer, primary_key=True)
-    # TODO: Shift enum to config file
-    salutation = Column(Enum("Mr", "Ms", "Mrs", "Miss", "Dr"))
+    salutation = Column(
+        Enum("Mr", "Ms", "Mrs", "Miss", "Madam", "Dr", "Lord", "Lordess")
+    )
     first_name = Column(Text)
     last_name = Column(Text)
     # Email regex handled clientside
     email = Column(Text)
-    # TODO: Determine data type for this
     contact_number = Column(Text)
     additional_data = Column(Text)
     booking_ref = Column(Text, ForeignKey("booking.guest_booking_ref"))
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
-        # TODO: Fill this in
         return f"GuestInfo(id={self.id}, salutation={self.salutation}, first_name={self.first_name}, last_name={self.last_name}, email={self.email}, contact_number={self.contact_number}, additional_data={self.additional_data})"
 
 
@@ -144,7 +154,12 @@ class User(Base):
     token_val = Column(Text, ForeignKey("token.value"))
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         # Autistic but necessary to maintain codebase standards
+        # JS in camelCase
+        # Python in snake_case
         return {
             "firstName": self.first_name,
             "lastName": self.last_name,
@@ -169,6 +184,9 @@ class Token(Base):
     assigned_user = relationship("User", backref="token", uselist=False)
 
     def as_dict(self):
+        """
+        Return table entry attributes as a dict
+        """
         return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
