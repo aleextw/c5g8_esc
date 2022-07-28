@@ -91,7 +91,7 @@ import { postLogout } from '../api/services/destinations';
             <AlertIcon />
             <AlertTitle>{logoutError}</AlertTitle>
             </Alert>}
-              <Text textAlign="center" p="2">Hello {firstName}!</Text>
+              <Text name="NameDisplay" textAlign="center" p="2">Hello {firstName}!</Text>
             
             <Button
               fontSize={'sm'}
@@ -101,7 +101,8 @@ import { postLogout } from '../api/services/destinations';
               _hover={{
                 bg: 'teal.300',
               }}
-              onClick={logout}>
+              onClick={logout}
+              name="LogOutButton">
               {loggingOut ? <Spinner /> : "Log Out"}
             </Button>
           </Stack>
@@ -122,7 +123,8 @@ import { postLogout } from '../api/services/destinations';
                   fontSize={'sm'}
                   fontWeight={400}
                   variant={'link'}
-                  onClick={goToProfile}>
+                  onClick={goToProfile}
+                  name="ProfileButton">
                   View Profile
                 </Button>
                 <Button
@@ -130,7 +132,8 @@ import { postLogout } from '../api/services/destinations';
                   fontSize={'sm'}
                   fontWeight={400}
                   variant={'link'}
-                  onClick={loginRoute}>
+                  onClick={loginRoute}
+                  name="LogInButton">
                   Log In
                 </Button>
                 <Button
@@ -141,7 +144,8 @@ import { postLogout } from '../api/services/destinations';
                   _hover={{
                     bg: 'pink.300',
                   }}
-                  onClick={registerRoute}>
+                  onClick={registerRoute}
+                  name="RegisterButton">
                   Register
                 </Button>
               </Stack>
