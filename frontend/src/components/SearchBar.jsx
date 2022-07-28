@@ -177,6 +177,7 @@ export default function SearchBar(props) {
                             onChange={onChange}
                             onClick={onClick}
                             onKeyDown={onKeyDown}
+                            setInvalidDestination={setInvalidDestination}
                             />
                     </Stack>
 

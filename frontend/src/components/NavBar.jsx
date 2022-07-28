@@ -21,19 +21,22 @@ import {
     CloseIcon,
     ChevronDownIcon,
   } from '@chakra-ui/icons';
-  import { useNavigate } from "react-router-dom";
+  import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from 'react';
 import { postLogout } from '../api/services/destinations';
   
   export default function NavBar() {
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const loginRoute = () => {
+      localStorage.setItem("prevURL", location.pathname + location.search);
       navigate("/login");
     }
   
     const registerRoute = () => {
+      localStorage.setItem("prevURL", location.pathname + location.search);
       navigate("/register");
     }
 
@@ -71,10 +74,6 @@ import { postLogout } from '../api/services/destinations';
     const [ logoutError, setLogoutError ] = useState("");
     
     function ManageUser() {
-      
-      console.log("logged in? ", localStorage.getItem("token"));
-      console.log("user", localStorage.getItem("firstName"));
-
       if (localStorage.getItem("token")) {
         const firstName = localStorage.getItem("firstName") !== null ? localStorage.getItem("firstName") : "Traveller";
 
@@ -255,7 +254,7 @@ import { postLogout } from '../api/services/destinations';
             />
           )}
         </Flex>
-  
+
         <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
           <Stack
             mt={2}
@@ -276,8 +275,13 @@ import { postLogout } from '../api/services/destinations';
     );
   };
   
+
+
+  
+  
   const NAV_ITEMS = [
-    {label: "View a Booking", name:'button_viewBooking', href: "/booking/search"}
+    {label: "View a Booking", name:'button_viewBooking', href: "/booking/search"},
+    {label: "Test", name:'test'}
     // {
     //   label: 'Inspiration',
     //   children: [
