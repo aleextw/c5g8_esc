@@ -24,10 +24,10 @@ import {
 
 
 export default function Booking() {
-  const localFirstName = localStorage.getItem("firstName") !== null ? JSON.parse(localStorage.getItem("firstName")) : "";
-  const localLastName = localStorage.getItem("lastName") !== null ? JSON.parse(localStorage.getItem("lastName")) : "";
-  const localEmail = localStorage.getItem("email") !== null ? JSON.parse(localStorage.getItem("email")) : "";
-  const localPhoneNumber = localStorage.getItem("phoneNumber") !== null ? JSON.parse(localStorage.getItem("phoneNumber")) : "";
+  const localFirstName = localStorage.getItem("firstName") !== null ? localStorage.getItem("firstName") : "";
+  const localLastName = localStorage.getItem("lastName") !== null ? localStorage.getItem("lastName") : "";
+  const localEmail = localStorage.getItem("email") !== null ? localStorage.getItem("email") : "";
+  const localPhoneNumber = localStorage.getItem("phoneNumber") !== null ? localStorage.getItem("phoneNumber") : "";
 
   const [ salutation, setSalutation ] = useState("Mr");
   const [ firstName, setFirstName ] = useState(localFirstName);
