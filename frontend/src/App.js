@@ -6,6 +6,7 @@ import Summary from "./pages/payment/Summary";
 import Hotel from "./pages/Hotel";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile"
 
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/booking/search" element={<BookingSearch />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </BrowserRouter>
   );
