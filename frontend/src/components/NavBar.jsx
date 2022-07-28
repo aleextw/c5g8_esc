@@ -34,6 +34,10 @@ import { postLogout } from '../api/services/destinations';
     const navigate = useNavigate();
     const location = useLocation();
 
+    const goToProfile = () => {
+      navigate("/profile")
+    }
+
     const loginRoute = () => {
       localStorage.setItem("prevURL", location.pathname + location.search);
       navigate("/login");
@@ -113,6 +117,14 @@ import { postLogout } from '../api/services/destinations';
                 justify={'flex-end'}
                 direction={'row'}
                 spacing={6}>
+                <Button
+                  as={'a'}
+                  fontSize={'sm'}
+                  fontWeight={400}
+                  variant={'link'}
+                  onClick={goToProfile}>
+                  View Profile
+                </Button>
                 <Button
                   as={'a'}
                   fontSize={'sm'}
