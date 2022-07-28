@@ -24,10 +24,10 @@ import {
 
 
 export default function Booking() {
-  const localFirstName = localStorage.getItem("firstName") !== null ? localStorage.getItem("firstName") : "";
-  const localLastName = localStorage.getItem("lastName") !== null ? localStorage.getItem("lastName") : "";
-  const localEmail = localStorage.getItem("email") !== null ? localStorage.getItem("email") : "";
-  const localPhoneNumber = localStorage.getItem("phoneNumber") !== null ? localStorage.getItem("phoneNumber") : "";
+  const localFirstName = localStorage.getItem("firstName");
+  const localLastName = localStorage.getItem("lastName");
+  const localEmail = localStorage.getItem("email");
+  const localPhoneNumber = localStorage.getItem("phoneNumber");
 
   const [ salutation, setSalutation ] = useState("Mr");
   const [ firstName, setFirstName ] = useState(localFirstName);
@@ -110,7 +110,7 @@ export default function Booking() {
     if (!(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(expiry))) { setExpiryError(true); pass=false;} else {setExpiryError(false);}
     if (!CVV || CVV.length!==3) { setCVVError(true);pass=false; } else {setCVVError(false);}
     if (!billingAddress) { setBillingAddressError(true);pass=false;} else {setBillingAddressError(false);}
-    //
+    
     return pass;
   }
 
@@ -127,7 +127,6 @@ export default function Booking() {
         <CSSReset />
         <Center w="100%" h="90%">
           <VStack w={{base: "70%", lg: "50%"}} h="100%" divider={<StackDivider borderColor='gray.200' />}>
-          {/* <Form> */}
             <Center w="100%">
               <VStack w="100%" padding={3}>
                 <Heading>
@@ -309,7 +308,6 @@ export default function Booking() {
                 </Button>
               </Flex>
             </Center>
-            {/* </Form> */}
           </VStack>
         </Center>
       </Box>
