@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 import CSSReset from "@chakra-ui/css-reset";
+import NumberFormat from 'react-number-format';
 import { 
   ChakraProvider,
   Box,
@@ -19,9 +20,20 @@ import {
   VStack,
   HStack,
   Center,
-  StackDivider, InputGroup,Select, InputRightElement
+  StackDivider, 
+  InputGroup,
+  Select, 
+  InputRightElement, 
+  IconButton
 } from "@chakra-ui/react";
+import { ArrowUpIcon } from '@chakra-ui/icons';
 
+const handleClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 
 export default function Booking() {
   const localFirstName = localStorage.getItem("firstName");
@@ -328,6 +340,20 @@ export default function Booking() {
                   onClick={cancelBook}>
                   Cancel
                 </Button>
+
+                <IconButton
+                  icon={<ArrowUpIcon />}
+                  size="lg"
+                  colorScheme="purple"
+                  variant="outline"
+                  border="2px solid"
+                  // ref={ScrolltoTop}
+                  onClick={handleClick}
+                  position="fixed"
+                  bottom="4rem"
+                  right="4rem"
+                  zIndex="-1"
+                />
               </Flex>
             </Center>
           </VStack>

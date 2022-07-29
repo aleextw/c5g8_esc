@@ -34,13 +34,13 @@ function Card(props) {
     
     const navigate = useNavigate();
     const searchHotel = () => {
-        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
+        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=${params.get("currency")}`);
     }
 
     return (<Flex name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={1} mb={1} shadow={"base"} background="white">
         <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
         <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-            <Stack p="2" direction="column" w="100%">
+            <Stack p="2" direction="column" w="70%">
                 <Heading size="md">{props.name}</Heading>
                 <Show above="md">
                     <Text>{props.address}</Text>
@@ -60,9 +60,9 @@ function Card(props) {
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p="2" w="100%" direction="column">
+            <Stack p="2" w="30%" direction="column">
                 {/* <Heading size="sm">C5G8</Heading> */}
-                <Text size="sm">SGD {props.price}</Text>
+                <Text size="sm">{localStorage.getItem("currency")} {props.price}</Text>
                 <Text>Earn at least {props.points} points</Text>
                 <Show above="md">
                     <Button name="button_bookHotel" onClick={searchHotel}>Book Deal</Button>
