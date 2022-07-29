@@ -241,7 +241,7 @@ export default function Booking() {
                         name="cardNumber"
                         placeholder="Card Number"
                         value={cardNumber}
-                        onChange={(event) => setCardNumber(event.target.value)}
+                        onChange={(event) => setCardNumber(event.target.value.slice(0, 16))}
                         onClick={e => setCardNumberError(false)}
                       />
                     {cardNumberError && <FormErrorMessage>Please enter a valid card number.</FormErrorMessage>}
@@ -280,7 +280,7 @@ export default function Booking() {
                         name="CVV"
                         placeholder="CVV"
                         value={CVV}
-                        onChange={(event) => setCVV(event.target.value)}
+                        onChange={(event) => setCVV(event.target.value.slice(0, 3))}
                         onClick={e => setCVVError(false)}
                       />
                       <InputRightElement paddingEnd={2} width="10">
