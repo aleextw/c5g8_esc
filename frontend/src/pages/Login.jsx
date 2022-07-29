@@ -118,7 +118,7 @@ const Login = () => {
                                     <Stack w="100%">
                                         <FormControl isInvalid={usernameError}>
                                             <FormLabel>Username</FormLabel>
-                                            <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
+                                            <Input name="loginUsernameInput" type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
                                             {usernameError && <FormErrorMessage>Username is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
@@ -126,7 +126,7 @@ const Login = () => {
                                         <FormControl isInvalid={passwordError}>
                                             <FormLabel>Password</FormLabel>
                                             <InputGroup>
-                                                <Input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
+                                                <Input name="loginPasswordInput"  type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
                                                 <InputRightElement width="4.5rem">
                                                     <Button h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
                                                     {showPassword ? "Hide" : "Show"}
@@ -143,11 +143,11 @@ const Login = () => {
                                 <Center w="100%">
                                     {loginError !== "" && <Alert status='error'>
                                     <AlertIcon />
-                                    <AlertTitle>{loginError}</AlertTitle>
+                                    <AlertTitle name="loginErrorMsg">{loginError}</AlertTitle>
                                     </Alert>}
                                 </Center>
                                 <Center w="100%">
-                                    <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ login } colorScheme="red">Submit</Button>
+                                    <Button name="loginSubmitButton" maxW="150px" w="100%" onClick={ login } colorScheme="red">Submit</Button>
                                 </Center>
                             </Stack>
                         </Box>

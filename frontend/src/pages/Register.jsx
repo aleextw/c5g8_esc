@@ -179,14 +179,14 @@ const Register = () => {
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={firstNameError}>
                                             <FormLabel>First Name</FormLabel>
-                                            <Input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} onClick={(e) => setFirstNameError(false)} placeholder="First Name"/>
+                                            <Input name="firstNameInput" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} onClick={(e) => setFirstNameError(false)} placeholder="First Name"/>
                                             {firstNameError && <FormErrorMessage>First name is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={lastNameError}>
                                             <FormLabel>Last Name</FormLabel>
-                                            <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onClick={(e) => setLastNameError(false)} placeholder="Last Name"/>
+                                            <Input name="lastNameInput" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onClick={(e) => setLastNameError(false)} placeholder="Last Name"/>
                                             {lastNameError && <FormErrorMessage>Last name is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
@@ -195,14 +195,14 @@ const Register = () => {
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={emailError}>
                                             <FormLabel>Email</FormLabel>
-                                            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} onClick={(e) => setEmailError(false)} placeholder="Email"/>
+                                            <Input name="emailInput" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onClick={(e) => setEmailError(false)} placeholder="Email"/>
                                             {emailError && <FormErrorMessage>Email is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={lastNameError}>
                                             <FormLabel>Phone Number</FormLabel>
-                                            <Input type="number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} onClick={(e) => setPhoneNumberError(false)} placeholder="Phone Number"/>
+                                            <Input name="numberInput" type="number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} onClick={(e) => setPhoneNumberError(false)} placeholder="Phone Number"/>
                                             {phoneNumberError && <FormErrorMessage>Phone number is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
@@ -211,7 +211,7 @@ const Register = () => {
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={usernameError}>
                                             <FormLabel>Username</FormLabel>
-                                            <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
+                                            <Input name="usernameInput" type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
                                             {usernameError && <FormErrorMessage>Username is required.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
@@ -219,7 +219,7 @@ const Register = () => {
                                         <FormControl isInvalid={passwordError}>
                                             <FormLabel>Password</FormLabel>
                                             <InputGroup>
-                                                <Input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
+                                                <Input name="passwordInput" type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
                                                 <InputRightElement width="4.5rem">
                                                     <Button h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
                                                     {showPassword ? "Hide" : "Show"}
@@ -236,11 +236,11 @@ const Register = () => {
                                 <Center w="100%">
                                     {registrationError !== "" && <Alert status='error'>
                                     <AlertIcon />
-                                    <AlertTitle>{registrationError}</AlertTitle>
+                                    <AlertTitle name="registrationErrorMsg">{registrationError}</AlertTitle>
                                     </Alert>}
                                 </Center>
                                 <Center w="100%">
-                                    <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ register } colorScheme="red">Submit</Button>
+                                    <Button maxW="150px" w="100%" name="registerButton" onClick={ register } colorScheme="red">Submit</Button>
                                 </Center>
                             </Stack>
                         </Box>
