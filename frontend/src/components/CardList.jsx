@@ -189,7 +189,7 @@ export default class CardList extends Component {
         if (this.state.hotels.hotels.length > 0) {
             return (
                 <Box w="100%" h={{base: "80vh", lg:"80vh", md: "70vh", sm: "70vh"}}>
-                    <Stack id="card-stack" w='100%' h='100%' overflowY='scroll' className="hotels-list" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                    <Stack id="card-stack" w='100%' h='100%' overflowY='scroll' pr="2" className="hotels-list" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                         <InfiniteScroll
                         dataLength={this.state.items.length}
                         next={this.fetchMoreData}
