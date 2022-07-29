@@ -133,7 +133,7 @@ export default class HotelDetails extends Component {
                 name={this.state.hotel.hotel_details.name}
             />
           </Box>}
-          { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
+          { this.state.hotel.rooms.map((room) => {
             return (  //display each room's info
               <Card
                 name={room["name"]}

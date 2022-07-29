@@ -18,6 +18,7 @@ export default function Hotels() {
     const [minPrice, setMinPrice] = useState();
     const [maxPrice, setMaxPrice] = useState();
     const [priceRange, setPriceRange] = useState([0,1000]); // replace with min and max price of search
+    const [reviewRange, setReviewRange] = useState([0,100]);
     const [starsRange, setStarsRange] = useState([0,100]);
     const [sort, setSort] = useState(0);
 
@@ -30,7 +31,7 @@ export default function Hotels() {
             <Box h="10%" w="100%">
                 <HotelsSearchBar name="HotelSearchBar" params={ params }/>
             </Box>
-            <Center background="#F5F4F1" w="100%" h="82%" overflowY='scroll' className="hotels-list">
+            <Center id="hotels-box" background="#F5F4F1" w="100%" h="82%" overflowY='scroll' className="hotels-list">
                 <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
                     <Center w={{base:"100%", lg:"75%"}} h="100%">
                         <CardList 
@@ -38,6 +39,7 @@ export default function Hotels() {
                         setMinPrice={setMinPrice}
                         setMaxPrice={setMaxPrice}
                         priceRange={priceRange}
+                        reviewRange={reviewRange}
                         starsRange={starsRange}
                         sort={sort}
                         params={ params }/>
@@ -48,6 +50,7 @@ export default function Hotels() {
                         maxPrice={maxPrice}
                         setHotel={setHotel}
                         setPriceRange={setPriceRange}
+                        setReviewRange={setReviewRange}
                         setStarsRange={setStarsRange}
                         setSort={setSort}/>
                     </Show>
