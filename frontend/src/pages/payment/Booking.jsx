@@ -41,7 +41,7 @@ export default function Booking() {
   const [ expiryYear, setExpiryYear ] = useState("2022");
   const [ CVV, setCVV ] = useState("");
   const [ showCVV, setShowCVV ] = useState(false);
-  const [billingAddress, setBillingAddress] = useState("");
+  const [ billingAddress, setBillingAddress ] = useState("");
   
   const [ firstNameError, setFirstNameError ] = useState(false);
   const [ lastNameError, setLastNameError ] = useState(false);
@@ -79,6 +79,7 @@ export default function Booking() {
       dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
       hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
       username: localStorage.getItem("username").replace(/['"]+/g, ''),
+      currency: localStorage.getItem("currency").replace(/['"]+/g, ''),
     };
 
     let response;

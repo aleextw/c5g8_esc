@@ -75,7 +75,6 @@ function Card(props) {
 export default class CardList extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             filteredHotels: [],
             selectedHotel: props.selectedHotel,
@@ -104,7 +103,6 @@ export default class CardList extends Component {
       };
 
     componentDidMount() {
-        // TODO: Figure out why its triggering twice
         this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
     }
 
@@ -115,7 +113,7 @@ export default class CardList extends Component {
     componentDidUpdate(prevProps) {
         if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
             this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
-            
+            this.updateTimer = setInterval(() => getHotels(this.props.params, this.setHotels), 2000);
         }
         if (prevProps.selectedHotel !== this.props.selectedHotel) {
             console.log("Hotel Filter changed");
@@ -130,28 +128,28 @@ export default class CardList extends Component {
         }
         if (prevProps.sort !== this.props.sort) {
             console.log("Sorting changed to value: "+ this.props.sort);
-            if (this.props.sort == 0) {
+            if (this.props.sort === 0) {
                 // console.log("Best deal selected");
                 // this.setState({hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 // .sort((a, b) => {
                 //     return compareObjects(b, a, 'points')
                 //   })}})
             }
-            if (this.props.sort == 1) {
+            if (this.props.sort === 1) {
                 console.log("Price low to high selected");
                 this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 .sort((a, b) => {
                     return compareObjects(a, b, 'price')
                   })}})
             }
-            if (this.props.sort == 2) {
+            if (this.props.sort === 2) {
                 console.log("Price high to low selected");
                 this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 .sort((a, b) => {
                     return compareObjects(b, a, 'price')
                   })}})
             }
-            if (this.props.sort == 3) {
+            if (this.props.sort === 3) {
                 console.log("Stars low to high selected");
                 this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 .sort((a, b) => {
@@ -159,14 +157,14 @@ export default class CardList extends Component {
                   })}})
                 
             }
-            if (this.props.sort == 4) {
+            if (this.props.sort === 4) {
                 console.log("Stars high to low selected");
                 this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 .sort((a, b) => {
                     return compareObjects(b, a, 'rating')
                   })}})
             }
-            if (this.props.sort == 5) {
+            if (this.props.sort === 5) {
                 console.log("Distance selected");
                 this.setState({ hotels: {"completed": false, "hotels": this.state.hotels.hotels
                 .sort((a, b) => {
@@ -183,13 +181,16 @@ export default class CardList extends Component {
         console.log(this.state.hotels.completed);
         console.log(this.state.hotels.hotels.length);
         if (this.state.hotels.completed === true) {
+            let hotels = {...this.state.hotels};
+            hotels.completed = false;
+            this.setState({hotels});
             clearInterval(this.updateTimer);
         }
         
         if (this.state.hotels.hotels.length > 0) {
             return (
-                <Box w="100%" h={{base: "80vh", lg:"80vh", md: "70vh", sm: "70vh"}}>
-                    <Stack id="card-stack" w='100%' h='100%' overflowY='scroll' pr="2" className="hotels-list" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                <Box w="100%" h="100%">
+                    <Stack id="card-stack" w='100%' h='100%' pr="2" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
                         <InfiniteScroll
                         dataLength={this.state.items.length}
                         next={this.fetchMoreData}

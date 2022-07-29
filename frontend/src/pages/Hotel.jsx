@@ -19,7 +19,7 @@ export default function Hotel() {
             <Box h="10%" w="100%">
                 <HotelSearchBar params={params}/>
             </Box>
-            <Center background="#F5F4F1" w="100%" h="82%" overflow="hidden">   
+            <Center background="#F5F4F1" w="100%" h="82%" overflowY='scroll' className="hotels-list">   
                 <HotelDetails params={params} />
             </Center>
         </Box>   

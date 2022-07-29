@@ -251,7 +251,6 @@ def generate_hotel(
 
         # Set up pricing data
         else:
-            print("length of hotelrooms: ", len(rooms_pricing.json()["rooms"]))
             for i in range(len(rooms_pricing.json()["rooms"])):
                 room_pricing_data = rooms_pricing.json()["rooms"][i]
                 return_data["rooms"][i] = {
@@ -280,8 +279,6 @@ def generate_hotel(
                     ),
                     "additional_info": room_pricing_data.get("roomAdditionalInfo", {}),
                 }
-
-            print("before return data rooms: ", len(return_data["rooms"]))
 
         # Add static data to hotel
         hotel = hotel.json()
@@ -431,6 +428,7 @@ def create_booking(booking):
     booking_entry = Booking(
         booking_display_info=display_info,
         price=booking.roomPrice,
+        currency=booking.currency,
         guest_booking_ref=id,
         guest_account_info=guest_info,
         guest_payment_info=payment_info,

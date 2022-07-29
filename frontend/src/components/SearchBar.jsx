@@ -16,7 +16,7 @@ import React, { useState } from "react";
 import { RangeDatepicker } from "chakra-dayzed-datepicker";
 import Autocomplete from "./Autocomplete";
 import { getDestinations } from "../api/services/destinations";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 function addLeadingZeros(n) {
@@ -32,6 +32,7 @@ function formatDate(date) {
 
 export default function SearchBar(props) {
     const navigate = useNavigate();
+    const location = useLocation();
     
     // TODO: Load data from local storage and load reasonable defaults if not present
 
@@ -74,7 +75,8 @@ export default function SearchBar(props) {
         }
 
         setSearching(false);
-        navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=${localStorage.get("currency")}`);
+        navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=${localStorage.getItem("currency")}`);
+        
     }
 
     const today = new Date();

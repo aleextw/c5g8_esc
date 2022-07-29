@@ -30,7 +30,7 @@ export default function Hotels() {
             <Box h="10%" w="100%">
                 <HotelsSearchBar name="HotelSearchBar" params={ params }/>
             </Box>
-            <Center background="#F5F4F1" w="100%" h="82%" overflow="hidden">
+            <Center background="#F5F4F1" w="100%" h="82%" overflowY='scroll' className="hotels-list">
                 <Stack w={{base:"100%", lg:"75%"}} direction={{ base: 'column', lg: 'row-reverse' }} h="100%">       
                     <Center w={{base:"100%", lg:"75%"}} h="100%">
                         <CardList 
