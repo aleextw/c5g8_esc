@@ -24,6 +24,8 @@ import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import { SHA512, enc, lib } from "crypto-js";
 import { postRegister } from "../api/services/destinations";
+import bcrypt from 'bcryptjs'
+import { useRef } from 'react'
 
 const Register = () => {
 
@@ -71,6 +73,32 @@ const Register = () => {
             passwordHash: passwordHash,
             salt: salt
         };
+
+        // hashing done in frontend, then move the hashed data into the backend
+        // to verify compare in backend and produce the success/ failure messages in frontend
+        // hashing of the inputted information
+
+        // bcrypt uses blowfish cipher
+
+        // var salt = bcrypt.genSaltSync(10);
+        // var hashedFirstName = bcrypt.hashSync(firstName, salt)
+        // var hashedLastName = bcrypt.hashSync(lastName, salt)
+        // var hashedEmail = bcrypt.hashSync(email, salt)
+        // var hashedNumber = bcrypt.hashSync(phoneNumber, salt)
+        // var hashedPassword = bcrypt.hashSync(password, salt)
+
+        // to store hashed details
+
+        // const body = {
+        //     username: username,
+        //     firstName: hashedFirstName,
+        //     lastName: hashedLastName,
+        //     email: hashedEmail,
+        //     phoneNumber: hashedNumber,
+        //     Number: hashedLastName,
+        //     password: hashedPassword
+        // }
+        // console.log(body)
         
         let response;
         setRegistering(true);
