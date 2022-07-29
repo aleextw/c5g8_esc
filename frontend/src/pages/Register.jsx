@@ -24,8 +24,6 @@ import NavBar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import { SHA512, enc, lib } from "crypto-js";
 import { postRegister } from "../api/services/destinations";
-import bcrypt from 'bcryptjs'
-import { useRef } from 'react'
 
 const Register = () => {
 
