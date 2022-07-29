@@ -1,9 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import React, { Component } from "react";
-import { getHotels } from "../api/services/destinations";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider, useBreakpointValue } from "@chakra-ui/react"
+import React, { useState, useEffect } from "react";
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider, useBreakpointValue, Spacer } from "@chakra-ui/react"
 import InfiniteScroll from "react-infinite-scroll-component";
-import ReactStars from "react-rating-stars-component";
+import StarRatingComponent from 'react-star-rating-component';
 
 function formatDistance(distance) {
     if (distance < 1000) {
@@ -11,21 +10,6 @@ function formatDistance(distance) {
     } else {
         return Math.round(distance / 1000 * 100) / 100 + " km";
     }
-}
-function compareObjects(object1, object2, key, reverse=false) {
-    const obj1 = object1[key]
-    const obj2 = object2[key]
-  
-    if (obj1 < obj2) {
-      return reverse ? 1 : -1;
-    }
-    if (obj1 > obj2) {
-      return reverse ? -1 : 1;
-    }
-    return 0
-}
-function getFilteredKey(hotels, filters, key) { 
-    return hotels.filter((item) => item[key]<=filters[0] && item[key]>=filters[1]);
 }
 
 function Card(props) {
@@ -45,19 +29,19 @@ function Card(props) {
                     <Text>{props.address}</Text>
                     <Text>{formatDistance(props.distance)} from city centre</Text>
                 </Show>
-                <ReactStars
-                    count={5}
-                    value={Number(props.rating)}
-                    edit={false}
-                    size={24}
-                    isHalf={true}
-                    emptyIcon={<i className="far fa-star"></i>}
-                    halfIcon={<i className="fa fa-star-half-alt"></i>}
-                    fullIcon={<i className="fa fa-star"></i>}
-                    activeColor="#ffd700"
-                  />
-                {/* TODO: Add map modal */}
-                {/* TODO: Add review */}
+                <Flex direction="row" w="100%">
+                    <StarRatingComponent 
+                        name={`${props.uid}-star`}
+                        editing={false}
+                        starCount={5}
+                        value={props.rating}
+                    />
+                    <Spacer />
+                    <Text>
+                        {props.review}
+                    </Text>
+                </Flex>
+                
             </Stack>
             <Stack p="2" w="30%" direction="column">
                 {/* <Heading size="sm">C5G8</Heading> */}
@@ -71,137 +55,44 @@ function Card(props) {
     </Flex>);
 }
 
-export default class CardList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            filteredHotels: [],
-            selectedHotel: props.selectedHotel,
-            setPrices: [],
-            priceRange: props.priceRange,
-            starsRange: props.starsRange,
-            sort: props.sort,
-            hotels: {"completed": false, "hotels": []},
-            params: props.params,
-            displayedLength: 11,
-        };
-        this.setHotels = this.setHotels.bind(this);
-    }
+export default function CardList(props) {
+    if (props.hotels.hotels.length > 0) {
+        return (
+            <Box w="100%" h="100%">
+                <Stack id="card-stack" w='100%' h='100%' pr="2" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
+                    <InfiniteScroll
+                    dataLength={props.displayedLength}
+                    next={props.fetchMoreData}
+                    hasMore={true}
+                    loader={<h4>Please Wait...</h4>}
+                    scrollableTarget="hotels-box"
+                    >
 
-    setHotels(hotels) {
-        this.setState({hotels: hotels});
-    }
+                        { props.hotels.hotels.map((hotel) => {
+                            return (
+                                <Card 
+                                    searchRank={hotel["searchRank"]}
+                                    price={hotel["price"]}
+                                    points={hotel["points"]}
+                                    latitude={hotel["latitude"]}
+                                    longitude={hotel["longitude"]}
+                                    distance={hotel["distance"]}
+                                    name={hotel["name"]}
+                                    address={hotel["address"]}
+                                    rating={hotel["rating"]}
+                                    review={hotel["review"]}
+                                    image={hotel["photo"]}
+                                    uid={hotel["uid"]}
+                                />      
+                            )
+                        })}
+                    </InfiniteScroll>
+                </Stack>
+            </Box>);
 
-    fetchMoreData = () => {
-        this.setState({
-            displayedLength: this.state.displayedLength + 10
-          });
-      };
-
-    componentDidMount() {
-        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.updateTimer);
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
-            this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
-            this.updateTimer = setInterval(() => getHotels(this.props.params, this.setHotels), 2000);
-        }
-        if (prevProps.selectedHotel !== this.props.selectedHotel) {
-            console.log("Hotel Filter changed");
-            // this.setState({hotels: hotels.get("hotels").get()})
-        }
-        if (prevProps.priceRange !== this.props.priceRange) {
-            console.log("Price Filter changed");
-            // this.setState({hotels: {"completed": false, "hotels": getFilteredKey(this.state.hotels.hotels, this.props.priceRange, 'price')}});
-        }
-        if (prevProps.starsRange !== this.props.starsRange) {
-            console.log("Stars Filter changed");
-        }
-        if (prevProps.sort !== this.props.sort) {
-            console.log("Sorting changed to value: "+ this.props.sort);
-            let hotels = {...this.state.hotels};
-            console.log(hotels.hotels[0]);
-            switch(this.props.sort) {
-                case "1":
-                case "2":
-                    hotels.hotels.sort(
-                        (a, b) => compareObjects(a, b, 'price', this.props.sort === "2")
-                    );
-                    break;
-                case "3":
-                case "4":
-                    hotels.hotels.sort(
-                        (a, b) => compareObjects(a, b, 'rating', this.props.sort === "4")
-                    );
-                    break;
-                case "5":
-                    hotels.hotels.sort(
-                        (a, b) => compareObjects(a, b, 'distance')
-                    );
-                    break;
-                default:
-                    hotels.hotels.sort(
-                        (a, b) => compareObjects(a, b, 'points')
-                    );
-            }
-            this.setState({hotels: hotels, sort: this.props.sort});
-            console.log(hotels.hotels[0]);
-        }
-    }
-
-    render() {
-        console.log(this.state.hotels.completed);
-        console.log(this.state.hotels.hotels.length);
-        console.log(this.state.hotels.hotels[0]);
-        console.log(this.state.displayedLength);
-        console.log(this.state.hotels.hotels.slice(0, this.state.displayedLength).len)
-        if (this.state.hotels.completed === true) {
-
-            clearInterval(this.updateTimer);
-        }
-        
-        if (this.state.hotels.hotels.length > 0) {
-            return (
-                <Box w="100%" h="100%">
-                    <Stack id="card-stack" w='100%' h='100%' pr="2" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
-                        <InfiniteScroll
-                        dataLength={this.state.displayedLength}
-                        next={this.fetchMoreData}
-                        hasMore={true}
-                        loader={<h4>Please Wait...</h4>}
-                        scrollableTarget="hotels-box"
-                        >
-
-                            { this.state.hotels.hotels.slice(0, this.state.displayedLength).map((hotel) => {
-                                return (
-                                    <Card 
-                                        searchRank={hotel["searchRank"]}
-                                        price={hotel["price"]}
-                                        points={hotel["points"]}
-                                        latitude={hotel["latitude"]}
-                                        longitude={hotel["longitude"]}
-                                        distance={hotel["distance"]}
-                                        name={hotel["name"]}
-                                        address={hotel["address"]}
-                                        rating={hotel["rating"]}
-                                        review={hotel["review"]}
-                                        image={hotel["photo"]}
-                                        uid={hotel["uid"]}
-                                    />      
-                                )
-                            })}
-                        </InfiniteScroll>
-                    </Stack>
-                </Box>);
-
-        } else if (this.state.hotels.completed === false) {
-            return (<Box w="100%" h="80vh">
-                <Center w="100%" h="100%">
+    } else if (props.hotels.completed === false) {
+        return (<Box w="100%" h="80vh">
+            <Center w="100%" h="100%">
                 <Spinner
                     thickness='4px'
                     speed='0.65s'
@@ -220,7 +111,7 @@ export default class CardList extends Component {
                     </Heading>
                 </Center>
             </Box>);
-        }
     }
 }
+
 
