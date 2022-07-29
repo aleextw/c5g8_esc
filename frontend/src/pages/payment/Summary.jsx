@@ -11,13 +11,19 @@ import {
   Spinner,
   Alert,
   AlertIcon,
-  Collapse
+  Collapse,
+  IconButton
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import NavBar from '../../components/NavBar';
 import { getBooking } from '../../api/services/destinations';
 import { useLocation } from "react-router-dom";
+import { ArrowUpIcon } from '@chakra-ui/icons';
+
+const ScrolltoTop = () => {
+  const ScrollButton = useRef();
+}
 
 function SummaryData(props) {
   const [copied, setCopied] = useState(false);
@@ -147,6 +153,21 @@ export default function Summary(props) {
           { content }
         </Center>
       </Box>
+      <IconButton
+            aria-label="scroll to top"
+            icon={<ArrowUpIcon />}
+            size="lg"
+            colorScheme="purple"
+            variant="outline"
+            border="2px solid"
+            ref={ScrolltoTop}
+            // onClick={handleClick}
+            position="fixed"
+            bottom="4rem"
+            right="4rem"
+            zIndex="-1"
+            opacity="0"
+          />
     </ChakraProvider>
   );
 }
