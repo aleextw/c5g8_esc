@@ -1,7 +1,7 @@
 import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 
@@ -19,14 +19,14 @@ function formatDate(date) {
 
 export default function HotelsSearchBar(props) {
     const navigate = useNavigate();
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
     
     // TODO: Load data from local storage and load reasonable defaults if not present
 
     const searchRoute = () => {
-        // TODO: Add error checking for invalid UIDs
-        // TODO: Add error checking if previous route is invalid
-        // TODO: Figure out why have to double click
-        navigate(-1);
+        params.delete("hotel_uid");
+        navigate("/hotels?" + params.toString());
     }
 
     const [selectedDates, setSelectedDates] = useState([new Date(), new Date()]);

@@ -1,10 +1,9 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 import CSSReset from "@chakra-ui/css-reset";
-// import NumberFormat from 'react-number-format';
 import { 
   ChakraProvider,
   Box,
@@ -20,20 +19,9 @@ import {
   VStack,
   HStack,
   Center,
-  StackDivider, 
-  InputGroup,
-  Select, 
-  InputRightElement, 
-  IconButton
+  StackDivider, InputGroup,Select, InputRightElement
 } from "@chakra-ui/react";
-import { ArrowUpIcon } from '@chakra-ui/icons';
 
-const handleClick = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
 
 export default function Booking() {
   const localFirstName = localStorage.getItem("firstName");
@@ -53,7 +41,7 @@ export default function Booking() {
   const [ expiryYear, setExpiryYear ] = useState("2022");
   const [ CVV, setCVV ] = useState("");
   const [ showCVV, setShowCVV ] = useState(false);
-  const [billingAddress, setBillingAddress] = useState("");
+  const [ billingAddress, setBillingAddress ] = useState("");
   
   const [ firstNameError, setFirstNameError ] = useState(false);
   const [ lastNameError, setLastNameError ] = useState(false);
@@ -91,6 +79,7 @@ export default function Booking() {
       dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
       hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
       username: localStorage.getItem("username").replace(/['"]+/g, ''),
+      currency: localStorage.getItem("currency").replace(/['"]+/g, ''),
     };
 
     let response;
@@ -340,20 +329,6 @@ export default function Booking() {
                   onClick={cancelBook}>
                   Cancel
                 </Button>
-
-                <IconButton
-                  icon={<ArrowUpIcon />}
-                  size="lg"
-                  colorScheme="purple"
-                  variant="outline"
-                  border="2px solid"
-                  // ref={ScrolltoTop}
-                  onClick={handleClick}
-                  position="fixed"
-                  bottom="4rem"
-                  right="4rem"
-                  zIndex="-1"
-                />
               </Flex>
             </Center>
           </VStack>

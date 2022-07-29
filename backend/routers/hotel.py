@@ -32,6 +32,7 @@ class Booking(BaseModel):
     roomName: str | None = None
     hotelName: str | None = None
     roomPrice: float | None = None
+    currency: str | None = None
     checkInDate: datetime.date | None = None
     checkOutDate: datetime.date | None = None
     numAdults: int | None = None

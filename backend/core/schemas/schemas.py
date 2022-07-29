@@ -41,6 +41,7 @@ class Booking(Base):
     room_uid = Column(Text)
     hotel_uid = Column(Text)
     price = Column(Float)
+    currency = Column(Text)
     booking_display_info = relationship("DisplayInfo", backref="booking", uselist=False)
     guest_booking_ref = Column(Text)
     guest_account_info = relationship("GuestInfo", backref="booking", uselist=False)

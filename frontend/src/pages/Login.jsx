@@ -99,12 +99,13 @@ const Login = () => {
                     <NavBar></NavBar>
                 </Box>
                 <Box name="bgImage"
-                bgImage="https://images.hdqwalls.com/download/storm-national-park-pacific-beach-seascape-4k-bn-1920x1080.jpg"
-                w="100%"
-                bgPosition="center"
-                bgRepeat="no-repeat"
-                fill="cover"
-                h="92%">
+                    bgImage="https://images.hdqwalls.com/download/storm-national-park-pacific-beach-seascape-4k-bn-1920x1080.jpg"
+                    w="100%"
+                    bgPosition="center"
+                    bgRepeat="no-repeat"
+                    fill="cover"
+                    h="92%"
+                >
                     <Center h="100%">
                         <Box p="5" maxW="400px" w="70%" borderWidth="1px" borderRadius="lg" overflow="hidden"  bgColor="white">
                             <Stack>

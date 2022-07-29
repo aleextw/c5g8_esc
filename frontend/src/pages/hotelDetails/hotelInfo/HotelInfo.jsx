@@ -66,7 +66,7 @@ function HotelInfo(props) {
         <Spacer />
         <Center borderWidth="1px" w="100%" background="white">
           <HStack w="100%">
-            <Box maxW="50%">
+            <Box maxW="50%" mt="4">
               <Container>
                 <ImageGallery items={images} ></ImageGallery>
               </Container>
@@ -102,10 +102,12 @@ function HotelInfo(props) {
                       // console.log("amenity: ", amenity);
                       if (amenity[0] in icons) {
                         return (
-                        <IconComponent amenity={amenity} align="left"/>
-                      )
+                          <IconComponent amenity={amenity} align="left"/>
+                        );
+                      }
+                      return "";
+                    })
                   }
-                  })}
                 </Flex>
                 <Spacer/>
                 <Spacer />

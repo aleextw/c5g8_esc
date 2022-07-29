@@ -402,6 +402,5 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {label: "View a Booking", name:'button_viewBooking', href: "/booking/search", login: false},
-  {label: "Test", name:"button_test", login: false},
   {label: "My Profile", name: "button_myProfile", href: "/profile", login: true},
 ];

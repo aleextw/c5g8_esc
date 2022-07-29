@@ -122,7 +122,7 @@ export default class HotelDetails extends Component {
 
     if (this.state.hotel.rooms.length > 0) {
       return ( //display static hotel info
-        <Stack name="HotelDetails" w="80%" h="100%" overflowY='scroll' className="hotels-list">
+        <Stack name="HotelDetails" w="70%" h="100%" pr="3" mt="2">
           <HotelInfo
             hotel_details = {this.state.hotel.hotel_details}
             price = {this.state.hotel.rooms[0].price}
@@ -138,7 +138,7 @@ export default class HotelDetails extends Component {
                 name={this.state.hotel.hotel_details.name}
             />
           </Box>}
-          { this.state.hotel.rooms.slice(0, this.state.hotel.rooms.length).map((room) => {
+          { this.state.hotel.rooms.map((room) => {
             return (  //display each room's info
               <Card
                 name={room["name"]}
