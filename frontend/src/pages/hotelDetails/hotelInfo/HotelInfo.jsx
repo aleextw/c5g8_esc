@@ -1,6 +1,6 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
-import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton, Tooltip} from "@chakra-ui/react";
+import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton, Tooltip, Stack} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import ReactDOMServer from 'react-dom/server';
 import ReactStars from "react-rating-stars-component";
@@ -54,7 +54,7 @@ function HotelInfo(props) {
   const images = [];
   for (let i = 0; i < props.hotel_details.images.count; i++) {
     const img_url = props.hotel_details.images.prefix + i + props.hotel_details.images.suffix;
-    images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 640, thumbnailHeight: 360});
+    images.push({original: img_url, thumbnail: img_url, thumbnailWidth: 1920, thumbnailHeight: 1080});
   }
 
   const amenities = Object.keys(props.hotel_details.amenities).map((key) => [key, props.hotel_details.amenities[key]]);
@@ -68,7 +68,7 @@ function HotelInfo(props) {
           <HStack w="100%">
             <Box maxW="50%">
               <Container>
-                <ImageGallery items={images} useBrowserFullscreen={false}></ImageGallery>
+                <ImageGallery items={images} ></ImageGallery>
               </Container>
             </Box>
             <VStack minW="50%" w="100%" h="100%" vertical-align="top" p="6" divider={<StackDivider borderColor='#gray.200' borderWidth="1px"/>}>
@@ -88,6 +88,7 @@ function HotelInfo(props) {
                     halfIcon={<i className="fa fa-star-half-alt"></i>}
                     fullIcon={<i className="fa fa-star"></i>}
                     activeColor="#ffd700"
+                    color="#D3D3D3"
                   />
                   </Box>
                 </HStack>
@@ -109,16 +110,21 @@ function HotelInfo(props) {
                 <Spacer/>
                 <Spacer />
               </VStack>
-              <Box w="100%">
+              <Box w="100%" mt={5}>
                 <HStack w="100%">
-                  <VStack w="50%">
-                    <Text w="100%" align="left" fontSize="lg">Select a room starting from:</Text>
-                    <Text w="100%" align="left">Earn at least</Text>
-                  </VStack>
-                  <VStack w="50%">
-                    <Heading w="100%" align="right" size="md">{localStorage.getItem("currency")} {props.price}</Heading>
-                    <Heading w="100%" align="right" size="sm">{props.points} points</Heading>
-                  </VStack>
+                  <Container>
+                    <Stack spacing={5} direction="column">
+                      <Stack spacing={5} direction="row">
+                        <Text w="100%" align="center" fontSize={18} fontWeight={"medium"} verticalAlign={"middle"}>Rooms starting from:</Text>
+                        <Heading w="100%" align="center" size="md" verticalAlign={"middle"}>{localStorage.getItem("currency")} {props.price}</Heading>
+                      </Stack>
+
+                      <Stack spacing={5} direction="row">
+                        <Text w="100%" align="center" fontSize={18} fontWeight={"medium"}>Earn at least:</Text>
+                        <Heading w="100%" align="center" fontSize={18} color="teal.500" >{props.points} points</Heading>
+                      </Stack>
+                    </Stack>
+                  </Container>
                 </HStack>
               </Box>
             </VStack>

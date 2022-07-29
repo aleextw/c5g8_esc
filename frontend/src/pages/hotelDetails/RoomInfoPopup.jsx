@@ -21,7 +21,7 @@ function RoomInfoPopup(props) {
 
   return (
     <>
-      <Button onClick={onOpen} colorScheme="teal" variant="ghost" width="50%">
+      <Button onClick={onOpen} colorScheme="teal" variant="ghost" width="85%">
         View More Details
       </Button>
 
@@ -54,7 +54,7 @@ function RoomInfoPopup(props) {
 
                     else {
                       return (
-                          <ListItem>{amenity}</ListItem>
+                          <ListItem margin={1}>{amenity}</ListItem>
                         )
                     }
                     })}

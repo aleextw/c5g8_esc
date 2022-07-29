@@ -37,10 +37,13 @@ function Card(props) {
         navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=${params.get("currency")}`);
     }
 
-    return (<Flex name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={1} mb={1} shadow={"base"} background="white">
-        <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
-        <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-            <Stack p="2" direction="column" w="70%">
+    return (
+    <Flex name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={3} shadow={"base"} background="white" borderRadius={"8px"}>
+        <Box objectFit="contain" w="40%" overflow={"hidden"}>
+            <Image boxSize="200px"  src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
+        </Box>
+        <Stack align="center" w="80%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
+            <Stack ml={2} p="2" direction="column" w="70%" spacing={"18px"}>
                 <Heading size="md">{props.name}</Heading>
                 <Show above="md">
                     <Text>{props.address}</Text>
@@ -56,16 +59,16 @@ function Card(props) {
                     halfIcon={<i className="fa fa-star-half-alt"></i>}
                     fullIcon={<i className="fa fa-star"></i>}
                     activeColor="#ffd700"
+                    color="#D3D3D3"
                   />
                 {/* TODO: Add map modal */}
                 {/* TODO: Add review */}
             </Stack>
-            <Stack p="2" w="30%" direction="column">
-                {/* <Heading size="sm">C5G8</Heading> */}
-                <Text size="sm">{localStorage.getItem("currency")} {props.price}</Text>
-                <Text>Earn at least {props.points} points</Text>
+            <Stack p="2" w="30%" direction="column" spacing={"24px"} mr={2}>
+                <Text fontSize={"18px"} fontWeight={"bold"} m={"auto"}>{localStorage.getItem("currency")} {props.price}</Text>
+                <Text fontWeight={"medium"} m={"auto"} color={"teal.500"}>Earn at least {props.points} points</Text>
                 <Show above="md">
-                    <Button name="button_bookHotel" onClick={searchHotel}>Book Deal</Button>
+                    <Button name="button_bookHotel" colorScheme={"teal"} onClick={searchHotel}>Book Deal</Button>
                 </Show>
             </Stack>
         </Stack>             

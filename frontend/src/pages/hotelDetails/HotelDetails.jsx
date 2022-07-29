@@ -30,13 +30,18 @@ function Card(props) {
 
     const images = [];
     for (let i = 0; i < props.images.length; i++) {
-      images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 640, thumbnailHeight: 360});
+      images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 1280, thumbnailHeight: 720});
+    }
+
+    const leftrightnavClass = {
+      height:"36px",
+      width: "18px"
     }
 
   return (<Flex borderWidth="1px" backgroundColor="white" borderRadius="lg">
-    <Box name="RoomCard" maxW="50%">
+    <Box name="RoomCard" maxW="70%">
       <Container>
-        <ImageGallery items={images} showPlayButton={false}></ImageGallery>
+        <ImageGallery items={images} showPlayButton={false} showThumbnails={false} additionalClass = {leftrightnavClass}></ImageGallery>
       </Container>
     </Box>
     <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
@@ -49,8 +54,8 @@ function Card(props) {
         </Stack>
         <Stack p="2" w={{base: "100%", md: "40%"}} direction="column">
             {/* <Heading size="sm">C5G8</Heading> */}
-            <Text size="sm">SGD {props.price}</Text>
-            <Text size="sm" color="teal.500">Earn {props.points} points!</Text>
+            <Text size="sm" fontWeight={"bold"} fontSize={20} color={"gray.700"}>SGD {props.price}</Text>
+            <Text size="sm" fontWeight={"semibold"} color="teal.500">Earn {props.points} points!</Text>
             <Show above="md">
             <Button name="button_bookRoom" colorScheme="teal" variant="solid" onClick={toPaymentsPage}>
               Book Now
@@ -117,7 +122,7 @@ export default class HotelDetails extends Component {
 
     if (this.state.hotel.rooms.length > 0) {
       return ( //display static hotel info
-        <Stack name="HotelDetails" w="70%" h="100%" overflowY='scroll' className="hotels-list">
+        <Stack name="HotelDetails" w="80%" h="100%" overflowY='scroll' className="hotels-list">
           <HotelInfo
             hotel_details = {this.state.hotel.hotel_details}
             price = {this.state.hotel.rooms[0].price}

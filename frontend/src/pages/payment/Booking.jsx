@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 import CSSReset from "@chakra-ui/css-reset";
-import NumberFormat from 'react-number-format';
+// import NumberFormat from 'react-number-format';
 import { 
   ChakraProvider,
   Box,
