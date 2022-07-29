@@ -107,9 +107,6 @@ function HotelInfo(props) {
                   })}
                 </Flex>
                 <Spacer/>
-                {/*<Link color="teal.500" href="#map" w="100%" align="left">
-                  Show on map
-                </Link> */}
                 <Spacer />
               </VStack>
               <Box w="100%">
@@ -119,7 +116,7 @@ function HotelInfo(props) {
                     <Text w="100%" align="left">Earn at least</Text>
                   </VStack>
                   <VStack w="50%">
-                    <Heading w="100%" align="right" size="md">SGD {props.price}</Heading>
+                    <Heading w="100%" align="right" size="md">{localStorage.getItem("currency")} {props.price}</Heading>
                     <Heading w="100%" align="right" size="sm">{props.points} points</Heading>
                   </VStack>
                 </HStack>

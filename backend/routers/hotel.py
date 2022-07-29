@@ -43,11 +43,6 @@ class Booking(BaseModel):
     username: str | None = None
 
 
-class UserData(BaseModel):
-    username: str
-    token: str
-
-
 @router.get("/results/hotel/{hotel_uid}", tags=["hotel"])
 def serve_hotel(
     hotel_uid: str | None = None,
