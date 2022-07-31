@@ -1,5 +1,5 @@
 import React from "react";
-import {Spacer, UnorderedList, ListItem, Divider, GridItem, Grid} from "@chakra-ui/react";
+import {UnorderedList, ListItem, Divider, GridItem, Grid} from "@chakra-ui/react";
 
 import {
   Button,
@@ -13,7 +13,8 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Heading
+  Heading,
+  Link,
 } from "@chakra-ui/react";
 
 function RoomInfoPopup(props) {
@@ -21,9 +22,11 @@ function RoomInfoPopup(props) {
 
   return (
     <>
-      <Button onClick={onOpen} colorScheme="teal" variant="ghost" width="85%">
-        View More Details
-      </Button>
+      <Box w="100%" align="left">
+        <Link onClick={onOpen} color="teal.500">
+          View More Details
+        </Link>
+      </Box>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

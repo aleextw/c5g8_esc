@@ -64,15 +64,15 @@ ul li {
   scrollbar-width: none;
 } 
 */
-/*
-.hotels-list::-webkit-scrollbar {
+
+.CardList::-webkit-scrollbar {
   display: none;
 }
 
-.hotels-list {
+.CardList {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}  */
+} 
 
 
 .suggestions::-webkit-scrollbar {
