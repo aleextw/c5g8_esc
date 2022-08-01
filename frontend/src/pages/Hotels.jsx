@@ -50,29 +50,35 @@ export default function Hotels() {
     const [filteredHotels, setFilteredHotels] = useState({"completed": false, "hotels": []});
 
     useEffect(() => {
-        if (!mounted.current) {
-            setUpdateTimer(setInterval(() => getHotels(params, parseHotels), 2000));
-            mounted.current = true;
-        } else {
-            setFilteredHotels({
-                    completed: hotels.completed,
-                    hotels: hotels.hotels.filter(
-                    (hotel) => (hotel.name.toLowerCase().includes(hotelFilter))
-                ).filter(
-                    (hotel) => (hotel.price >= priceRange[0] && hotel.price <= priceRange[1])
-                ).filter(
-                    (hotel) => (hotel.review >= reviewRange[0] && hotel.review <= reviewRange[1])
-                ).filter(
-                    (hotel) => (hotel.rating >= starsRange[0] && hotel.rating <= starsRange[1])
-                ).sort(
-                    (a, b) => compareObjects(a, b, sortMapper[sort][0], sortMapper[sort][1])
-                )
-            });
+        const timer = window.setInterval(() => getHotels(params, parseHotels), 2000);
+        setUpdateTimer(timer);
+        console.log(`Setting timer ${timer}`);
+        return () => clearInterval(timer);
+    }, []);
+
+    useEffect(() => {
+        setFilteredHotels({
+            completed: hotels.completed,
+            hotels: hotels.hotels.filter(
+            (hotel) => (hotel.name.toLowerCase().includes(hotelFilter))
+            ).filter(
+                (hotel) => (hotel.price >= priceRange[0] && hotel.price <= priceRange[1])
+            ).filter(
+                (hotel) => (hotel.review >= reviewRange[0] && hotel.review <= reviewRange[1])
+            ).filter(
+                (hotel) => (hotel.rating >= starsRange[0] && hotel.rating <= starsRange[1])
+            ).sort(
+                (a, b) => compareObjects(a, b, sortMapper[sort][0], sortMapper[sort][1])
+            )
+        });
+        if (hotels.completed) {
+            console.log(`Clearing timer ${updateTimer}`);
+            clearInterval(updateTimer);
         }
-        return () => clearInterval(updateTimer);
     }, [hotels, hotelFilter, priceRange, reviewRange, starsRange, sort]);
 
     const parseHotels = (data) => {
+        console.log(data);
         if (data.hotels.length > 0) {
             let minPrice = data.hotels[0].price;
             let maxPrice = data.hotels[0].price;
