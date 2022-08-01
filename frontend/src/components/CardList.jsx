@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import React from "react";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider, Spacer } from "@chakra-ui/react"
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider, Spacer, AspectRatio } from "@chakra-ui/react"
 import InfiniteScroll from "react-infinite-scroll-component";
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -23,7 +23,9 @@ function Card(props) {
 
     return (
     <Flex h="200px" maxW="1000px" name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={3} shadow={"base"} background="white" borderRadius={"8px"}>
-        <Image boxSize="200px" objectFit="cover" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
+        <AspectRatio w="200px" ratio={1 / 1}>
+            <Image boxSize="200px" objectFit="cover" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
+        </AspectRatio>
         <Stack align="center" h="200px" w="80%" maxW="800px" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
             <Flex p="4" direction="column" w={{base: "100%", md: "60%"}} h={{base: "50%", md: "100%"}} dspacing={"18px"}>
                 <Heading size="sm">{props.name}</Heading>
