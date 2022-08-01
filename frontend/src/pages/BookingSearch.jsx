@@ -98,14 +98,11 @@ export default function BookingSearch() {
                         <Heading size="md">Enter a Booking UID</Heading>
                         <Stack w="100%">
                             <FormControl isInvalid={error}>
-                            <Input value={uid} onChange={(e) => setUid(e.target.value)}/>
+                            <Input name="input_booking_uid" value={uid} onChange={(e) => setUid(e.target.value)}/>
                                 {error && <FormErrorMessage>Booking UID is required.</FormErrorMessage>}
                             </FormControl>
                         </Stack>
-                        <Button maxW="150px" w="100%" name="dest_search_submit" onClick={ goToBooking } colorScheme="red">Submit</Button>
-                        
-                        {bookings}  
-                        
+                        <Button name="button_findBooking" maxW="150px" w="100%" onClick={ goToBooking } colorScheme="red">Submit</Button>
                     </Flex>
                     </Box>
               </Center>

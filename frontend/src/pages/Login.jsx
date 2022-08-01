@@ -129,7 +129,7 @@ const Login = () => {
                                             <InputGroup>
                                                 <Input name="loginPasswordInput"  type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
                                                 <InputRightElement width="4.5rem">
-                                                    <Button h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
+                                                    <Button name="showPassword" h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
                                                     {showPassword ? "Hide" : "Show"}
                                                     </Button>
                                                 </InputRightElement>

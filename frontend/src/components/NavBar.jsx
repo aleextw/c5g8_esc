@@ -139,8 +139,8 @@ export default function NavBar() {
             <AlertTitle>{logoutError}</AlertTitle>
           </Alert>}
           { currencyElement() }
-          <Text textAlign="center" p="2">Hello {firstName}!</Text>
-          <Button
+          <Text name="namePlaceholder" textAlign="center" p="2">Hello {firstName}!</Text>
+          <Button name="LogoutButton"
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
@@ -167,15 +167,16 @@ export default function NavBar() {
           divider={<StackDivider borderWidth/>}
         >
           { currencyElement() }
-          <Button
+          <Button name="button_login"
             as={'a'}
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
+            cursor='pointer'
             onClick={loginRoute}>
             Log In
           </Button>
-          <Button
+          <Button name="button_register"
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
@@ -256,7 +257,7 @@ const DesktopNav = () => {
             return (<Box key={navItem.label}>
               <Popover trigger={'hover'} placement={'bottom-start'}>
                 <PopoverTrigger>
-                  <Link
+                  <Link name={navItem.name}
                     p={2}
                     href={navItem.href ?? '#'}
                     fontSize={'sm'}
@@ -339,7 +340,7 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => {
         if (!navItem.login || (navItem.login && localStorage.getItem("token") !== null)) { 
           return (
-            <MobileNavItem key={navItem.label} {...navItem} />
+            <MobileNavItem name={navItem.name} key={navItem.label} {...navItem} />
           );
         } 
         return "";

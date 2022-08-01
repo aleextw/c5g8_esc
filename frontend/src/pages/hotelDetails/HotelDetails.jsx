@@ -35,7 +35,7 @@ function Card(props) {
     }
 
   return (<Flex shadow="base" backgroundColor="white" borderRadius="md" h="100%" p="2">
-    <Box w={{base: "50%", md: "30%"}} h="100%">
+    <Box name="RoomCard" w={{base: "50%", md: "30%"}} h="100%">
       <Flex>
         <ImageGallery 
           items={images} 
