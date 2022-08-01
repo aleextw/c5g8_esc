@@ -44,10 +44,6 @@ export default function NavBar() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
 
-  const goToProfile = () => {
-    navigate("/profile")
-  }
-
   const loginRoute = () => {
     localStorage.setItem("prevURL", location.pathname + location.search);
     navigate("/login");
@@ -96,6 +92,7 @@ export default function NavBar() {
     console.log(params.toString());
     params.set("currency", e.target.innerText);
     console.log(params.toString());
+    setTimeout(() => window.location.reload(), 100);
     navigate(location.pathname + "?" + params.toString());
   }
 
