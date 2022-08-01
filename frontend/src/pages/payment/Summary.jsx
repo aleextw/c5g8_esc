@@ -12,6 +12,7 @@ import {
   Alert,
   AlertIcon,
   Collapse,
+  Stack,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
@@ -26,15 +27,15 @@ function SummaryData(props) {
 
   return (
     <Box name="bgImage"
-    bgImage="https://images.hdqwalls.com/download/clouds-sky-mountains-4k-2j-2560x1080.jpg"
-    w="100%"
-    bgPosition="center"
-    bgRepeat="no-repeat"
-    fill="cover"
-    h="100%"
->
-    <Center h="100%">
-        <Box p="5" maxW="1500px" w="70%" borderWidth="1px" borderRadius="lg" overflow="hidden"  bgColor="white">
+      bgImage="https://images.hdqwalls.com/download/clouds-sky-mountains-4k-2j-2560x1080.jpg"
+      w="100%"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      fill="cover"
+      h="100%"
+    >
+      <Center w="100%" h="100%" overflow="scroll">
+        <Box p="5" maxW="1000px" w={{base: "100%", lg: "70%"}} borderWidth="1px" borderRadius={{base: "none", lg: "lg"}}  bgColor="white">
         <VStack w="100%" h="100%" divider={<StackDivider borderColor='gray.200' />}>
             <Heading>
               Your booking has been confirmed!
@@ -90,35 +91,42 @@ function SummaryData(props) {
               </VStack>
             </HStack>
             
-            <VStack w="100%">
-              <Heading w="100%" size="md" align="left">
-                Hotel Details
-              </Heading>
-              <Text w="100%" align="left">
-                <strong>Destination:</strong> {props.data.destination_info.term}
-              </Text>
-              <Text w="100%" align="left">
-                <strong>Hotel Name:</strong> {props.data.display_info.hotel_name}
-              </Text>
-              <Text w="100%" align="left">
-                <strong>Room Name:</strong> {props.data.display_info.room_name}
-              </Text>
-              <Text w="100%" align="left">
-                <strong>Check In Date:</strong> {props.data.display_info.check_in_date}
-              </Text>
-              <Text w="100%" align="top-left">
-                  <strong>Check Out Date:</strong> {props.data.display_info.check_out_date}
-              </Text>
-              <Text w="100%" align="top-left">
-                  <strong>Number of Rooms:</strong> {props.data.display_info.num_rooms}
-              </Text>
-              <Text w="100%" align="top-left">
-                  <strong>Number of Adults:</strong> {props.data.display_info.num_adults}
-              </Text>
-              <Text w="100%" align="top-left">
-                  <strong>Number of Children:</strong> {props.data.display_info.num_children}
-              </Text>
-            </VStack>    
+            <Stack w="100%" direction={{base: "row", lg: "column"}}>
+              <VStack w="100%">
+                <Heading w="100%" size="md" align="left">
+                  Hotel Details
+                </Heading>
+                <Text w="100%" align="left">
+                  <strong>Destination:</strong> {props.data.destination_info.term}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Hotel Name:</strong> {props.data.display_info.hotel_name}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Room Name:</strong> {props.data.display_info.room_name}
+                </Text>
+              </VStack>
+              
+
+              <VStack w="100%">
+                <Text w="100%" align="left">
+                  <strong>Check In Date:</strong> {props.data.display_info.check_in_date}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Check Out Date:</strong> {props.data.display_info.check_out_date}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Rooms:</strong> {props.data.display_info.num_rooms}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Adults:</strong> {props.data.display_info.num_adults}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Children:</strong> {props.data.display_info.num_children}
+                </Text>
+              </VStack>
+              
+            </Stack>    
           </VStack>
         </Box>
     </Center>
@@ -156,7 +164,7 @@ export default function Summary() {
   return (
     <ChakraProvider>
       <Box h="100vh" w="100wh">
-        <Box h="8%" w="100%">
+        <Box h="8%" minH="50px" w="100%">
             <NavBar></NavBar>
         </Box>
         <Center w="100%" h="92%">
