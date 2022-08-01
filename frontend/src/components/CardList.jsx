@@ -49,10 +49,10 @@ function Card(props) {
                 </Flex>
                 
             </Flex>
-            <Flex p="4" w={{base: "100%", md: "40%"}} h={{base: "50%", md: "100%"}} direction={{ base: "row", md: "column" }} alignContents="center">
-                <Text w="100%" align="center" fontSize={"18px"} fontWeight={"bold"}>{localStorage.getItem("currency")} {props.price}</Text>
+            <Flex p="4" w={{base: "100%", md: "40%"}} h={{base: "50%", md: "100%"}} direction="column" alignContents="center">
+                <Text w="100%" align={{ base: "right", md: "center" }} fontSize={"18px"} fontWeight={"bold"}>{localStorage.getItem("currency")} {props.price}</Text>
                     <Spacer />
-                <Text w="100%" align="center" fontWeight={"medium"} color={"teal.500"}>Earn at least {props.points} points</Text>
+                <Text w="100%" align={{ base: "right", md: "center" }} fontWeight={"medium"} color={"teal.500"}>Earn at least {props.points} points</Text>
                     <Spacer />
                 <Show above="md">
                     <Button name="button_bookHotel" colorScheme={"teal"} onClick={searchHotel}>Book Deal</Button>

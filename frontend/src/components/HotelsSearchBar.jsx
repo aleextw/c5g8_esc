@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent} from "@chakra-ui/react";
+import { Box, Center, Flex, Text, Select, Stack, HStack, Heading, useColorModeValue, VStack, StackDivider, useDisclosure, AlertDialog, AlertDialogOverlay, AlertDialogContent, Show} from "@chakra-ui/react";
 import React, { useState } from "react";
 import { getDestinations } from "../api/services/destinations";
 import { useNavigate } from "react-router-dom";
@@ -61,42 +61,56 @@ export default function HotelsSearchBar(props) {
                 px={{ base: 4 }}
                 align={'center'}
                 onClick={onOpen}>
-                <Stack direction="horizontal" align="center" gap="5" p={{ base: 0, lg: 2 }} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
-                    <VStack>
-                        <SearchIcon></SearchIcon>
-                        <Text>Edit</Text>
-                    </VStack>
+                <Show above="md">
+                    <Stack direction="horizontal" align="center" gap="5" p={{ base: 0, lg: 2 }} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
+                        <VStack>
+                            <SearchIcon></SearchIcon>
+                            <Text>Edit</Text>
+                        </VStack>
 
-                    <VStack>
-                        <Text>Destination or Hotel</Text>
-                        <Text>{props.params.get("destination")}</Text>
-                    </VStack>
+                        <VStack>
+                            <Text>Destination or Hotel</Text>
+                            <Text>{props.params.get("destination")}</Text>
+                        </VStack>
 
-                    <VStack>
-                        <Text>Check In</Text>
-                        <Text>{props.params.get("checkInDate")}</Text>
-                    </VStack>
+                        <VStack>
+                            <Text>Check In</Text>
+                            <Text>{props.params.get("checkInDate")}</Text>
+                        </VStack>
 
-                    <VStack>
-                        <Text>Check Out</Text>
-                        <Text>{props.params.get("checkOutDate")}</Text>
-                    </VStack>
-                    
-                    <VStack>
-                        <Text>Rooms</Text>
-                        <Text>{props.params.get("numRooms")}</Text>
-                    </VStack>
-                    
-                    <VStack>
-                        <Text>Adults</Text>
-                        <Text>{props.params.get("numAdults")}</Text>
-                    </VStack>
-                    
-                    <VStack>
-                        <Text>Children</Text>
-                        <Text>{props.params.get("numChildren")}</Text>
-                    </VStack>
-                </Stack>
+                        <VStack>
+                            <Text>Check Out</Text>
+                            <Text>{props.params.get("checkOutDate")}</Text>
+                        </VStack>
+                        
+                        <VStack>
+                            <Text>Rooms</Text>
+                            <Text>{props.params.get("numRooms")}</Text>
+                        </VStack>
+                        
+                        <VStack>
+                            <Text>Adults</Text>
+                            <Text>{props.params.get("numAdults")}</Text>
+                        </VStack>
+                        
+                        <VStack>
+                            <Text>Children</Text>
+                            <Text>{props.params.get("numChildren")}</Text>
+                        </VStack>
+                    </Stack>
+                </Show>
+                <Show below="md">
+                    <HStack w="100%" divider={<StackDivider borderColor='grey.200' borderWidth="0.05rem"/>}>
+                        <VStack>
+                            <SearchIcon></SearchIcon>
+                            <Text>Edit</Text>
+                        </VStack>
+                        <VStack w="100%">
+                            <Heading w="100%" size="sm" color="black" align="left">{props.params.get("destination")}</Heading>
+                            <Text w="100%" align="left">{new Date(props.params.get("checkInDate")).toLocaleDateString('en-us', {day:"numeric", month:"short"})} - {new Date(props.params.get("checkOutDate")).toLocaleDateString('en-us', {day:"numeric", month:"short"})}, {props.params.get("numRooms")} room(s), {Number(props.params.get("numAdults")) + Number(props.params.get("numChildren"))} guest(s) per room</Text>
+                        </VStack>
+                    </HStack>
+                </Show>
             </Center>
             <AlertDialog
                 motionPreset='slideInBottom'
@@ -108,7 +122,9 @@ export default function HotelsSearchBar(props) {
                 <AlertDialogOverlay/>
 
                 <AlertDialogContent bg="none">
-                    <SearchBar onClick={onClose}/>
+                    <Center h="100%">
+                        <SearchBar onClick={onClose}/>
+                    </Center>
                 </AlertDialogContent>
             </AlertDialog>
         </Box>

@@ -25,7 +25,6 @@ function compareObjects(object1, object2, key, reverse=false) {
 export default function Hotels() {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-    const mounted = useRef();
 
     const sortMapper = {
         "0": ["searchRank", true],
