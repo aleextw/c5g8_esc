@@ -3,18 +3,13 @@ import {
     Box, 
     ChakraProvider, 
     Heading, 
-    Input, 
-    VStack,   
-    HStack, 
+    Input,
     FormControl,
-    FormLabel,
     FormErrorMessage,
     Text,
     Stack,
     Button,
-    FormHelperText,
     Flex,
-    Spacer,
     StackDivider
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";

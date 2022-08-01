@@ -20,9 +20,7 @@ import {
     PopoverContent,
     StackDivider,
     PopoverArrow,
-    PopoverHeader,
     PopoverBody,
-    PopoverCloseButton,
     HStack,
     VStack,
     Center,
@@ -89,9 +87,7 @@ export default function NavBar() {
   const changeCurrency = (e) => {
     localStorage.setItem("currency", e.target.innerText);
     setSelectedCurrency(e.target.innerText);
-    console.log(params.toString());
     params.set("currency", e.target.innerText);
-    console.log(params.toString());
     setTimeout(() => window.location.reload(), 100);
     navigate(location.pathname + "?" + params.toString());
   }

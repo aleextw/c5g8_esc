@@ -2,7 +2,7 @@ import { SHA512, enc } from "crypto-js";
 import { config } from "../../config";
 
 export async function getDestinations(callback) {
-  const response = await fetch("https://localhost:8000/");
+  const response = await fetch(`${config.apiURL}`);
   const destinations = await response.json();
   callback(destinations);
 }
