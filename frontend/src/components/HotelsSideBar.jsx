@@ -4,7 +4,7 @@ import {FaDotCircle} from "react-icons/fa"
  
 export default function SideBar(props) {
   return (
-      <Center h="100%" backgroundColor="white" p="5">
+      <Center w="100%" h="100%" backgroundColor="white" p="5">
         <Stack h="100%" w="100%">
           <Stack>
               <Heading size="sm" color="black">Hotel Name</Heading>

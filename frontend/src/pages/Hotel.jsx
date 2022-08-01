@@ -12,7 +12,7 @@ export default function Hotel() {
     
     return (
       <ChakraProvider>
-        <Box h="100vh" w="100wh">
+        <Box h="100%" w="100wh">
             <Box h="8%" w="100%">
                 <NavBar></NavBar>
             </Box>

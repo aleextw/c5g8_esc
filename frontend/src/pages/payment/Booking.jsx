@@ -78,7 +78,7 @@ export default function Booking() {
       room_uid: localStorage.getItem("room_uid").replace(/['"]+/g, ''),
       dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
       hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
-      username: localStorage.getItem("username").replace(/['"]+/g, ''),
+      username: (localStorage.getItem("username") !== null ? localStorage.getItem("username") : "").replace(/['"]+/g, ''),
       currency: localStorage.getItem("currency").replace(/['"]+/g, ''),
     };
 

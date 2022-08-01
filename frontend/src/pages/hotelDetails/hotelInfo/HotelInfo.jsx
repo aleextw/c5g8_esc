@@ -1,14 +1,13 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import { Box, Heading, HStack, VStack, Text, Center, StackDivider, Link, Spacer, Container, Flex,Icon, IconButton, Tooltip, Stack} from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons";
-import ReactDOMServer from 'react-dom/server';
-import ReactStars from "react-rating-stars-component";
 import {MdSmokeFree,MdOutlineBusinessCenter,MdOutlineIron,MdOutlineDryCleaning,MdOutlineDry,MdPool, MdRoomService, MdSettingsEthernet,MdHotTub,MdOutlineMonitor, MdOutlineRecordVoiceOver, MdOutlineDriveEta, MdFitnessCenter} from "react-icons/md";
 import{TbSnowflake,TbParking} from "react-icons/tb";
 import {BiFridge,BiHandicap} from "react-icons/bi";
 import {BsSafe} from "react-icons/bs";
-
+import {CustomLeftNav, CustomRightNav} from "../../../components/CustomNavButton";
+import StarRatingComponent from 'react-star-rating-component';
+import { StarIcon } from "@chakra-ui/icons";
 
 const icons = {
   "airConditioning": [<TbSnowflake/>, "Air Conditioning"],
@@ -61,42 +60,51 @@ function HotelInfo(props) {
   // console.log("amenities: ", amenities);
 
   return (
-    <Center w="100%" h="100%">
+    <Center w="100%" h="100%" shadow="base" borderRadius="md" bgColor="white">
       <VStack w="100%" h="100%">
-        <Spacer />
-        <Center borderWidth="1px" w="100%" background="white">
-          <HStack w="100%">
-            <Box maxW="50%" mt="4">
-              <Container>
-                <ImageGallery items={images} ></ImageGallery>
-              </Container>
+        <Center w="100%" h="100%">
+          <HStack w="100%" h="100%" p="2" align="top">
+            <Box w="50%" h="100%">
+              <ImageGallery 
+                items={images} 
+                showThumbnails={false} 
+                showPlayButton={false} 
+                renderLeftNav={(onClick, disabled) => (
+                  <CustomLeftNav onClick={onClick} disabled={disabled} />
+                )}
+                renderRightNav={(onClick, disabled) => (
+                  <CustomRightNav onClick={onClick} disabled={disabled} />
+                )}
+              />
             </Box>
-            <VStack minW="50%" w="100%" h="100%" vertical-align="top" p="6" divider={<StackDivider borderColor='#gray.200' borderWidth="1px"/>}>
-              <VStack w="100%">
-                <HStack w="100%">
-                  <Heading size="md" w="50%" align="left">
-                    {props.hotel_details.name}
-                  </Heading>
-                  <Box w="50%" align="right">
-                  <ReactStars
-                    count={5}
-                    value={props.hotel_details.rating}
-                    edit={false}
-                    size={24}
-                    isHalf={true}
-                    emptyIcon={<i className="far fa-star"></i>}
-                    halfIcon={<i className="fa fa-star-half-alt"></i>}
-                    fullIcon={<i className="fa fa-star"></i>}
-                    activeColor="#ffd700"
-                    color="#D3D3D3"
-                  />
-                  </Box>
+              
+            <VStack w="50%" h="100%" p="2" divider={<StackDivider borderColor='#gray.200' borderWidth="1px"/>}>
+              <VStack w="100%" h="100%">
+                <HStack w="100%" h="100%">
+                  <VStack w="70%" h="100%" align="right">
+                    <Heading size="md"align="left">
+                      {props.hotel_details.name}
+                    </Heading>
+                    <Text w="100%" align="left">
+                      {props.hotel_details.address}
+                    </Text>
+                  </VStack>
+                  <VStack w="30%" align="right">
+                    <StarRatingComponent 
+                        name={`${props.hotel_details.uid}-star`}
+                        editing={false}
+                        starCount={5}
+                        value={props.hotel_details.rating}
+                        activeColor="#ffd700"
+                        color="#D3D3D3"
+                        renderStarIcon={() => <StarIcon />}
+                    />
+                    <Text w="100%" align="right">
+                      <strong>Rating:</strong> {props.hotel_details.review}
+                    </Text>
+                  </VStack>
                 </HStack>
-                <Text w="100%" align="left">
-                  {props.hotel_details.address}
-                </Text>
-                <Spacer />
-                <Flex align='left' direction={"row"} flexWrap={"wrap"} justifyContent={"flex-start"} alignContent={"flex-start"}>
+                <Flex align='left' w="100%" direction={"row"} flexWrap={"wrap"} justifyContent={"flex-start"} alignContent={"flex-start"}>
                   {
                     amenities.slice(0, amenities.length).map((amenity) => {
                       // console.log("amenity: ", amenity);
@@ -112,29 +120,22 @@ function HotelInfo(props) {
                 <Spacer/>
                 <Spacer />
               </VStack>
-              <Box w="100%" mt={5}>
+              <Box w="100%">
                 <HStack w="100%">
-                  <Container>
-                    <Stack spacing={5} direction="column">
-                      <Stack spacing={5} direction="row">
-                        <Text w="100%" align="center" fontSize={18} fontWeight={"medium"} verticalAlign={"middle"}>Rooms starting from:</Text>
-                        <Heading w="100%" align="center" size="md" verticalAlign={"middle"}>{localStorage.getItem("currency")} {props.price}</Heading>
-                      </Stack>
-
-                      <Stack spacing={5} direction="row">
-                        <Text w="100%" align="center" fontSize={18} fontWeight={"medium"}>Earn at least:</Text>
-                        <Heading w="100%" align="center" fontSize={18} color="teal.500" >{props.points} points</Heading>
-                      </Stack>
-                    </Stack>
-                  </Container>
+                  <VStack w="50%">
+                    <Text w="100%" align="left" fontSize="lg">Select a room starting from:</Text>
+                    <Text w="100%" align="left">Earn at least</Text>
+                  </VStack>
+                  <VStack w="50%">
+                    <Heading w="100%" align="right" size="md">{localStorage.getItem("currency")} {props.price}</Heading>
+                    <Heading w="100%" align="right" size="sm">{props.points} points</Heading>
+                  </VStack>
                 </HStack>
               </Box>
             </VStack>
           </HStack>
         </Center>
         <Spacer />
-        {/* <Box borderWidth="1px" w="100%" background="white" p="6" h="100vh" dangerouslySetInnerHTML={{__html: props.hotel_details.description}}>
-        </Box> */}
       </VStack>
     </Center>
     

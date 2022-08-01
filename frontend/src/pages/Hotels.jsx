@@ -139,23 +139,24 @@ export default function Hotels() {
                         />
                     </Center>
                     <Show above="lg" h="100%">
-                        <SideBar 
-                            completed={hotels.completed}
-                            priceBounds={priceBounds}
-                            reviewBounds={reviewBounds}
-                            priceRange={priceRange}
-                            reviewRange={reviewRange}
-                            starsRange={starsRange}
-                            setHotelFilter={setHotelFilter}
-                            setPriceRange={setPriceRange}
-                            setReviewRange={setReviewRange}
-                            setStarsRange={setStarsRange}
-                            setSort={setSort}
-                            resetState={resetState}
-                        />
-                    </Show>
-                    <Show below="lg">
-                        <Footer/>
+                        <Center w={{base:"100%", lg:"25%"}} h="100%">
+                            <SideBar 
+                                completed={hotels.completed}
+                                priceBounds={priceBounds}
+                                reviewBounds={reviewBounds}
+                                priceRange={priceRange}
+                                reviewRange={reviewRange}
+                                starsRange={starsRange}
+                                setHotelFilter={setHotelFilter}
+                                setPriceRange={setPriceRange}
+                                setReviewRange={setReviewRange}
+                                setStarsRange={setStarsRange}
+                                setSort={setSort}
+                                resetState={resetState}
+                            />
+                        </Center>
+
+                        
                     </Show>
                 </Stack>
             </Center>
