@@ -105,8 +105,9 @@ export default function Booking() {
     if (!(/\S+@\S+\.\S+/.test(email))) { setEmailError(true);pass=false; console.log(3);} else {setEmailError(false);}
     if (!phone || phone.length!==8) { setPhoneError(true);pass=false; console.log(4);} else {setPhoneError(false);}
     if (!cardName) { setCardNameError(true);pass=false; console.log(5);} else {setCardNameError(false);}
-    if (!cardNumber|| cardNumber.length!==16) { setCardNumberError(true);pass=false; console.log(6);} else {setCardNumberError(false);}
-    if (!(/^((0?[1-9])|(1[0-2]))$/.test(expiryMonth))) { setExpiryMonthError(true); pass=false; console.log(7);} else {setExpiryMonthError(false);}
+    if (!cardNumber|| cardNumber.length<13) { setCardNumberError(true);pass=false; console.log(6);} else {setCardNumberError(false);}
+    if (!(/^((0?[1-9])|(1[0-2]))$/.test(expiryMonth)) || (new Date().getMonth() > expiryMonth && new Date().getFullYear() == expiryYear ) ) { 
+      setExpiryMonthError(true); pass=false; console.log(7);} else {setExpiryMonthError(false);}
     if (!(/^(19|20)[\d]{2,2}$/.test(expiryYear))) { setExpiryYearError(true); pass=false; console.log(8);} else {setExpiryYearError(false);}
     if (!CVV || CVV.length!==3) { setCVVError(true);pass=false; console.log(9);} else {setCVVError(false);}
     if (!billingAddress) { setBillingAddressError(true);pass=false; console.log(10);} else {setBillingAddressError(false);}
@@ -132,7 +133,6 @@ export default function Booking() {
                   Booking Details
                 </Heading>
                 <HStack w="100%">
-                    
                   <FormControl isRequired w="20%">
                     <FormLabel>Salutation</FormLabel>
                     <InputGroup>
@@ -249,31 +249,31 @@ export default function Booking() {
                   </FormControl>
                 </HStack>
                 <HStack w="100%">
-                  <FormControl isRequired>
-                    <FormLabel>Month</FormLabel>
+                  <FormControl isRequired w="30%" isInvalid={expiryMonthError}>
+                    <FormLabel>Expiry Month</FormLabel>
                     <Select 
-                        value={expiryMonth} 
-                        onChange={setExpiryMonth}
-                        onClick={e => setExpiryMonthError(false)}
+                      name="expiryMonth"
+                      value={expiryMonth} 
+                      onChange={(event) => setExpiryMonth(event.target.value)}
                     >
                       {Array.from({length: 12}, (_, index) => index + 1).map((month) => {return <option>{month}</option>})}
                     </Select>
-                    {expiryMonthError && <FormErrorMessage>Please select a month.</FormErrorMessage>}
+                    {expiryMonthError && <FormErrorMessage>Please select a valid month.</FormErrorMessage>}
                   </FormControl>
 
-                  <FormControl isRequired>
+                  <FormControl isRequired w="40%" isInvalid={expiryYearError}>
                     <FormLabel>Year</FormLabel>
                     <Select
-                        value={expiryYear}
-                        onChange={setExpiryYear}
-                        onClick={e => setExpiryYearError(false)}
+                      name='expiryYear'
+                      value={expiryYear}
+                      onChange={(event) => setExpiryYear(event.target.value)}
                     >
-                      {Array.from({length: 10}, (_, index) => index + new Date().getFullYear()).map((year) => {return <option>{year}</option>})}
+                      {Array.from({length: 11}, (_, index) => index + new Date().getFullYear()).map((year) => {return <option>{year}</option>})}
                     </Select>
                     {expiryYearError && <FormErrorMessage>Please select a year.</FormErrorMessage>}
                   </FormControl>
 
-                  <FormControl isRequired w='35%' isInvalid={CVVError}>
+                  <FormControl isRequired w='30%' isInvalid={CVVError}>
                     <FormLabel>CVV</FormLabel>
                     <InputGroup>
                       <Input onWheel={(event)=> event.currentTarget.blur()} // prevent scroll wheel
@@ -285,7 +285,7 @@ export default function Booking() {
                         onClick={e => setCVVError(false)}
                       />
                       <InputRightElement paddingEnd={2} width="10">
-                        <Button fontSize={10} height="6" size="sm" onClick={()=> setShowCVV(!showCVV)}>
+                        <Button name="button_showCVV" fontSize={10} height="6" size="sm" onClick={()=> setShowCVV(!showCVV)}>
                           {showCVV ? "Hide" : "Show"}
                         </Button>
 
@@ -311,8 +311,9 @@ export default function Booking() {
               </VStack>
             </Center>
             <Center w="100%">
-              <Flex padding={4} w="100%">
-                <Button name="button_confirmBooking"
+              <Flex paddingBottom={5} w="100%">
+                <Button 
+                  name="button_confirmBooking"
                   w="70%" bg="blue.300" color="black"
                   _hover={{
                     bg: 'blue.500',
@@ -322,7 +323,9 @@ export default function Booking() {
                   Book
                 </Button>
                 <Spacer/>
-                <Button w="28%" color="black" 
+                <Button 
+                  name="button_cancelBooking"
+                  w="28%" color="black" 
                   _hover={{
                     bg: 'red.500',
                   }}
