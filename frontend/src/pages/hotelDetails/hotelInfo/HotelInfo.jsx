@@ -121,16 +121,17 @@ function HotelInfo(props) {
                 <Spacer />
               </VStack>
               <Box w="100%">
-                <HStack w="100%">
-                  <VStack w="50%">
+                <VStack w="100%">
+                  <HStack w="100%">
                     <Text w="100%" align="left" fontSize="lg">Select a room starting from:</Text>
-                    <Text w="100%" align="left">Earn at least</Text>
-                  </VStack>
-                  <VStack w="50%">
                     <Heading w="100%" align="right" size="md">{localStorage.getItem("currency")} {props.price}</Heading>
-                    <Heading w="100%" align="right" size="sm">{props.points} points</Heading>
-                  </VStack>
-                </HStack>
+                  </HStack>
+                  <HStack w="100%">
+                    <Text w="100%" align="left">Earn at least</Text>
+                    <Heading w="100%" align="right" size="sm" color="teal.500">{props.points} points</Heading>
+                  </HStack>
+                </VStack>
+                
               </Box>
             </VStack>
           </HStack>
