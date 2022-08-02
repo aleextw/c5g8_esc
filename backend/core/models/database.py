@@ -5,7 +5,6 @@
 import json
 import logging
 import secrets
-import time
 
 import requests
 from sqlalchemy import create_engine, select
@@ -130,13 +129,8 @@ def generate_destinations():
     """
     Returns a list of {term: destination_uid} pairs.
     """
-    start_time = time.time()
-    # formatted_destinations = resources["SESSION"].execute(select(Destination)).all()
-    # formatted_destinations = [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
-    with open(config["DESTINATION_SETUP_FILE"]) as fp:
-        formatted_destinations = json.loads(fp.read())
-    print(f"generate_destinations took {time.time() - start_time}s")
-    return formatted_destinations
+    destinations = resources["SESSION"].execute(select(Destination)).all()
+    return [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
 
 
 def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, currency):
