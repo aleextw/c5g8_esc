@@ -33,6 +33,7 @@ function formatDate(date) {
 export default function SearchBar(props) {
     const navigate = useNavigate();
     const location = useLocation();
+    const params = new URLSearchParams(location.search);
     
     // TODO: Load data from local storage and load reasonable defaults if not present
 
@@ -84,18 +85,18 @@ export default function SearchBar(props) {
     const initDates = [new Date(today), new Date(today)];
     initDates[0].setDate(initDates[0].getDate() + 1);
     initDates[1].setDate(initDates[1].getDate() + 2);
-    const [selectedDates, setSelectedDates] = useState(initDates);
-    const [selectedDestination, setSelectedDestination] = useState("");
+    const [selectedDates, setSelectedDates] = useState(params.get("checkInDate") ? [Date.parse(params.get("checkInDate")), Date.parse(params.get("checkOutDate"))] : initDates);
+    const [selectedDestination, setSelectedDestination] = useState(params.get("destination") ? params.get("destination") : "");
     const [destinations, setDestinations] = useState([]);
-    const [numRooms, setNumRooms] = useState(1);
-    const [numAdults, setNumAdults] = useState(2);
-    const [numChildren, setNumChildren] = useState(0);
+    const [numRooms, setNumRooms] = useState(params.get("numRooms") ? params.get("numRooms") : 1);
+    const [numAdults, setNumAdults] = useState(params.get("numAdults") ? params.get("numAdults") : 2);
+    const [numChildren, setNumChildren] = useState(params.get("numChildren") ? params.get("numChildren") : 0);
     const [autocompleteOpenState, setAutocompleteOpenState] = useState(false);
 
     const [activeSuggestion, setActiveSuggestion] = useState(0);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [userInput, setUserInput] = useState("");
+    const [userInput, setUserInput] = useState(selectedDestination);
     
     const [searching, setSearching] = useState(false);
 
