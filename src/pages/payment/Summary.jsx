@@ -34,7 +34,7 @@ function SummaryData(props) {
       fill="cover"
       h="100%"
     >
-      <Center w="100%" h="100%" overflow="scroll">
+      <Center w="100%" h="100%" overflowY="scroll">
         <Box p="5" maxW="1000px" w={{base: "100%", lg: "70%"}} borderWidth="1px" borderRadius={{base: "none", lg: "lg"}}  bgColor="white">
         <VStack w="100%" h="100%" divider={<StackDivider borderColor='gray.200' />}>
             <Heading>
