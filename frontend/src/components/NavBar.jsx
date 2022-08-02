@@ -73,6 +73,7 @@ export default function NavBar() {
           localStorage.removeItem("phoneNumber");
           localStorage.removeItem("username");
           localStorage.removeItem("prevURL");
+          navigate("/");
         } else {
           setLogoutError(response.valid);
         }

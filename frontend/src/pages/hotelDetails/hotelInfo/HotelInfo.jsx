@@ -22,7 +22,7 @@ const icons = {
   "roomService": [<MdRoomService/>, "Room Service"],
   "safe": [<BsSafe/>, "Safe"],
   "sauna": [<MdHotTub/>, "Sauna"],
-  "tVInRoom": [<MdOutlineMonitor/>, "TV in Rooom"],
+  "tVInRoom": [<MdOutlineMonitor/>, "TV in Room"],
   "valetParking": [<MdOutlineDriveEta/>, "Valet Parking"],
   "voiceMail": [<MdOutlineRecordVoiceOver/>, "Voicemail"],
   "fitnessFacility": [<MdFitnessCenter/>, "Fitness Facility"],
@@ -75,6 +75,7 @@ function HotelInfo(props) {
                 renderRightNav={(onClick, disabled) => (
                   <CustomRightNav onClick={onClick} disabled={disabled} />
                 )}
+                onErrorImageURL="https://via.placeholder.com/150.jpeg"
               />
             </Box>
               

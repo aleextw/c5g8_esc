@@ -86,7 +86,7 @@ function SummaryData(props) {
                   <strong>Billing Address:</strong> {props.data.payment_info.billing_address}
                 </Text>
                 <Text w="100%" align="left">
-                  <strong>Amount Paid:</strong> {props.data.booking_info.currency} {Number(props.data.booking_info.price) * Number(props.data.display_info.num_rooms)}
+                  <strong>Amount Paid:</strong> {props.data.booking_info.currency} {Number(props.data.booking_info.price)}
                 </Text>
               </VStack>
             </HStack>
