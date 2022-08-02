@@ -33,11 +33,11 @@ const Register = () => {
     const register = () => {
         let anyError = false;
         // error if empty or not alphanumeric
-        if (firstName === "" || firstName.match(/^[0-9A-Za-z]+$/) === null) {
+        if (firstName === "" || firstName.match(/^[0-9A-Za-z ]+$/) === null) {
             setFirstNameError(true);
             anyError = true;
         }
-        if (lastName === "" || lastName.match(/^[0-9A-Za-z]+$/)===null) {
+        if (lastName === "" || lastName.match(/^[0-9A-Za-z ]+$/)===null) {
             setLastNameError(true);
             anyError = true;
         }
@@ -49,7 +49,7 @@ const Register = () => {
             setPhoneNumberError(true);
             anyError = true;
         }
-        if (username === "") {
+        if (username === "" || username.match(/^[0-9A-Za-z]+$/) === null) {
             setUsernameError(true);
             anyError = true;
         }
@@ -186,7 +186,7 @@ const Register = () => {
                                         <FormControl isInvalid={usernameError}>
                                             <FormLabel>Username</FormLabel>
                                             <Input name="usernameInput" type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
-                                            {usernameError && <FormErrorMessage>Username is required.</FormErrorMessage>}
+                                            {usernameError && <FormErrorMessage>Please enter alphanumeric characters.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>

@@ -44,10 +44,10 @@ export default function BookingSearch() {
     const [bookings, setBookings] = useState("");
 
     const goToBooking = () => {
-        if (uid !== "") {
-            navigate(`/summary?booking_uid=${uid}`);
-        } else {
+        if (uid === "" || uid.match(/^[0-9A-Za-z]+$/) === null) {
             setError(true);
+        } else {
+            navigate(`/summary?booking_uid=${uid}`);
         }
     };
 
@@ -99,7 +99,7 @@ export default function BookingSearch() {
                         <Stack w="100%">
                             <FormControl isInvalid={error}>
                             <Input name="input_booking_uid" value={uid} onChange={(e) => setUid(e.target.value)}/>
-                                {error && <FormErrorMessage>Booking UID is required.</FormErrorMessage>}
+                                {error && <FormErrorMessage>Invalid Booking UID provided.</FormErrorMessage>}
                             </FormControl>
                         </Stack>
                         <Button name="button_findBooking" maxW="150px" w="100%" onClick={ goToBooking } colorScheme="red">Submit</Button>

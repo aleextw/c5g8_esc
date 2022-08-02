@@ -100,17 +100,17 @@ export default function Booking() {
 
   function handleError() {
     let pass = true;
-    if (!firstName) { setFirstNameError(true); pass=false; console.log(1);} else {setFirstNameError(false);}
-    if (!lastName) {  setLastNameError(true); pass=false; console.log(2);} else {setLastNameError(false);}
+    if (firstName === "" || firstName.match(/^[0-9A-Za-z ]+$/) === null) { setFirstNameError(true); pass=false; console.log(1);} else {setFirstNameError(false);}
+    if (lastName === ""|| lastName.match(/^[0-9A-Za-z ]+$/) === null) {  setLastNameError(true); pass=false; console.log(2);} else {setLastNameError(false);}
     if (!(/\S+@\S+\.\S+/.test(email))) { setEmailError(true);pass=false; console.log(3);} else {setEmailError(false);}
-    if (!phone || phone.length!==8) { setPhoneError(true);pass=false; console.log(4);} else {setPhoneError(false);}
-    if (!cardName) { setCardNameError(true);pass=false; console.log(5);} else {setCardNameError(false);}
-    if (!cardNumber|| cardNumber.length<13) { setCardNumberError(true);pass=false; console.log(6);} else {setCardNumberError(false);}
+    if (phone === "" || phone.length!==8) { setPhoneError(true);pass=false; console.log(4);} else {setPhoneError(false);}
+    if (cardName === "") { setCardNameError(true);pass=false; console.log(5);} else {setCardNameError(false);}
+    if (cardNumber === ""|| cardNumber.length!==16) { setCardNumberError(true);pass=false; console.log(6);} else {setCardNumberError(false);}
     if (!(/^((0?[1-9])|(1[0-2]))$/.test(expiryMonth)) || (new Date().getMonth() > expiryMonth && new Date().getFullYear() == expiryYear ) ) { 
       setExpiryMonthError(true); pass=false; console.log(7);} else {setExpiryMonthError(false);}
     if (!(/^(19|20)[\d]{2,2}$/.test(expiryYear))) { setExpiryYearError(true); pass=false; console.log(8);} else {setExpiryYearError(false);}
-    if (!CVV || CVV.length!==3) { setCVVError(true);pass=false; console.log(9);} else {setCVVError(false);}
-    if (!billingAddress) { setBillingAddressError(true);pass=false; console.log(10);} else {setBillingAddressError(false);}
+    if (CVV ==="" || CVV.length!==3) { setCVVError(true);pass=false; console.log(9);} else {setCVVError(false);}
+    if (billingAddress==="") { setBillingAddressError(true);pass=false; console.log(10);} else {setBillingAddressError(false);}
     return pass;
   }
 
