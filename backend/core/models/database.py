@@ -131,8 +131,10 @@ def generate_destinations():
     Returns a list of {term: destination_uid} pairs.
     """
     start_time = time.time()
-    destinations = resources["SESSION"].execute(select(Destination)).all()
-    formatted_destinations = [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
+    # formatted_destinations = resources["SESSION"].execute(select(Destination)).all()
+    # formatted_destinations = [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
+    with open("../../setup/destinations.json", "r") as fp:
+        formatted_destinations = json.loads(fp.read())
     print(f"generate_destinations took {time.time() - start_time}s")
     return formatted_destinations
 
