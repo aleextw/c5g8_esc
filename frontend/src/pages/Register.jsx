@@ -32,23 +32,24 @@ const Register = () => {
 
     const register = () => {
         let anyError = false;
-        if (firstName === "") {
+        // error if empty or not alphanumeric
+        if (firstName === "" || firstName.match(/^[0-9A-Za-z ]+$/) === null) {
             setFirstNameError(true);
             anyError = true;
         }
-        if (lastName === "") {
+        if (lastName === "" || lastName.match(/^[0-9A-Za-z ]+$/)===null) {
             setLastNameError(true);
             anyError = true;
         }
-        if (email === "") {
+        if (email === "" || !(/\S+@\S+\.\S+/.test(email))) {
             setEmailError(true);
             anyError = true;
         }
-        if (phoneNumber === "") {
+        if (phoneNumber === "" || phoneNumber.match(/^[0-9]+$/)===null) {
             setPhoneNumberError(true);
             anyError = true;
         }
-        if (username === "") {
+        if (username === "" || username.match(/^[0-9A-Za-z]+$/) === null) {
             setUsernameError(true);
             anyError = true;
         }
@@ -153,14 +154,14 @@ const Register = () => {
                                         <FormControl isInvalid={firstNameError}>
                                             <FormLabel>First Name</FormLabel>
                                             <Input name="firstNameInput" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} onClick={(e) => setFirstNameError(false)} placeholder="First Name"/>
-                                            {firstNameError && <FormErrorMessage>First name is required.</FormErrorMessage>}
+                                            {firstNameError && <FormErrorMessage>Please enter a valid first name.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>
                                         <FormControl isInvalid={lastNameError}>
                                             <FormLabel>Last Name</FormLabel>
                                             <Input name="lastNameInput" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onClick={(e) => setLastNameError(false)} placeholder="Last Name"/>
-                                            {lastNameError && <FormErrorMessage>Last name is required.</FormErrorMessage>}
+                                            {lastNameError && <FormErrorMessage>Please enter a valid last name.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                 </Flex>
@@ -169,14 +170,14 @@ const Register = () => {
                                         <FormControl isInvalid={emailError}>
                                             <FormLabel>Email</FormLabel>
                                             <Input name="emailInput" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onClick={(e) => setEmailError(false)} placeholder="Email"/>
-                                            {emailError && <FormErrorMessage>Email is required.</FormErrorMessage>}
+                                            {emailError && <FormErrorMessage>Please enter a valid email address.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>
-                                        <FormControl isInvalid={lastNameError}>
+                                        <FormControl isInvalid={phoneNumberError}>
                                             <FormLabel>Phone Number</FormLabel>
                                             <Input name="numberInput" type="number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} onClick={(e) => setPhoneNumberError(false)} placeholder="Phone Number"/>
-                                            {phoneNumberError && <FormErrorMessage>Phone number is required.</FormErrorMessage>}
+                                            {phoneNumberError && <FormErrorMessage>Please enter a valid contact number.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                 </Flex>
@@ -185,7 +186,7 @@ const Register = () => {
                                         <FormControl isInvalid={usernameError}>
                                             <FormLabel>Username</FormLabel>
                                             <Input name="usernameInput" type="text" value={username} onChange={(e) => setUsername(e.target.value)} onClick={(e) => setUsernameError(false)} placeholder="Username"/>
-                                            {usernameError && <FormErrorMessage>Username is required.</FormErrorMessage>}
+                                            {usernameError && <FormErrorMessage>Please enter alphanumeric characters.</FormErrorMessage>}
                                         </FormControl>
                                     </Stack>
                                     <Stack w={{base: "100%", lg: "50%"}}>
@@ -194,7 +195,7 @@ const Register = () => {
                                             <InputGroup>
                                                 <Input name="passwordInput" type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} onClick={(e) => setPasswordError(false)} placeholder="Password"/>
                                                 <InputRightElement width="4.5rem">
-                                                    <Button h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
+                                                    <Button name="showPassword" h="1.75rem" w="4rem" size="sm" onClick={handleShowClick}>
                                                     {showPassword ? "Hide" : "Show"}
                                                     </Button>
                                                 </InputRightElement>
@@ -213,7 +214,7 @@ const Register = () => {
                                     </Alert>}
                                 </Center>
                                 <Center w="100%">
-                                    <Button maxW="150px" w="100%" name="registerButton" onClick={ register } colorScheme="red">Submit</Button>
+                                    <Button maxW="150px" w="100%" name="registerUser" onClick={ register } colorScheme="red">Submit</Button>
                                 </Center>
                             </Stack>
                         </Box>

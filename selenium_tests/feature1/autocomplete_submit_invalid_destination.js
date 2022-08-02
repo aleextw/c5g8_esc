@@ -11,7 +11,7 @@ async function test1() {
   let driver = await new Builder().forBrowser("chrome").build();
 
   // Step 1 -To fetch our server from the browser with our code.
-  await driver.get("http://localhost:3000");
+  await driver.get("https://localhost:3000");
   await driver.manage().setTimeouts({ implicit: 10000 });
   console.info(await driver.manage().getTimeouts());
   // load search input bar then continue
@@ -21,14 +21,14 @@ async function test1() {
   await sleep(3000);
 
   // Step 2 - enter destination input
-  await inputBar.sendKeys("sh");
+  await inputBar.sendKeys("shh");
   let autocomplete = driver.findElement(By.name("dest_suggestions"));
   await driver.wait(until.elementIsVisible(autocomplete), 5000);
 
   // Step 3 - use arrow keys to navigate down to choice
-  await inputBar.sendKeys(Key.ARROW_DOWN);
-  await inputBar.sendKeys(Key.ARROW_DOWN);
-  await inputBar.sendKeys(Key.ENTER);
+  // await inputBar.sendKeys(Key.ARROW_DOWN);
+  // await inputBar.sendKeys(Key.ARROW_DOWN);
+  // await inputBar.sendKeys(Key.ENTER);
 
   // Step 4 - select datepicker input
   let datePicker = driver.findElement(By.name("date_picker"));
@@ -70,11 +70,11 @@ async function test1() {
   // Step 9 - submit
   await driver.findElement(By.name("dest_search_submit")).click();
   console.log(
-    `Search entered successfully for ${await inputBar.getAttribute(
+    `Error caught for ${await inputBar.getAttribute(
       "value"
     )} in DestinationSearch for HBS`
   );
-  await sleep(15000);
+  await sleep(5000);
   await driver.close();
 }
 

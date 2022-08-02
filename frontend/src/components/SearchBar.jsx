@@ -75,6 +75,7 @@ export default function SearchBar(props) {
         }
 
         setSearching(false);
+        setTimeout(() => window.location.reload(), 100);
         navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=${localStorage.getItem("currency")}`);
         
     }
@@ -89,7 +90,6 @@ export default function SearchBar(props) {
     const [numRooms, setNumRooms] = useState(1);
     const [numAdults, setNumAdults] = useState(2);
     const [numChildren, setNumChildren] = useState(0);
-    // const [currency, setCurrency] = useState("SGD");
     const [autocompleteOpenState, setAutocompleteOpenState] = useState(false);
 
     const [activeSuggestion, setActiveSuggestion] = useState(0);

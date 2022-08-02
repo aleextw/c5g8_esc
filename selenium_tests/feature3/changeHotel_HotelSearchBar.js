@@ -7,7 +7,7 @@ async function test(){
     let driver = await new Builder().forBrowser("chrome").build();
   
     // Step 1 - To fetch our server from the browser with our code.
-    await driver.get("http://localhost:3000/hotels?destination=Singapore,%20Singapore&dest_uid=RsBU&checkInDate=2022-07-24&checkOutDate=2022-07-25&numRooms=1&numAdults=2&numChildren=0&currency=SGD");
+    await driver.get("https://localhost:3000/hotels?destination=Singapore,%20Singapore&dest_uid=RsBU&checkInDate=2022-07-24&checkOutDate=2022-07-25&numRooms=1&numAdults=2&numChildren=0&currency=SGD");
     await driver.manage().setTimeouts({ implicit: 10000 });
     console.info(await driver.manage().getTimeouts());
   

@@ -382,12 +382,12 @@ def create_booking(booking):
         ]
     ):
         return "-1"
-    id = secrets.token_urlsafe(64)
+    id = secrets.token_urlsafe(32)
     while (
         resources["SESSION"].execute(select(Booking).where(Booking.id == id)).first()
         is not None
     ):
-        id = secrets.token_urlsafe(64)
+        id = secrets.token_urlsafe(32)
 
     display_info = DisplayInfo(
         room_name=booking.roomName,

@@ -1,4 +1,5 @@
 import { SHA512, enc } from "crypto-js";
+import { config } from "../../config";
 
 export async function getDestinations(callback) {
   const response = await fetch("https://localhost:8000/");
@@ -8,7 +9,7 @@ export async function getDestinations(callback) {
 
 export async function getHotels(params, callback) {
   const response = await fetch(
-    `https://localhost:8000/results/${params.get(
+    `${config.apiURL}/results/${params.get(
       "dest_uid"
     )}?checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get(
       "checkOutDate"
@@ -23,7 +24,7 @@ export async function getHotels(params, callback) {
 // check
 export async function getHotel(params, callback) {
   const response = await fetch(
-    `https://localhost:8000/results/hotel/${params.get(
+    `${config.apiURL}/results/hotel/${params.get(
       "hotel_uid"
     )}?dest_uid=${params.get("dest_uid")}&checkInDate=${params.get(
       "checkInDate"
@@ -38,7 +39,7 @@ export async function getHotel(params, callback) {
 }
 
 export function postBooking(body) {
-  return fetch("https://localhost:8000/booking", {
+  return fetch(`${config.apiURL}/booking`, {
     method: "POST",
     mode: "cors",
     body: body,
@@ -55,14 +56,14 @@ export function postBooking(body) {
 
 export async function getBooking(params, callback) {
   const response = await fetch(
-    `https://localhost:8000/summary/${params.get("booking_uid")}`
+    `${config.apiURL}/summary/${params.get("booking_uid")}`
   );
   const booking = await response.json();
   callback(booking);
 }
 
 export function postRegister(body) {
-  return fetch("https://localhost:8000/register", {
+  return fetch(`${config.apiURL}/register`, {
     method: "POST",
     mode: "cors",
     body: body,
@@ -85,7 +86,7 @@ export function postRegister(body) {
 }
 
 export function postLogin(body) {
-  return fetch("https://localhost:8000/login", {
+  return fetch(`${config.apiURL}/login`, {
     method: "POST",
     mode: "cors",
     body: JSON.stringify({ type: "query", username: body.username }),
@@ -93,7 +94,7 @@ export function postLogin(body) {
   })
     .then((response) =>
       response.json().then((data) => {
-        return fetch("https://localhost:8000/login", {
+        return fetch(`${config.apiURL}/login`, {
           method: "POST",
           mode: "cors",
           body: JSON.stringify({
@@ -126,7 +127,7 @@ export function postLogin(body) {
 }
 
 export function postLogout(body) {
-  return fetch("https://localhost:8000/logout", {
+  return fetch(`${config.apiURL}/logout`, {
     method: "POST",
     mode: "cors",
     body: body,
@@ -146,7 +147,7 @@ export function postLogout(body) {
 }
 
 export function getUserBookings(body) {
-  return fetch("https://localhost:8000/summary", {
+  return fetch(`${config.apiURL}/summary`, {
     method: "POST",
     mode: "cors",
     body: body,
@@ -167,7 +168,7 @@ export function getUserBookings(body) {
 }
 
 export function getUserData(body, callback) {
-  fetch("https://localhost:8000/profile", {
+  fetch(`${config.apiURL}/profile`, {
     method: "POST",
     mode: "cors",
     body: body,
@@ -189,7 +190,7 @@ export function getUserData(body, callback) {
 }
 
 export function postDeleteAccount(body) {
-  return fetch("https://localhost:8000/profile/delete", {
+  return fetch(`${config.apiURL}/profile/delete`, {
     method: "POST",
     mode: "cors",
     body: body,
