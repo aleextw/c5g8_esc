@@ -74,19 +74,18 @@ export default function SearchBar(props) {
         if (props.onClick) {
             props.onClick();
         }
-
+        
         setSearching(false);
         setTimeout(() => window.location.reload(), 100);
         navigate(`/hotels?destination=${destinations.find(d => d.uid === finalSelectedDestination).term}&dest_uid=${finalSelectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&numRooms=${numRooms}&numAdults=${numAdults}&numChildren=${numChildren}&currency=${localStorage.getItem("currency")}`);
-        
     }
 
     const today = new Date();
     const initDates = [new Date(today), new Date(today)];
     initDates[0].setDate(initDates[0].getDate() + 1);
     initDates[1].setDate(initDates[1].getDate() + 2);
-    const [selectedDates, setSelectedDates] = useState(params.get("checkInDate") ? [Date.parse(params.get("checkInDate")), Date.parse(params.get("checkOutDate"))] : initDates);
-    const [selectedDestination, setSelectedDestination] = useState(params.get("destination") ? params.get("destination") : "");
+    const [selectedDates, setSelectedDates] = useState(params.get("checkInDate") ? [new Date(params.get("checkInDate")), new Date(params.get("checkOutDate"))] : initDates);
+    const [selectedDestination, setSelectedDestination] = useState(params.get("dest_uid") ? params.get("dest_uid") : "");
     const [destinations, setDestinations] = useState([]);
     const [numRooms, setNumRooms] = useState(params.get("numRooms") ? params.get("numRooms") : 1);
     const [numAdults, setNumAdults] = useState(params.get("numAdults") ? params.get("numAdults") : 2);
@@ -96,7 +95,7 @@ export default function SearchBar(props) {
     const [activeSuggestion, setActiveSuggestion] = useState(0);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
-    const [userInput, setUserInput] = useState(selectedDestination);
+    const [userInput, setUserInput] = useState(params.get("destination") ? params.get("destination") : "");
     
     const [searching, setSearching] = useState(false);
 
