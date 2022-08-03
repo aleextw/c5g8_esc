@@ -39,7 +39,7 @@ export default function BookingSearch() {
     const [bookings, setBookings] = useState("");
 
     const goToBooking = () => {
-        if (uid === "" || uid.match(/^[0-9A-Za-z]+$/) === null) {
+        if (uid === "" || uid.match(/^[0-9A-Za-z_]+$/) === null) {
             setError(true);
         } else {
             navigate(`/summary?booking_uid=${uid}`);
