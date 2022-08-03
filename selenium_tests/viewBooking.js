@@ -7,14 +7,14 @@ async function test(){
     let driver = await new Builder().forBrowser("chrome").build();
     
     // Step 1 -To fetch our server from the browser with our code.
-    await driver.get("https://localhost:3000");
+    await driver.get("https://c5g8-esc.onrender.com");
     await driver.manage().setTimeouts({ implicit: 5000 });
     console.info(await driver.manage().getTimeouts());
     
     await driver.findElement(By.name("button_viewBooking")).click();
     await sleep(2000);
     await driver.findElement(By.name("input_booking_uid")).click();
-    await driver.findElement(By.name("input_booking_uid")).sendKeys("up2sbn2lz4996p75nfo45j40pf5dthq9vu0bbotssm9jxhxj3xqoe7fa1xea3hvb");
+    await driver.findElement(By.name("input_booking_uid")).sendKeys("00EgQ6dc66z8SMP_nAUpptRQRsqhx0DuE_FVRp37BYc");
     await driver.sleep(2000);
     await driver.findElement(By.name("button_findBooking")).click();
     console.log(
