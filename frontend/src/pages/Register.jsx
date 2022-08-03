@@ -82,13 +82,13 @@ const Register = () => {
             if (response.status === 200) {
                 if (response.valid === "") {
                     console.log(response);
-                    localStorage.setItem("token", response.token);
-                    localStorage.setItem("firstName", response.user.firstName);
-                    localStorage.setItem("lastName", response.user.lastName);
-                    localStorage.setItem("email", response.user.email);
-                    localStorage.setItem("phoneNumber", response.user.phoneNumber);
-                    localStorage.setItem("username", response.user.username);
-                    let url = localStorage.getItem("prevURL");
+                    sessionStorage.setItem("token", response.token);
+                    sessionStorage.setItem("firstName", response.user.firstName);
+                    sessionStorage.setItem("lastName", response.user.lastName);
+                    sessionStorage.setItem("email", response.user.email);
+                    sessionStorage.setItem("phoneNumber", response.user.phoneNumber);
+                    sessionStorage.setItem("username", response.user.username);
+                    let url = sessionStorage.getItem("prevURL");
                     if (url !== null) {
                         navigate(url);
                     } else {
@@ -123,7 +123,7 @@ const Register = () => {
     const [registrationError, setRegistrationError] = useState("");
     const handleShowClick = () => setShowPassword(!showPassword);
     
-    if (localStorage.getItem("token") !== null) {
+    if (sessionStorage.getItem("token") !== null) {
         navigate(-1);
     }
 

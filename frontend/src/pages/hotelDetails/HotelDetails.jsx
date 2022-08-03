@@ -14,18 +14,18 @@ function Card(props) {
     const params = new URLSearchParams(location.search);
     const navigate = useNavigate();
     const toPaymentsPage = () => {
-      localStorage.setItem("roomName", JSON.stringify(props.description));
-      localStorage.setItem("hotelName", JSON.stringify(props.hotelName));
-      localStorage.setItem("roomPrice", JSON.stringify(props.price));
-      localStorage.setItem("points", JSON.stringify(props.points));
-      localStorage.setItem("checkInDate", JSON.stringify(params.get("checkInDate")));
-      localStorage.setItem("checkOutDate", JSON.stringify(params.get("checkOutDate")));
-      localStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
-      localStorage.setItem("numChildren", JSON.stringify(params.get("numChildren")));
-      localStorage.setItem("numRooms", JSON.stringify(params.get("numRooms")));
-      localStorage.setItem("room_uid", JSON.stringify(props.uid));
-      localStorage.setItem("dest_uid", JSON.stringify(params.get("dest_uid")));
-      localStorage.setItem("hotel_uid", JSON.stringify(params.get("hotel_uid"))); 
+      sessionStorage.setItem("roomName", JSON.stringify(props.description));
+      sessionStorage.setItem("hotelName", JSON.stringify(props.hotelName));
+      sessionStorage.setItem("roomPrice", JSON.stringify(props.price));
+      sessionStorage.setItem("points", JSON.stringify(props.points));
+      sessionStorage.setItem("checkInDate", JSON.stringify(params.get("checkInDate")));
+      sessionStorage.setItem("checkOutDate", JSON.stringify(params.get("checkOutDate")));
+      sessionStorage.setItem("numAdults", JSON.stringify(params.get("numAdults")));
+      sessionStorage.setItem("numChildren", JSON.stringify(params.get("numChildren")));
+      sessionStorage.setItem("numRooms", JSON.stringify(params.get("numRooms")));
+      sessionStorage.setItem("room_uid", JSON.stringify(props.uid));
+      sessionStorage.setItem("dest_uid", JSON.stringify(params.get("dest_uid")));
+      sessionStorage.setItem("hotel_uid", JSON.stringify(params.get("hotel_uid"))); 
       navigate(`/booking`);
     }
 

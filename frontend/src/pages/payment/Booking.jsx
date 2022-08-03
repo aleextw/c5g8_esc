@@ -24,10 +24,10 @@ import {
 
 
 export default function Booking() {
-  const localFirstName = localStorage.getItem("firstName");
-  const localLastName = localStorage.getItem("lastName");
-  const localEmail = localStorage.getItem("email");
-  const localPhoneNumber = localStorage.getItem("phoneNumber");
+  const localFirstName = sessionStorage.getItem("firstName");
+  const localLastName = sessionStorage.getItem("lastName");
+  const localEmail = sessionStorage.getItem("email");
+  const localPhoneNumber = sessionStorage.getItem("phoneNumber");
 
   const [ salutation, setSalutation ] = useState("Mr");
   const [ firstName, setFirstName ] = useState(localFirstName);
@@ -67,19 +67,19 @@ export default function Booking() {
       cardName: cardName.replace(/['"] + /g, ''), 
       cardNumber: cardNumber.replace(/['"] + /g, '').substring(0, 6) + "xxxxxx" + cardNumber.replace(/['"] + /g, '').substring(12, 16), // Only pass first 6 and last 4 digits
       billingAddress: billingAddress.replace(/['"] + /g, ''),
-      roomName: localStorage.getItem("roomName").replace(/['"]+/g, ''),
-      hotelName: localStorage.getItem("hotelName").replace(/['"]+/g, ''),
-      roomPrice: localStorage.getItem("roomPrice"),
-      checkInDate: localStorage.getItem("checkInDate").replace(/['"]+/g, ''),
-      checkOutDate: localStorage.getItem("checkOutDate").replace(/['"]+/g, ''),
-      numAdults: localStorage.getItem("numAdults").replace(/['"]+/g, ''),
-      numChildren: localStorage.getItem("numChildren").replace(/['"]+/g, ''),
-      numRooms: localStorage.getItem("numRooms").replace(/['"]+/g, ''),
-      room_uid: localStorage.getItem("room_uid").replace(/['"]+/g, ''),
-      dest_uid: localStorage.getItem("dest_uid").replace(/['"]+/g, ''),
-      hotel_uid: localStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
-      username: (localStorage.getItem("username") !== null ? localStorage.getItem("username") : "").replace(/['"]+/g, ''),
-      currency: localStorage.getItem("currency").replace(/['"]+/g, ''),
+      roomName: sessionStorage.getItem("roomName").replace(/['"]+/g, ''),
+      hotelName: sessionStorage.getItem("hotelName").replace(/['"]+/g, ''),
+      roomPrice: sessionStorage.getItem("roomPrice"),
+      checkInDate: sessionStorage.getItem("checkInDate").replace(/['"]+/g, ''),
+      checkOutDate: sessionStorage.getItem("checkOutDate").replace(/['"]+/g, ''),
+      numAdults: sessionStorage.getItem("numAdults").replace(/['"]+/g, ''),
+      numChildren: sessionStorage.getItem("numChildren").replace(/['"]+/g, ''),
+      numRooms: sessionStorage.getItem("numRooms").replace(/['"]+/g, ''),
+      room_uid: sessionStorage.getItem("room_uid").replace(/['"]+/g, ''),
+      dest_uid: sessionStorage.getItem("dest_uid").replace(/['"]+/g, ''),
+      hotel_uid: sessionStorage.getItem("hotel_uid").replace(/['"]+/g, ''),
+      username: (sessionStorage.getItem("username") !== null ? sessionStorage.getItem("username") : "").replace(/['"]+/g, ''),
+      currency: sessionStorage.getItem("currency").replace(/['"]+/g, ''),
     };
 
     let response;

@@ -39,8 +39,8 @@ export default function UserDetails(props) {
   const deleteAccount = (event) => {
     setDeleting(true);
     const body = {
-      username: localStorage.getItem("username"),
-      token: localStorage.getItem("token")
+      username: sessionStorage.getItem("username"),
+      token: sessionStorage.getItem("token")
     };
     let response;
     postDeleteAccount(JSON.stringify(body)).then((data) => {
@@ -49,13 +49,13 @@ export default function UserDetails(props) {
       if (response.status === 200) {
         setDeleting(false);
         if (response.valid === "") {            
-          localStorage.removeItem("token");   
-          localStorage.removeItem("firstName");
-          localStorage.removeItem("lastName");
-          localStorage.removeItem("email");
-          localStorage.removeItem("phoneNumber");
-          localStorage.removeItem("username");
-          localStorage.removeItem("prevURL");
+          sessionStorage.removeItem("token");   
+          sessionStorage.removeItem("firstName");
+          sessionStorage.removeItem("lastName");
+          sessionStorage.removeItem("email");
+          sessionStorage.removeItem("phoneNumber");
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem("prevURL");
           navigate("/");
         } else {
           setDeleteError(response.valid);
@@ -118,7 +118,7 @@ export default function UserDetails(props) {
     </Center>
     <Center w="100%">
         <Flex padding={4} w="100%">
-            <Button name="button_confirmBooking"
+            {/* <Button name="button_confirmBooking"
                 w="40%" bg="blue.300" color="black"
                 _hover={{
                 bg: 'blue.400',
@@ -126,15 +126,15 @@ export default function UserDetails(props) {
                 type="submit"
                 onClick={() => console.log("Unimplemented")}>
                 {"Update Account"}
-            </Button>
+            </Button> */}
             <Spacer/>
             {deleteError !== "" && <Alert status='error'>
                 <AlertIcon />
                 <AlertDescription>{deleteError}</AlertDescription>
             </Alert> }
-            <Button w="40%" bg="red.500" color="black"
+            <Button w="40%" bg="red.500" color="white"
                 _hover={{
-                bg: 'red.600',
+                bg: 'red.400',
                 }}
                 onClick={onOpen}>
                 {deleting ? <Spinner /> : "Delete Account"}

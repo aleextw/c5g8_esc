@@ -54,11 +54,11 @@ export default function BookingSearch() {
     useEffect(() => userBookings(), []);
 
     const userBookings = () => {
-        if (localStorage.getItem("token") !== null) {
+        if (sessionStorage.getItem("token") !== null) {
             getUserBookings(
                 JSON.stringify({
-                    username: localStorage.getItem("username"),
-                    token: localStorage.getItem("token")
+                    username: sessionStorage.getItem("username"),
+                    token: sessionStorage.getItem("token")
                 })
             ).then((data) => {
                 if (data.status === 200) {
