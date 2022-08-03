@@ -5,15 +5,16 @@ require("chromedriver");
 
 // generate inputs with fuzzed data using appropriate inputs
 
-const length = Math.floor(Math.random() * 100)
+const length = Math.floor(Math.random() * 100);
 
 function alphabetFuzz(){
-    var alphabetFuzzed = '';
+    var alphabetFuzzed = ""
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     var charLenght = characters.length;
     for(var i = 0; i < length; i++){
         alphabetFuzzed += characters.charAt(Math.floor(Math.random()*charLenght));
     }
+    console.log(alphabetFuzzed);
     return alphabetFuzzed;
 }
 
@@ -67,76 +68,38 @@ function textFuzz(){
 
 async function test(){
 
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
     let driver = await new Builder().forBrowser("chrome").build();
 
-    await driver.get("https://localhost:3000/booking");
+    await driver.get("https://c5g8-esc.onrender.com/booking");
     await driver.manage().setTimeouts({implicit:10000});
 
-    let firstName = driver.findElement(By.name("firstName"));
-    await firstName.click();
-    await firstName.clear();
-    await SelectInput(3000);
-    await firstName.sendKeys(alphabetFuzz);
+    await driver.findElement(By.name("firstName")).sendKeys(alphabetFuzz());
+    await driver.findElement(By.name("lastName")).sendKeys(alphabetFuzz());
+    await driver.findElement(By.name("email")).sendKeys(emailFuzz());
+    await driver.findElement(By.name("number")).sendKeys(numberFuzz());
+    await driver.findElement(By.name("message")).sendKeys(textFuzz());
+    await driver.findElement(By.name("cardName")).sendKeys(nameFuzz());
+    await driver.findElement(By.name("cardNumber")).sendKeys(numberFuzz());
+    await driver.findElement(By.name("expiryMonth")).click();
+    await driver.findElement(By.name("expiryMonth")).sendKeys(Key.ARROW_DOWN,Key.ARROW_DOWN,Key.ARROW_DOWN,Key.ENTER);
+    await driver.findElement(By.name("expiryYear")).click();
+    await driver.findElement(By.name("expiryYear")).sendKeys(Key.ARROW_DOWN,Key.ARROW_DOWN,Key.ARROW_DOWN,Key.ENTER);
+    await driver.findElement(By.name("CVV")).sendKeys(numberFuzz());
+    await driver.findElement(By.name("billingAddress")).sendKeys(textFuzz());
 
-    let lastName = driver.findElement(By.name("lastName"));
-    await lastName.click();
-    await lastName.clear();
-    await SelectInput(3000);
-    await lastName.sendKeys(alphabetFuzz);
+    await driver.findElement(By.name("button_confirmBooking")).click();
 
-    let email = driver.findElement(By.name("email"));
-    await email.click();
-    await email.clear();
-    await SelectInput(3000);
-    await email.sendKeys(emailFuzz);
-
-    let number = driver.findElement(By.name("number"));
-    await number.click();
-    await number.clear();
-    await SelectInput(3000);
-    await number.sendKeys(numberFuzz);
     
-    let message = driver.findElement(By.name("message"));
-    await message.click();
-    await message.clear();
-    await SelectInput(3000);
-    await message.sendKeys(alphabetFuzz);
-
-    let cardName = driver.findElement(By.name("cardName"));
-    await cardName.click();
-    await cardName.clear();
-    await SelectInput(3000);
-    await cardName.sendKeys(nameFuzz);
-
-    let cardNumber = driver.findElement(By.name("cardNumber"));
-    await cardNumber.click();
-    await cardNumber.clear();
-    await SelectInput(3000);
-    await cardNumber.sendKeys(numberFuzz);
-
-    let CVV = driver.findElement(By.name("CVV"));
-    await CVV.click();
-    await CVV.clear();
-    await SelectInput(3000);
-    await CVV.sendKeys(numberFuzz);
-
-    let billingAddress = driver.findElement(By.name("billingAddress"));
-    await billingAddress.click();
-    await billingAddress.clear();
-    await SelectInput(3000);
-    await billingAddress.sendKeys(textFuzz);
-
-    await driver.fineElement(By.name("button_confirmBooking")).click();
     await driver.sleep(3000)
+
 }
 
 async function loopTesting() {
     for(let i = 0; i < 100; i++){
         await test();
     }
-    await driver.close();
-
-    await driver.quit();
 };
 
 loopTesting();
