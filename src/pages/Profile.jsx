@@ -10,8 +10,8 @@ export default function Profile() {
     const params = new URLSearchParams(location.search);
     const [data, setData] = useState({status: 1});
     const body = {
-        username: localStorage.getItem("username"),
-        token: localStorage.getItem("token")
+        username: sessionStorage.getItem("username"),
+        token: sessionStorage.getItem("token")
     };
     const foo = (bar) => {console.log(bar); setData(bar)}
     useEffect(() => getUserData(JSON.stringify(body), foo), []);

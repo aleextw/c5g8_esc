@@ -20,7 +20,9 @@ import {
     PopoverContent,
     StackDivider,
     PopoverArrow,
+    PopoverHeader,
     PopoverBody,
+    PopoverCloseButton,
     HStack,
     VStack,
     Center,
@@ -43,19 +45,23 @@ export default function NavBar() {
   const params = new URLSearchParams(location.search);
 
   const loginRoute = () => {
-    localStorage.setItem("prevURL", location.pathname + location.search);
+    if (!(location.pathname === "/login" || location.pathname === "/register")) {
+      sessionStorage.setItem("prevURL", location.pathname + location.search);
+    }
     navigate("/login");
   }
 
   const registerRoute = () => {
-    localStorage.setItem("prevURL", location.pathname + location.search);
+    if (!(location.pathname === "/login" || location.pathname === "/register")) {
+      sessionStorage.setItem("prevURL", location.pathname + location.search);
+    }
     navigate("/register");
   }
 
   const logout = () => {
     const body = {
-      username: localStorage.getItem("username"),
-      token: localStorage.getItem("token")
+      username: sessionStorage.getItem("username"),
+      token: sessionStorage.getItem("token")
     };
     let response;
     setLoggingOut(true);
@@ -64,13 +70,14 @@ export default function NavBar() {
       setLoggingOut(false);
       if (response.status === 200) {
         if (response.valid === "") {            
-          localStorage.removeItem("token");   
-          localStorage.removeItem("firstName");
-          localStorage.removeItem("lastName");
-          localStorage.removeItem("email");
-          localStorage.removeItem("phoneNumber");
-          localStorage.removeItem("username");
-          localStorage.removeItem("prevURL");
+          sessionStorage.removeItem("token");   
+          sessionStorage.removeItem("firstName");
+          sessionStorage.removeItem("lastName");
+          sessionStorage.removeItem("email");
+          sessionStorage.removeItem("phoneNumber");
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem("prevURL");
+          navigate("/");
         } else {
           setLogoutError(response.valid);
         }
@@ -81,13 +88,15 @@ export default function NavBar() {
     });
   }
 
-  if (localStorage.getItem("currency") ===  null) {localStorage.setItem("currency", "SGD")};
-  const [selectedCurrency, setSelectedCurrency] = useState(localStorage.getItem("currency") === null ? "SGD" : localStorage.getItem("currency"))
+  if (sessionStorage.getItem("currency") ===  null) {sessionStorage.setItem("currency", "SGD")};
+  const [selectedCurrency, setSelectedCurrency] = useState(sessionStorage.getItem("currency") === null ? "SGD" : sessionStorage.getItem("currency"))
 
   const changeCurrency = (e) => {
-    localStorage.setItem("currency", e.target.innerText);
+    sessionStorage.setItem("currency", e.target.innerText);
     setSelectedCurrency(e.target.innerText);
+    console.log(params.toString());
     params.set("currency", e.target.innerText);
+    console.log(params.toString());
     setTimeout(() => window.location.reload(), 100);
     navigate(location.pathname + "?" + params.toString());
   }
@@ -122,8 +131,8 @@ export default function NavBar() {
   const [ logoutError, setLogoutError ] = useState("");
   
   function ManageUser() {
-    if (localStorage.getItem("token")) {
-      const firstName = localStorage.getItem("firstName") !== null ? localStorage.getItem("firstName") : "Traveller";
+    if (sessionStorage.getItem("token")) {
+      const firstName = sessionStorage.getItem("firstName") !== null ? sessionStorage.getItem("firstName") : "Traveller";
 
       return (
         <Stack direction="row" h="100%" alignItems="center" divider={<StackDivider borderWidth/>}>
@@ -246,7 +255,7 @@ const DesktopNav = () => {
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => {
-          if (!navItem.login || (navItem.login && localStorage.getItem("token") !== null)) { 
+          if (!navItem.login || (navItem.login && sessionStorage.getItem("token") !== null)) { 
             return (<Box key={navItem.label}>
               <Popover trigger={'hover'} placement={'bottom-start'}>
                 <PopoverTrigger>
@@ -331,7 +340,7 @@ const MobileNav = () => {
       <Stack
       p={4}>
       {NAV_ITEMS.map((navItem) => {
-        if (!navItem.login || (navItem.login && localStorage.getItem("token") !== null)) { 
+        if (!navItem.login || (navItem.login && sessionStorage.getItem("token") !== null)) { 
           return (
             <MobileNavItem name={navItem.name} key={navItem.label} {...navItem} />
           );

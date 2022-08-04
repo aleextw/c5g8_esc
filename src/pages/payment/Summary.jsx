@@ -34,7 +34,7 @@ function SummaryData(props) {
       fill="cover"
       h="100%"
     >
-      <Center w="100%" h="100%" overflow="auto">
+      <Center w="100%" h="100%" overflow="scroll">
         <Box p="5" maxW="1000px" w={{base: "100%", lg: "70%"}} borderWidth="1px" borderRadius={{base: "none", lg: "lg"}}  bgColor="white">
         <VStack w="100%" h="100%" divider={<StackDivider borderColor='gray.200' />}>
             <Heading>
@@ -86,7 +86,7 @@ function SummaryData(props) {
                   <strong>Billing Address:</strong> {props.data.payment_info.billing_address}
                 </Text>
                 <Text w="100%" align="left">
-                  <strong>Amount Paid:</strong> {props.data.booking_info.currency} {Number(props.data.booking_info.price) * Number(props.data.display_info.num_rooms)}
+                  <strong>Amount Paid:</strong> {props.data.booking_info.currency} {Number(props.data.booking_info.price)}
                 </Text>
               </VStack>
             </HStack>

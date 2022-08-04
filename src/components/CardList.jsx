@@ -50,7 +50,7 @@ function Card(props) {
                 
             </Flex>
             <Flex p="4" w={{base: "100%", md: "40%"}} h={{base: "50%", md: "100%"}} direction="column" alignContents="center">
-                <Text w="100%" align={{ base: "right", md: "center" }} fontSize={"18px"} fontWeight={"bold"}>{localStorage.getItem("currency")} {props.price}</Text>
+                <Text w="100%" align={{ base: "right", md: "center" }} fontSize={"18px"} fontWeight={"bold"}>{sessionStorage.getItem("currency")} {props.price}</Text>
                     <Spacer />
                 <Text w="100%" align={{ base: "right", md: "center" }} fontWeight={"medium"} color={"teal.500"}>Earn at least {props.points} points</Text>
                     <Spacer />

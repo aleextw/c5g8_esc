@@ -36,6 +36,10 @@ import SideBar from './HotelsSideBar';
           cursor='pointer'
           onClick={onOpen}>
           <Stack direction={'row'} spacing={6} divider={<StackDivider borderColor='grey.200' borderRightWidth="0.1rem"/>}>
+            {/* <Link href={'#'}>Home</Link>
+            <Link href={'#'}>About</Link>
+            <Link href={'#'}>Blog</Link>
+            <Link href={'#'}>Contact</Link> */}
             <Link color='white'>Filter / Sort</Link>
           </Stack>
         </Container>

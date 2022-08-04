@@ -44,10 +44,10 @@ export default function SideBar(props) {
               <Heading size="sm">Price Range</Heading>
               <Stack direction="row" w="100%">
                 <Text size="sm" w="100%" align="left">
-                  {localStorage.getItem("currency")} {props.priceRange[0]}
+                  {sessionStorage.getItem("currency")} {props.priceRange[0]}
                 </Text>
                 <Text size="sm" w="100%" align="right">
-                  {localStorage.getItem("currency")} {props.priceRange[1]}
+                  {sessionStorage.getItem("currency")} {props.priceRange[1]}
                 </Text>
               </Stack>
               <RangeSlider

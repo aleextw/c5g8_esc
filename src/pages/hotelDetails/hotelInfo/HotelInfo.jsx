@@ -22,7 +22,7 @@ const icons = {
   "roomService": [<MdRoomService/>, "Room Service"],
   "safe": [<BsSafe/>, "Safe"],
   "sauna": [<MdHotTub/>, "Sauna"],
-  "tVInRoom": [<MdOutlineMonitor/>, "TV in Rooom"],
+  "tVInRoom": [<MdOutlineMonitor/>, "TV in Room"],
   "valetParking": [<MdOutlineDriveEta/>, "Valet Parking"],
   "voiceMail": [<MdOutlineRecordVoiceOver/>, "Voicemail"],
   "fitnessFacility": [<MdFitnessCenter/>, "Fitness Facility"],
@@ -75,6 +75,7 @@ function HotelInfo(props) {
                 renderRightNav={(onClick, disabled) => (
                   <CustomRightNav onClick={onClick} disabled={disabled} />
                 )}
+                onErrorImageURL="https://via.placeholder.com/150.jpeg"
               />
             </Box>
               
@@ -124,7 +125,7 @@ function HotelInfo(props) {
                 <VStack w="100%">
                   <HStack w="100%">
                     <Text w="100%" align="left" fontSize="lg">Select a room starting from:</Text>
-                    <Heading w="100%" align="right" size="md">{localStorage.getItem("currency")} {props.price}</Heading>
+                    <Heading w="100%" align="right" size="md">{sessionStorage.getItem("currency")} {props.price}</Heading>
                   </HStack>
                   <HStack w="100%">
                     <Text w="100%" align="left">Earn at least</Text>

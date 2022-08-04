@@ -1,11 +1,12 @@
 import { useLocation } from "react-router-dom";
 import { Box, Center, ChakraProvider, Show, Stack } from "@chakra-ui/react";
 import "../index.css";
+import Footer from "../components/HotelsFooter";
 import NavBar from "../components/NavBar";
 import CardList from "../components/CardList";
 import HotelsSearchBar from "../components/HotelsSearchBar";
 import SideBar from "../components/HotelsSideBar";
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { getHotels } from "../api/services/destinations";
 
 function compareObjects(object1, object2, key, reverse=false) {
@@ -50,6 +51,7 @@ export default function Hotels() {
     useEffect(() => {
         const timer = window.setInterval(() => getHotels(params, parseHotels), 2000);
         setUpdateTimer(timer);
+        console.log(`Setting timer ${timer}`);
         return () => clearInterval(timer);
     }, []);
 
@@ -69,6 +71,7 @@ export default function Hotels() {
             )
         });
         if (hotels.completed) {
+            console.log(`Clearing timer ${updateTimer}`);
             clearInterval(updateTimer);
         }
     }, [hotels, hotelFilter, priceRange, reviewRange, starsRange, sort]);

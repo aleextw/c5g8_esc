@@ -3,13 +3,18 @@ import {
     Box, 
     ChakraProvider, 
     Heading, 
-    Input,
+    Input, 
+    VStack,   
+    HStack, 
     FormControl,
+    FormLabel,
     FormErrorMessage,
     Text,
     Stack,
     Button,
+    FormHelperText,
     Flex,
+    Spacer,
     StackDivider
 } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
@@ -49,11 +54,11 @@ export default function BookingSearch() {
     useEffect(() => userBookings(), []);
 
     const userBookings = () => {
-        if (localStorage.getItem("token") !== null) {
+        if (sessionStorage.getItem("token") !== null) {
             getUserBookings(
                 JSON.stringify({
-                    username: localStorage.getItem("username"),
-                    token: localStorage.getItem("token")
+                    username: sessionStorage.getItem("username"),
+                    token: sessionStorage.getItem("token")
                 })
             ).then((data) => {
                 if (data.status === 200) {
