@@ -45,7 +45,8 @@ const Register = () => {
             setEmailError(true);
             anyError = true;
         }
-        if (phoneNumber === "" || phoneNumber.match(/^[0-9]+$/)===null) {
+        // must be 8 digits
+        if (phoneNumber === "" || phoneNumber.length!==8 || phoneNumber.match(/^[0-9]+$/)===null) {
             setPhoneNumberError(true);
             anyError = true;
         }

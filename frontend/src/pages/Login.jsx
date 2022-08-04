@@ -29,7 +29,7 @@ const Login = () => {
 
     const login = () => {
         let anyError = false;
-        if (username === "") {
+        if (username === ""||username.match(/^[0-9A-Za-z]+$/) === null) {
             setUsernameError(true);
             anyError = true;
         }
