@@ -8,7 +8,7 @@ export default function SideBar(props) {
         <Stack h="100%" w="100%">
           <Stack>
               <Heading size="sm" color="black">Hotel Name</Heading>
-              <Input isDisabled={!props.completed} onChange={(e) => props.setHotelFilter(e.target.value)}></Input>
+              <Input name="HotelSearchInput" isDisabled={!props.completed} onChange={(e) => props.setHotelFilter(e.target.value)}></Input>
           </Stack>
 
           <Stack>
@@ -28,7 +28,7 @@ export default function SideBar(props) {
                 step={1}
                 onChange={(e) => props.setReviewRange(e)}
               >
-                <RangeSliderTrack>
+                <RangeSliderTrack name="reviewRange">
                   <RangeSliderFilledTrack />
                 </RangeSliderTrack>
                 <RangeSliderThumb boxSize={6} index={0}>
@@ -57,7 +57,7 @@ export default function SideBar(props) {
                 step={1}
                 onChange={(e)=> props.setPriceRange(e)}
               >
-                <RangeSliderTrack>
+                <RangeSliderTrack name="priceRange">
                   <RangeSliderFilledTrack />
                 </RangeSliderTrack>
                 <RangeSliderThumb boxSize={6} index={0}>
@@ -84,7 +84,7 @@ export default function SideBar(props) {
                 defaultValue={[1, 5]} min={1} max={5} step={1}
                 onChange={(e) => props.setStarsRange(e)}
               >
-                <RangeSliderTrack>
+                <RangeSliderTrack name="starRange">
                   <RangeSliderFilledTrack />
                 </RangeSliderTrack>
                 <RangeSliderThumb boxSize={6} index={0}>
@@ -98,7 +98,7 @@ export default function SideBar(props) {
 
           <Stack>
             <Heading size="sm">Sort by</Heading>
-            <Select value={props.sort} onChange={(e) => props.setSort(e.target.value)} isDisabled={!props.completed}>
+            <Select name="sorting" value={props.sort} onChange={(e) => props.setSort(e.target.value)} isDisabled={!props.completed}>
               <option value='0'>-</option>
               <option value='1'>Price: Low to High</option>
               <option value='2'>Price: High to Low</option>
@@ -109,7 +109,7 @@ export default function SideBar(props) {
           </Stack>
 
           <Stack>
-              <Button onClick={ props.resetState } w="100%" colorScheme="red" isDisabled={!props.completed}>Reset</Button>
+              <Button name="resetButton" onClick={ props.resetState } w="100%" colorScheme="red" isDisabled={!props.completed}>Reset</Button>
           </Stack>
         </Stack>
       </Center>
