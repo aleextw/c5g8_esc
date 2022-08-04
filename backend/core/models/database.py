@@ -6,6 +6,7 @@ import json
 import logging
 import secrets
 import time
+import re
 
 import requests
 from sqlalchemy import create_engine, select
@@ -27,6 +28,7 @@ from backend.shared_resources import resources
 logger = logging.getLogger()
 valid_chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
+pat = re.compile(r"^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$")
 
 def load():
     """
@@ -470,6 +472,38 @@ def get_booking(booking_uid):
 
 
 def register_user(data):
+    # Field validation is already handled on clientside, here is just as a precaution
+    if data.email == "":
+        return {"valid": "Error: Email cannot be empty."}
+
+    if pat.search(data.email) is None:
+        return {"valid": "Error: Please enter a valid email."}
+
+    if data.username == "":
+        return {"valid": "Error: Username cannot be empty."}
+
+    if not data.username.isalnum():
+        return {"valid": "Error: Please enter a valid username."}
+
+    if data.phoneNumber == "":
+        return {"valid": "Error: Phone number cannot be empty."}
+
+    if len(data.phoneNumber) < 8 or not data.phoneNumber.isnumeric():
+        # Assume Singaporean phone number
+        return {"valid": "Error: Please enter a valid phone number."}
+
+    if data.firstName == "":
+        return {"valid": "Error: First name cannot be empty."}
+
+    if data.lastName == "":
+        return {"valid": "Error: Last name cannot be empty."}
+
+    if not data.firstName.isalnum():
+        return {"valid": "Error: First name cannot have special characters."}
+
+    if not data.lastName.isalnum():
+        return {"valid": "Error: Last name cannot have special characters."}
+
     if (
         resources["SESSION"]
         .execute(select(User).where(User.email == data.email))
@@ -512,6 +546,9 @@ def register_user(data):
 
 
 def login_user(data):
+    if data.username == "":
+        return {"valid": "Error: Username cannot be empty."}
+
     user = (
         resources["SESSION"]
         .execute(select(User).where(User.username == data.username))
@@ -533,6 +570,9 @@ def login_user(data):
             resources["SESSION"].commit()
 
             return {"valid": "", "token": token.value, "user": user[0].as_dict()}
+        else:
+            return {"valid": "Error: Invalid credentials provided."}
+
 
     return {"valid": "Error: Application error. Please try again."}
 
@@ -581,6 +621,9 @@ def delete_user_data(data):
 
 
 def validate_auth_data(data):
+    if data.username == "":
+        return {"valid": "Error: Missing username."}
+
     user = (
         resources["SESSION"]
         .execute(select(User).where(User.username == data.username))
@@ -589,6 +632,9 @@ def validate_auth_data(data):
 
     if user is None:
         return {"valid": "Error: User does not exist."}
+
+    if data.token == "":
+        return {"valid": "Error: Missing token."}
 
     token = (
         resources["SESSION"]
