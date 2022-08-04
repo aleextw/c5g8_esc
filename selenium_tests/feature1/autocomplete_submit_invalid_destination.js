@@ -11,7 +11,7 @@ async function test1() {
   let driver = await new Builder().forBrowser("chrome").build();
 
   // Step 1 -To fetch our server from the browser with our code.
-  await driver.get("https://localhost:3000");
+  await driver.get("https://c5g8-esc.onrender.com");
   await driver.manage().setTimeouts({ implicit: 10000 });
   console.info(await driver.manage().getTimeouts());
   // load search input bar then continue
