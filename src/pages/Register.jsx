@@ -45,7 +45,7 @@ const Register = () => {
             setEmailError(true);
             anyError = true;
         }
-        if (phoneNumber === "" || phoneNumber.match(/^[0-9]+$/)===null) {
+        if (phoneNumber === "" || phoneNumber.length!==8 || phoneNumber.match(/^[0-9]+$/)===null) {
             setPhoneNumberError(true);
             anyError = true;
         }
