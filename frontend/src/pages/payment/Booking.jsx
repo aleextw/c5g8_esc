@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { postBooking } from '../../api/services/destinations';
 import CSSReset from "@chakra-ui/css-reset";
+import * as gremlins from "gremlins.js";
+
 import { 
   ChakraProvider,
   Box,
@@ -22,6 +24,14 @@ import {
   StackDivider, InputGroup,Select, InputRightElement
 } from "@chakra-ui/react";
 
+function fuzzClicking(){
+  const strategy = {
+      species: [gremlins.species.clicker()],
+      strategies: [gremlins.strategies.distribution()]
+  }; 
+  const horde = gremlins.createHorde(strategy);
+  horde.unleash();
+}
 
 export default function Booking() {
   const localFirstName = sessionStorage.getItem("firstName");
@@ -332,6 +342,8 @@ export default function Booking() {
                   onClick={cancelBook}>
                   Cancel
                 </Button>
+
+                <Button onClick={fuzzClicking}>Fuzz</Button>
               </Flex>
             </Center>
           </VStack>
