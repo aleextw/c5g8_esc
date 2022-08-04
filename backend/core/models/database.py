@@ -386,6 +386,7 @@ def create_booking(booking):
             ]
         ]
     ):
+        print("Missing fields")
         return "-1"
     id = secrets.token_urlsafe(32)
     while (
@@ -428,7 +429,8 @@ def create_booking(booking):
     )
 
     if destination is None:
-        return -1
+        print("Invalid destination")
+        return "-1"
 
     booking_entry = Booking(
         booking_display_info=display_info,

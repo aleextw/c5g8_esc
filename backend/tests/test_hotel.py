@@ -9,9 +9,11 @@ from ..core.models.database import *
 client = TestClient(app)
 
 room_attr = [
+    "key",
     "uid",
     "name",
     "price",
+    "points",
     "photo",
     "description",
     "long_description",
