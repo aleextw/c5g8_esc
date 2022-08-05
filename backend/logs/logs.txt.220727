@@ -1,0 +1,1240 @@
+2022-07-27 00:16:46,299 (INFO): Started server process [9036]
+2022-07-27 00:16:46,300 (INFO): Waiting for application startup.
+2022-07-27 00:16:46,301 (INFO): Application startup complete.
+2022-07-27 12:56:22,976 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-27 12:56:23,331 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 12:56:23,793 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 12:56:25,125 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 12:56:26,006 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 12:56:27,171 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 12:56:28,069 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 12:56:29,339 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 12:56:30,256 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 13:48:28,986 (INFO): Started server process [20424]
+2022-07-27 13:48:28,987 (INFO): Waiting for application startup.
+2022-07-27 13:48:28,988 (INFO): Application startup complete.
+2022-07-27 16:57:31,254 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-07-27 16:57:31,697 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 16:57:33,052 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 16:57:33,570 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 16:57:34,526 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 16:57:35,544 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 16:57:36,535 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 16:57:39,770 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-27 16:57:40,625 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 16:57:41,264 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-27 16:57:41,997 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:35:35,093 (DEBUG): Resetting dropped connection: hotelapi.loyalty.dev
+2022-07-27 17:35:35,825 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 17:35:36,816 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:35:37,203 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 17:35:37,714 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:35:39,184 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 17:35:40,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:35:41,201 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-07-27 17:35:42,134 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:36:05,980 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-27 17:36:06,744 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 17:36:07,682 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8 HTTP/1.1" 200 None
+2022-07-27 17:36:08,583 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/Jot8/price?destination_id=YCcf&checkin=2022-07-28&checkout=2022-07-29&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-07-27 19:02:36,159 (INFO): Started server process [2176]
+2022-07-27 19:02:36,161 (INFO): Waiting for application startup.
+2022-07-27 19:02:36,162 (INFO): Application startup complete.
+2022-07-27 19:09:56,366 (INFO): Started server process [26424]
+2022-07-27 19:09:56,367 (INFO): Waiting for application startup.
+2022-07-27 19:09:56,368 (INFO): Application startup complete.
+2022-07-27 19:12:35,192 (INFO): Started server process [29460]
+2022-07-27 19:12:35,193 (INFO): Waiting for application startup.
+2022-07-27 19:12:35,194 (INFO): Application startup complete.
+2022-07-27 19:15:38,449 (INFO): Started server process [18764]
+2022-07-27 19:15:38,450 (INFO): Waiting for application startup.
+2022-07-27 19:15:38,452 (INFO): Application startup complete.
+2022-07-27 19:16:21,541 (INFO): Started server process [4208]
+2022-07-27 19:16:21,542 (INFO): Waiting for application startup.
+2022-07-27 19:16:21,542 (INFO): Application startup complete.
+2022-07-27 19:16:49,460 (INFO): Shutting down
+2022-07-27 19:16:49,569 (INFO): Waiting for application shutdown.
+2022-07-27 19:16:49,570 (INFO): Application shutdown complete.
+2022-07-27 19:16:49,571 (INFO): Finished server process [4208]
+2022-07-27 19:16:58,145 (INFO): Started server process [28656]
+2022-07-27 19:16:58,146 (INFO): Waiting for application startup.
+2022-07-27 19:16:58,147 (INFO): Application startup complete.
+2022-07-27 19:22:43,803 (WARNING): Invalid HTTP request received.
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_readers.py", line 85, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 91, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b"\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\x96S+\xdb\x00\xeb/3\xb7\x9f\x15g\xf5`gl\xca\x9a$l\xc6\xfe7\xc5n\xa9\xcd7\x04\xe1\xe4a X\xd71U\xcc\xa3\xce\x1f\x92\xed)\'\xbe*z\xd0\xab5X\xea\x00`\xbda\x92\x08\x85\x8a\xebCLm\x00 ")
+2022-07-27 19:22:44,046 (WARNING): Invalid HTTP request received.
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+2022-07-27 19:22:44,170 (WARNING): Invalid HTTP request received.
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+2022-07-27 19:22:44,354 (WARNING): Invalid HTTP request received.
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_readers.py", line 85, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\h11\_util.py", line 91, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\x1fnc\xbb7\x90#!\x1c\x00\x8b\xbdaz\x19v\xf0tV\x81\xf57\x88\xf0\x9c\xb0\x99\x9ci\xed\xe8\x8b L\x14\xde\x9b\xb7\xeb\x0bC\x95\xa2TQH\x8a\x84&g\xc1\xb6s\x91O\x08\xfc\xe4\xd3}\x02_\xcf\x84b\x00 \xfa\xfa\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00')
+2022-07-27 19:33:37,333 (INFO): Shutting down
+2022-07-27 19:33:37,442 (INFO): Waiting for application shutdown.
+2022-07-27 19:33:37,443 (INFO): Application shutdown complete.
+2022-07-27 19:33:37,444 (INFO): Finished server process [28656]
+2022-07-27 19:35:04,264 (INFO): Started server process [15560]
+2022-07-27 19:35:04,265 (INFO): Waiting for application startup.
+2022-07-27 19:35:04,266 (INFO): Application startup complete.
+2022-07-27 19:35:41,123 (INFO): Started server process [3252]
+2022-07-27 19:35:41,124 (INFO): Waiting for application startup.
+2022-07-27 19:35:41,127 (INFO): Application startup complete.
+2022-07-27 19:40:31,469 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 466, in register_user
+    .execute(select(User).where(User.phopne_number == data.phoneNumber))
+AttributeError: type object 'User' has no attribute 'phopne_number'
+2022-07-27 19:40:51,360 (INFO): Started server process [2820]
+2022-07-27 19:40:51,361 (INFO): Waiting for application startup.
+2022-07-27 19:40:51,362 (INFO): Application startup complete.
+2022-07-27 19:41:06,289 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 471, in register_user
+    new_user = User(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1154, in _declarative_constructor
+    raise TypeError(
+TypeError: 'phone' is an invalid keyword argument for User
+2022-07-27 19:41:44,745 (INFO): Started server process [12088]
+2022-07-27 19:41:44,746 (INFO): Waiting for application startup.
+2022-07-27 19:41:44,747 (INFO): Application startup complete.
+2022-07-27 19:41:51,839 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\destinations.py", line 17, in serve_destinations
+    if len(destinations := database.generate_destinations()) > 0:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 123, in generate_destinations
+    destinations = resources["SESSION"].execute(select(Destination)).all()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1640, in execute
+    ) = compile_state_cls.orm_pre_session_exec(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\context.py", line 319, in orm_pre_session_exec
+    session._autoflush()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 2237, in _autoflush
+    util.raise_(e, with_traceback=sys.exc_info()[2])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 2226, in _autoflush
+    self.flush()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3502, in _flush
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 326, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('PXL9DXAQ3efdxXYLzHtwguTptcvR5vpsxDP9PC3sMABQnr1NX7zQAanue-pwrgh4g9D_yhIMWFnWnCkLJIliGD3zYSTYegNC90S0-dOKBMd-4ZIY0Z2hCLKsFPncdrZPc4-OavUUAMSOSHQgHGiCb ... (44 characters truncated) ... EClMcZhrk7keAN51hHxxbBGvQ7fl9dt0zBoPA_YLxl3CA9pnocbcsdt6NfyTy5cETQJIbH-rIMvm_HaWxtsNvddccBd8upxwFfpbEQBayxHCa9IzMpO1FJJrWm38VI-mFM2Vgnj7nWB4YfXwDYDOg', User(id=1, first_name=Alex, last_name=Lee, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2022-07-27 19:41:51,973 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\destinations.py", line 17, in serve_destinations
+    if len(destinations := database.generate_destinations()) > 0:
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 123, in generate_destinations
+    destinations = resources["SESSION"].execute(select(Destination)).all()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1691, in execute
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1532, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('PXL9DXAQ3efdxXYLzHtwguTptcvR5vpsxDP9PC3sMABQnr1NX7zQAanue-pwrgh4g9D_yhIMWFnWnCkLJIliGD3zYSTYegNC90S0-dOKBMd-4ZIY0Z2hCLKsFPncdrZPc4-OavUUAMSOSHQgHGiCb ... (44 characters truncated) ... EClMcZhrk7keAN51hHxxbBGvQ7fl9dt0zBoPA_YLxl3CA9pnocbcsdt6NfyTy5cETQJIbH-rIMvm_HaWxtsNvddccBd8upxwFfpbEQBayxHCa9IzMpO1FJJrWm38VI-mFM2Vgnj7nWB4YfXwDYDOg', User(id=1, first_name=Alex, last_name=Lee, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+2022-07-27 19:44:43,662 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 452, in register_user
+    .execute(select(User).where(User.email == data.email))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1691, in execute
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1532, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('PXL9DXAQ3efdxXYLzHtwguTptcvR5vpsxDP9PC3sMABQnr1NX7zQAanue-pwrgh4g9D_yhIMWFnWnCkLJIliGD3zYSTYegNC90S0-dOKBMd-4ZIY0Z2hCLKsFPncdrZPc4-OavUUAMSOSHQgHGiCb ... (44 characters truncated) ... EClMcZhrk7keAN51hHxxbBGvQ7fl9dt0zBoPA_YLxl3CA9pnocbcsdt6NfyTy5cETQJIbH-rIMvm_HaWxtsNvddccBd8upxwFfpbEQBayxHCa9IzMpO1FJJrWm38VI-mFM2Vgnj7nWB4YfXwDYDOg', User(id=1, first_name=Alex, last_name=Lee, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+2022-07-27 19:45:10,674 (INFO): Started server process [8520]
+2022-07-27 19:45:10,675 (INFO): Waiting for application startup.
+2022-07-27 19:45:10,676 (INFO): Application startup complete.
+2022-07-27 19:46:06,071 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 483, in register_user
+    resources["SESSION"].commit()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3502, in _flush
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 326, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('_5UoeYwcKn70Ixd9wwD9F_eiUL4d8XtV4grB74tS7buuzVg9giS9l6zq0O0D6V7iVz4UFOYK2OlfaqgPS0YlhysKX3HEqE_aWrTteUwt2Ev7o4CeG4HmhTCCoY2wrBCpOewkJyt_hVh_C4dvnMpW9 ... (44 characters truncated) ... l2TgJu_U6rr2KxbTLdx1R1iOlPRh-yEaArJxeac2yTQtz6xAzIX5y6jxecbMjQ3Wt7XtvDTbTHq0tjK2d2vbjSMPgiQ5XqmRJA5EXe4oH1e8FUyhKcbg1aKp_CxHqYdc5mk3R_cuEQRFbKTR1SXcw', User(id=1, first_name=Alex, last_name=Tan, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2022-07-27 19:46:34,100 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 452, in register_user
+    .execute(select(User).where(User.email == data.email))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1691, in execute
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1532, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('_5UoeYwcKn70Ixd9wwD9F_eiUL4d8XtV4grB74tS7buuzVg9giS9l6zq0O0D6V7iVz4UFOYK2OlfaqgPS0YlhysKX3HEqE_aWrTteUwt2Ev7o4CeG4HmhTCCoY2wrBCpOewkJyt_hVh_C4dvnMpW9 ... (44 characters truncated) ... l2TgJu_U6rr2KxbTLdx1R1iOlPRh-yEaArJxeac2yTQtz6xAzIX5y6jxecbMjQ3Wt7XtvDTbTHq0tjK2d2vbjSMPgiQ5XqmRJA5EXe4oH1e8FUyhKcbg1aKp_CxHqYdc5mk3R_cuEQRFbKTR1SXcw', User(id=1, first_name=Alex, last_name=Tan, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+2022-07-27 19:48:06,835 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 452, in register_user
+    .execute(select(User).where(User.email == data.email))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1691, in execute
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1532, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('_5UoeYwcKn70Ixd9wwD9F_eiUL4d8XtV4grB74tS7buuzVg9giS9l6zq0O0D6V7iVz4UFOYK2OlfaqgPS0YlhysKX3HEqE_aWrTteUwt2Ev7o4CeG4HmhTCCoY2wrBCpOewkJyt_hVh_C4dvnMpW9 ... (44 characters truncated) ... l2TgJu_U6rr2KxbTLdx1R1iOlPRh-yEaArJxeac2yTQtz6xAzIX5y6jxecbMjQ3Wt7XtvDTbTHq0tjK2d2vbjSMPgiQ5XqmRJA5EXe4oH1e8FUyhKcbg1aKp_CxHqYdc5mk3R_cuEQRFbKTR1SXcw', User(id=1, first_name=Alex, last_name=Tan, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+2022-07-27 19:48:11,939 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 452, in register_user
+    .execute(select(User).where(User.email == data.email))
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1691, in execute
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1532, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 601, in _assert_active
+    raise sa_exc.PendingRollbackError(
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('_5UoeYwcKn70Ixd9wwD9F_eiUL4d8XtV4grB74tS7buuzVg9giS9l6zq0O0D6V7iVz4UFOYK2OlfaqgPS0YlhysKX3HEqE_aWrTteUwt2Ev7o4CeG4HmhTCCoY2wrBCpOewkJyt_hVh_C4dvnMpW9 ... (44 characters truncated) ... l2TgJu_U6rr2KxbTLdx1R1iOlPRh-yEaArJxeac2yTQtz6xAzIX5y6jxecbMjQ3Wt7XtvDTbTHq0tjK2d2vbjSMPgiQ5XqmRJA5EXe4oH1e8FUyhKcbg1aKp_CxHqYdc5mk3R_cuEQRFbKTR1SXcw', User(id=1, first_name=Alex, last_name=Tan, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+2022-07-27 19:48:13,460 (INFO): Shutting down
+2022-07-27 19:48:13,568 (INFO): Waiting for connections to close. (CTRL+C to force quit)
+2022-07-27 19:48:15,939 (INFO): Started server process [17888]
+2022-07-27 19:48:15,940 (INFO): Waiting for application startup.
+2022-07-27 19:48:15,941 (INFO): Application startup complete.
+2022-07-27 19:48:18,608 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 30, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 483, in register_user
+    resources["SESSION"].commit()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3502, in _flush
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\elements.py", line 326, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
+[SQL: INSERT INTO token (value, assigned_user) VALUES (?, ?)]
+[parameters: ('TkPez0pLKiMHgrdWp2n6KNZNtGNPPEcyufC7sXlinO1eFfhP5QI1cUkAwkhvN8bVKrzjckCSNb9x7weG3955kDz085MaZZ-ZG_aRlehf2K_0NLezeQE2SgUYbUkV_iUgVawsHlzb8989h5poMxeRN ... (44 characters truncated) ... F78Hpqe9tYnjRVaut1qdQstpKW4rsb8FWRpbHosu2SzPv7WJ85lKbL2Z-giRXBcPb1FAKowXfTkxL5bfPqzn6I7t9WRl1lYCwG2cxLI2NupCw0LDm7nJi80vh4TExix4MPQYbOv5akTX9qDD4wWpw', User(id=1, first_name=Alex, last_name=Lee, email=test@gmail.com, phone_number=1234, username=aleextw))]
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2022-07-27 19:49:57,086 (INFO): Started server process [6800]
+2022-07-27 19:49:57,087 (INFO): Waiting for application startup.
+2022-07-27 19:49:57,088 (INFO): Application startup complete.
+2022-07-27 19:50:00,546 (INFO): Shutting down
+2022-07-27 19:50:00,654 (INFO): Waiting for application shutdown.
+2022-07-27 19:50:00,655 (INFO): Application shutdown complete.
+2022-07-27 19:50:00,655 (INFO): Finished server process [6800]
+2022-07-27 19:50:28,959 (INFO): Started server process [17640]
+2022-07-27 19:50:28,960 (INFO): Waiting for application startup.
+2022-07-27 19:50:28,961 (INFO): Application startup complete.
+2022-07-27 19:50:37,115 (INFO): Shutting down
+2022-07-27 19:50:37,223 (INFO): Waiting for application shutdown.
+2022-07-27 19:50:37,223 (INFO): Application shutdown complete.
+2022-07-27 19:50:37,224 (INFO): Finished server process [17640]
+2022-07-27 19:50:42,679 (INFO): Started server process [9372]
+2022-07-27 19:50:42,680 (INFO): Waiting for application startup.
+2022-07-27 19:50:42,681 (INFO): Application startup complete.
+2022-07-27 19:53:09,467 (INFO): Shutting down
+2022-07-27 19:53:09,577 (INFO): Waiting for connections to close. (CTRL+C to force quit)
+2022-07-27 20:01:59,025 (INFO): Started server process [18572]
+2022-07-27 20:01:59,025 (INFO): Waiting for application startup.
+2022-07-27 20:01:59,025 (INFO): Application startup complete.
+2022-07-27 21:58:50,334 (INFO): Started server process [7772]
+2022-07-27 21:58:50,335 (INFO): Waiting for application startup.
+2022-07-27 21:58:50,336 (INFO): Application startup complete.
+2022-07-27 22:04:41,689 (INFO): Started server process [18628]
+2022-07-27 22:04:41,690 (INFO): Waiting for application startup.
+2022-07-27 22:04:41,691 (INFO): Application startup complete.
+2022-07-27 22:06:14,713 (INFO): Started server process [25644]
+2022-07-27 22:06:14,714 (INFO): Waiting for application startup.
+2022-07-27 22:06:14,714 (INFO): Application startup complete.
+2022-07-27 22:06:33,327 (INFO): Started server process [10888]
+2022-07-27 22:06:33,328 (INFO): Waiting for application startup.
+2022-07-27 22:06:33,329 (INFO): Application startup complete.
+2022-07-27 22:06:50,850 (INFO): Started server process [28120]
+2022-07-27 22:06:50,851 (INFO): Waiting for application startup.
+2022-07-27 22:06:50,852 (INFO): Application startup complete.
+2022-07-27 22:06:54,657 (INFO): Shutting down
+2022-07-27 22:06:54,765 (INFO): Waiting for application shutdown.
+2022-07-27 22:06:54,766 (INFO): Application shutdown complete.
+2022-07-27 22:06:54,766 (INFO): Finished server process [28120]
+2022-07-27 22:07:21,488 (INFO): Started server process [27752]
+2022-07-27 22:07:21,489 (INFO): Waiting for application startup.
+2022-07-27 22:07:21,490 (INFO): Application startup complete.
+2022-07-27 22:07:50,653 (INFO): Shutting down
+2022-07-27 22:07:50,761 (INFO): Waiting for application shutdown.
+2022-07-27 22:07:50,762 (INFO): Application shutdown complete.
+2022-07-27 22:07:50,762 (INFO): Finished server process [27752]
+2022-07-27 22:07:56,246 (INFO): Started server process [26852]
+2022-07-27 22:07:56,247 (INFO): Waiting for application startup.
+2022-07-27 22:07:56,248 (INFO): Application startup complete.
+2022-07-27 22:10:00,588 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 36, in register
+    return database.register_user(registration_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 474, in register_user
+    new_user = User(
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1154, in _declarative_constructor
+    raise TypeError(
+TypeError: 'passwordHash' is an invalid keyword argument for User
+2022-07-27 22:10:12,101 (INFO): Started server process [20600]
+2022-07-27 22:10:12,102 (INFO): Waiting for application startup.
+2022-07-27 22:10:12,102 (INFO): Application startup complete.
+2022-07-27 22:10:21,829 (INFO): Started server process [1968]
+2022-07-27 22:10:21,830 (INFO): Waiting for application startup.
+2022-07-27 22:10:21,831 (INFO): Application startup complete.
+2022-07-27 22:17:09,196 (INFO): Started server process [10508]
+2022-07-27 22:17:09,197 (INFO): Waiting for application startup.
+2022-07-27 22:17:09,198 (INFO): Application startup complete.
+2022-07-27 22:38:03,346 (INFO): Started server process [18664]
+2022-07-27 22:38:03,347 (INFO): Waiting for application startup.
+2022-07-27 22:38:03,348 (INFO): Application startup complete.
+2022-07-27 22:39:11,786 (INFO): Started server process [29620]
+2022-07-27 22:39:11,787 (INFO): Waiting for application startup.
+2022-07-27 22:39:11,789 (INFO): Application startup complete.
+2022-07-27 22:40:45,414 (INFO): Started server process [23444]
+2022-07-27 22:40:45,415 (INFO): Waiting for application startup.
+2022-07-27 22:40:45,416 (INFO): Application startup complete.
+2022-07-27 22:53:21,218 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 41, in login
+    return database.login_user(login_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 504, in login_user
+    if user.password_hash == data.passwordHash and user.username == data.username:
+AttributeError: Could not locate column in row for column 'password_hash'
+2022-07-27 22:54:15,697 (INFO): Started server process [17864]
+2022-07-27 22:54:15,697 (INFO): Waiting for application startup.
+2022-07-27 22:54:15,698 (INFO): Application startup complete.
+2022-07-27 23:12:54,092 (INFO): Started server process [22848]
+2022-07-27 23:12:54,093 (INFO): Waiting for application startup.
+2022-07-27 23:12:54,094 (INFO): Application startup complete.
+2022-07-27 23:14:13,909 (INFO): Started server process [17668]
+2022-07-27 23:14:13,910 (INFO): Waiting for application startup.
+2022-07-27 23:14:13,911 (INFO): Application startup complete.
+2022-07-27 23:15:42,496 (INFO): Started server process [2148]
+2022-07-27 23:15:42,496 (INFO): Waiting for application startup.
+2022-07-27 23:15:42,497 (INFO): Application startup complete.
+2022-07-27 23:16:51,681 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 46, in login
+    return database.login_user(login_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 529, in login_user
+    .execute(select(Token).where(Token.value == data.token))
+AttributeError: 'LoginData' object has no attribute 'token'
+2022-07-27 23:17:18,838 (INFO): Started server process [28328]
+2022-07-27 23:17:18,838 (INFO): Waiting for application startup.
+2022-07-27 23:17:18,839 (INFO): Application startup complete.
+2022-07-27 23:17:24,231 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 46, in login
+    return database.login_user(login_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 508, in login_user
+    token = Token(value=secrets.token_urlsafe(256), assigned_user=user[0])
+  File "<string>", line 4, in __init__
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
+    with util.safe_reraise():
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1157, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 459, in __set__
+    self.impl.set(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\attributes.py", line 1563, in set
+    raise TypeError(
+TypeError: Incompatible collection type: User is not list-like
+2022-07-27 23:17:48,159 (INFO): Started server process [17192]
+2022-07-27 23:17:48,160 (INFO): Waiting for application startup.
+2022-07-27 23:17:48,162 (INFO): Application startup complete.
+2022-07-27 23:17:57,141 (ERROR): Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 2637, in delete
+    state = attributes.instance_state(instance)
+AttributeError: Could not locate column in row for column '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\middleware\cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\fastapi\routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\concurrency.py", line 39, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\to_thread.py", line 28, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(func, *args, cancellable=cancellable,
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 818, in run_sync_in_worker_thread
+    return await future
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 754, in run
+    result = context.run(func, *args)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\routers\auth.py", line 51, in logout
+    return database.logout_user(logout_data)
+  File "C:\Users\Razer\Documents\GitHub\c5g8_esc\.\backend\core\models\database.py", line 536, in logout_user
+    resources["SESSION"].delete(token)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\session.py", line 2639, in delete
+    util.raise_(
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'sqlalchemy.engine.row.Row' is not mapped
+2022-07-27 23:18:10,461 (INFO): Started server process [23008]
+2022-07-27 23:18:10,462 (INFO): Waiting for application startup.
+2022-07-27 23:18:10,463 (INFO): Application startup complete.
