@@ -4,23 +4,16 @@ require("chromedriver");
 function clickableComponents(){
 
     var components = [
-        "salutation", 
-        "firstName", 
-        "lastName", 
-        "email", 
-        "number", 
-        "message", 
-        "cardName", 
-        "cardNumber", 
-        "expiryMonth", 
-        "expiryYear", 
-        "CVV", 
-        "billingAddress"
-        // "button_confirmBooking", 
-        // "button_linkToHomePage", 
-        // "button_register", 
-        // "button_login", 
-        // "button_viewBooking"
+        "bgImage",
+        "firstNameInput",
+        "lastNameInput",
+        "emailInput",
+        "numberInput",
+        "usernameInput",
+        "passwordInput",
+        "showPassword",
+        "registerUser"
+
     ];
 
     var randComp = components[Math.floor(Math.random() * components.length)];
@@ -34,11 +27,11 @@ async function test(){
 
     let driver = await new Builder().forBrowser("chrome").build();
 
-    await driver.get("https://c5g8-esc.onrender.com/booking");
+    await driver.get("https://c5g8-esc.onrender.com/register");
     await driver.manage().setTimeouts({implicit:10000});
     await driver.sleep(5000);
 
-    for (let i = 0; i < 100; i ++){
+    for (let i = 0; i < 500; i ++){
         let Clickable = driver.findElement(By.name(clickableComponents()));
         await Clickable.click();
     }
