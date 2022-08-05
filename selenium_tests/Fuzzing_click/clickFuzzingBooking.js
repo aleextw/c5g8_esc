@@ -15,9 +15,8 @@ function clickableComponents(){
         "expiryMonth", 
         "expiryYear", 
         "CVV", 
-        "billingAddress"
-        // "Currency_selector"
-        // "button_confirmBooking", 
+        "billingAddress",
+        "button_confirmBooking"
         // "button_linkToHomePage", 
         // "button_register", 
         // "button_login", 
