@@ -1,3 +1,3 @@
 export const config = {
-  apiURL: "https://secure-ocean-08729.herokuapp.com/",
+  apiURL: "https://localhost:8000",
 };
