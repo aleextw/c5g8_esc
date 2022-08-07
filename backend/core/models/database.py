@@ -28,7 +28,9 @@ from backend.shared_resources import resources
 logger = logging.getLogger()
 valid_chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
-pat = re.compile(r"^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$")
+email_pattern = re.compile(r"^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$")
+name_pattern = re.compile(r"^[0-9A-Za-z ]+$")
+username_pattern = re.compile(r"^[0-9A-Za-z ]+$")
 
 def load():
     """
@@ -476,13 +478,13 @@ def register_user(data):
     if data.email == "":
         return {"valid": "Error: Email cannot be empty."}
 
-    if pat.search(data.email) is None:
+    if email_pattern.search(data.email) is None:
         return {"valid": "Error: Please enter a valid email."}
 
     if data.username == "":
         return {"valid": "Error: Username cannot be empty."}
 
-    if not data.username.isalnum():
+    if username_pattern.search(data.username) is None:
         return {"valid": "Error: Please enter a valid username."}
 
     if data.phoneNumber == "":
@@ -498,10 +500,10 @@ def register_user(data):
     if data.lastName == "":
         return {"valid": "Error: Last name cannot be empty."}
 
-    if not data.firstName.isalnum():
+    if name_pattern.search(data.firstName) is None:
         return {"valid": "Error: First name cannot have special characters."}
 
-    if not data.lastName.isalnum():
+    if name_pattern.search(data.lastName) is None:
         return {"valid": "Error: Last name cannot have special characters."}
 
     if (
