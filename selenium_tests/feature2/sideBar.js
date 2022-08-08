@@ -11,7 +11,7 @@ async function test(){
     await driver.manage().setTimeouts({ implicit: 10000 });
     console.info(await driver.manage().getTimeouts());
     
-    await driver.sleep(until.elementIsVisible(driver.findElement(By.name("button_bookHotel"))));
+    await driver.wait(until.elementIsVisible(driver.findElement(By.name("button_bookHotel"))));
     await driver.sleep(5000);
     
     // Hotel search

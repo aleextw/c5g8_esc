@@ -14,30 +14,43 @@ async function valid_data() {
   await driver.manage().setTimeouts({ implicit: 10000 });
   console.info(await driver.manage().getTimeouts());
   // get search input bar
-  await driver.sleep(5000);
   let inputBar = driver.findElement(By.name("dest_input"));
   await inputBar.click();
   await inputBar.clear();
   await driver.sleep(3000);
+  let submitSearch = await driver.findElement(By.name("dest_search_submit"));
 
   // Step 2 - enter destination input
+  // 2a - empty field
+  await submitSearch.click();
+  await driver.sleep(2000);
+
+  // 2b - invalid dest
+  await inputBar.click();
+  await inputBar.sendKeys("A","s","c","e","n","d","a");
+  await driver.sleep(2000);
+  await submitSearch.click();
+  await driver.sleep(3000);
+
+  // 2c - valid dest
+  await inputBar.click();
+  await inputBar.sendKeys(Key.CONTROL, 'a', Key.DELETE);
   await inputBar.sendKeys("s");
   await driver.sleep(500);
-  await inputBar.sendKeys("i");
+  await inputBar.sendKeys("h");
   await driver.sleep(500);
-
 
   // Step 3 - use arrow keys to navigate down to choice
   await inputBar.sendKeys(Key.ARROW_DOWN);
-  await driver.sleep(1000);
+  await driver.sleep(500);
   await inputBar.sendKeys(Key.ARROW_DOWN);
-  await driver.sleep(1000);
+  await driver.sleep(500);
   await inputBar.sendKeys(Key.ENTER);
 
   // Step 4 - select datepicker input
   let datePicker = driver.findElement(By.name("date_picker"));
   await datePicker.click();
-  await sleep(1000);
+  await driver.sleep(1000);
 
   // TODO: Fix inability to click on dates in datepicker
   //   // Step 5 - select dates of stay
@@ -53,22 +66,21 @@ async function valid_data() {
   let roomCount = driver.findElement(By.name("rooms"));
   await roomCount.click();
   
-  await sleep(1000);
+  await driver.sleep(1000);
   await roomCount.sendKeys(Key.ARROW_DOWN);
   await roomCount.sendKeys(Key.ENTER);
 
   // Step 7 - select room count input
   let adultCount = driver.findElement(By.name("num_adults"));
   await adultCount.click();
-  await sleep(1000);
-  await adultCount.sendKeys(Key.ARROW_UP);
+  await driver.sleep(1000);
+  await adultCount.sendKeys(Key.ARROW_DOWN);
   await adultCount.sendKeys(Key.ENTER);
 
   // Step 8 - select room count input
   let childrenCount = driver.findElement(By.name("num_children"));
   await childrenCount.click();
-  await sleep(1000);
-  await childrenCount.sendKeys(Key.ARROW_DOWN);
+  await driver.sleep(1000);
   await childrenCount.sendKeys(Key.ARROW_DOWN);
   await childrenCount.sendKeys(Key.ENTER);
 
@@ -79,7 +91,7 @@ async function valid_data() {
     )} in DestinationSearch for HBS`
   );
   await driver.findElement(By.name("dest_search_submit")).click();
-  await sleep(15000);
+  await driver.sleep(3000);
   await driver.close();
 }
 
