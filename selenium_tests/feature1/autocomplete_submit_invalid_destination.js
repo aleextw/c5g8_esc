@@ -1,33 +1,39 @@
 const { By, Key, Builder, until } = require("selenium-webdriver");
 require("chromedriver");
 
-async function test1() {
+async function valid_data() {
   /* 
-  
+  Should transition to feature 2 (hotels) given valid data
   */
-
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  //To wait for browser to build and launch properly
+  // To wait for browser to build and launch properly
   let driver = await new Builder().forBrowser("chrome").build();
 
   // Step 1 -To fetch our server from the browser with our code.
   await driver.get("https://c5g8-esc.onrender.com");
   await driver.manage().setTimeouts({ implicit: 10000 });
   console.info(await driver.manage().getTimeouts());
-  // load search input bar then continue
+  // get search input bar
+  await driver.sleep(5000);
   let inputBar = driver.findElement(By.name("dest_input"));
   await inputBar.click();
   await inputBar.clear();
-  await sleep(3000);
+  await driver.sleep(3000);
 
   // Step 2 - enter destination input
-  await inputBar.sendKeys("shh");
-  let autocomplete = driver.findElement(By.name("dest_suggestions"));
-  await driver.wait(until.elementIsVisible(autocomplete), 5000);
+  await inputBar.sendKeys("s");
+  await driver.sleep(500);
+  await inputBar.sendKeys("h");
+  await driver.sleep(500);
+  await inputBar.sendKeys("h");
+  await driver.sleep(500);
+
 
   // Step 3 - use arrow keys to navigate down to choice
   // await inputBar.sendKeys(Key.ARROW_DOWN);
+  // await driver.sleep(1000);
   // await inputBar.sendKeys(Key.ARROW_DOWN);
+  // await driver.sleep(1000);
   // await inputBar.sendKeys(Key.ENTER);
 
   // Step 4 - select datepicker input
@@ -48,6 +54,7 @@ async function test1() {
   // Step 6 - select room count input
   let roomCount = driver.findElement(By.name("rooms"));
   await roomCount.click();
+  
   await sleep(1000);
   await roomCount.sendKeys(Key.ARROW_DOWN);
   await roomCount.sendKeys(Key.ENTER);
@@ -68,16 +75,16 @@ async function test1() {
   await childrenCount.sendKeys(Key.ENTER);
 
   // Step 9 - submit
-  await driver.findElement(By.name("dest_search_submit")).click();
   console.log(
-    `Error caught for ${await inputBar.getAttribute(
+    `Search entered successfully for ${await inputBar.getAttribute(
       "value"
     )} in DestinationSearch for HBS`
   );
-  await sleep(5000);
+  await driver.findElement(By.name("dest_search_submit")).click();
+  await sleep(15000);
   await driver.close();
 }
 
 // passed
-test1();
+valid_data();
 // run w ` node ____.js `
