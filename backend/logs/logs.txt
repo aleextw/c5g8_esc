@@ -1,0 +1,85 @@
+2022-08-07 13:24:44,960 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:44,974 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:44,982 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:44,991 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,001 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,011 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,020 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,027 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,035 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,041 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,048 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,089 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,099 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,107 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,119 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,129 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,167 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,181 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,200 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,221 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,228 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,236 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,243 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,252 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,263 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,274 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,283 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,290 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,316 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:24:45,337 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:05,857 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:05,885 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:05,895 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:26,258 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:47,044 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:47,048 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-08-07 13:25:47,308 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:25:47,809 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:25:52,826 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:52,985 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:25:53,523 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:25:58,533 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:25:58,598 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:25:59,178 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:26:04,192 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:04,256 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf HTTP/1.1" 200 None
+2022-08-07 13:26:04,659 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:26:09,672 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:09,863 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:26:10,101 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-05&checkout=2022-08-04&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:26:15,109 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:15,252 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:26:15,532 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:26:20,540 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:20,662 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:26:20,937 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:26:25,955 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:26,018 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-07 13:26:26,346 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=FOO&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 500 None
+2022-08-07 13:26:31,355 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:26:56,376 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:05,744 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:06,515 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:27:11,648 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:12,308 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:15,295 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:27:20,466 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:20,552 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-08-07 13:27:20,844 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:27:25,861 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:25,920 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-08-07 13:27:26,230 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-08-09&checkout=2022-08-10&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-07 13:27:31,238 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:31,921 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:32,505 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-06&checkout=2022-08-05&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:27:37,527 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:38,140 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:38,716 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-08&checkout=2022-08-09&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:27:43,732 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:44,442 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:45,048 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-08&checkout=2022-08-09&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:27:50,067 (DEBUG): Using proactor: IocpProactor
+2022-08-07 13:27:50,733 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-07 13:27:51,413 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-08&checkout=2022-08-09&lang=en_US&currency=FOO&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-07 13:27:56,424 (DEBUG): Using proactor: IocpProactor

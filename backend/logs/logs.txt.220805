@@ -1,0 +1,132 @@
+2022-08-05 12:26:04,089 (INFO): Started server process [2548]
+2022-08-05 12:26:04,089 (INFO): Waiting for application startup.
+2022-08-05 12:26:04,089 (INFO): Application startup complete.
+2022-08-05 12:26:04,091 (INFO): Uvicorn running on https://127.0.0.1:8000 (Press CTRL+C to quit)
+2022-08-05 12:38:10,113 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,125 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,133 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,141 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,150 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,157 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,167 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,176 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,186 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,196 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,205 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,255 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,266 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,276 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,287 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,295 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,324 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,337 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,353 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,371 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,381 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,388 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,395 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,403 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,413 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,421 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,431 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,436 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,459 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:10,481 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:34,719 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:34,746 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:34,755 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:38:58,862 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:23,557 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:23,562 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-08-05 12:39:23,715 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:24,190 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:39:29,200 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:29,306 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:29,857 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:39:34,870 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:34,947 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:35,601 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:39:40,619 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:40,680 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf HTTP/1.1" 200 None
+2022-08-05 12:39:41,223 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/asdf/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:39:46,243 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:46,393 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:46,653 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-03&checkout=2022-08-02&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:39:51,671 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:51,729 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:52,004 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:39:57,016 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:39:57,118 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:39:57,362 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:40:02,377 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:02,473 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4 HTTP/1.1" 200 None
+2022-08-05 12:40:02,851 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/KVj4/price?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=FOO&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 500 None
+2022-08-05 12:40:07,867 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:36,815 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:37,499 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:40:38,051 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:40:43,179 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:43,791 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:40:46,053 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:40:51,259 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:51,306 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-08-05 12:40:51,582 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:40:56,596 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:40:56,664 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=asdf HTTP/1.1" 200 None
+2022-08-05 12:40:56,932 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=asdf&checkin=2022-08-07&checkout=2022-08-08&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:41:01,949 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:41:02,539 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:41:03,031 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-04&checkout=2022-08-03&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:41:08,045 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:41:08,644 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:41:09,057 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:41:14,072 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:41:14,706 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:41:15,117 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:41:20,130 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:41:20,756 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=A6Dz HTTP/1.1" 200 None
+2022-08-05 12:41:21,216 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=A6Dz&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=FOO&country_code=SG&guests=0&partner_id=1 HTTP/1.1" 422 None
+2022-08-05 12:41:26,224 (DEBUG): Using proactor: IocpProactor
+2022-08-05 12:56:02,623 (ERROR): Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-08-05 12:56:19,936 (ERROR): Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-08-05 12:56:23,512 (DEBUG): Starting new HTTPS connection (1): hotelapi.loyalty.dev:443
+2022-08-05 12:56:23,818 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-08-05 12:56:24,170 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:56:25,517 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-08-05 12:56:26,399 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:56:27,416 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels?destination_id=YCcf HTTP/1.1" 200 None
+2022-08-05 12:56:28,357 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/prices?destination_id=YCcf&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:56:30,654 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/z5rb HTTP/1.1" 200 None
+2022-08-05 12:56:31,176 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/z5rb/price?destination_id=YCcf&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:56:32,633 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/z5rb HTTP/1.1" 200 None
+2022-08-05 12:56:33,316 (DEBUG): https://hotelapi.loyalty.dev:443 "GET /api/hotels/z5rb/price?destination_id=YCcf&checkin=2022-08-06&checkout=2022-08-07&lang=en_US&currency=SGD&country_code=SG&guests=2&partner_id=1 HTTP/1.1" 200 None
+2022-08-05 12:56:42,675 (ERROR): Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2022-08-05 12:58:17,824 (ERROR): Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Razer\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 162, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
