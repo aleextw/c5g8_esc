@@ -4,15 +4,16 @@ require("chromedriver");
 // characters = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_{}[];:`~
 
 // generate inputs with fuzzed data using appropriate inputs
-function textFuzz(){
-    const length = Math.floor(Math.random() * 7)
-    var textFuzzed = '';
-    var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_{}[];:`~";
-    var charLength = characters.length;
+function alphabetFuzz(){
+    var length = Math.floor(Math.random() * 3) 
+    var alphabetFuzzed = ""
+    var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var charLenght = characters.length;
     for(var i = 0; i < length; i++){
-        textFuzzed += characters.charAt(Math.floor(Math.random()*charLength));
+        alphabetFuzzed += characters.charAt(Math.floor(Math.random()*charLenght));
     }
-    return textFuzzed;
+    // console.log(alphabetFuzzed);
+    return alphabetFuzzed;
 }
 
 
@@ -21,7 +22,7 @@ async function loop(driver, hotelSearch) {
     // clear input
     await hotelSearch.sendKeys(Key.CONTROL, 'a', Key.DELETE);
     await driver.sleep(1000);
-    await hotelSearch.sendKeys(textFuzz());
+    await hotelSearch.sendKeys(alphabetFuzz());
     await driver.sleep(1000);
 
 }
@@ -44,11 +45,12 @@ async function test() {
     await driver.wait(until.elementIsVisible(await driver.findElement(By.name("button_bookHotel"))));
 
     let hotelSearch = await driver.findElement(By.name("HotelSearchInput"));
+    await driver.sleep(5000);
         
     console.log("Fuzzing in progress")
     // keep looping
     while (true) {
-        await loop(driver,hotelSearch);
+        await loop(driver, hotelSearch);
         // If page changes, close test
         if (!hotelSearch.isDisplayed) {
             console.log("Fuzzing ended");

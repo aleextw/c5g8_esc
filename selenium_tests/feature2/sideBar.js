@@ -19,29 +19,29 @@ async function test(){
     await hotelSearch.click();
     await hotelSearch.sendKeys(Key.CONTROL,"a",Key.DELETE);
     await hotelSearch.sendKeys("r","e","g","i","s");
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     
     await hotelSearch.click();
     await hotelSearch.sendKeys(Key.CONTROL,"a",Key.DELETE);
     await hotelSearch.sendKeys("r","o","a","d");
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     // clear inputs
     await hotelSearch.click();
     await hotelSearch.sendKeys(Key.CONTROL,"a",Key.DELETE);
-    await driver.sleep(3000);
+    await driver.sleep(2000);
 
     console.log("Test filters")
     // Review score filter
     let reviewRange = await driver.findElement(By.name("reviewRange")).click();
-    await driver.sleep(3000);
+    await driver.sleep(1500);
 
     // Price range filter
     let priceRange = await driver.findElement(By.name("priceRange")).click();
-    await driver.sleep(3000);
+    await driver.sleep(1500);
 
     // Star rating filter
     let starRange = await driver.findElement(By.name("starRange")).click();
-    await driver.sleep(5000);
+    await driver.sleep(1500);
 
     // reset 
     // TODO: FIX reset button if possible (filter slider + selector)
@@ -53,19 +53,19 @@ async function test(){
     // price low to high
     await sorting.click();
     await sorting.sendKeys(Key.ARROW_DOWN, Key.ENTER);
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     // price high to low
     await sorting.click();
     await sorting.sendKeys(Key.ARROW_DOWN, Key.ENTER);
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     // stars low to high
     await sorting.click();
     await sorting.sendKeys(Key.ARROW_DOWN, Key.ENTER);
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     // stars high to low
     await sorting.click();
     await sorting.sendKeys(Key.ARROW_DOWN, Key.ENTER);
-    await driver.sleep(3000);
+    await driver.sleep(2000);
     // distance
     await sorting.click();
     await sorting.sendKeys(Key.ARROW_DOWN, Key.ENTER);
