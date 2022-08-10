@@ -29,6 +29,8 @@ function Card(props) {
       navigate(`/booking`);
     }
 
+    const currency = params.get("currency");
+
     const images = [];
     for (let i = 0; i < props.images.length; i++) {
       images.push({original: (props.images[i].high_resolution_url ? props.images[i].high_resolution_url : props.images[i].url) , thumbnail: props.images[i].url, thumbnailWidth: 1280, thumbnailHeight: 720});
@@ -58,7 +60,7 @@ function Card(props) {
         </Stack>
         <Stack align="center" p="2" w={{base: "100%", md: "40%"}} direction={{base: "row", md: "column"}}>
           <Stack direction="column" w={{base: "50%", md: "100%"}} h="100%">
-            <Text size="sm" fontWeight={"bold"} fontSize={20} color={"gray.700"}>SGD {props.price}</Text>
+            <Text size="sm" fontWeight={"bold"} fontSize={20} color={"gray.700"}>{currency} {props.price}</Text>
             <Text size="sm" fontWeight={"semibold"} color="teal.500">Earn {props.points} points!</Text>
           </Stack>
           <Stack direction="column" w={{base: "50%", md: "100%"}} h="100%">
