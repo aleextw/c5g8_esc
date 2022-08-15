@@ -1,181 +1,176 @@
 import {
   Box,
-  Button,
   ChakraProvider,
-  Flex,
-  FormControl,
-  FormLabel,
   Heading,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Link,
-  Stack,
-  Textarea,
-  Tooltip,
-  useClipboard,
-  useColorModeValue,
   VStack,
+  HStack,
+  StackDivider,
+  Text,
+  Center,
+  Spinner,
+  Alert,
+  AlertIcon,
+  Collapse,
+  Stack,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import NavBar from '../../components/NavBar';
+import { getBooking } from '../../api/services/destinations';
+import { useLocation } from "react-router-dom";
 
 
-export default function Summary(props) {
-  console.log("roomName: ", localStorage.getItem("roomName"));
-  console.log("hotelName: ", localStorage.getItem("hotelName"));
-  console.log("checkInDate: ", localStorage.getItem("checkInDate"));
-  console.log("checkOutDate: ", localStorage.getItem("checkOutDate"));
-  console.log("roomPrice: ", localStorage.getItem("roomPrice"));
-  console.log("name: ", localStorage.getItem("name"));
-  console.log("email: ", localStorage.getItem("email"));
-  console.log("phone: ", localStorage.getItem("phone"));
-  console.log("additionalData", localStorage.getItem("additionalData"))
 
-  // booking user details
-  const nameSet = localStorage.getItem('name')
-  const emailSet = localStorage.getItem('email')
-  const phoneSet = localStorage.getItem('phone')
-  const messageSet = localStorage.getItem('additionalData')
-
-  // booking hotel details
-  const roomName = localStorage.getItem('roomName')
-  const hotelName = localStorage.getItem('hotelName')
-  const checkInDate = localStorage.getItem('checkInDate')
-  const checkOutDate = localStorage.getItem('checkOutDate')
-  const roomPrice = localStorage.getItem('roomPrice')
-
-  // user payment details
-  const cardName = localStorage.getItem('cardName')
-  const cardNumber = localStorage.getItem('cardNumber')
-  const expiry = localStorage.getItem('expiry')
-  const CVV = localStorage.getItem('CVV')
-
-  const maskedNumber = `${cardNumber.substring(0, 7)}xxxxxx${cardNumber.substring(11, 15)}`;
+function SummaryData(props) {
+  const [copied, setCopied] = useState(false);
 
   return (
-    <div className='home'>
-      <Flex
-        bg={useColorModeValue('gray.100', 'gray.900')}
-        align="center"
-        justify="center"
-        css={{
-          backgroundAttachment: 'fixed',
-        }}
-        id="contact">
-        <Box
-          borderRadius="lg"
-          m={{ base: 5, md: 16, lg: 10 }}
-          p={{ base: 5, lg: 16 }}>
-          <Box>
-            <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-              <ChakraProvider>
-              <Heading
-                fontSize={{
-                  base: '4xl',
-                  md: '5xl',
-                }}>
-                Booking Summary
-              </Heading>
-                <h1>User Details</h1>
-              <Stack
-                spacing={{ base: 4, md: 8, lg: 20 }}
-                direction={{ base: 'column', md: 'row' }}>
-                <Box
-                  bg={useColorModeValue('white', 'gray.700')}
-                  borderRadius="lg"
-                  p={8}
-                  color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                  shadow="base">
-                  <VStack spacing={5}>
-                    <FormControl isRequired>
-                      <p>Name: {nameSet}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>Email: {emailSet}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>Number: {phoneSet}</p>
-                    </FormControl>
+    <Box name="bgImage"
+      bgImage="https://images.hdqwalls.com/download/clouds-sky-mountains-4k-2j-2560x1080.jpg"
+      w="100%"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      fill="cover"
+      h="100%"
+    >
+      <Center w="100%" h="100%" overflow="scroll">
+        <Box p="5" maxW="1000px" w={{base: "100%", lg: "70%"}} borderWidth="1px" borderRadius={{base: "none", lg: "lg"}}  bgColor="white">
+        <VStack w="100%" h="100%" divider={<StackDivider borderColor='gray.200' />}>
+            <Heading>
+              Your booking has been confirmed!
+            </Heading>
+            <Box>
+              <Heading size="md" w="100%" align="center">Your booking ID:</Heading>
+              <Center w="100%" align="center">
+                <Link name="copyBookingRef" color='teal.500' w="100%" onClick={(e)=>{navigator.clipboard.writeText(e.target.innerText); setCopied(true); setInterval(() => setCopied(false), 10000)}} isExternal>{props.data.booking_info.guest_booking_ref}</Link>
+              </Center>
+              <Collapse in={copied} animateOpacity>
+                <Alert status='info' borderRadius="md">
+                  <AlertIcon />
+                  Booking ID copied to clipboard!
+                </Alert>
+              </Collapse>
+              
+              <Text align="center">(Copy this booking ID to access your booking data again in future.)</Text>
+            </Box>
+            <HStack w="100%" h="100%">
+              <VStack w="100%" h="100%">
+                <Heading w="100%" size="md" align="left">
+                  Guest Details
+                </Heading>
+                <Text w="100%" align="left">
+                  <strong>Name:</strong> {props.data.account_info.salutation} {props.data.account_info.first_name} {props.data.account_info.last_name}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Email:</strong> {props.data.account_info.email}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Phone:</strong> {props.data.account_info.contact_number}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Additional Information:</strong> {props.data.account_info.additional_data}
+                </Text>
+              </VStack>
+              <VStack w="100%" h="100%">
+                <Heading w="100%" size="md" align="left">
+                  Payment Details
+                </Heading>
+                <Text w="100%" align="left">
+                  <strong>Payee Name:</strong> {props.data.payment_info.card_name}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Card Number:</strong> {props.data.payment_info.card_number}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Billing Address:</strong> {props.data.payment_info.billing_address}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Amount Paid:</strong> {props.data.booking_info.currency} {Number(props.data.booking_info.price)}
+                </Text>
+              </VStack>
+            </HStack>
+            
+            <Stack w="100%" direction={{base: "row", lg: "column"}}>
+              <VStack w="100%">
+                <Heading w="100%" size="md" align="left">
+                  Hotel Details
+                </Heading>
+                <Text w="100%" align="left">
+                  <strong>Destination:</strong> {props.data.destination_info.term}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Hotel Name:</strong> {props.data.display_info.hotel_name}
+                </Text>
+                <Text w="100%" align="left">
+                  <strong>Room Name:</strong> {props.data.display_info.room_name}
+                </Text>
+              </VStack>
+              
 
-                    <FormControl isRequired>
-                      <p>Message: {messageSet}</p>
-                    </FormControl>
-                  </VStack>
-                </Box>
-              </Stack>
-              <h1>Hotel Details</h1>
-              <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: 'column', md: 'row' }}>
-                <Box
-                  bg={useColorModeValue('white', 'gray.700')}
-                  borderRadius="lg"
-                  p={8}
-                  color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                  shadow="base">
-                  <VStack spacing={5}>
-                    <FormControl isRequired>
-                      <p>Hotel: {hotelName}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>Room: {roomName}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>Number: {phoneSet}</p>
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <p>Check In: {checkInDate}</p>
-                      <p>Check Out: {checkOutDate}</p>
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <p>Price: {roomPrice}</p>
-                    </FormControl>
-                  </VStack>
-                  </Box>
-                </Stack>
-                <h1>Payment Details</h1>
-              <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: 'column', md: 'row' }}>
-                <Box
-                  bg={useColorModeValue('white', 'gray.700')}
-                  borderRadius="lg"
-                  p={8}
-                  color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                  shadow="base">
-                  <VStack spacing={5}>
-                    <FormControl isRequired>
-                      <p>cardName: {cardName}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>cardNumber: {maskedNumber}</p>
-                    </FormControl>
-  
-                    <FormControl isRequired>
-                      <p>expiry: {expiry}</p>
-                    </FormControl>
-
-                    <FormControl isRequired>
-                      <p>CVV: {CVV}</p>
-                    </FormControl>
-                  </VStack>
-                  </Box>
-                </Stack>
-
-              </ChakraProvider>
-            </VStack>
-          </Box>
+              <VStack w="100%">
+                <Text w="100%" align="left">
+                  <strong>Check In Date:</strong> {props.data.display_info.check_in_date}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Check Out Date:</strong> {props.data.display_info.check_out_date}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Rooms:</strong> {props.data.display_info.num_rooms}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Adults:</strong> {props.data.display_info.num_adults}
+                </Text>
+                <Text w="100%" align="top-left">
+                    <strong>Number of Children:</strong> {props.data.display_info.num_children}
+                </Text>
+              </VStack>
+              
+            </Stack>    
+          </VStack>
         </Box>
-      </Flex>
-    </div>
+    </Center>
+  </Box>);
+}
+
+export default function Summary() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const [ booking, setBooking ] = useState("");
+  const foo = (e) => {console.log(e); setBooking(e)}
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {getBooking(params, foo)}, []);
+  
+  let content;
+
+  if (booking !== "") {
+    if (booking === -1) {
+      content = (<Heading size="lg">
+                  No booking found!
+              </Heading>);
+    } else {
+      content = <SummaryData data={booking}/>;
+    }
+  } else {
+    content = (<Spinner
+      thickness='4px'
+      speed='0.65s'
+      emptyColor='gray.200'
+      color='blue.500'
+      size='xl'
+  />);
+  }
+
+  return (
+    <ChakraProvider>
+      <Box h="100vh" w="100wh">
+        <Box h="8%" minH="50px" w="100%">
+            <NavBar></NavBar>
+        </Box>
+        <Center w="100%" h="92%">
+          { content }
+        </Center>
+      </Box>
+    </ChakraProvider>
   );
 }

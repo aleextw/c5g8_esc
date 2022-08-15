@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException, status
-from backend.core.models import database
-from datetime import date
 import logging
+from datetime import date
+
+from fastapi import APIRouter, HTTPException, status
+
+from backend.core.models import database
 
 router = APIRouter()
 

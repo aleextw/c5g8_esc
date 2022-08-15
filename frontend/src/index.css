@@ -54,24 +54,72 @@ ul li {
   margin: 0;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* 
 .suggestions::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .suggestions {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 } 
+*/
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hotels-list::-webkit-scrollbar {
+.CardList::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.hotels-list {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.CardList {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 } 
+
+
+.suggestions::-webkit-scrollbar {
+  width: 10px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+  background: rgb(200, 200, 200);
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+  background: rgb(150, 150, 150);
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-thumb:hover {
+  background: rgb(125, 125, 125);
+  border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-thumb:active {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+
+
+.hotels-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.hotels-list::-webkit-scrollbar-track {
+  background: rgb(200, 200, 200);
+  border-radius: 10px;
+}
+
+.hotels-list::-webkit-scrollbar-thumb {
+  background: rgb(150, 150, 150);
+  border-radius: 10px;
+}
+
+.hotels-list::-webkit-scrollbar-thumb:hover {
+  background: rgb(125, 125, 125);
+  border-radius: 10px;
+}
+
+.hotels-list::-webkit-scrollbar-thumb:active {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}

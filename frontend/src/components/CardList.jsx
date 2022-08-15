@@ -1,7 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Component } from "react";
-import { getHotels } from "../api/services/destinations";
-import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spacer, Spinner, UnorderedList, ListItem, Show, StackDivider } from "@chakra-ui/react"
+import React from "react";
+import { Flex, Heading, Image, Stack, Text, Button, Box, Center, Spinner, Show, StackDivider, Spacer, AspectRatio } from "@chakra-ui/react"
+import InfiniteScroll from "react-infinite-scroll-component";
+import StarRatingComponent from 'react-star-rating-component';
 
 function formatDistance(distance) {
     if (distance < 1000) {
@@ -17,112 +18,89 @@ function Card(props) {
     
     const navigate = useNavigate();
     const searchHotel = () => {
-        console.log(props.name);
-        console.log(props);
-        console.log(props.uid);
-        // TODO: Add error checking for invalid UIDs
-        // TODO: Store data to local storage        
-        // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=SGD`);
-        // navigate(`/hotel?hotel_uid=${props.uid}&dest_uid=${params.get("uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&guests=${params.get("guests")}&currency=SGD`);
+        navigate(`/hotel?hotel_uid=${props.uid}&destination=${params.get("destination")}&dest_uid=${params.get("dest_uid")}&checkInDate=${params.get("checkInDate")}&checkOutDate=${params.get("checkOutDate")}&numRooms=${params.get("numRooms")}&numAdults=${params.get("numAdults")}&numChildren=${params.get("numChildren")}&currency=${params.get("currency")}`);
     }
 
-    return (<Flex  name="HotelCard" onClick={searchHotel} cursor={"pointer"}>
-        <Image boxSize="150px" objectFit="cover" w="25%" src={props.image} />
-        <Stack align="center" w="75%" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
-            <Stack p="2" direction="column" w={{base: "100%", md: "60%", sm:"60%"}}>
-                <Heading size="md">{props.name}</Heading>
+    return (
+    <Flex h="200px" maxW="1000px" name="HotelCard" onClick={searchHotel} cursor={"pointer"} mt={3} shadow={"base"} background="white" borderRadius={"8px"}>
+        <AspectRatio w="200px" ratio={1 / 1}>
+            <Image boxSize="200px" objectFit="cover" src={props.image} fallbackSrc="https://via.placeholder.com/150"/>
+        </AspectRatio>
+        <Stack align="center" h="200px" w="80%" maxW="800px" direction={{ base: 'column', md: 'row' }} divider={<StackDivider borderColor='#F5F4F1' borderWidth="1px"/>}>
+            <Flex p="4" direction="column" w={{base: "100%", md: "60%"}} h={{base: "50%", md: "100%"}} dspacing={"18px"}>
+                <Heading size="sm">{props.name}</Heading>
                 <Show above="md">
                     <Text>{props.address}</Text>
                     <Text>{formatDistance(props.distance)} from city centre</Text>
                 </Show>
-                {/* TODO: Add rating */}
-                {/* TODO: Add map modal */}
-                {/* TODO: Add review */}
-            </Stack>
-            <Stack p="2" w={{base: "100%", md: "40%", sm: "60%"}} direction="column">
-                {/* <Heading size="sm">C5G8</Heading> */}
-                <Text size="sm">SGD {props.price}</Text>
-                <Text>Earn at least {props.points} points</Text>
+                <Flex direction="row" w="100%">
+                    <StarRatingComponent 
+                        name={`${props.uid}-star`}
+                        editing={false}
+                        starCount={5}
+                        value={props.rating}
+                        activeColor="#ffd700"
+                        color="#D3D3D3"
+                    />
+                    <Spacer />
+                    <Text>
+                        {props.review}
+                    </Text>
+                </Flex>
+                
+            </Flex>
+            <Flex p="4" w={{base: "100%", md: "40%"}} h={{base: "50%", md: "100%"}} direction="column" alignContents="center">
+                <Text w="100%" align={{ base: "right", md: "center" }} fontSize={"18px"} fontWeight={"bold"}>{sessionStorage.getItem("currency")} {props.price}</Text>
+                    <Spacer />
+                <Text w="100%" align={{ base: "right", md: "center" }} fontWeight={"medium"} color={"teal.500"}>Earn at least {props.points} points</Text>
+                    <Spacer />
                 <Show above="md">
-                    <Button onClick={searchHotel}>Book Deal</Button>
+                    <Button name="button_bookHotel" colorScheme={"teal"} onClick={searchHotel}>Book Deal</Button>
                 </Show>
-            </Stack>
+            </Flex>
         </Stack>             
     </Flex>);
 }
 
-export default class CardList extends Component {
-    constructor(props) {
-        super(props);
+export default function CardList(props) {
+    if (props.hotels.hotels.length > 0) {
+        return (
+            <Box w="100%" h="100%">
+                <Stack id="card-stack" w='100%' h='100%' pr="2">
+                    <InfiniteScroll
+                    dataLength={props.displayedLength}
+                    next={props.fetchMoreData}
+                    hasMore={true}
+                    loader={<h4>Please Wait...</h4>}
+                    scrollableTarget="hotels-box"
+                    className="CardList" 
+                    >
 
-        this.state = {
-            selectedHotel: "",
-            hotels: {"completed": false, "hotels": []},
-            starRating: "",
-            reviewRange: [],
-            priceRange: [],
-            typeFilter: [],
-            params: props.params
-        };
+                        { props.hotels.hotels.map((hotel) => {
+                            return (
+                                <Card 
+                                    searchRank={hotel["searchRank"]}
+                                    price={hotel["price"]}
+                                    points={hotel["points"]}
+                                    latitude={hotel["latitude"]}
+                                    longitude={hotel["longitude"]}
+                                    distance={hotel["distance"]}
+                                    name={hotel["name"]}
+                                    address={hotel["address"]}
+                                    rating={hotel["rating"]}
+                                    review={hotel["review"]}
+                                    image={hotel["photo"]}
+                                    uid={hotel["uid"]}
+                                />      
+                            )
+                        })}
+                    </InfiniteScroll>
+                </Stack>
+            </Box>);
 
-        this.setHotels = this.setHotels.bind(this);
-    }
-
-    setHotels(hotels) {
-        // TODO: Add completed checking
-        this.setState({hotels: hotels});
-    }
-
-    componentDidMount() {
-        // TODO: Figure out why its triggering twice
-        this.updateTimer = setInterval(() => getHotels(this.state.params, this.setHotels), 2000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.updateTimer);
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.params.get("destination") !== this.props.params.get("destination")) {
-            this.setState({params: this.props.params, hotels: {"completed": false, "hotels": []}});
-        }
-    }
-
-    render() {
-        console.log(this.state.hotels.completed);
-        console.log(this.state.hotels.hotels.length);
-        if (this.state.hotels.completed === true) {
-            clearInterval(this.updateTimer);
-        }
-        
-        if (this.state.hotels.hotels.length > 0) {
-            return (
-                <Box w="100%" h={{base: "80vh", lg:"80vh", md: "70vh", sm: "70vh"}}>
-                    <Stack w='100%' h='100%' overflowY='scroll' className="hotels-list" backgroundColor="white" divider={<StackDivider borderColor='#898989' borderWidth="1px"/>}>
-                    { this.state.hotels.hotels.slice(0, 10).map((hotel) => {
-                        return (
-                            <Card 
-                                searchRank={hotel["searchRank"]}
-                                price={hotel["price"]}
-                                points={hotel["points"]}
-                                latitude={hotel["latitude"]}
-                                longitude={hotel["longitude"]}
-                                distance={hotel["distance"]}
-                                name={hotel["name"]}
-                                address={hotel["address"]}
-                                rating={hotel["rating"]}
-                                review={hotel["review"]}
-                                image={hotel["photo"]}
-                                uid={hotel["uid"]}
-                            />      
-                        )
-                    })}
-                    </Stack>
-                </Box>);
-        } else if (this.state.hotels.completed === false) {
-            return (<Box w="100%" h="80vh">
-                <Center w="100%" h="100%">
+    } else if (props.hotels.completed === false) {
+        return (<Box w="100%" h="80vh">
+            <Center w="100%" h="100%">
                 <Spinner
                     thickness='4px'
                     speed='0.65s'
@@ -141,7 +119,7 @@ export default class CardList extends Component {
                     </Heading>
                 </Center>
             </Box>);
-        }
     }
 }
+
 

@@ -1,105 +1,115 @@
-import { Box, Center, Flex, Text, Select, Stack, Button, Heading, Input, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { getDestinations } from "../api/services/destinations";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Box, Center, Text, Select, Stack, Button, Heading, Input, RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
+import React from "react";
+import {FaDotCircle} from "react-icons/fa"
  
-export default function SideBar({ onClose, ...rest }) {
-  // const navigate = useNavigate();
-  
-  // // TODO: Load data from local storage and load reasonable defaults if not present
-
-  // const searchRoute = () => {
-  //     // TODO: Add error checking for invalid UIDs
-  //     // TODO: Store data to local storage        
-  //     // navigate(`/hotels?${selectedDestination}?checkInDate=${selectedDates[0]}&checkOutDate=${selectedDates[1]}&guests=${numAdults + numChildren}&currency=${currency}`);
-  //     navigate(`/hotels?uid=${selectedDestination}&checkInDate=${formatDate(selectedDates[0])}&checkOutDate=${formatDate(selectedDates[1])}&guests=${numAdults + numChildren}&currency=SGD`);
-  // }
-
-  const initialState = {
-    selectedHotel: '',
-    starRating: 0,
-    // minPrice: 0,
-    // maxPrice: 100,
-    reviewRange: 0,
-    priceRange: [0, 100],
-    sort: 0
-
-  };
-  // const [minPrice, setMinPrice] = useState(0);
-  // const [maxPrice, setMaxPrice] = useState(100);
-  const [filters, setFilters] = useState(initialState);
-  const [selectedHotel, setHotel] = useState("");
-  const [starRating, setStarRating] = useState(0);
-  const [reviewRange, setReviewRange] = useState([]);
-  const [priceRange, setPriceRange] = useState([0,100]);
-  const [sort, setSort] = useState(0);
-  // const [typeFilter, setTypeFilters] = useState([]);
-
-  // const updateState= () => {
-  //   setFilters({hotel: hotelName, reviews: reviewScore, price_range: pricesChosen, rating: ratingScore});
-  // };
-
-  // TODO : reset to initial state
-  const resetState = () => {
-    setFilters(initialState);
-  };
-  // TODO: still not working yet
-  const handlePrice = (event) => setPriceRange(event.target.value);
-  const handleSort = (event) => setSort(event.target.value);
-  // TODO: Fix background colour / decide on what colour to use
+export default function SideBar(props) {
   return (
-      <Center h="100%" backgroundColor="white" p="5">
+      <Center w="100%" h="100%" backgroundColor="white" p="5">
         <Stack h="100%" w="100%">
           <Stack>
               <Heading size="sm" color="black">Hotel Name</Heading>
-              <Input placeholder="Placeholder input"></Input>
+              <Input name="HotelSearchInput" isDisabled={!props.completed} onChange={(e) => props.setHotelFilter(e.target.value)}></Input>
           </Stack>
 
           <Stack>
               <Heading size="sm">Reviews Score</Heading>
-              <Input placeholder="Placeholder input"></Input>
+              <Stack direction="row" w="100%">
+                <Text size="sm" w="100%" align="left">
+                  {props.reviewRange[0]}
+                </Text>
+                <Text size="sm" w="100%" align="right">
+                  {props.reviewRange[1]}
+                </Text>
+              </Stack>
+              <RangeSlider
+                isDisabled={!props.completed}
+                min={props.reviewBounds[0]} max={props.reviewBounds[1]} 
+                defaultValue={[0, 1000000]}
+                step={1}
+                onChange={(e) => props.setReviewRange(e)}
+              >
+                <RangeSliderTrack name="reviewRange">
+                  <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb boxSize={6} index={0}>
+                  <Box color="gray.300" as={FaDotCircle}/>
+                </RangeSliderThumb>
+                <RangeSliderThumb boxSize={6} index={1}>
+                  <Box color="gray.300" as={FaDotCircle}/>
+                </RangeSliderThumb>
+              </RangeSlider>
           </Stack>
 
           <Stack>
               <Heading size="sm">Price Range</Heading>
-              <RangeSlider 
-              defaultValue={[0, 100]}
-              // onChangeEnd={handlePrice}
+              <Stack direction="row" w="100%">
+                <Text size="sm" w="100%" align="left">
+                  {sessionStorage.getItem("currency")} {props.priceRange[0]}
+                </Text>
+                <Text size="sm" w="100%" align="right">
+                  {sessionStorage.getItem("currency")} {props.priceRange[1]}
+                </Text>
+              </Stack>
+              <RangeSlider
+                isDisabled={!props.completed}
+                min={props.priceBounds[0]} max={props.priceBounds[1]} 
+                defaultValue={[0, 1000000]}
+                step={1}
+                onChange={(e)=> props.setPriceRange(e)}
               >
-              <RangeSliderTrack>
-                <RangeSliderFilledTrack />
+                <RangeSliderTrack name="priceRange">
+                  <RangeSliderFilledTrack />
                 </RangeSliderTrack>
                 <RangeSliderThumb boxSize={6} index={0}>
-                  <Box />
+                  <Box color="gray.300" as={FaDotCircle}/>
                 </RangeSliderThumb>
                 <RangeSliderThumb boxSize={6} index={1}>
-                  <Box />
+                  <Box color="gray.300" as={FaDotCircle}/>
                 </RangeSliderThumb>
               </RangeSlider>
           </Stack>
 
           <Stack>
               <Heading size="sm">Hotel Star Rating</Heading>
-              <Input placeholder="Placeholder input"></Input>
-          </Stack>
-
-          <Stack>
-              <Heading size="sm">Hotels Popular For</Heading>
-              <Input placeholder="Placeholder input"></Input>
+              <Stack direction="row" w="100%">
+                <Text size="sm" w="100%" align="left">
+                  {props.starsRange[0]}
+                </Text>
+                <Text size="sm" w="100%" align="right">
+                  {props.starsRange[1]}
+                </Text>
+              </Stack>
+              <RangeSlider
+                isDisabled={!props.completed}
+                defaultValue={[1, 5]} min={1} max={5} step={1}
+                onChange={(e) => props.setStarsRange(e)}
+              >
+                <RangeSliderTrack name="starRange">
+                  <RangeSliderFilledTrack />
+                </RangeSliderTrack>
+                <RangeSliderThumb boxSize={6} index={0}>
+                  <Box color="gray.300" as={FaDotCircle}/>
+                </RangeSliderThumb>
+                <RangeSliderThumb boxSize={6} index={1}>
+                  <Box color="gray.300" as={FaDotCircle}/>
+                </RangeSliderThumb>
+              </RangeSlider>
           </Stack>
 
           <Stack>
             <Heading size="sm">Sort by</Heading>
-            <Select value={sort} onChange={handleSort}>
+            <Select name="sorting" value={props.sort} onChange={(e) => props.setSort(e.target.value)} isDisabled={!props.completed}>
               <option value='0'>-</option>
               <option value='1'>Price: Low to High</option>
               <option value='2'>Price: High to Low</option>
+              <option value='3'>Stars: Low to High</option>
+              <option value='4'>Stars: High to Low</option>
+              <option value='5'>Distance to City Centre</option>
             </Select>
           </Stack>
 
           <Stack>
-              <Button onClick={ resetState } w="100%" colorScheme="red">Reset</Button>
+              <Button name="resetButton" onClick={ props.resetState } w="100%" colorScheme="red" isDisabled={!props.completed}>Reset</Button>
           </Stack>
         </Stack>
       </Center>

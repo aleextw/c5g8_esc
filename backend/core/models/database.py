@@ -1,6 +1,12 @@
+# pylint: disable=no-member
+# pylint: disable=broad-except
+# pylint: disable=invalid-name
+# pylint: disable=redefined-builtin
 import json
 import logging
-from typing import Set
+import secrets
+import time
+import re
 
 import requests
 from sqlalchemy import create_engine, select
@@ -8,12 +14,23 @@ from sqlalchemy.orm import sessionmaker
 
 from backend.config import config
 from backend.core.models.base import Base
-from backend.core.schemas.schemas import *
+from backend.core.schemas.schemas import (
+    Booking,
+    Destination,
+    DisplayInfo,
+    GuestInfo,
+    PaymentInfo,
+    Token,
+    User,
+)
 from backend.shared_resources import resources
-import random
 
 logger = logging.getLogger()
+valid_chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
+email_pattern = re.compile(r"^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$")
+name_pattern = re.compile(r"^[0-9A-Za-z ]+$")
+username_pattern = re.compile(r"^[0-9A-Za-z ]+$")
 
 def load():
     """
@@ -117,8 +134,12 @@ def generate_destinations():
     """
     Returns a list of {term: destination_uid} pairs.
     """
+
+    start_time = time.time()
     destinations = resources["SESSION"].execute(select(Destination)).all()
-    return [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
+    formatted_destinations = [{"term": i[0].term, "uid": i[0].destination_id} for i in destinations]
+    print(f"generate_destinations took {time.time() - start_time}s")
+    return formatted_destinations
 
 
 def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, currency):
@@ -138,21 +159,8 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
             num_rooms,
             guests,
             currency,
-        ),
-        headers={
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.5",
-            "Connection": "keep-alive",
-            "DNT": "1",
-            "Host": "hotelapi.loyalty.dev",
-            "Sec-Fetch-Dest": "document",
-            "Sec-Fetch-Mode": "navigate",
-            "Sec-Fetch-Site": "cross-site",
-            "TE": "trailers",
-            "Upgrade-Insecure-Requests": "1",
-        },
+        )
     )
-
     if (
         hotels_pricing.status_code == requests.codes.ok
         and hotels.status_code == requests.codes.ok
@@ -164,7 +172,9 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                 return_data["hotels"][hotel_pricing_data["id"]] = {
                     "uid": hotel_pricing_data["id"],
                     "searchRank": hotel_pricing_data["searchRank"],
-                    "price": hotel_pricing_data["lowest_converted_price"],
+                    "price": hotel_pricing_data["converted_price"]
+                    if hotel_pricing_data["converted_price"] > 0
+                    else hotel_pricing_data["lowest_converted_price"],
                     "points": hotel_pricing_data["points"],
                 }
 
@@ -187,7 +197,7 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
                             + hotel_static_data["image_details"]["suffix"],
                         }
                     )
-        except Exception as e:
+        except Exception as _:
             # Data missing
             pass
 
@@ -201,7 +211,6 @@ def generate_hotels(destination_id, checkin, checkout, num_rooms, guests, curren
     return {"completed": True, "hotels": []}
 
 
-#  TODO: CHECK
 def generate_hotel(
     hotel_id, destination_id, checkin, checkout, num_rooms, guests, currency
 ):
@@ -243,22 +252,42 @@ def generate_hotel(
             "rooms": {},
         }
 
-        if len(rooms_pricing.json()["rooms"]) == 0:
+        if (
+            rooms_pricing.json()["completed"]
+            and len(rooms_pricing.json()["rooms"]) == 0
+        ):
             return {"completed": True, "rooms": [], "hotel_details": {}}
 
         # Set up pricing data
-        for room_pricing_data in rooms_pricing.json()["rooms"]:
-            return_data["rooms"][room_pricing_data["key"]] = {
-                "uid": room_pricing_data["key"],
-                "name": room_pricing_data["roomNormalizedDescription"],
-                "price": room_pricing_data["lowest_converted_price"],
-                "photo": room_pricing_data["images"],
-                "description": room_pricing_data["description"],
-                "long_description": room_pricing_data.get("long_description", None),
-                "amenities": room_pricing_data["amenities"],
-                "free_cancellation": room_pricing_data["free_cancellation"],
-                "additional_info": room_pricing_data["roomAdditionalInfo"],
-            }
+        else:
+            for i in range(len(rooms_pricing.json()["rooms"])):
+                room_pricing_data = rooms_pricing.json()["rooms"][i]
+                return_data["rooms"][i] = {
+                    "key": room_pricing_data["key"],
+                    "uid": room_pricing_data["key"],
+                    "name": room_pricing_data.get("roomNormalizedDescription", ""),
+                    "price": room_pricing_data["converted_price"]
+                    if room_pricing_data["converted_price"] > 0
+                    else room_pricing_data["lowest_converted_price"],
+                    "points": room_pricing_data["points"],
+                    "photo": room_pricing_data.get(
+                        "images",
+                        [
+                            {
+                                "url": "https://via.placeholder.com/300",
+                                "high_resolution_url": "https://via.placeholder.com/300",
+                                "hero_image": False,
+                            }
+                        ],
+                    ),
+                    "description": room_pricing_data.get("description", ""),
+                    "long_description": room_pricing_data.get("long_description", None),
+                    "amenities": room_pricing_data.get("amenities", []),
+                    "free_cancellation": room_pricing_data.get(
+                        "free_cancellation", False
+                    ),
+                    "additional_info": room_pricing_data.get("roomAdditionalInfo", {}),
+                }
 
         # Add static data to hotel
         hotel = hotel.json()
@@ -269,24 +298,31 @@ def generate_hotel(
         return_data["hotel_details"].update(
             {
                 "uid": hotel["id"],
-                "latitude": hotel["latitude"],
-                "longitude": hotel["longitude"],
+                "latitude": hotel.get("latitude", 38.685516),
+                "longitude": hotel.get("longitude", -101.073324),
                 "name": hotel["name"],
                 "address": hotel["address"],
                 "rating": hotel["rating"],
                 "review": hotel["trustyou"]["score"]["kaligo_overall"],
-                "images": hotel["image_details"],
-                "description": hotel["description"],
+                "images": hotel.get(
+                    "image_details", {"suffix": "", "count": 0, "prefix": ""}
+                ),
+                "description": hotel.get(
+                    "description", "This hotel has not provided a description."
+                ),
                 "amenities": hotel["amenities"],
             }
         )
 
         # Remove entries with no static data
+
         for hotel_data in set(return_data["rooms"].keys()):
             if return_data["rooms"][hotel_data].get("name", None) is None:
                 del return_data["rooms"][hotel_data]
 
         return_data["rooms"] = list(return_data["rooms"].values())
+
+        print("after return data rooms: ", len(return_data["rooms"]))
         return return_data
     return {
         "completed": True,
@@ -304,6 +340,9 @@ get_dest_endpoint = (
 def get_dest_price_endpoint(
     destination_id, checkin, checkout, num_rooms, guests, currency
 ):
+    """
+    Build and return the hotel pricing URL for the specified destination
+    """
     return f"https://hotelapi.loyalty.dev/api/hotels/prices?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
@@ -314,17 +353,29 @@ get_hotel_endpoint = lambda x: f"https://hotelapi.loyalty.dev/api/hotels/{x}"
 def get_hotel_details_endpoint(
     destination_id, hotel_id, checkin, checkout, num_rooms, guests, currency
 ):
+    """
+    Build and return the hotel details URL for the specified hotel
+    """
     return f"https://hotelapi.loyalty.dev/api/hotels/{hotel_id}/price?destination_id={destination_id}&checkin={checkin}&checkout={checkout}&lang=en_US&currency={currency}&country_code=SG&guests={'|'.join([str(guests)] * num_rooms)}&partner_id=1"
 
 
 def create_booking(booking):
+    """
+    Create a new booking using the given booking data
+    """
     if any(
         [
             i is None
             for i in [
-                booking.name,
-                booking.phone,
+                booking.salutation,
+                booking.firstName,
+                booking.lastName,
                 booking.email,
+                booking.phone,
+                booking.additionalData,
+                booking.cardName,
+                booking.cardNumber,
+                booking.billingAddress,
                 booking.roomName,
                 booking.hotelName,
                 booking.roomPrice,
@@ -339,27 +390,63 @@ def create_booking(booking):
             ]
         ]
     ):
+        print("Missing fields")
         return "-1"
-    id = "".join(
-        [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
-    )
+    id = secrets.token_urlsafe(32)
     while (
         resources["SESSION"].execute(select(Booking).where(Booking.id == id)).first()
         is not None
     ):
-        id = "".join(
-            [random.choice("abcdefghijklmnopqrstuvwxyz1234567890") for _ in range(64)]
+        id = secrets.token_urlsafe(32)
+
+    display_info = DisplayInfo(
+        room_name=booking.roomName,
+        hotel_name=booking.hotelName,
+        check_in_date=booking.checkInDate,
+        check_out_date=booking.checkOutDate,
+        num_adults=booking.numAdults,
+        num_children=booking.numChildren,
+        num_rooms=booking.numRooms,
+    )
+
+    payment_info = PaymentInfo(
+        card_name=booking.cardName,
+        card_number=booking.cardNumber,
+        billing_address=booking.billingAddress,
+    )
+
+    guest_info = GuestInfo(
+        salutation=booking.salutation,
+        first_name=booking.firstName,
+        last_name=booking.lastName,
+        email=booking.email,
+        contact_number=booking.phone,
+        additional_data=booking.additionalData,
+    )
+
+    destination = (
+        resources["SESSION"]
+        .execute(
+            select(Destination).where(Destination.destination_id == booking.dest_uid)
         )
+        .first()
+    )
+
+    if destination is None:
+        print("Invalid destination")
+        return "-1"
 
     booking_entry = Booking(
-        booking_display_info="",
-        booking_price=booking.roomPrice,
-        supplier_booking_ID=0,
-        supplier_booking_ref=0,
+        booking_display_info=display_info,
+        price=booking.roomPrice,
+        currency=booking.currency,
         guest_booking_ref=id,
-        guest_account_info="",
-        guest_payment_info="",
-        destination_id=booking.dest_uid,
+        guest_account_info=guest_info,
+        guest_payment_info=payment_info,
+        room_uid=booking.room_uid,
+        hotel_uid=booking.hotel_uid,
+        destination=destination[0],
+        assigned_user=booking.username,
     )
 
     resources["SESSION"].add(booking_entry)
@@ -372,8 +459,197 @@ def get_booking(booking_uid):
     if (
         booking := resources["SESSION"]
         .execute(select(Booking).where(Booking.guest_booking_ref == booking_uid))
-        .all()
+        .first()
     ):
-        return booking
+
+        return {
+            "booking_info": booking[0].as_dict(),
+            "display_info": booking[0].booking_display_info.as_dict(),
+            "account_info": booking[0].guest_account_info.as_dict(),
+            "payment_info": booking[0].guest_payment_info.as_dict(),
+            "destination_info": booking[0].destination.as_dict(),
+        }
     else:
         return -1
+
+
+def register_user(data):
+    # Field validation is already handled on clientside, here is just as a precaution
+    if data.email == "":
+        return {"valid": "Error: Email cannot be empty."}
+
+    if email_pattern.search(data.email) is None:
+        return {"valid": "Error: Please enter a valid email."}
+
+    if data.username == "":
+        return {"valid": "Error: Username cannot be empty."}
+
+    if username_pattern.search(data.username) is None:
+        return {"valid": "Error: Please enter a valid username."}
+
+    if data.phoneNumber == "":
+        return {"valid": "Error: Phone number cannot be empty."}
+
+    if len(data.phoneNumber) < 8 or not data.phoneNumber.isnumeric():
+        # Assume Singaporean phone number
+        return {"valid": "Error: Please enter a valid phone number."}
+
+    if data.firstName == "":
+        return {"valid": "Error: First name cannot be empty."}
+
+    if data.lastName == "":
+        return {"valid": "Error: Last name cannot be empty."}
+
+    if name_pattern.search(data.firstName) is None:
+        return {"valid": "Error: First name cannot have special characters."}
+
+    if name_pattern.search(data.lastName) is None:
+        return {"valid": "Error: Last name cannot have special characters."}
+
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.email == data.email))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Email already in use."}
+
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Username already in use."}
+
+    if (
+        resources["SESSION"]
+        .execute(select(User).where(User.phone_number == data.phoneNumber))
+        .first()
+        is not None
+    ):
+        return {"valid": "Error: Phone number already in use."}
+
+    new_user = User(
+        first_name=data.firstName,
+        last_name=data.lastName,
+        email=data.email,
+        phone_number=data.phoneNumber,
+        username=data.username,
+        password_hash=data.passwordHash,
+        salt=data.salt,
+    )
+    token = Token(value=secrets.token_urlsafe(256), assigned_user=new_user)
+
+    resources["SESSION"].add_all([new_user, token])
+    resources["SESSION"].commit()
+
+    return {"valid": "", "token": token.value, "user": new_user.as_dict()}
+
+
+def login_user(data):
+    if data.username == "":
+        return {"valid": "Error: Username cannot be empty."}
+
+    user = (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+    )
+
+    if user is None:
+        return {"valid": "Error: User does not exist."}
+
+    if data.type == "query":
+        return {"valid": "", "salt": user[0].salt}
+    elif data.type == "login":
+        if (
+            user[0].password_hash == data.passwordHash
+            and user[0].username == data.username
+        ):
+            token = Token(value=secrets.token_urlsafe(256), assigned_user=user[0])
+            resources["SESSION"].add(token)
+            resources["SESSION"].commit()
+
+            return {"valid": "", "token": token.value, "user": user[0].as_dict()}
+        else:
+            return {"valid": "Error: Invalid credentials provided."}
+
+
+    return {"valid": "Error: Application error. Please try again."}
+
+
+def logout_user(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        resources["SESSION"].delete(response["token"][0])
+        resources["SESSION"].commit()
+
+        return {"valid": ""}
+    return {"valid": response["valid"]}
+
+
+def get_user_bookings(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        return {
+            "valid": "",
+            "bookings": [
+                i.booking_display_info.as_dict() for i in response["user"][0].bookings
+            ],
+        }
+    return {"valid": response["valid"]}
+
+
+def get_user_data(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        return {
+            "valid": "",
+            "user": response["user"][0].as_dict(),
+        }
+    return {"valid": response["valid"]}
+
+
+def delete_user_data(data):
+    response = validate_auth_data(data)
+    if response["valid"] == "":
+        resources["SESSION"].delete(response["token"][0])
+        resources["SESSION"].delete(response["user"][0])
+        resources["SESSION"].commit()
+
+        return {"valid": ""}
+    return {"valid": response["valid"]}
+
+
+def validate_auth_data(data):
+    if data.username == "":
+        return {"valid": "Error: Missing username."}
+
+    user = (
+        resources["SESSION"]
+        .execute(select(User).where(User.username == data.username))
+        .first()
+    )
+
+    if user is None:
+        return {"valid": "Error: User does not exist."}
+
+    if data.token == "":
+        return {"valid": "Error: Missing token."}
+
+    token = (
+        resources["SESSION"]
+        .execute(select(Token).where(Token.value == data.token))
+        .first()
+    )
+
+    if token is None:
+        return {"valid": "Error: Token does not exist."}
+
+    if token[0].assigned_user != user[0]:
+        return {
+            "valid": "Error: Specified token does not correspond to specified user."
+        }
+
+    return {"valid": "", "user": user, "token": token}

@@ -9,9 +9,11 @@ from ..core.models.database import *
 client = TestClient(app)
 
 room_attr = [
+    "key",
     "uid",
     "name",
     "price",
+    "points",
     "photo",
     "description",
     "long_description",
@@ -93,22 +95,10 @@ def test_get_rooms_valid_hotel():
     assert set(data["hotel_details"]["images"].keys()) == set(
         ["suffix", "count", "prefix"]
     )
-    assert (
-        isinstance(data["hotel_details"]["images"]["count"], int)
-        and data["hotel_details"]["images"]["count"] > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["images"]["suffix"], str)
-        and len(data["hotel_details"]["images"]["suffix"]) > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["images"]["prefix"], str)
-        and len(data["hotel_details"]["images"]["prefix"]) > 0
-    )
-    assert (
-        isinstance(data["hotel_details"]["description"], str)
-        and len(data["hotel_details"]["description"]) > 0
-    )
+    assert isinstance(data["hotel_details"]["images"]["count"], int)
+    assert isinstance(data["hotel_details"]["images"]["suffix"], str)
+    assert isinstance(data["hotel_details"]["images"]["prefix"], str)
+    assert isinstance(data["hotel_details"]["description"], str)
     assert (
         # TODO: Check what a non-empty amenities dict should contain (wrt datatypes)
         isinstance(data["hotel_details"]["amenities"], dict)
@@ -117,6 +107,7 @@ def test_get_rooms_valid_hotel():
     for room in data["rooms"]:
         assert set(room.keys()) == set(room_attr)
         assert isinstance(room["uid"], str) and len(room["uid"]) > 0
+        assert isinstance(room["name"], str) and len(room["name"]) >= 0
         assert isinstance(room["price"], (float, int)) and room["price"] >= 0
         assert isinstance(room["photo"], list)
         for item in room["photo"]:
@@ -128,7 +119,7 @@ def test_get_rooms_valid_hotel():
                 and len(item["high_resolution_url"]) > 0
             )
             assert isinstance(item["hero_image"], bool)
-        assert isinstance(room["description"], str) and len(room["description"]) > 0
+        assert isinstance(room["description"], str)
         assert isinstance(room["long_description"], (str, NoneType))
         assert isinstance(room["amenities"], list)
         for item in room["amenities"]:

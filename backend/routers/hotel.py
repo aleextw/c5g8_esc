@@ -1,10 +1,14 @@
+# pylint: disable=no-name-in-module
+# pylint: disable=no-self-argument
 import datetime
 import logging
 
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter
 from pydantic import BaseModel
 
 from backend.core.models import database
+
+from .auth import AuthData
 
 router = APIRouter()
 
@@ -16,13 +20,19 @@ class Booking(BaseModel):
     Data passed by the frontend corresponding to a hotel room booking
     """
 
-    name: str | None = None
-    phone: str | None = None
+    salutation: str | None = None
+    firstName: str | None = None
+    lastName: str | None = None
     email: str | None = None
+    phone: str | None = None
     additionalData: str | None = None
+    cardName: str | None = None
+    cardNumber: str | None = None
+    billingAddress: str | None = None
     roomName: str | None = None
     hotelName: str | None = None
     roomPrice: float | None = None
+    currency: str | None = None
     checkInDate: datetime.date | None = None
     checkOutDate: datetime.date | None = None
     numAdults: int | None = None
@@ -31,6 +41,7 @@ class Booking(BaseModel):
     room_uid: str | None = None
     hotel_uid: str | None = None
     dest_uid: str | None = None
+    username: str | None = None
 
 
 @router.get("/results/hotel/{hotel_uid}", tags=["hotel"])
@@ -68,3 +79,12 @@ def get_booking(booking_uid: str):
     If an invalid booking_uid is passed, return -1.
     """
     return database.get_booking(booking_uid)
+
+
+@router.post("/summary", tags=["booking"])
+def get_user_bookings(user_data: AuthData):
+    """
+    Given a username and token, return the corresponding bookings belonging to the user.
+    If any invalid data is passed, return -1.
+    """
+    return database.get_user_bookings(user_data)
